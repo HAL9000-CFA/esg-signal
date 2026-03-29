@@ -1,0 +1,26 @@
+# Secrets
+.env
+
+# Large data files — use data/cache/ for committed LLM responses only
+data/raw/
+data/processed/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+dist/
+*.egg-info/
+
+# Airflow
+logs/
+.airflow/
+
+# Local DCF uploads (don't commit client models)
+*.xlsx
+!tests/fixtures/*.xlsx
+
+# OS
+.DS_Store
+
