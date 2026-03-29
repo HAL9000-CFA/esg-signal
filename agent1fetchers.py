@@ -617,7 +617,7 @@ class LayoutParserExtractor:
             # - then table extraction libraries - forgot the name
             
             # Placeholder implementation
-            import PyPDF2
+            import PyPDF2 
             
             with open(pdf_path, 'rb') as file:
                 reader = PyPDF2.PdfReader(file)
