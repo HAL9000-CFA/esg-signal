@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
- test script for Agent 1
- demonstrates usage and validates functionality
+test script for Agent 1
+demonstrates usage and validates functionality
 """
 
-import json
 from pathlib import Path
+
 from agent1fetchers import Agent1
+
 
 def print_section(title):
     """print a formatted section header"""
@@ -18,16 +19,16 @@ def print_section(title):
 def test_edgar_fetcher():
     """test EDGAR data fetching"""
     print_section("Testing EDGAR Fetcher")
-    
+
     from agent1fetchers import EDGARFetcher
-    
+
     edgar = EDGARFetcher(user_email="test@example.com")
-    
+
     # test ticker conversion
     print("Testing CIK lookup...")
     cik = edgar.get_cik_from_ticker("AAPL")
     print(f"✓ AAPL CIK: {cik}")
-    
+
     # test 10-K fetch
     print("\nTesting 10-K fetch...")
     filing_info = edgar.get_latest_10k("AAPL")
@@ -36,31 +37,31 @@ def test_edgar_fetcher():
         print(f"  Accession: {filing_info['accessionNumber']}")
     else:
         print("✗ Failed to fetch 10-K")
-    
+
     return filing_info is not None
 
 
 def test_gdelt_fetcher():
     """test GDELT data fetching"""
     print_section("Testing GDELT Fetcher")
-    
+
     from agent1fetchers import GDELTFetcher
-    
+
     gdelt = GDELTFetcher()
-    
+
     print("Fetching Apple news mentions...")
     result = gdelt.fetch("Apple", start_date="20240301", end_date="20240310")
-    
-    if result['status'] == 'success':
-        article_count = result['data']['article_count']
+
+    if result["status"] == "success":
+        article_count = result["data"]["article_count"]
         print(f"✓ Found {article_count} articles")
-        
+
         if article_count > 0:
-            articles = result['data']['articles'][:3]
-            print(f"\nSample articles:")
+            articles = result["data"]["articles"][:3]
+            print("\nSample articles:")
             for i, article in enumerate(articles, 1):
                 print(f"  {i}. {article.get('title', 'No title')[:60]}...")
-        
+
         return True
     else:
         print(f"✗ GDELT fetch failed: {result.get('error', 'Unknown error')}")
@@ -70,77 +71,68 @@ def test_gdelt_fetcher():
 def test_full_fetch():
     """test complete Agent 1 fetch"""
     print_section("Testing Full Agent 1 Fetch")
-    
+
     # Initialize Agent 1
-    agent = Agent1(
-        sec_email="test@example.com",
-        companies_house_key="TEST_KEY"
-    )
-    
+    agent = Agent1(sec_email="test@example.com", companies_house_key="TEST_KEY")
+
     # test with Apple
     ticker = "AAPL"
     company_name = "Apple Inc."
-    
+
     print(f"Fetching data for {ticker}...")
-    
+
     results = agent.fetch_all(
-        ticker=ticker,
-        company_name=company_name,
-        date_range=("20240301", "20240310")
+        ticker=ticker, company_name=company_name, date_range=("20240301", "20240310")
     )
-    
+
     # print summary
     print("\nResults Summary:")
-    for source, data in results['sources'].items():
-        status = data.get('status', 'unknown')
-        status_symbol = '✓' if status == 'success' else '⚠' if status == 'partial' else '✗'
+    for source, data in results["sources"].items():
+        status = data.get("status", "unknown")
+        status_symbol = "✓" if status == "success" else "⚠" if status == "partial" else "✗"
         print(f"  {status_symbol} {source.upper():20s} {status}")
-    
+
     # save test results
     output_dir = Path("./output")
     output_dir.mkdir(exist_ok=True)
-    
+
     output_file = output_dir / f"test_results_{ticker}.json"
     agent.save_results(results, str(output_file))
-    
+
     print(f"\n✓ Test results saved to: {output_file}")
-    
+
     return True
 
 
 def run_example_queries():
     """Run example queries with different tickers"""
     print_section("Example Queries")
-    
+
     examples = [
         {
-            'ticker': 'AAPL',
-            'company': 'Apple Inc.',
-            'description': 'Tech company with strong ESG focus'
+            "ticker": "AAPL",
+            "company": "Apple Inc.",
+            "description": "Tech company with strong ESG focus",
         },
         {
-            'ticker': 'MSFT',
-            'company': 'Microsoft Corporation',
-            'description': 'Cloud and software leader'
+            "ticker": "MSFT",
+            "company": "Microsoft Corporation",
+            "description": "Cloud and software leader",
         },
-        {
-            'ticker': 'TSLA',
-            'company': 'Tesla Inc.',
-            'description': 'Electric vehicle manufacturer'
-        }
+        {"ticker": "TSLA", "company": "Tesla Inc.", "description": "Electric vehicle manufacturer"},
     ]
-    
+
     agent = Agent1(sec_email="test@example.com")
-    
+
     for example in examples:
         print(f"\n{example['ticker']}: {example['description']}")
         print("-" * 50)
-        
+
         # just fetch EDGAR as example
-        edgar_result = agent.edgar.fetch(example['ticker'])
-        
-        if edgar_result['status'] == 'success':
-            filing_date = edgar_result['data']['filing_info']['filingDate']
+        edgar_result = agent.edgar.fetch(example["ticker"])
+
+        if edgar_result["status"] == "success":
+            filing_date = edgar_result["data"]["filing_info"]["filingDate"]
             print(f"  ✓ Latest 10-K: {filing_date}")
         else:
             print(f"  ✗ Failed: {edgar_result.get('error', 'Unknown error')}")
@@ -148,51 +140,53 @@ def run_example_queries():
 
 def main():
     """Run all tests"""
-    print("""
-    Agent 1: Multi-Source ESG Data Fetcher                
-    Test & Example                        
-    """)
-    
+    print(
+        """
+    Agent 1: Multi-Source ESG Data Fetcher
+    Test & Example
+    """
+    )
+
     tests = [
         ("EDGAR Fetcher", test_edgar_fetcher),
         ("GDELT Fetcher", test_gdelt_fetcher),
         ("Full Fetch", test_full_fetch),
     ]
-    
+
     results = {}
-    
+
     for test_name, test_func in tests:
         try:
             results[test_name] = test_func()
         except Exception as e:
             print(f"\n✗ {test_name} failed with error: {e}")
             results[test_name] = False
-    
+
     # print test summary
     print_section("Test Summary")
-    
+
     for test_name, passed in results.items():
         status = "✓ PASS" if passed else "✗ FAIL"
         print(f"  {status:10s} {test_name}")
-    
+
     # run example queries
     try:
         run_example_queries()
     except Exception as e:
         print(f"\n✗ Example queries failed: {e}")
-    
+
     print_section("Test Complete")
-    
+
     total_tests = len(results)
     passed_tests = sum(1 for v in results.values() if v)
-    
+
     print(f"Results: {passed_tests}/{total_tests} tests passed")
-    
+
     if passed_tests == total_tests:
         print("\n🎉 All tests passed! Agent 1 is ready for submission.")
     else:
         print(f"\n⚠ {total_tests - passed_tests} test(s) failed. Review errors above.")
-    
+
     print("\nNext steps:")
     print("  1. Review output/test_results_*.json files")
     print("  2. Update .env with your real credentials")
@@ -200,5 +194,5 @@ def main():
     print()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
