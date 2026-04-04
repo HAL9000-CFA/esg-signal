@@ -9,9 +9,11 @@ x-airflow-common: &airflow-common
     AIRFLOW__WEBSERVER__SECRET_KEY: "change-me-in-production"
     PYTHONPATH: /opt/airflow/src
   volumes:
-    - ./pipeline:/opt/airflow/dags # DAG files
-    - ./agents:/opt/airflow/src/agents # importable from DAGs
-    - ./data:/opt/airflow/data # shared data volume
+    - ./pipeline:/opt/airflow/dags
+    - ./agents:/opt/airflow/src/agents
+    - ./data:/opt/airflow/data
+    - ./scripts:/opt/airflow/src/scripts
+    - ./requirements-airflow.txt:/opt/airflow/src/requirements-airflow.txt
     - airflow-logs:/opt/airflow/logs
   depends_on:
     postgres:
@@ -23,7 +25,7 @@ services:
     environment:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
-      POSTGRESS_DB: airflow
+      POSTGRES_DB: airflow
     volumes:
       - postgres-data:/var/lib/postgresql/data
     healthcheck:
@@ -34,30 +36,14 @@ services:
 
   airflow-init:
     <<: *airflow-common
-    command: >
-      bash -c "
-        pip install -r /opt/airflow/src/requirements.txt --quiet &&
-        airflow db migrate &&
-        airflow users create
-          --username admin
-          --password admin
-          --firstname ESG
-          --lastname Signal
-          --role Admin
-          --email admin@example.com
-      "
-    volumes:
-      - ./pipeline:/opt/airflow/dags
-      - ./agents:/opt/airflow/src/agents
-      - ./data:/opt/airflow/data
-      - ./requirements.txt:/opt/airflow/src/requirements.txt
-      - airflow-logs:/opt/airflow/logs
+    command: bash /opt/airflow/src/scripts/init_airflow.sh
     restart: "no"
 
   airflow-webserver:
     <<: *airflow-common
     command: webserver
-    ports: -m "8080:8080"
+    ports:
+      - "8080:8080"
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
       interval: 10s
