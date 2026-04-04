@@ -121,6 +121,7 @@ docker compose exec airflow-webserver bash
 
 # Full reset (wipes the database)
 docker compose down -v
+```
 
 ---
 
@@ -184,4 +185,3 @@ Status values: `success`, `partial` (data returned but incomplete), `failed`.
 | CDP | `https://www.cdp.net/en/data` | No (CSV download) | — | Climate and water disclosure responses, Scope 1/2/3 |
 | GDELT | `https://api.gdeltproject.org/api/v2` | No | — | News articles, events, sentiment by company |
 | LayoutParser | local | — | — | Structured text extraction from sustainability PDFs |
-```
