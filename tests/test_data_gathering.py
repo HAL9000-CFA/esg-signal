@@ -2,8 +2,9 @@
 """
 Test script for Data Gatherer
 Demonstrates usage and validates functionality
-"""
 
+NOTE: OUR UNITS TESTS SHOULD NOT USE LIVE APIS. Magic mock the HTTP responses and use those instead. THESE NEED REPLACING"
+"""
 
 from agents.data_gathering import DataGatherer
 
@@ -15,6 +16,9 @@ def print_section(title):
     print(f"{'='*70}\n")
 
 
+@pytest.mark.skipif(
+    not os.getenv("SEC_EMAIL"), reason="Skipping live API test in CI — set SEC_EMAIL to run locally"
+)
 def test_edgar_fetcher():
     """test EDGAR data fetching"""
     print_section("Testing EDGAR Fetcher")
@@ -40,6 +44,9 @@ def test_edgar_fetcher():
     return filing_info is not None
 
 
+@pytest.mark.skipif(
+    not os.getenv("SEC_EMAIL"), reason="Skipping live API test in CI — set SEC_EMAIL to run locally"
+)
 def test_gdelt_fetcher():
     """test GDELT data fetching"""
     print_section("Testing GDELT Fetcher")
@@ -67,7 +74,10 @@ def test_gdelt_fetcher():
         return False
 
 
-def test_full_fetch():
+@pytest.mark.skipif(
+    not os.getenv("SEC_EMAIL"), reason="Skipping live API test in CI — set SEC_EMAIL to run locally"
+)
+def test_full_fetch(tmp_path):
     """test complete Data Gatherer fetch"""
     print_section("Testing Full Data Gatherer Fetch")
 
