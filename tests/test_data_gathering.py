@@ -4,7 +4,6 @@ Test script for Data Gatherer
 Demonstrates usage and validates functionality
 """
 
-from pathlib import Path
 
 from agents.data_gathering import DataGatherer
 
@@ -93,10 +92,7 @@ def test_full_fetch():
         print(f"  {status_symbol} {source.upper():20s} {status}")
 
     # save test results
-    output_dir = Path("data/raw")
-    output_dir.mkdir(exist_ok=True)
-
-    output_file = output_dir / f"test_results_{ticker}.json"
+    output_file = tmp_path / f"test_results_{ticker}.json"
     agent.save_results(results, str(output_file))
 
     print(f"\n✓ Test results saved to: {output_file}")
