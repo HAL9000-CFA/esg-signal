@@ -66,6 +66,8 @@ cp .env.example .env
 
 Keys vars are placeholders atm, they'll probs be changed as we go but how to obtain them should be written here when they are first implemented and changed.
 
+- `COMPANIES_HOUSE_API_KEY` - https://developer.company-information.service.gov.uk
+
 ### 3. Start everything with Docker
 
 ```bash
@@ -119,4 +121,67 @@ docker compose exec airflow-webserver bash
 
 # Full reset (wipes the database)
 docker compose down -v
+
+---
+
+## Common Issues
+
+### Data Gatherer
+
+**403 error from SEC** - use a real email address, they block fake ones
+
+**Companies House auth failed** - check the API key in your .env has no extra spaces
+
+**PDF extraction failing** - run `pip install PyPDF2`
+
+**pip not recognised** - venv isnt activated, run `venv\Scripts\activate` first
+
+---
+
+## Agent Overviews
+
+## Data Gatherer
+
+Agent: /agents/data_gathering.py
+Test: /tests/test_data_gathering.py
+
+### Output Shape
+
+{
+  "ticker": "AAPL",
+  "company_name": "Apple Inc.",
+  "timestamp": "2024-03-29T10:30:00",
+  "sources": {
+    "edgar": {
+      "source": "EDGAR",
+      "status": "success",
+      "data": {
+        "filing_info": { ... },
+        "risk_factors": "...",
+        "financials": {
+          "years": ["2023", "2022", "2021"],
+          "revenue": [...],
+          "operating_expenses": [...],
+          "capital_expenditures": [...]
+        }
+      }
+    },
+    "companies_house": { ... },
+    "cdp": { ... },
+    "gdelt": { ... },
+    "layout_parser": { ... }
+  }
+}
+
+Status values: `success`, `partial` (data returned but incomplete), `failed`.
+
+### Data Sources
+
+| Source | Base URL | Key required | Rate limit | What it provides |
+|---|---|---|---|---|
+| SEC EDGAR | `https://data.sec.gov` | No (email in User-Agent) | 10 req/s | 10-K filings, risk factors, financial statements |
+| Companies House | `https://api.company-information.service.gov.uk` | Yes (free) | 600 req/5min | Confirmation statements, SIC codes, filing history |
+| CDP | `https://www.cdp.net/en/data` | No (CSV download) | — | Climate and water disclosure responses, Scope 1/2/3 |
+| GDELT | `https://api.gdeltproject.org/api/v2` | No | — | News articles, events, sentiment by company |
+| LayoutParser | local | — | — | Structured text extraction from sustainability PDFs |
 ```
