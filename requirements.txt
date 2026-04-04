@@ -1,23 +1,16 @@
-# Core pipeline
-apache-airflow==2.9.3
+# API clients
 anthropic==0.34.2
 google-generativeai==0.7.2
-
-# Data acquisition
 requests==2.32.3
 beautifulsoup4==4.12.3
 openpyxl==3.1.5
 
 # PDF extraction
 pdfplumber==0.11.2
-layoutparser==0.3.4
 
 # UI
 streamlit==1.37.0
 reportlab==4.2.2
-
-# Geo / satellite
-geemap==0.33.0
 
 # Dev
 pytest==8.3.2
@@ -25,3 +18,6 @@ ruff==0.6.1
 black==24.8.0
 python-dotenv==1.0.1
 
+# Heavy deps - reinstante when needed
+# layoutparser
+# geemap
