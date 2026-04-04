@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Agent 1 CLI - command-line interface for data fetching
-Usage: python agent1_cli.py --ticker AAPL --email your@email.com
+Data Gatherer CLI - command-line interface for data fetching
+Usage: python fetch_data.py --ticker AAPL --email your@email.com
 """
 
 import argparse
@@ -9,26 +9,29 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-from agent1fetchers import Agent1
+from agents.data_gathering import DataGatherer
+
+REPO_ROOT = Path(__file__).parent.parent
+DEFAULT_OUTPUT_DIR = REPO_ROOT / "data" / "raw"
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Agent 1: Multi-Source ESG Data Fetcher",
+        description="Data Gatherer: Multi-Source ESG Data Fetcher",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   # fetch data for Apple
-  python agent1_cli.py --ticker AAPL --email your@email.com
+  python fetch_data.py --ticker AAPL --email your@email.com
 
   # fetch with company name for UK sources
-  python agent1_cli.py --ticker BP --company "BP PLC" --email your@email.com
+  python fetch_data.py --ticker BP --company "BP PLC" --email your@email.com
 
   # include PDF extraction
-  python agent1_cli.py --ticker MSFT --pdf sustainability_report.pdf --email your@email.com
+  python fetch_data.py --ticker MSFT --pdf sustainability_report.pdf --email your@email.com
 
   # custom date range for GDELT
-  python agent1_cli.py --ticker TSLA --start 20240101 --end 20240331 --email your@email.com
+  python fetch_data.py --ticker TSLA --start 20240101 --end 20240331 --email your@email.com
         """,
     )
 
@@ -58,10 +61,14 @@ Examples:
 
     parser.add_argument("--end", help="End date for GDELT search (YYYYMMDD format)")
 
-    parser.add_argument("--output", help="Output file path (default: agent1_TICKER_TIMESTAMP.json)")
+    parser.add_argument(
+        "--output", help="Output file path (default: data_gatherer_TICKER_TIMESTAMP.json)"
+    )
 
     parser.add_argument(
-        "--output-dir", default="./output", help="Output directory (default: ./output)"
+        "--output-dir",
+        default=str(DEFAULT_OUTPUT_DIR),
+        help="Output directory (default: path_to_project/data/)",
     )
 
     parser.add_argument("--verbose", action="store_true", help="Enable verbose output")
@@ -72,9 +79,9 @@ Examples:
     output_dir = Path(args.output_dir)
     output_dir.mkdir(exist_ok=True)
 
-    # initialize Agent 1
+    # initialise Data Gatherer
     print(f"\n{'='*70}")
-    print("  Agent 1: Multi-Source ESG Data Fetcher")
+    print("  Data Gatherer: Multi-Source ESG Data Fetcher")
     print(f"{'='*70}\n")
 
     print("Configuration:")
@@ -88,7 +95,7 @@ Examples:
         print(f"  Date Range: {args.start} to {args.end}")
     print()
 
-    agent = Agent1(sec_email=args.email, companies_house_key=args.companies_house_key)
+    agent = DataGatherer(sec_email=args.email, companies_house_key=args.companies_house_key)
 
     # prepare date range for GDELT
     date_range = None
@@ -106,7 +113,7 @@ Examples:
             output_path = Path(args.output)
         else:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            output_path = output_dir / f"agent1_{args.ticker}_{timestamp}.json"
+            output_path = output_dir / f"data_gatherer_{args.ticker}_{timestamp}.json"
 
         # save results
         agent.save_results(results, str(output_path))

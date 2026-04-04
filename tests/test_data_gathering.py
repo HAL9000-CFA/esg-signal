@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-test script for Agent 1
-demonstrates usage and validates functionality
+Test script for Data Gatherer
+Demonstrates usage and validates functionality
 """
 
 from pathlib import Path
 
-from agent1fetchers import Agent1
+from agents.data_gathering import DataGatherer
 
 
 def print_section(title):
@@ -20,7 +20,7 @@ def test_edgar_fetcher():
     """test EDGAR data fetching"""
     print_section("Testing EDGAR Fetcher")
 
-    from agent1fetchers import EDGARFetcher
+    from agents.data_gathering import EDGARFetcher
 
     edgar = EDGARFetcher(user_email="test@example.com")
 
@@ -45,7 +45,7 @@ def test_gdelt_fetcher():
     """test GDELT data fetching"""
     print_section("Testing GDELT Fetcher")
 
-    from agent1fetchers import GDELTFetcher
+    from agents.data_gathering import GDELTFetcher
 
     gdelt = GDELTFetcher()
 
@@ -69,11 +69,11 @@ def test_gdelt_fetcher():
 
 
 def test_full_fetch():
-    """test complete Agent 1 fetch"""
-    print_section("Testing Full Agent 1 Fetch")
+    """test complete Data Gatherer fetch"""
+    print_section("Testing Full Data Gatherer Fetch")
 
-    # Initialize Agent 1
-    agent = Agent1(sec_email="test@example.com", companies_house_key="TEST_KEY")
+    # Initialise Data Gatherer
+    agent = DataGatherer(sec_email="test@example.com", companies_house_key="TEST_KEY")
 
     # test with Apple
     ticker = "AAPL"
@@ -93,7 +93,7 @@ def test_full_fetch():
         print(f"  {status_symbol} {source.upper():20s} {status}")
 
     # save test results
-    output_dir = Path("./output")
+    output_dir = Path("data/raw")
     output_dir.mkdir(exist_ok=True)
 
     output_file = output_dir / f"test_results_{ticker}.json"
@@ -122,7 +122,7 @@ def run_example_queries():
         {"ticker": "TSLA", "company": "Tesla Inc.", "description": "Electric vehicle manufacturer"},
     ]
 
-    agent = Agent1(sec_email="test@example.com")
+    agent = DataGatherer(sec_email="test@example.com")
 
     for example in examples:
         print(f"\n{example['ticker']}: {example['description']}")
@@ -142,7 +142,7 @@ def main():
     """Run all tests"""
     print(
         """
-    Agent 1: Multi-Source ESG Data Fetcher
+    Data Gatherer: Multi-Source ESG Data Fetcher
     Test & Example
     """
     )
@@ -183,14 +183,14 @@ def main():
     print(f"Results: {passed_tests}/{total_tests} tests passed")
 
     if passed_tests == total_tests:
-        print("\n🎉 All tests passed! Agent 1 is ready for submission.")
+        print("\n🎉 All tests passed! Data Gatherer is ready for submission.")
     else:
         print(f"\n⚠ {total_tests - passed_tests} test(s) failed. Review errors above.")
 
     print("\nNext steps:")
     print("  1. Review output/test_results_*.json files")
     print("  2. Update .env with your real credentials")
-    print("  3. Run: python agent1_cli.py --ticker YOUR_TICKER --email YOUR_EMAIL")
+    print("  3. Run: python scripts/fetch_data.py --ticker YOUR_TICKER --email YOUR_EMAIL")
     print()
 
 

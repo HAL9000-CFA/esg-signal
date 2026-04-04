@@ -1,5 +1,5 @@
 """
-Agent 1: Multi-Source ESG Data Fetcher
+Data Gathering Agent: Multi-Source ESG Data Fetcher
 Fetches data from EDGAR, Companies House, CDP, GDELT, and LayoutParser
 """
 
@@ -678,9 +678,9 @@ class LayoutParserExtractor:
         return result
 
 
-class Agent1:
+class DataGatherer:
     """
-    Main Agent 1 orchestrator - coordinates all data fetchers
+    Main data gathering orchestrator - coordinates all data fetchers
     """
 
     def __init__(
@@ -689,7 +689,7 @@ class Agent1:
         companies_house_key: str = "YOUR_API_KEY_HERE",
     ):
         """
-        Initialize Agent 1 with API credentials
+        Initialise data gatherer with API credentials
 
         Args:
             sec_email: Email for SEC EDGAR API
@@ -721,7 +721,7 @@ class Agent1:
             Dict containing all fetched data
         """
         print(f"\n{'='*60}")
-        print(f"AGENT 1: Starting data fetch for {ticker}")
+        print(f"Data : Starting data fetch for {ticker}")
         print(f"{'='*60}\n")
 
         results = {
@@ -759,12 +759,12 @@ class Agent1:
             results["sources"]["layout_parser"] = pdf_data
 
         print(f"\n{'='*60}")
-        print("AGENT 1: Data fetch complete")
+        print("DATA GATHERER: Data fetch complete")
         print(f"{'='*60}\n")
 
         return results
 
-    def save_results(self, results: Dict, output_path: str = "agent1_output.json"):
+    def save_results(self, results: Dict, output_path: str = "data_gatherer_output.json"):
         """
         Save results to JSON file
 
@@ -780,10 +780,10 @@ class Agent1:
 # testing fornow
 if __name__ == "__main__":
     # example usage
-    print("Agent 1 Data Fetcher - example usage\n")
+    print("Data Gatherer - example usage\n")
 
     # add  your credentials
-    agent = Agent1(
+    agent = DataGatherer(
         sec_email="your.email@example.com",  # required: use real email for SEC
         companies_house_key="YOUR_API_KEY_HERE",  # get from developer.company-information.service.gov.uk
     )
@@ -800,7 +800,7 @@ if __name__ == "__main__":
     )
 
     # save results
-    agent.save_results(results, f"agent1_{ticker}_output.json")
+    agent.save_results(results, f"data_gatherer_{ticker}_output.json")
 
-    print("\n✓ Agent 1 execution complete!")
-    print(f"✓ Check agent1_{ticker}_output.json for results")
+    print("\n✓ Data gatherer execution complete!")
+    print(f"✓ Check data_gatherer_{ticker}_output.json for results")
