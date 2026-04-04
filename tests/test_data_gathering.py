@@ -6,6 +6,10 @@ Demonstrates usage and validates functionality
 NOTE: OUR UNITS TESTS SHOULD NOT USE LIVE APIS. Magic mock the HTTP responses and use those instead. THESE NEED REPLACING"
 """
 
+import os
+
+import pytest
+
 from agents.data_gathering import DataGatherer
 
 
