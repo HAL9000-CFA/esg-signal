@@ -106,6 +106,12 @@ pytest
 
 ## Day-to-day commands (according to claude)
 
+# Start all services
+
+```bash
+docker compose up -d
+```
+
 ```bash
 # Rebuild Streamlit after UI changes
 docker compose build streamlit && docker compose up -d streamlit
@@ -149,39 +155,39 @@ Test: /tests/test_data_gathering.py
 ### Output Shape
 
 {
-  "ticker": "AAPL",
-  "company_name": "Apple Inc.",
-  "timestamp": "2024-03-29T10:30:00",
-  "sources": {
-    "edgar": {
-      "source": "EDGAR",
-      "status": "success",
-      "data": {
-        "filing_info": { ... },
-        "risk_factors": "...",
-        "financials": {
-          "years": ["2023", "2022", "2021"],
-          "revenue": [...],
-          "operating_expenses": [...],
-          "capital_expenditures": [...]
-        }
-      }
-    },
-    "companies_house": { ... },
-    "cdp": { ... },
-    "gdelt": { ... },
-    "layout_parser": { ... }
-  }
+"ticker": "AAPL",
+"company_name": "Apple Inc.",
+"timestamp": "2024-03-29T10:30:00",
+"sources": {
+"edgar": {
+"source": "EDGAR",
+"status": "success",
+"data": {
+"filing_info": { ... },
+"risk_factors": "...",
+"financials": {
+"years": ["2023", "2022", "2021"],
+"revenue": [...],
+"operating_expenses": [...],
+"capital_expenditures": [...]
+}
+}
+},
+"companies_house": { ... },
+"cdp": { ... },
+"gdelt": { ... },
+"layout_parser": { ... }
+}
 }
 
 Status values: `success`, `partial` (data returned but incomplete), `failed`.
 
 ### Data Sources
 
-| Source | Base URL | Key required | Rate limit | What it provides |
-|---|---|---|---|---|
-| SEC EDGAR | `https://data.sec.gov` | No (email in User-Agent) | 10 req/s | 10-K filings, risk factors, financial statements |
-| Companies House | `https://api.company-information.service.gov.uk` | Yes (free) | 600 req/5min | Confirmation statements, SIC codes, filing history |
-| CDP | `https://www.cdp.net/en/data` | No (CSV download) | — | Climate and water disclosure responses, Scope 1/2/3 |
-| GDELT | `https://api.gdeltproject.org/api/v2` | No | — | News articles, events, sentiment by company |
-| LayoutParser | local | — | — | Structured text extraction from sustainability PDFs |
+| Source          | Base URL                                         | Key required             | Rate limit   | What it provides                                    |
+| --------------- | ------------------------------------------------ | ------------------------ | ------------ | --------------------------------------------------- |
+| SEC EDGAR       | `https://data.sec.gov`                           | No (email in User-Agent) | 10 req/s     | 10-K filings, risk factors, financial statements    |
+| Companies House | `https://api.company-information.service.gov.uk` | Yes (free)               | 600 req/5min | Confirmation statements, SIC codes, filing history  |
+| CDP             | `https://www.cdp.net/en/data`                    | No (CSV download)        | —            | Climate and water disclosure responses, Scope 1/2/3 |
+| GDELT           | `https://api.gdeltproject.org/api/v2`            | No                       | —            | News articles, events, sentiment by company         |
+| LayoutParser    | local                                            | —                        | —            | Structured text extraction from sustainability PDFs |
