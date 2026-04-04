@@ -19,7 +19,7 @@ addopts = "-v --tb=short"
 line-length = 100
 lint.ignore = ["E501"]
 lint.select = ["E", "F", "I"]
-extend-select = ["PT"]
+lint.extend-select = ["PT"]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["F821"]
