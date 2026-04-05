@@ -1,0 +1,73 @@
+x-airflow-common: &airflow-common
+  image: apache/airflow:2.9.3-python3.11
+  env_file: .env
+  environment:
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dags
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__WEBSERVER__SECRET_KEY: "change-me-in-production"
+    PYTHONPATH: /opt/airflow/src
+  volumes:
+    - ./pipeline:/opt/airflow/dags
+    - ./agents:/opt/airflow/src/agents
+    - ./data:/opt/airflow/data
+    - ./scripts:/opt/airflow/src/scripts
+    - ./requirements-airflow.txt:/opt/airflow/src/requirements-airflow.txt
+    - airflow-logs:/opt/airflow/logs
+  depends_on:
+    postgres:
+      condition: service_healthy
+
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 5s
+      retries: 5
+    restart: unless-stopped
+
+  airflow-init:
+    <<: *airflow-common
+    command: bash /opt/airflow/src/scripts/init_airflow.sh
+    restart: "no"
+
+  airflow-webserver:
+    <<: *airflow-common
+    command: webserver
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+
+  airflow-scheduler:
+    <<: *airflow-common
+    command: scheduler
+    restart: unless-stopped
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    ports:
+      - "8501:8501"
+    env_file: .env
+    volumes:
+      - ./ui:/app/ui
+      - ./agents:/app/agents
+      - ./data:/app/data
+    restart: unless-stopped
+
+volumes:
+  postgres-data:
+  airflow-logs:
