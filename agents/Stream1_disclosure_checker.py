@@ -12,12 +12,13 @@ Run with cached responses (no API calls):
     python stream1_disclosure_checker.py --ticker BP --use-cached
 """
 
-import anthropic
 import argparse
 import json
 import os
 from datetime import datetime
 from pathlib import Path
+
+import anthropic
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -55,7 +56,7 @@ def log_api_call(call_type: str, input_tokens: int, output_tokens: int):
         "call_type": call_type,
         "input_tokens": input_tokens,
         "output_tokens": output_tokens,
-        "estimated_cost_usd": round(total_cost, 6)
+        "estimated_cost_usd": round(total_cost, 6),
     }
 
     with open(AUDIT_LOG_PATH, "a") as f:
@@ -69,7 +70,7 @@ def grade_single_factor(
     factor: str,
     company: str,
     client: anthropic.Anthropic,
-    use_cached: bool = False
+    use_cached: bool = False,
 ) -> dict:
     """
     Grades a single ESG factor as QUANTIFIED, VAGUE or UNDISCLOSED
@@ -98,7 +99,7 @@ def grade_single_factor(
             return {
                 "factor": factor,
                 "grade": "UNDISCLOSED",
-                "evidence": "No cached response available - run without --use-cached first"
+                "evidence": "No cached response available - run without --use-cached first",
             }
 
     # otherwise make the real claude api call
@@ -125,14 +126,14 @@ Return your answer as JSON only, no other text, in this exact format:
         model=MODEL_NAME,
         max_tokens=500,
         temperature=TEMPERATURE,
-        messages=[{"role": "user", "content": prompt}]
+        messages=[{"role": "user", "content": prompt}],
     )
 
     # log the call
     log_api_call(
         call_type=f"grade_factor:{factor}",
         input_tokens=response.usage.input_tokens,
-        output_tokens=response.usage.output_tokens
+        output_tokens=response.usage.output_tokens,
     )
 
     # parse response - strip markdown backticks if claude wraps it
@@ -168,13 +169,15 @@ def detect_drift(current_grades: list, previous_grades: list) -> list:
 
         # flag it if the grade changed between years
         if previous_grade and previous_grade != current_grade:
-            drift_flags.append({
-                "factor": factor,
-                "previous_grade": previous_grade,
-                "current_grade": current_grade,
-                "drift_detected": True,
-                "note": f"Changed from {previous_grade} to {current_grade} year on year"
-            })
+            drift_flags.append(
+                {
+                    "factor": factor,
+                    "previous_grade": previous_grade,
+                    "current_grade": current_grade,
+                    "drift_detected": True,
+                    "note": f"Changed from {previous_grade} to {current_grade} year on year",
+                }
+            )
 
     return drift_flags
 
@@ -213,7 +216,7 @@ def run_disclosure_checker(
     current_agent1_output: dict,
     previous_agent1_output: dict,
     material_factors: list,
-    use_cached: bool = False
+    use_cached: bool = False,
 ) -> dict:
     """
     Main function - ties everything together
@@ -254,7 +257,9 @@ def run_disclosure_checker(
     # grade each factor for last years report
     previous_grades = []
     for factor in material_factors:
-        grade = grade_single_factor(previous_report_text, factor, f"{company}_prev", client, use_cached)
+        grade = grade_single_factor(
+            previous_report_text, factor, f"{company}_prev", client, use_cached
+        )
         previous_grades.append(grade)
 
     # compare the two years and flag anything that changed
@@ -270,8 +275,8 @@ def run_disclosure_checker(
             "quantified": len([g for g in current_grades if g["grade"] == "QUANTIFIED"]),
             "vague": len([g for g in current_grades if g["grade"] == "VAGUE"]),
             "undisclosed": len([g for g in current_grades if g["grade"] == "UNDISCLOSED"]),
-            "drift_detected": len(drift_flags)
-        }
+            "drift_detected": len(drift_flags),
+        },
     }
 
     print(f"\nDone. Summary: {output['summary']}")
@@ -283,7 +288,11 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Stream 1: Disclosure Quality Checker")
     parser.add_argument("--ticker", default="BP", help="Company ticker")
-    parser.add_argument("--use-cached", action="store_true", help="Load cached Claude responses instead of calling API")
+    parser.add_argument(
+        "--use-cached",
+        action="store_true",
+        help="Load cached Claude responses instead of calling API",
+    )
     args = parser.parse_args()
 
     # placeholder agent 1 output - mimics DataGatherer.fetch_all() structure
@@ -301,7 +310,7 @@ if __name__ == "__main__":
                     Capital expenditure on low carbon energy reached $1.2 billion.
                     Employee health and safety remains a core operational priority.
                     """
-                }
+                },
             },
             "layout_parser": {
                 "status": "success",
@@ -309,16 +318,16 @@ if __name__ == "__main__":
                     "sections": {
                         "environmental": {
                             "title": "Environmental",
-                            "content": "Water management programme continues across all sites. We reduced freshwater consumption by 8%."
+                            "content": "Water management programme continues across all sites. We reduced freshwater consumption by 8%.",
                         },
                         "emissions": {
                             "title": "Emissions",
-                            "content": "Scope 1 and 2 emissions reduced to 34.5 million tonnes CO2e, a 12% reduction year on year."
-                        }
+                            "content": "Scope 1 and 2 emissions reduced to 34.5 million tonnes CO2e, a 12% reduction year on year.",
+                        },
                     }
-                }
-            }
-        }
+                },
+            },
+        },
     }
 
     test_agent1_previous = {
@@ -332,7 +341,7 @@ if __name__ == "__main__":
                     BP is committed to net zero by 2050. Greenhouse gas emissions were
                     39.2 million tonnes CO2 equivalent. Low carbon investment was $800 million.
                     """
-                }
+                },
             },
             "layout_parser": {
                 "status": "success",
@@ -340,12 +349,12 @@ if __name__ == "__main__":
                     "sections": {
                         "environmental": {
                             "title": "Environmental",
-                            "content": "Water management is an important part of our sustainability strategy."
+                            "content": "Water management is an important part of our sustainability strategy.",
                         }
                     }
-                }
-            }
-        }
+                },
+            },
+        },
     }
 
     # placeholder agent 2 output - replace with real agent 2 output when connected
@@ -353,7 +362,7 @@ if __name__ == "__main__":
         "greenhouse gas emissions",
         "water management",
         "employee health and safety",
-        "low carbon investment"
+        "low carbon investment",
     ]
 
     result = run_disclosure_checker(
@@ -361,7 +370,7 @@ if __name__ == "__main__":
         current_agent1_output=test_agent1_current,
         previous_agent1_output=test_agent1_previous,
         material_factors=test_material_factors,
-        use_cached=args.use_cached
+        use_cached=args.use_cached,
     )
 
     print("\nFull output:")
