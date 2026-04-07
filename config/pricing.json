@@ -1,0 +1,10 @@
+{
+  "claude-opus-4-5": {
+    "pricing_usd": {
+      "input_per_1m": 5,
+      "output_per_1m": 25,
+    },
+    "source": "https://pricepertoken.com/pricing-page/model/anthropic-claude-opus-4.5",
+    "last_updated": 07-04-2026
+  }
+}
