@@ -1,6 +1,6 @@
 # API clients
 anthropic==0.34.2
-google-generativeai==0.7.2
+google-generativeai==0.7.2  # protobuf C ext incompatible with Python 3.14 — works on CI (3.11), graceful import in llm_client.py
 requests==2.32.3
 beautifulsoup4==4.12.3
 openpyxl==3.1.5
