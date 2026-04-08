@@ -1,15 +1,16 @@
-from .indeed import fetch_indeed_jobs
 from .googlejobs import fetch_google_jobs
+from .indeed import fetch_indeed_jobs
+
 
 def fetch_job_postings(company: str, keywords: list) -> list:
     results = []
-    
+
     # primary: indeed
     try:
         results.extend(fetch_indeed_jobs(company, keywords))
     except Exception as e:
         print(f"[Indeed] Failed: {e}")
-    
+
     # fallback: serp api
     if not results:
         try:
@@ -17,5 +18,5 @@ def fetch_job_postings(company: str, keywords: list) -> list:
                 results.extend(fetch_google_jobs(company, kw))
         except Exception as e:
             print(f"[SerpAPI] Failed: {e}")
-    
+
     return results
