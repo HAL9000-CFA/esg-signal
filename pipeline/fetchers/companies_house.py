@@ -1,0 +1,113 @@
+import os
+from typing import Dict, List, Optional
+
+import requests
+from dotenv import load_dotenv
+
+from pipeline.fetchers.base import BaseFetcher
+from pipeline.models import CompanyProfile, FilingMetadata
+
+load_dotenv()
+
+CH_FILING_BASE = "https://find-and-update.company-information.service.gov.uk"
+
+
+class CompaniesHouseFetcher(BaseFetcher):
+    BASE_URL = "https://api.company-information.service.gov.uk"
+
+    def __init__(self, api_key: str = None):
+        key = api_key or os.getenv("COMPANIES_HOUSE_API_KEY")
+        if not key:
+            raise ValueError("Provide api_key or set COMPANIES_HOUSE_API_KEY env var")
+        self.auth = (key, "")
+
+    def search(self, name: str) -> Optional[str]:
+        r = requests.get(
+            f"{self.BASE_URL}/search/companies",
+            params={"q": name},
+            auth=self.auth,
+            timeout=10,
+        )
+        r.raise_for_status()
+        items = r.json().get("items", [])
+        return items[0]["company_number"] if items else None
+
+    def get_profile(self, number: str) -> Dict:
+        r = requests.get(
+            f"{self.BASE_URL}/company/{number}",
+            auth=self.auth,
+            timeout=10,
+        )
+        r.raise_for_status()
+        return r.json()
+
+    def get_filing_history(self, number: str, category: str = "accounts") -> Dict:
+        r = requests.get(
+            f"{self.BASE_URL}/company/{number}/filing-history",
+            params={"category": category, "items_per_page": 10},
+            auth=self.auth,
+            timeout=10,
+        )
+        r.raise_for_status()
+        return r.json()
+
+    def get_latest_annual_accounts(self, number: str) -> Optional[Dict]:
+        """Returns metadata for the most recent full annual accounts filing (type AA)."""
+        history = self.get_filing_history(number, category="accounts")
+        for item in history.get("items", []):
+            if item.get("type") == "AA":
+                links = item.get("links", {})
+                self_path = links.get("self", "")
+                return {
+                    "filing_type": "AA",
+                    "filed_date": item.get("date", ""),
+                    "period_of_report": item.get("description_values", {}).get("made_up_date"),
+                    "document_url": f"{CH_FILING_BASE}{self_path}" if self_path else "",
+                }
+        return None
+
+    def fetch(self, company_name: str) -> CompanyProfile:
+        errors: List[str] = []
+        source_urls: List[str] = []
+
+        number = self.search(company_name)
+        if not number:
+            raise ValueError(f"Company not found: {company_name}")
+
+        profile = self.get_profile(number)
+        name = profile.get("company_name", company_name)
+
+        sic_codes = profile.get("sic_codes", [])
+        sic_code = sic_codes[0] if sic_codes else None
+
+        latest_annual_filing = None
+        try:
+            filing = self.get_latest_annual_accounts(number)
+            if filing:
+                latest_annual_filing = FilingMetadata(
+                    filing_type=filing["filing_type"],
+                    filed_date=filing["filed_date"],
+                    period_of_report=filing.get("period_of_report"),
+                    document_url=filing["document_url"],
+                )
+                if filing["document_url"]:
+                    source_urls.append(filing["document_url"])
+            else:
+                errors.append("No annual accounts (AA) filing found")
+        except Exception as e:
+            errors.append(f"Filing history fetch failed: {e}")
+
+        return CompanyProfile(
+            ticker=None,
+            name=name,
+            index=None,  # set by caller (DataGatherer)
+            sic_code=sic_code,
+            sic_description=None,  # CH API returns code only, not description
+            country="GB",
+            latest_annual_filing=latest_annual_filing,
+            annual_report_text=None,  # full document text requires Document API (issue #8)
+            raw_financials={},
+            source_urls=source_urls,
+            errors=errors,
+            identifier=number,
+        )

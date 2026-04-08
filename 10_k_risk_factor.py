@@ -1,17 +1,25 @@
+import os
+
+import requests
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+
+load_dotenv()
+
+CACHE_DIR = os.getenv("CACHE_DIR")
+SEC_EMAIL = os.getenv("SEC_EMAIL")
+HEADERS = {"User-Agent": SEC_EMAIL}
+
 
 def get_risk_factors(cik: str) -> str:
-    #return item 1a risk factors text from most recent 10-k
+    # return item 1a risk factors text from most recent 10-k
     cache_path = f"{CACHE_DIR}/{cik}_risk_factors.txt"
     if os.path.exists(cache_path):
         with open(cache_path) as f:
             return f.read()
 
     # get  filing list
-    r = requests.get(
-        f"https://data.sec.gov/submissions/CIK{cik}.json",
-        headers=HEADERS
-    )
+    r = requests.get(f"https://data.sec.gov/submissions/CIK{cik}.json", headers=HEADERS)
     filings = r.json()["filings"]["recent"]
 
     # find most recent 10-K
@@ -29,7 +37,7 @@ def get_risk_factors(cik: str) -> str:
     # find Item 1a section
     text = soup.get_text(separator=" ")
     start = text.lower().find("item 1a")
-    end   = text.lower().find("item 1b", start)
+    end = text.lower().find("item 1b", start)
     risk_text = text[start:end] if start != -1 else text[:5000]
 
     with open(cache_path, "w") as f:

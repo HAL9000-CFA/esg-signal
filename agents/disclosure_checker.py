@@ -15,6 +15,7 @@ from datetime import datetime
 from textwrap import dedent
 
 from pipeline.llm_client import call_claude
+from pipeline.models import CompanyProfile
 
 # model config
 MODEL_NAME = "claude-opus-4-5"
@@ -155,50 +156,31 @@ def detect_drift(current_grades: list, previous_grades: list) -> list:
     return drift_flags
 
 
-def extract_report_text_from_data_gatherer(data_gatherer_output: dict) -> str:
+def extract_report_text(profile: CompanyProfile) -> str:
     """
-    Pulls sustainability report text out of the Agent 1 data gatherer output dict
-    Combines layout parser sections and edgar risk factors into one string
+    Returns the annual report text from a CompanyProfile for ESG factor grading.
+    Layout parser sections (PDF) will be appended here once issue #8 is complete.
 
     Args:
-        data_gatherer_output: the dict returned by DataGatherer.fetch_all()
+        profile: CompanyProfile produced by DataGatherer.fetch_company_profile()
     """
-    text_parts = []
-
-    # pull from layout parser sections (sustainability report pdf)
-    layout_data = data_gatherer_output.get("sources", {}).get("layout_parser", {})
-
-    if layout_data.get("status") == "success":
-        sections = layout_data.get("data", {}).get("sections", {})
-        for section_name, section_data in sections.items():
-            content = section_data.get("content", "")
-            if content:
-                text_parts.append(f"{section_name}:\n{content}")
-
-    # pull from edgar risk factors
-    edgar_data = data_gatherer_output.get("sources", {}).get("edgar", {})
-    if edgar_data.get("status") == "success":
-        risk_factors = edgar_data.get("data", {}).get("risk_factors", "")
-        if risk_factors:
-            text_parts.append(f"risk factors:\n{risk_factors}")
-
-    return "\n\n".join(text_parts)
+    return profile.annual_report_text or ""
 
 
 def run_disclosure_checker(
     company: str,
-    current_data_gatherer_output: dict,
-    previous_data_gatherer_output: dict,
+    current_profile: CompanyProfile,
+    previous_profile: CompanyProfile,
     material_factors: list,
 ) -> dict:
     """
-    Main function - ties everything together
-    Call this from the pipeline with real Agent 1 and Agent 2 outputs
+    Main function - ties everything together.
+    Call this from the pipeline with real Agent 1 and Agent 2 outputs.
 
     Args:
         company: company name as a string
-        current_data_gatherer_output: this years Agent 1 output dict
-        previous_data_gatherer_output: last years Agent 1 output dict
+        current_profile: CompanyProfile for the current year from DataGatherer
+        previous_profile: CompanyProfile for the previous year from DataGatherer
         material_factors: list of ESG factors from Agent 2
 
     Returns a dict with grades and drift flags ready for the credibility aggregator
@@ -206,9 +188,8 @@ def run_disclosure_checker(
 
     print(f"\nRunning Stream 1: Disclosure Quality Checker for {company}")
 
-    # pull report text from agent 1 outputs
-    current_report_text = extract_report_text_from_data_gatherer(current_data_gatherer_output)
-    previous_report_text = extract_report_text_from_data_gatherer(previous_data_gatherer_output)
+    current_report_text = extract_report_text(current_profile)
+    previous_report_text = extract_report_text(previous_profile)
 
     print(f"Checking {len(material_factors)} material ESG factors...\n")
 
@@ -246,7 +227,7 @@ def run_disclosure_checker(
     return output
 
 
-# testing - replace these with real agent 1 and agent 2 outputs when pipeline is connected
+# testing — replace with real DataGatherer.fetch_company_profile() calls when pipeline is wired
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Stream 1: Disclosure Quality Checker")
@@ -254,69 +235,48 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    # placeholder agent 1 output - mimics DataGatherer.fetch_all() structure
-    # replace with real agent 1 output when connected
-    test_agent1_current = {
-        "ticker": args.ticker,
-        "company_name": "BP PLC",
-        "sources": {
-            "edgar": {
-                "status": "success",
-                "data": {
-                    "risk_factors": """
-                    BP faces significant climate-related risks. Greenhouse gas emissions
-                    were reduced by 12% to 34.5 million tonnes CO2 equivalent in 2023.
-                    Capital expenditure on low carbon energy reached $1.2 billion.
-                    Employee health and safety remains a core operational priority.
-                    """
-                },
-            },
-            "layout_parser": {
-                "status": "success",
-                "data": {
-                    "sections": {
-                        "environmental": {
-                            "title": "Environmental",
-                            "content": "Water management programme continues across all sites. We reduced freshwater consumption by 8%.",
-                        },
-                        "emissions": {
-                            "title": "Emissions",
-                            "content": "Scope 1 and 2 emissions reduced to 34.5 million tonnes CO2e, a 12% reduction year on year.",
-                        },
-                    }
-                },
-            },
-        },
-    }
+    # placeholder profiles — replace with DataGatherer.fetch_company_profile() calls
+    test_profile_current = CompanyProfile(
+        ticker=args.ticker,
+        name="BP PLC",
+        index="FTSE100",
+        sic_code="11100",
+        sic_description=None,
+        country="GB",
+        latest_annual_filing=None,
+        annual_report_text=(
+            "BP faces significant climate-related risks. Greenhouse gas emissions "
+            "were reduced by 12% to 34.5 million tonnes CO2 equivalent in 2023. "
+            "Capital expenditure on low carbon energy reached $1.2 billion. "
+            "Employee health and safety remains a core operational priority. "
+            "Water management programme continues across all sites. "
+            "We reduced freshwater consumption by 8%. "
+            "Scope 1 and 2 emissions reduced to 34.5 million tonnes CO2e, a 12% reduction year on year."
+        ),
+        raw_financials={},
+        source_urls=[],
+        errors=[],
+    )
 
-    test_agent1_previous = {
-        "ticker": args.ticker,
-        "company_name": "BP PLC",
-        "sources": {
-            "edgar": {
-                "status": "success",
-                "data": {
-                    "risk_factors": """
-                    BP is committed to net zero by 2050. Greenhouse gas emissions were
-                    39.2 million tonnes CO2 equivalent. Low carbon investment was $800 million.
-                    """
-                },
-            },
-            "layout_parser": {
-                "status": "success",
-                "data": {
-                    "sections": {
-                        "environmental": {
-                            "title": "Environmental",
-                            "content": "Water management is an important part of our sustainability strategy.",
-                        }
-                    }
-                },
-            },
-        },
-    }
+    test_profile_previous = CompanyProfile(
+        ticker=args.ticker,
+        name="BP PLC",
+        index="FTSE100",
+        sic_code="11100",
+        sic_description=None,
+        country="GB",
+        latest_annual_filing=None,
+        annual_report_text=(
+            "BP is committed to net zero by 2050. Greenhouse gas emissions were "
+            "39.2 million tonnes CO2 equivalent. Low carbon investment was $800 million. "
+            "Water management is an important part of our sustainability strategy."
+        ),
+        raw_financials={},
+        source_urls=[],
+        errors=[],
+    )
 
-    # placeholder agent 2 output - replace with real agent 2 output when connected
+    # placeholder agent 2 output — replace with real relevance_filter output when wired
     test_material_factors = [
         "greenhouse gas emissions",
         "water management",
@@ -326,8 +286,8 @@ if __name__ == "__main__":
 
     result = run_disclosure_checker(
         company="BP",
-        current_data_gatherer_output=test_agent1_current,
-        previous_data_gatherer_output=test_agent1_previous,
+        current_profile=test_profile_current,
+        previous_profile=test_profile_previous,
         material_factors=test_material_factors,
     )
 
