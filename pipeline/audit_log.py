@@ -4,19 +4,29 @@ Satisfies Rules 4.4 (Reproducability) and 4.5 (Disclosure)
 """
 
 import json
+import logging
 import os
 import threading
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 
+LOGGER = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s | %(levelname)s | %(name)s | %(message)s"
+)
+
 LOCK = threading.Lock()
-PRICES = json.load("../config/pricing.json")
 LOG_PATH = Path(os.getenv("AUDIT_LOG_PATH", "data/audit_log.jsonl"))
+with open("config/pricing.json") as f:
+    PRICES = json.load(f)
 
 
 def compute_cost(model: str, *, input_tokens: int, output_tokens: int) -> float:
     if model not in PRICES:
+        LOGGER.warning(
+            f"Price not available for model '{model}' (see config/pricing.json). Using '0.0'."
+        )
         return 0.0
 
     input_price = PRICES[model]["pricing_per_1m_usd"]["input"]
@@ -32,7 +42,8 @@ def log_llm_call(
     purpose: str,
     input_tokens: str,
     output_tokens: str,
-    cost_usd: Optional[float] = None,
+    cost_usd: float,
+    temperature: float,
     cached: bool = False,
     run_id: Optional[str] = None,
 ) -> None:
