@@ -10,6 +10,7 @@ from pipeline.fetchers.edgar import EDGARFetcher
 from pipeline.fetchers.eu_ets import EUETSFetcher
 from pipeline.fetchers.ghgrp import GHGRPFetcher
 from pipeline.fetchers.nrc import NRCFetcher
+from pipeline.fetchers.pdf_extractor import PDFExtractor
 from pipeline.models import CompanyProfile, DataGathererResult
 
 load_dotenv()
@@ -65,6 +66,28 @@ class DataGatherer:
                 source_statuses["companies_house"] = "success"
             except Exception as e:
                 source_statuses["companies_house"] = f"failed: {e}"
+
+        # PDF extraction — populate annual_report_text from the filing document URL.
+        # Tried for whichever profile succeeded (EDGAR 10-K or CH annual accounts).
+        # pdfplumber handles text-layer PDFs; Gemini 1.5 Pro handles scanned ones.
+        _active_profile = edgar_profile or ch_profile
+        if (
+            _active_profile is not None
+            and _active_profile.annual_report_text is None
+            and _active_profile.latest_annual_filing is not None
+            and _active_profile.latest_annual_filing.document_url
+        ):
+            try:
+                pdf_text = PDFExtractor().extract(
+                    url=_active_profile.latest_annual_filing.document_url,
+                    agent="data_gatherer",
+                )
+                _active_profile.annual_report_text = pdf_text or None
+                source_statuses["pdf_extraction"] = (
+                    f"success: {len(pdf_text):,} chars" if pdf_text else "success: empty"
+                )
+            except Exception as e:
+                source_statuses["pdf_extraction"] = f"failed: {e}"
 
         # EPA / NRC regulatory fetchers — US companies only.
         # List is built here (not at module level) so @patch decorators work in tests.
