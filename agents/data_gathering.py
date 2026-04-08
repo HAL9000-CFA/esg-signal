@@ -4,8 +4,10 @@ import time
 from dotenv import load_dotenv
 
 from pipeline.fetchers.companies_house import CompaniesHouseFetcher
+from pipeline.fetchers.ea_pollution import EAPollutionFetcher
 from pipeline.fetchers.echo import ECHOFetcher
 from pipeline.fetchers.edgar import EDGARFetcher
+from pipeline.fetchers.eu_ets import EUETSFetcher
 from pipeline.fetchers.ghgrp import GHGRPFetcher
 from pipeline.fetchers.nrc import NRCFetcher
 from pipeline.models import CompanyProfile, DataGathererResult
@@ -72,6 +74,28 @@ class DataGatherer:
                 ("ghgrp", GHGRPFetcher),
                 ("echo", ECHOFetcher),
                 ("nrc", NRCFetcher),
+            ]:
+                try:
+                    fetcher = fetcher_cls()
+                    df = fetcher.fetch(company_name=name)
+                    if df.empty:
+                        source_statuses[source] = "success: no records found"
+                    else:
+                        raw_path = f"data/raw/{source}_{ticker}.csv"
+                        processed_path = f"data/processed/{source}_{ticker}.csv"
+                        fetcher.save(df, raw_path=raw_path, processed_path=processed_path)
+                        source_statuses[source] = f"success: {len(df)} records"
+                        regulatory_paths[source] = processed_path
+                except Exception as e:
+                    source_statuses[source] = f"failed: {e}"
+
+        # EA / EU ETS regulatory fetchers — UK/EU companies only.
+        # List is built here (not at module level) so @patch decorators work in tests.
+        if ch_profile is not None:
+            name = ch_profile.name
+            for source, fetcher_cls in [
+                ("ea_pollution", EAPollutionFetcher),
+                ("eu_ets", EUETSFetcher),
             ]:
                 try:
                     fetcher = fetcher_cls()
