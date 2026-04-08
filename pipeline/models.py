@@ -28,6 +28,27 @@ class CompanyProfile:
 
 
 @dataclass
+class JobPosting:
+    job_id: str
+    title: str
+    date_posted: str  # raw string from source (format varies)
+    url: str
+    source: str  # "indeed" or "serp"
+    keywords_matched: List[str]
+    seniority: str  # "senior", "mid", "junior"
+
+
+@dataclass
+class TalentSignalResult:
+    company_name: str
+    total_postings: int
+    senior_ratio: float  # proportion of senior-title postings (0.0–1.0)
+    ghost_count: int  # postings that disappeared without a hire
+    factor_scores: Dict[str, float]  # {"environment": 0.65, "social": 0.3, ...} (0.0–1.0)
+    errors: List[str]
+
+
+@dataclass
 class DataGathererResult:
     profile: Optional["CompanyProfile"]
     source_statuses: Dict[str, str] = field(default_factory=dict)
