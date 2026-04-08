@@ -46,7 +46,7 @@ def test_summarise_aggregates_correctly(tmp_log):
         )
     summary = al.summarise("run-abc")
     assert summary["total_calls"] == 3
-    assert summary["total_cost_usd"] == pytest.approx(0.15)
+    assert summary["no_cache_cost_usd"] == pytest.approx(0.15)
 
 
 def test_compute_cost_known_model():
