@@ -37,6 +37,7 @@ def call_claude(
     *,
     agent: str,
     model: str = VALID_MODELS["claude"][0],
+    version: str,
     purpose: str,
     system: str,
     prompt: str,
@@ -53,13 +54,13 @@ def call_claude(
     Args:
         agent:          Name of the calling agent
         model:          Which model to use
+        version:        LLM version for logs
         purpose:        What the call is for
         system:         Sytem prompt
         prompt:         User message
         temperature:    Amount of randomness between 0.0 and 1.0 (inclusive).
         max_tokens:     Maximum tokens in reponse
         run_id:         Airflow run ID for audit log (grouping)
-
     Returns:
         Reponse text from Claude
     """
@@ -71,12 +72,13 @@ def call_claude(
             model = new_model
 
     # Validate temperature
-    if not (0 < temperature < 1):
-        with max(0.0, min(temperature, 1.0)) as new_temperature:
-            LOGGER.warning(
-                f"Temperature '{temperature}' not between 0.0 and 1.0. Using '{new_temperature}' instead."
-            )
-            temperature = new_temperature
+    new_temperature = max(0.0, min(temperature, 1.0))
+
+    if new_temperature != temperature:
+        LOGGER.warning(
+            f"Temperature '{temperature}' not between 0.0 and 1.0. Using '{new_temperature}' instead."
+        )
+        temperature = new_temperature
 
     # Create payload and cache key
     payload = {
@@ -130,6 +132,7 @@ def call_claude(
     log_llm_call(
         agent=agent,
         model=model,
+        version=version,
         purpose=purpose,
         input_tokens=input_tokens,
         output_tokens=output_tokens,

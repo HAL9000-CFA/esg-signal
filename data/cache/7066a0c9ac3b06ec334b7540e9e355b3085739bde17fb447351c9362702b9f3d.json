@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n{\n  \"factor\": \"employee health and safety\",\n  \"grade\": \"UNDISCLOSED\",\n  \"evidence\": null\n}\n```",
+  "cost_usd": 0.0033900000000000002,
+  "input_tokens": 483,
+  "model": "claude-opus-4-5",
+  "output_tokens": 39,
+  "purpose": "Grade ESG factors as QUANTIFIED or VAGUE or UNDISCLOSED, analysing drift over years.",
+  "temperature": 0.0
+}

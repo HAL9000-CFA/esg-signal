@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n{\n  \"factor\": \"greenhouse gas emissions\",\n  \"grade\": \"QUANTIFIED\",\n  \"evidence\": \"Scope 1 and 2 emissions reduced to 34.5 million tonnes CO2e, a 12% reduction year on year.\"\n}\n```",
+  "cost_usd": 0.004485,
+  "input_tokens": 552,
+  "model": "claude-opus-4-5",
+  "output_tokens": 69,
+  "purpose": "Grade ESG factors as QUANTIFIED or VAGUE or UNDISCLOSED, analysing drift over years.",
+  "temperature": 0.0
+}

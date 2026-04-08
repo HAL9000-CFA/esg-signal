@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n{\n  \"factor\": \"low carbon investment\",\n  \"grade\": \"QUANTIFIED\",\n  \"evidence\": \"Capital expenditure on low carbon energy reached $1.2 billion.\"\n}\n```",
+  "cost_usd": 0.00406,
+  "input_tokens": 552,
+  "model": "claude-opus-4-5",
+  "output_tokens": 52,
+  "purpose": "Grade ESG factors as QUANTIFIED or VAGUE or UNDISCLOSED, analysing drift over years.",
+  "temperature": 0.0
+}

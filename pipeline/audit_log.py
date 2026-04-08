@@ -39,13 +39,14 @@ def log_llm_call(
     *,
     agent: str,
     model: str,
+    version: str,
     purpose: str,
     input_tokens: str,
     output_tokens: str,
     cost_usd: float,
-    temperature: float,
     cached: bool = False,
     run_id: Optional[str] = None,
+    **extra_parameters,
 ) -> None:
     record = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -58,6 +59,7 @@ def log_llm_call(
         "total_tokens": input_tokens + output_tokens,
         "cost_usd": round(cost_usd, 6),
         "cached": cached,
+        **extra_parameters,
     }
 
     LOG_PATH.parent.mkdir(parents=True, exist_ok=True)

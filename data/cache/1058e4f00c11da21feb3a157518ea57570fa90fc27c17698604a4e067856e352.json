@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n{\n  \"factor\": \"water management\",\n  \"grade\": \"VAGUE\",\n  \"evidence\": \"Water management is an important part of our sustainability strategy.\"\n}\n```",
+  "cost_usd": 0.00358,
+  "input_tokens": 481,
+  "model": "claude-opus-4-5",
+  "output_tokens": 47,
+  "purpose": "Grade ESG factors as QUANTIFIED or VAGUE or UNDISCLOSED, analysing drift over years.",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n{\n  \"factor\": \"low carbon investment\",\n  \"grade\": \"QUANTIFIED\",\n  \"evidence\": \"Low carbon investment was $800 million.\"\n}\n```",
+  "cost_usd": 0.0035600000000000002,
+  "input_tokens": 482,
+  "model": "claude-opus-4-5",
+  "output_tokens": 46,
+  "purpose": "Grade ESG factors as QUANTIFIED or VAGUE or UNDISCLOSED, analysing drift over years.",
+  "temperature": 0.0
+}
