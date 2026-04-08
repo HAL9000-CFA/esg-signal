@@ -6,5 +6,13 @@
     },
     "source": "https://pricepertoken.com/pricing-page/model/anthropic-claude-opus-4.5",
     "last_updated": "2026-04-07"
+  },
+  "gemini-2.0-flash": {
+    "pricing_per_1m_usd": {
+      "input": 0.10,
+      "output": 0.40
+    },
+    "source": "https://ai.google.dev/pricing",
+    "last_updated": "2026-04-09"
   }
 }
