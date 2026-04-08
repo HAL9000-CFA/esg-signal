@@ -16,6 +16,7 @@ def test_log_writes_record(tmp_log):
     al.log_llm_call(
         agent="test_agent",
         model="claude-opus-4-5",
+        version="test",
         purpose="unit_test",
         input_tokens=100,
         output_tokens=50,
@@ -35,6 +36,7 @@ def test_summarise_aggregates_correctly(tmp_log):
         al.log_llm_call(
             agent="scorer",
             model="claude-opus-4-5",
+            version="test",
             purpose="test",
             input_tokens=1000,
             output_tokens=500,
@@ -69,6 +71,7 @@ def test_log_is_thread_safe(tmp_log):
             kwargs={
                 "agent": "scorer",
                 "model": "claude-opus-4-5",
+                "version": "test",
                 "purpose": "test",
                 "input_tokens": 10,
                 "output_tokens": 10,
