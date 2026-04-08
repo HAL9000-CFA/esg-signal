@@ -1,5 +1,5 @@
-from .indeed_scraper import fetch_indeed_jobs
-from .serpapi_scraper import fetch_google_jobs
+from .indeed import fetch_indeed_jobs
+from .googlejobs import fetch_google_jobs
 
 def fetch_job_postings(company: str, keywords: list) -> list:
     results = []
