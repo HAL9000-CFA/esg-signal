@@ -57,29 +57,36 @@ CH_PROFILE = CompanyProfile(
 EMPTY_DF = pd.DataFrame()
 
 
-def _regulatory_mocks():
-    """Returns patch decorators for all three regulatory fetchers."""
-    return [
-        patch("agents.data_gathering.NRCFetcher"),
-        patch("agents.data_gathering.ECHOFetcher"),
-        patch("agents.data_gathering.GHGRPFetcher"),
-    ]
-
-
 def _setup_regulatory_mocks(*mocks):
     """Makes all regulatory fetchers return empty DataFrames by default."""
     for m in mocks:
         m.return_value.fetch.return_value = EMPTY_DF
 
 
+# All tests patch every regulatory fetcher so no real HTTP calls are made.
+# US fetchers (GHGRP, ECHO, NRC) fire when EDGAR succeeds.
+# UK/EU fetchers (EAPollution, EUETS) fire when Companies House succeeds.
+_us_patches = [
+    patch("agents.data_gathering.NRCFetcher"),
+    patch("agents.data_gathering.ECHOFetcher"),
+    patch("agents.data_gathering.GHGRPFetcher"),
+]
+_uk_patches = [
+    patch("agents.data_gathering.EUETSFetcher"),
+    patch("agents.data_gathering.EAPollutionFetcher"),
+]
+
+
 @patch("agents.data_gathering.NRCFetcher")
 @patch("agents.data_gathering.ECHOFetcher")
 @patch("agents.data_gathering.GHGRPFetcher")
+@patch("agents.data_gathering.EUETSFetcher")
+@patch("agents.data_gathering.EAPollutionFetcher")
 @patch("agents.data_gathering.CompaniesHouseFetcher")
 @patch("agents.data_gathering.EDGARFetcher")
-def test_fetch_all_edgar_success(MockEDGAR, MockCH, MockGHGRP, MockECHO, MockNRC):
+def test_fetch_all_edgar_success(MockEDGAR, MockCH, MockEA, MockETS, MockGHGRP, MockECHO, MockNRC):
     MockEDGAR.return_value.fetch.return_value = EDGAR_PROFILE
-    _setup_regulatory_mocks(MockGHGRP, MockECHO, MockNRC)
+    _setup_regulatory_mocks(MockGHGRP, MockECHO, MockNRC, MockEA, MockETS)
 
     gatherer = DataGatherer(sec_email="test@example.com", ch_api_key="key")
     result = gatherer.fetch_all(ticker="AAPL")
@@ -92,11 +99,15 @@ def test_fetch_all_edgar_success(MockEDGAR, MockCH, MockGHGRP, MockECHO, MockNRC
 @patch("agents.data_gathering.NRCFetcher")
 @patch("agents.data_gathering.ECHOFetcher")
 @patch("agents.data_gathering.GHGRPFetcher")
+@patch("agents.data_gathering.EUETSFetcher")
+@patch("agents.data_gathering.EAPollutionFetcher")
 @patch("agents.data_gathering.CompaniesHouseFetcher")
 @patch("agents.data_gathering.EDGARFetcher")
-def test_fetch_all_sets_index_on_profile(MockEDGAR, MockCH, MockGHGRP, MockECHO, MockNRC):
+def test_fetch_all_sets_index_on_profile(
+    MockEDGAR, MockCH, MockEA, MockETS, MockGHGRP, MockECHO, MockNRC
+):
     MockEDGAR.return_value.fetch.return_value = EDGAR_PROFILE
-    _setup_regulatory_mocks(MockGHGRP, MockECHO, MockNRC)
+    _setup_regulatory_mocks(MockGHGRP, MockECHO, MockNRC, MockEA, MockETS)
 
     gatherer = DataGatherer(sec_email="test@example.com", ch_api_key="key")
     result = gatherer.fetch_all(ticker="AAPL", index="SP500")
@@ -107,14 +118,16 @@ def test_fetch_all_sets_index_on_profile(MockEDGAR, MockCH, MockGHGRP, MockECHO,
 @patch("agents.data_gathering.NRCFetcher")
 @patch("agents.data_gathering.ECHOFetcher")
 @patch("agents.data_gathering.GHGRPFetcher")
+@patch("agents.data_gathering.EUETSFetcher")
+@patch("agents.data_gathering.EAPollutionFetcher")
 @patch("agents.data_gathering.CompaniesHouseFetcher")
 @patch("agents.data_gathering.EDGARFetcher")
 def test_fetch_all_includes_ch_when_company_name_given(
-    MockEDGAR, MockCH, MockGHGRP, MockECHO, MockNRC
+    MockEDGAR, MockCH, MockEA, MockETS, MockGHGRP, MockECHO, MockNRC
 ):
     MockEDGAR.return_value.fetch.return_value = EDGAR_PROFILE
     MockCH.return_value.fetch.return_value = CH_PROFILE
-    _setup_regulatory_mocks(MockGHGRP, MockECHO, MockNRC)
+    _setup_regulatory_mocks(MockGHGRP, MockECHO, MockNRC, MockEA, MockETS)
 
     gatherer = DataGatherer(sec_email="test@example.com", ch_api_key="key")
     result = gatherer.fetch_all(ticker="BP", company_name="BP PLC")
@@ -125,30 +138,38 @@ def test_fetch_all_includes_ch_when_company_name_given(
 @patch("agents.data_gathering.NRCFetcher")
 @patch("agents.data_gathering.ECHOFetcher")
 @patch("agents.data_gathering.GHGRPFetcher")
+@patch("agents.data_gathering.EUETSFetcher")
+@patch("agents.data_gathering.EAPollutionFetcher")
 @patch("agents.data_gathering.CompaniesHouseFetcher")
 @patch("agents.data_gathering.EDGARFetcher")
-def test_fetch_all_edgar_failure_falls_back_to_ch(MockEDGAR, MockCH, MockGHGRP, MockECHO, MockNRC):
+def test_fetch_all_edgar_failure_falls_back_to_ch(
+    MockEDGAR, MockCH, MockEA, MockETS, MockGHGRP, MockECHO, MockNRC
+):
     MockEDGAR.return_value.fetch.side_effect = ValueError("CIK not found for BP")
     MockCH.return_value.fetch.return_value = CH_PROFILE
+    _setup_regulatory_mocks(MockEA, MockETS)
 
     gatherer = DataGatherer(sec_email="test@example.com", ch_api_key="key")
     result = gatherer.fetch_all(ticker="BP", company_name="BP PLC")
 
     assert result.source_statuses["edgar"].startswith("failed:")
     assert result.profile is CH_PROFILE
-    # regulatory fetchers not called when EDGAR fails (UK company fallback)
     MockGHGRP.return_value.fetch.assert_not_called()
 
 
 @patch("agents.data_gathering.NRCFetcher")
 @patch("agents.data_gathering.ECHOFetcher")
 @patch("agents.data_gathering.GHGRPFetcher")
+@patch("agents.data_gathering.EUETSFetcher")
+@patch("agents.data_gathering.EAPollutionFetcher")
 @patch("agents.data_gathering.CompaniesHouseFetcher")
 @patch("agents.data_gathering.EDGARFetcher")
-def test_fetch_all_records_ch_failure(MockEDGAR, MockCH, MockGHGRP, MockECHO, MockNRC):
+def test_fetch_all_records_ch_failure(
+    MockEDGAR, MockCH, MockEA, MockETS, MockGHGRP, MockECHO, MockNRC
+):
     MockEDGAR.return_value.fetch.return_value = EDGAR_PROFILE
     MockCH.return_value.fetch.side_effect = ValueError("Company not found: Unknown")
-    _setup_regulatory_mocks(MockGHGRP, MockECHO, MockNRC)
+    _setup_regulatory_mocks(MockGHGRP, MockECHO, MockNRC, MockEA, MockETS)
 
     gatherer = DataGatherer(sec_email="test@example.com", ch_api_key="key")
     result = gatherer.fetch_all(ticker="AAPL", company_name="Unknown")
@@ -160,21 +181,23 @@ def test_fetch_all_records_ch_failure(MockEDGAR, MockCH, MockGHGRP, MockECHO, Mo
 @patch("agents.data_gathering.NRCFetcher")
 @patch("agents.data_gathering.ECHOFetcher")
 @patch("agents.data_gathering.GHGRPFetcher")
+@patch("agents.data_gathering.EUETSFetcher")
+@patch("agents.data_gathering.EAPollutionFetcher")
 @patch("agents.data_gathering.CompaniesHouseFetcher")
 @patch("agents.data_gathering.EDGARFetcher")
-def test_fetch_all_regulatory_populated_on_us_company(
-    MockEDGAR, MockCH, MockGHGRP, MockECHO, MockNRC
+def test_fetch_all_us_regulatory_populated(
+    MockEDGAR, MockCH, MockEA, MockETS, MockGHGRP, MockECHO, MockNRC
 ):
     MockEDGAR.return_value.fetch.return_value = EDGAR_PROFILE
     ghgrp_df = pd.DataFrame({"facility_name": ["HQ"], "ghg_quantity_mtco2e": [32000.0]})
     MockGHGRP.return_value.fetch.return_value = ghgrp_df
     MockECHO.return_value.fetch.return_value = EMPTY_DF
     MockNRC.return_value.fetch.return_value = EMPTY_DF
+    _setup_regulatory_mocks(MockEA, MockETS)
 
     gatherer = DataGatherer(sec_email="test@example.com", ch_api_key="key")
     result = gatherer.fetch_all(ticker="AAPL")
 
-    assert "ghgrp" in result.source_statuses
     assert result.source_statuses["ghgrp"].startswith("success")
     assert "ghgrp" in result.regulatory_paths
 
@@ -182,15 +205,42 @@ def test_fetch_all_regulatory_populated_on_us_company(
 @patch("agents.data_gathering.NRCFetcher")
 @patch("agents.data_gathering.ECHOFetcher")
 @patch("agents.data_gathering.GHGRPFetcher")
+@patch("agents.data_gathering.EUETSFetcher")
+@patch("agents.data_gathering.EAPollutionFetcher")
+@patch("agents.data_gathering.CompaniesHouseFetcher")
+@patch("agents.data_gathering.EDGARFetcher")
+def test_fetch_all_uk_regulatory_populated(
+    MockEDGAR, MockCH, MockEA, MockETS, MockGHGRP, MockECHO, MockNRC
+):
+    MockEDGAR.return_value.fetch.side_effect = ValueError("CIK not found")
+    MockCH.return_value.fetch.return_value = CH_PROFILE
+    ea_df = pd.DataFrame({"operator_name": ["BP PLC"], "total_release_tonnes": [1250000.0]})
+    MockEA.return_value.fetch.return_value = ea_df
+    MockETS.return_value.fetch.return_value = EMPTY_DF
+
+    gatherer = DataGatherer(sec_email="test@example.com", ch_api_key="key")
+    result = gatherer.fetch_all(ticker="BP", company_name="BP PLC")
+
+    assert result.source_statuses["ea_pollution"].startswith("success")
+    assert "ea_pollution" in result.regulatory_paths
+    assert result.profile is CH_PROFILE
+
+
+@patch("agents.data_gathering.NRCFetcher")
+@patch("agents.data_gathering.ECHOFetcher")
+@patch("agents.data_gathering.GHGRPFetcher")
+@patch("agents.data_gathering.EUETSFetcher")
+@patch("agents.data_gathering.EAPollutionFetcher")
 @patch("agents.data_gathering.CompaniesHouseFetcher")
 @patch("agents.data_gathering.EDGARFetcher")
 def test_fetch_all_regulatory_failure_does_not_block(
-    MockEDGAR, MockCH, MockGHGRP, MockECHO, MockNRC
+    MockEDGAR, MockCH, MockEA, MockETS, MockGHGRP, MockECHO, MockNRC
 ):
     MockEDGAR.return_value.fetch.return_value = EDGAR_PROFILE
     MockGHGRP.return_value.fetch.side_effect = Exception("EPA API down")
     MockECHO.return_value.fetch.return_value = EMPTY_DF
     MockNRC.return_value.fetch.return_value = EMPTY_DF
+    _setup_regulatory_mocks(MockEA, MockETS)
 
     gatherer = DataGatherer(sec_email="test@example.com", ch_api_key="key")
     result = gatherer.fetch_all(ticker="AAPL")
@@ -202,11 +252,15 @@ def test_fetch_all_regulatory_failure_does_not_block(
 @patch("agents.data_gathering.NRCFetcher")
 @patch("agents.data_gathering.ECHOFetcher")
 @patch("agents.data_gathering.GHGRPFetcher")
+@patch("agents.data_gathering.EUETSFetcher")
+@patch("agents.data_gathering.EAPollutionFetcher")
 @patch("agents.data_gathering.CompaniesHouseFetcher")
 @patch("agents.data_gathering.EDGARFetcher")
-def test_fetch_company_profile_returns_profile(MockEDGAR, MockCH, MockGHGRP, MockECHO, MockNRC):
+def test_fetch_company_profile_returns_profile(
+    MockEDGAR, MockCH, MockEA, MockETS, MockGHGRP, MockECHO, MockNRC
+):
     MockEDGAR.return_value.fetch.return_value = EDGAR_PROFILE
-    _setup_regulatory_mocks(MockGHGRP, MockECHO, MockNRC)
+    _setup_regulatory_mocks(MockGHGRP, MockECHO, MockNRC, MockEA, MockETS)
 
     gatherer = DataGatherer(sec_email="test@example.com", ch_api_key="key")
     profile = gatherer.fetch_company_profile(ticker="AAPL", index="SP500")
@@ -219,9 +273,13 @@ def test_fetch_company_profile_returns_profile(MockEDGAR, MockCH, MockGHGRP, Moc
 @patch("agents.data_gathering.NRCFetcher")
 @patch("agents.data_gathering.ECHOFetcher")
 @patch("agents.data_gathering.GHGRPFetcher")
+@patch("agents.data_gathering.EUETSFetcher")
+@patch("agents.data_gathering.EAPollutionFetcher")
 @patch("agents.data_gathering.CompaniesHouseFetcher")
 @patch("agents.data_gathering.EDGARFetcher")
-def test_fetch_company_profile_raises_when_no_data(MockEDGAR, MockCH, MockGHGRP, MockECHO, MockNRC):
+def test_fetch_company_profile_raises_when_no_data(
+    MockEDGAR, MockCH, MockEA, MockETS, MockGHGRP, MockECHO, MockNRC
+):
     MockEDGAR.return_value.fetch.side_effect = ValueError("CIK not found")
 
     gatherer = DataGatherer(sec_email="test@example.com", ch_api_key="key")

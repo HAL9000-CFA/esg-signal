@@ -6,9 +6,9 @@ import pandas as pd
 
 class BaseRegulatoryFetcher(ABC):
     """
-    Base class for US regulatory data fetchers (GHGRP, ECHO, NRC).
+    Base class for mandatory regulatory data fetchers (GHGRP, ECHO, NRC, EA, EU ETS).
     Unlike BaseFetcher, these return pandas DataFrames and write to disk.
-    They are only invoked for US companies.
+    US fetchers are invoked when EDGAR succeeds; UK/EU fetchers when Companies House succeeds.
     """
 
     @abstractmethod
