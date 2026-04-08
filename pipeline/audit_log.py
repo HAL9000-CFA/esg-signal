@@ -87,7 +87,8 @@ def summarise(run_id: str | None = None) -> dict:
         "live_calls": sum(1 for r in records if not r["cached"]),
         "cached_calls": sum(1 for r in records if r["cached"]),
         "total_tokens": sum(r["total_tokens"] for r in records),
-        "total_cost_usd": round(sum(r["cost_usd"] for r in records), 4),
+        "no_cache_cost_usd": round(sum(r["cost_usd"] for r in records), 4),
+        "actual_cost_usd": round(sum(r["cost_usd"] for r in records if not r["cached"]), 4),
         "models_used": list({r["model"] for r in records}),
     }
 
