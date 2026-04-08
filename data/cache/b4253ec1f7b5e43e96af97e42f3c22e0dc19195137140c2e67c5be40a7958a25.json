@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n{\n  \"factor\": \"water management\",\n  \"grade\": \"QUANTIFIED\",\n  \"evidence\": \"Water management programme continues across all sites. We reduced freshwater consumption by 8%.\"\n}\n```",
+  "cost_usd": 0.004105,
+  "input_tokens": 551,
+  "model": "claude-opus-4-5",
+  "output_tokens": 54,
+  "purpose": "Grade ESG factors as QUANTIFIED or VAGUE or UNDISCLOSED, analysing drift over years.",
+  "temperature": 0.0
+}
