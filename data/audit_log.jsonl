@@ -1,0 +1,2 @@
+{"timestamp": "2026-04-07T23:58:15.647633+00:00", "run_id": "test-run-001", "agent": "summariser_test", "model": "claude-opus-4-5", "purpose": "summarise_article", "input_tokens": 63, "output_tokens": 103, "total_tokens": 166, "cost_usd": 0.00289, "cached": false}
+{"timestamp": "2026-04-08T00:06:18.967121+00:00", "run_id": "test-run-001", "agent": "summariser_test", "model": "claude-opus-4-5", "purpose": "summarise_article", "input_tokens": 63, "output_tokens": 103, "total_tokens": 166, "cost_usd": 0.00289, "cached": true}
