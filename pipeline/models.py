@@ -1,28 +1,34 @@
 from dataclasses import dataclass, field
-from typing import Dict, Optional
+from typing import Dict, List, Optional
+
+
+@dataclass
+class FilingMetadata:
+    filing_type: str  # "10-K" or "AA"
+    filed_date: str
+    period_of_report: Optional[str]
+    document_url: str
 
 
 @dataclass
 class CompanyProfile:
-    name: str
     ticker: Optional[str]
+    name: str
+    index: Optional[str]  # "SP500", "FTSE100", or None
+    sic_code: Optional[str]
+    sic_description: Optional[str]
     country: str
-    identifier: str  # CIK or company_number
-    incorporation_state: Optional[str] = None
-    listing_country: Optional[str] = None
-
-    filing_date: Optional[str] = None
-    report_url: Optional[str] = None
-
-    risk_factors: Optional[str] = None
-
-    revenue: Optional[float] = None
-    operating_income: Optional[float] = None
-    total_assets: Optional[float] = None
+    latest_annual_filing: Optional[FilingMetadata]
+    annual_report_text: Optional[str]
+    raw_financials: Dict
+    source_urls: List[str]
+    errors: List[str]
+    # internal identifier — CIK (EDGAR) or company_number (CH)
+    identifier: Optional[str] = None
 
 
 @dataclass
 class DataGathererResult:
-    profile: CompanyProfile
-    sources: Dict = field(default_factory=dict)
-    extra: Dict = field(default_factory=dict)
+    profile: Optional["CompanyProfile"]
+    source_statuses: Dict[str, str] = field(default_factory=dict)
+    # e.g. {"edgar": "success", "companies_house": "failed: Company not found"}

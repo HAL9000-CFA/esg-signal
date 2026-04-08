@@ -1,11 +1,15 @@
+import os
 import re
 from functools import lru_cache
-from typing import Dict, Optional
+from typing import Dict, List, Optional
 
 import requests
+from dotenv import load_dotenv
 
 from pipeline.fetchers.base import BaseFetcher
-from pipeline.models import CompanyProfile
+from pipeline.models import CompanyProfile, FilingMetadata
+
+load_dotenv()
 
 
 class EDGARFetcher(BaseFetcher):
@@ -13,8 +17,13 @@ class EDGARFetcher(BaseFetcher):
     BASE_XBRL = "https://data.sec.gov/api/xbrl/companyfacts/"
     BASE_ARCHIVES = "https://www.sec.gov/Archives/edgar/data/"
 
-    def __init__(self, user_email: str):
-        self.headers = {"User-Agent": user_email}
+    def __init__(self, user_email: str = None):
+        email = user_email or os.getenv("SEC_EMAIL") or os.getenv("CONTACT_EMAIL")
+        if not email:
+            raise ValueError(
+                "Provide user_email or set SEC_EMAIL env var (required by SEC fair-use policy)"
+            )
+        self.headers = {"User-Agent": email}
 
     @lru_cache(maxsize=1)
     def _ticker_map(self) -> Dict:
@@ -38,12 +47,13 @@ class EDGARFetcher(BaseFetcher):
 
     def get_latest_10k(self, submissions: Dict) -> Optional[Dict]:
         data = submissions["filings"]["recent"]
-
+        period_list = data.get("periodOfReport", [])
         for i, form in enumerate(data["form"]):
             if form == "10-K":
                 return {
                     "accession": data["accessionNumber"][i],
                     "filing_date": data["filingDate"][i],
+                    "period_of_report": period_list[i] if i < len(period_list) else None,
                     "primary_doc": data["primaryDocument"][i],
                 }
         return None
@@ -58,21 +68,10 @@ class EDGARFetcher(BaseFetcher):
         except Exception:
             return None
 
-    def extract_risk_factors(self, text: str) -> str:
-        if not text:
-            return ""
-
-        patterns = [
-            r"(?i)item\s*1a\.?\s*risk\s*factors(.*?)(?=item\s*1b|item\s*2)",
-        ]
-
-        for pattern in patterns:
-            match = re.search(pattern, text, re.DOTALL)
-            if match:
-                cleaned = re.sub(r"<[^>]+>", " ", match.group(1))
-                return re.sub(r"\s+", " ", cleaned)[:10000]
-
-        return ""
+    def strip_html_to_text(self, html: str) -> str:
+        """Strips HTML tags and normalises whitespace to produce plain text."""
+        text = re.sub(r"<[^>]+>", " ", html)
+        return re.sub(r"\s+", " ", text).strip()
 
     def get_xbrl(self, cik: str) -> Dict:
         url = f"{self.BASE_XBRL}CIK{cik}.json"
@@ -86,60 +85,78 @@ class EDGARFetcher(BaseFetcher):
 
             def latest(tag):
                 units = us_gaap.get(tag, {}).get("units", {})
-                for unit in units.values():
-                    return sorted(unit, key=lambda x: x.get("end", ""), reverse=True)[0]["val"]
+                for unit_vals in units.values():
+                    # prefer 10-K annual values over quarterly
+                    annual = [v for v in unit_vals if v.get("form") == "10-K"]
+                    candidates = annual if annual else unit_vals
+                    if candidates:
+                        return sorted(candidates, key=lambda x: x.get("end", ""), reverse=True)[0][
+                            "val"
+                        ]
                 return None
 
             return {
-                "revenue": latest("Revenues"),
+                "revenue": latest("Revenues")
+                or latest("RevenueFromContractWithCustomerExcludingAssessedTax"),
                 "operating_income": latest("OperatingIncomeLoss"),
                 "total_assets": latest("Assets"),
             }
         except Exception:
             return {}
 
-    def extract_incorporation_state(self, submissions: Dict) -> Optional[str]:
-        return submissions.get("addresses", {}).get("business", {}).get("stateOrCountry")
-
     def fetch(self, ticker: str) -> CompanyProfile:
+        errors: List[str] = []
+        source_urls: List[str] = []
+
         cik = self.get_cik(ticker)
         if not cik:
             raise ValueError(f"CIK not found for {ticker}")
 
         submissions = self.get_submissions(cik)
         company_name = submissions.get("name", ticker)
+        sic_code = submissions.get("sic")
+        sic_description = submissions.get("sicDescription")
 
         filing = self.get_latest_10k(submissions)
-
-        document = None
-        risk_factors = ""
-        report_url = None
+        latest_annual_filing = None
+        annual_report_text = ""
 
         if filing:
-            document = self.download_10k_document(cik, filing)
-            risk_factors = self.extract_risk_factors(document)
             accession = filing["accession"].replace("-", "")
             report_url = f"{self.BASE_ARCHIVES}{cik}/{accession}/{filing['primary_doc']}"
+            source_urls.append(report_url)
+            latest_annual_filing = FilingMetadata(
+                filing_type="10-K",
+                filed_date=filing["filing_date"],
+                period_of_report=filing.get("period_of_report"),
+                document_url=report_url,
+            )
+            document = self.download_10k_document(cik, filing)
+            if document:
+                annual_report_text = self.strip_html_to_text(document)
+            else:
+                errors.append("Failed to download 10-K document")
+        else:
+            errors.append("No 10-K filing found in recent submissions")
 
-        facts = self.get_xbrl(cik)
-        financials = self.extract_financials(facts)
+        raw_financials: Dict = {}
+        try:
+            facts = self.get_xbrl(cik)
+            raw_financials = self.extract_financials(facts)
+        except Exception as e:
+            errors.append(f"XBRL fetch failed: {e}")
 
         return CompanyProfile(
+            ticker=ticker.upper(),
             name=company_name,
-            ticker=ticker,
+            index=None,  # set by caller (DataGatherer)
+            sic_code=str(sic_code) if sic_code else None,
+            sic_description=sic_description,
             country="US",
-            listing_country="US",
-            incorporation_state=self.extract_incorporation_state(submissions),
+            latest_annual_filing=latest_annual_filing,
+            annual_report_text=annual_report_text,
+            raw_financials=raw_financials,
+            source_urls=source_urls,
+            errors=errors,
             identifier=cik,
-            filing_date=filing["filing_date"] if filing else None,
-            report_url=report_url,
-            revenue=financials.get("revenue"),
-            operating_income=financials.get("operating_income"),
-            total_assets=financials.get("total_assets"),
-            extra={
-                "xbrl": facts,
-                "submissions": submissions,
-                "risk_factors": risk_factors,
-                "document": document[:20000] if document else None,
-            },
         )
