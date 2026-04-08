@@ -4,7 +4,10 @@ import time
 from dotenv import load_dotenv
 
 from pipeline.fetchers.companies_house import CompaniesHouseFetcher
+from pipeline.fetchers.echo import ECHOFetcher
 from pipeline.fetchers.edgar import EDGARFetcher
+from pipeline.fetchers.ghgrp import GHGRPFetcher
+from pipeline.fetchers.nrc import NRCFetcher
 from pipeline.models import CompanyProfile, DataGathererResult
 
 load_dotenv()
@@ -23,6 +26,7 @@ class DataGatherer:
     ) -> DataGathererResult:
         """
         Fetches from EDGAR (US) and optionally Companies House (UK).
+        For US companies, also fetches EPA GHGRP, ECHO, and NRC regulatory data.
 
         Args:
             ticker: stock ticker, used for EDGAR CIK lookup
@@ -30,10 +34,12 @@ class DataGatherer:
             index: "SP500" or "FTSE100" — stored on the profile for downstream agents
 
         Returns DataGathererResult with:
-            .profile — CompanyProfile (EDGAR preferred, CH fallback)
-            .source_statuses — {"edgar": "success", "companies_house": "failed: ..."}
+            .profile            — CompanyProfile (EDGAR preferred, CH fallback)
+            .source_statuses    — {"edgar": "success", "ghgrp": "failed: ...", ...}
+            .regulatory_paths   — {"ghgrp": "data/processed/ghgrp_AAPL.csv", ...}
         """
         source_statuses = {}
+        regulatory_paths = {}
         edgar_profile = None
         ch_profile = None
 
@@ -58,10 +64,37 @@ class DataGatherer:
             except Exception as e:
                 source_statuses["companies_house"] = f"failed: {e}"
 
+        # EPA / NRC regulatory fetchers — US companies only.
+        # List is built here (not at module level) so @patch decorators work in tests.
+        if edgar_profile is not None:
+            name = edgar_profile.name
+            for source, fetcher_cls in [
+                ("ghgrp", GHGRPFetcher),
+                ("echo", ECHOFetcher),
+                ("nrc", NRCFetcher),
+            ]:
+                try:
+                    fetcher = fetcher_cls()
+                    df = fetcher.fetch(company_name=name)
+                    if df.empty:
+                        source_statuses[source] = "success: no records found"
+                    else:
+                        raw_path = f"data/raw/{source}_{ticker}.csv"
+                        processed_path = f"data/processed/{source}_{ticker}.csv"
+                        fetcher.save(df, raw_path=raw_path, processed_path=processed_path)
+                        source_statuses[source] = f"success: {len(df)} records"
+                        regulatory_paths[source] = processed_path
+                except Exception as e:
+                    source_statuses[source] = f"failed: {e}"
+
         # Prefer EDGAR profile; fall back to CH if EDGAR failed
         profile = edgar_profile or ch_profile
 
-        return DataGathererResult(profile=profile, source_statuses=source_statuses)
+        return DataGathererResult(
+            profile=profile,
+            source_statuses=source_statuses,
+            regulatory_paths=regulatory_paths,
+        )
 
     def fetch_company_profile(
         self,

@@ -1,0 +1,9 @@
+# UI dependencies — install separately for local development: pip install -r requirements-ui.txt
+# Not installed by CI (ci.yml uses requirements.txt only).
+#
+# NOTE: streamlit does not yet support pandas>=3. Install in a separate venv
+# or wait for streamlit support before combining with requirements.txt.
+# Implementation is planned for 1.56 (next release).
+# Tracked upstream: https://github.com/streamlit/streamlit/issues/13211
+streamlit==1.37.0
+reportlab==4.2.2

@@ -31,4 +31,6 @@ class CompanyProfile:
 class DataGathererResult:
     profile: Optional["CompanyProfile"]
     source_statuses: Dict[str, str] = field(default_factory=dict)
-    # e.g. {"edgar": "success", "companies_house": "failed: Company not found"}
+    # e.g. {"edgar": "success", "ghgrp": "failed: no facilities found"}
+    regulatory_paths: Dict[str, str] = field(default_factory=dict)
+    # e.g. {"ghgrp": "data/processed/ghgrp_AAPL.csv"} — read by credibility scorer
