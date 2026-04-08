@@ -1,0 +1,10 @@
+{
+  "agent": "summariser_test",
+  "content": "I don't have the ability to access external URLs or browse the internet, so I cannot retrieve the content from the CFA Institute link you've provided.\n\nHowever, if you could paste the article text directly into our conversation, I would be happy to summarize it into 3 clear bullet points focused on the ESG-related content.\n\nAlternatively, if you can share the key details or topic of the article, I can help you formulate a summary based on that information.",
+  "cost_usd": 0.00289,
+  "input_tokens": 63,
+  "model": "claude-opus-4-5",
+  "output_tokens": 103,
+  "purpose": "summarise_article",
+  "temperature": 0.2
+}
