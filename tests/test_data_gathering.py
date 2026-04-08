@@ -1,208 +1,139 @@
-#!/usr/bin/env python3
-"""
-Test script for Data Gatherer
-Demonstrates usage and validates functionality
-
-NOTE: OUR UNITS TESTS SHOULD NOT USE LIVE APIS. Magic mock the HTTP responses and use those instead. THESE NEED REPLACING"
-"""
-
-import os
+from unittest.mock import patch
 
 import pytest
 
 from agents.data_gathering import DataGatherer
+from pipeline.models import CompanyProfile, DataGathererResult, FilingMetadata
 
-
-def print_section(title):
-    """print a formatted section header"""
-    print(f"\n{'='*70}")
-    print(f"  {title}")
-    print(f"{'='*70}\n")
-
-
-@pytest.mark.skipif(
-    not os.getenv("SEC_EMAIL"), reason="Skipping live API test in CI — set SEC_EMAIL to run locally"
+EDGAR_PROFILE = CompanyProfile(
+    ticker="AAPL",
+    name="APPLE INC",
+    index=None,
+    sic_code="3674",
+    sic_description="Semiconductors and Related Devices",
+    country="US",
+    latest_annual_filing=FilingMetadata(
+        filing_type="10-K",
+        filed_date="2023-11-03",
+        period_of_report="2023-09-30",
+        document_url="https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+    ),
+    annual_report_text="Apple designs consumer electronics and software.",
+    raw_financials={
+        "revenue": 383285000000,
+        "operating_income": 114301000000,
+        "total_assets": 352583000000,
+    },
+    source_urls=[
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm"
+    ],
+    errors=[],
+    identifier="0000320193",
 )
-def test_edgar_fetcher():
-    """test EDGAR data fetching"""
-    print_section("Testing EDGAR Fetcher")
 
-    from agents.data_gathering import EDGARFetcher
-
-    edgar = EDGARFetcher(user_email="test@example.com")
-
-    # test ticker conversion
-    print("Testing CIK lookup...")
-    cik = edgar.get_cik_from_ticker("AAPL")
-    print(f"✓ AAPL CIK: {cik}")
-
-    # test 10-K fetch
-    print("\nTesting 10-K fetch...")
-    filing_info = edgar.get_latest_10k("AAPL")
-    if filing_info:
-        print(f"✓ Latest 10-K: {filing_info['filingDate']}")
-        print(f"  Accession: {filing_info['accessionNumber']}")
-    else:
-        print("✗ Failed to fetch 10-K")
-
-    return filing_info is not None
-
-
-@pytest.mark.skipif(
-    not os.getenv("SEC_EMAIL"), reason="Skipping live API test in CI — set SEC_EMAIL to run locally"
+CH_PROFILE = CompanyProfile(
+    ticker=None,
+    name="BP PLC",
+    index=None,
+    sic_code="19100",
+    sic_description=None,
+    country="GB",
+    latest_annual_filing=FilingMetadata(
+        filing_type="AA",
+        filed_date="2023-03-31",
+        period_of_report="2022-12-31",
+        document_url="https://find-and-update.company-information.service.gov.uk/company/00102498/filing-history/abc",
+    ),
+    annual_report_text=None,
+    raw_financials={},
+    source_urls=[
+        "https://find-and-update.company-information.service.gov.uk/company/00102498/filing-history/abc"
+    ],
+    errors=[],
+    identifier="00102498",
 )
-def test_gdelt_fetcher():
-    """test GDELT data fetching"""
-    print_section("Testing GDELT Fetcher")
-
-    from agents.data_gathering import GDELTFetcher
-
-    gdelt = GDELTFetcher()
-
-    print("Fetching Apple news mentions...")
-    result = gdelt.fetch("Apple", start_date="20240301", end_date="20240310")
-
-    if result["status"] == "success":
-        article_count = result["data"]["article_count"]
-        print(f"✓ Found {article_count} articles")
-
-        if article_count > 0:
-            articles = result["data"]["articles"][:3]
-            print("\nSample articles:")
-            for i, article in enumerate(articles, 1):
-                print(f"  {i}. {article.get('title', 'No title')[:60]}...")
-
-        return True
-    else:
-        print(f"✗ GDELT fetch failed: {result.get('error', 'Unknown error')}")
-        return False
 
 
-@pytest.mark.skipif(
-    not os.getenv("SEC_EMAIL"), reason="Skipping live API test in CI — set SEC_EMAIL to run locally"
-)
-def test_full_fetch(tmp_path):
-    """test complete Data Gatherer fetch"""
-    print_section("Testing Full Data Gatherer Fetch")
+@patch("agents.data_gathering.CompaniesHouseFetcher")
+@patch("agents.data_gathering.EDGARFetcher")
+def test_fetch_all_edgar_success(MockEDGAR, MockCH):
+    MockEDGAR.return_value.fetch.return_value = EDGAR_PROFILE
 
-    # Initialise Data Gatherer
-    agent = DataGatherer(sec_email="test@example.com", companies_house_key="TEST_KEY")
+    gatherer = DataGatherer(sec_email="test@example.com", ch_api_key="key")
+    result = gatherer.fetch_all(ticker="AAPL")
 
-    # test with Apple
-    ticker = "AAPL"
-    company_name = "Apple Inc."
-
-    print(f"Fetching data for {ticker}...")
-
-    results = agent.fetch_all(
-        ticker=ticker, company_name=company_name, date_range=("20240301", "20240310")
-    )
-
-    # print summary
-    print("\nResults Summary:")
-    for source, data in results["sources"].items():
-        status = data.get("status", "unknown")
-        status_symbol = "✓" if status == "success" else "⚠" if status == "partial" else "✗"
-        print(f"  {status_symbol} {source.upper():20s} {status}")
-
-    # save test results
-    output_file = tmp_path / f"test_results_{ticker}.json"
-    agent.save_results(results, str(output_file))
-
-    print(f"\n✓ Test results saved to: {output_file}")
-
-    return True
+    assert isinstance(result, DataGathererResult)
+    assert result.source_statuses["edgar"] == "success"
+    assert result.profile is EDGAR_PROFILE
 
 
-def run_example_queries():
-    """Run example queries with different tickers"""
-    print_section("Example Queries")
+@patch("agents.data_gathering.CompaniesHouseFetcher")
+@patch("agents.data_gathering.EDGARFetcher")
+def test_fetch_all_sets_index_on_profile(MockEDGAR, MockCH):
+    MockEDGAR.return_value.fetch.return_value = EDGAR_PROFILE
 
-    examples = [
-        {
-            "ticker": "AAPL",
-            "company": "Apple Inc.",
-            "description": "Tech company with strong ESG focus",
-        },
-        {
-            "ticker": "MSFT",
-            "company": "Microsoft Corporation",
-            "description": "Cloud and software leader",
-        },
-        {"ticker": "TSLA", "company": "Tesla Inc.", "description": "Electric vehicle manufacturer"},
-    ]
+    gatherer = DataGatherer(sec_email="test@example.com", ch_api_key="key")
+    result = gatherer.fetch_all(ticker="AAPL", index="SP500")
 
-    agent = DataGatherer(sec_email="test@example.com")
-
-    for example in examples:
-        print(f"\n{example['ticker']}: {example['description']}")
-        print("-" * 50)
-
-        # just fetch EDGAR as example
-        edgar_result = agent.edgar.fetch(example["ticker"])
-
-        if edgar_result["status"] == "success":
-            filing_date = edgar_result["data"]["filing_info"]["filingDate"]
-            print(f"  ✓ Latest 10-K: {filing_date}")
-        else:
-            print(f"  ✗ Failed: {edgar_result.get('error', 'Unknown error')}")
+    assert result.profile.index == "SP500"
 
 
-def main():
-    """Run all tests"""
-    print(
-        """
-    Data Gatherer: Multi-Source ESG Data Fetcher
-    Test & Example
-    """
-    )
+@patch("agents.data_gathering.CompaniesHouseFetcher")
+@patch("agents.data_gathering.EDGARFetcher")
+def test_fetch_all_includes_ch_when_company_name_given(MockEDGAR, MockCH):
+    MockEDGAR.return_value.fetch.return_value = EDGAR_PROFILE
+    MockCH.return_value.fetch.return_value = CH_PROFILE
 
-    tests = [
-        ("EDGAR Fetcher", test_edgar_fetcher),
-        ("GDELT Fetcher", test_gdelt_fetcher),
-        ("Full Fetch", test_full_fetch),
-    ]
+    gatherer = DataGatherer(sec_email="test@example.com", ch_api_key="key")
+    result = gatherer.fetch_all(ticker="BP", company_name="BP PLC")
 
-    results = {}
-
-    for test_name, test_func in tests:
-        try:
-            results[test_name] = test_func()
-        except Exception as e:
-            print(f"\n✗ {test_name} failed with error: {e}")
-            results[test_name] = False
-
-    # print test summary
-    print_section("Test Summary")
-
-    for test_name, passed in results.items():
-        status = "✓ PASS" if passed else "✗ FAIL"
-        print(f"  {status:10s} {test_name}")
-
-    # run example queries
-    try:
-        run_example_queries()
-    except Exception as e:
-        print(f"\n✗ Example queries failed: {e}")
-
-    print_section("Test Complete")
-
-    total_tests = len(results)
-    passed_tests = sum(1 for v in results.values() if v)
-
-    print(f"Results: {passed_tests}/{total_tests} tests passed")
-
-    if passed_tests == total_tests:
-        print("\n🎉 All tests passed! Data Gatherer is ready for submission.")
-    else:
-        print(f"\n⚠ {total_tests - passed_tests} test(s) failed. Review errors above.")
-
-    print("\nNext steps:")
-    print("  1. Review output/test_results_*.json files")
-    print("  2. Update .env with your real credentials")
-    print("  3. Run: python scripts/fetch_data.py --ticker YOUR_TICKER --email YOUR_EMAIL")
-    print()
+    assert result.source_statuses.get("companies_house") == "success"
 
 
-if __name__ == "__main__":
-    main()
+@patch("agents.data_gathering.CompaniesHouseFetcher")
+@patch("agents.data_gathering.EDGARFetcher")
+def test_fetch_all_edgar_failure_falls_back_to_ch(MockEDGAR, MockCH):
+    MockEDGAR.return_value.fetch.side_effect = ValueError("CIK not found for BP")
+    MockCH.return_value.fetch.return_value = CH_PROFILE
+
+    gatherer = DataGatherer(sec_email="test@example.com", ch_api_key="key")
+    result = gatherer.fetch_all(ticker="BP", company_name="BP PLC")
+
+    assert result.source_statuses["edgar"].startswith("failed:")
+    assert result.profile is CH_PROFILE
+
+
+@patch("agents.data_gathering.CompaniesHouseFetcher")
+@patch("agents.data_gathering.EDGARFetcher")
+def test_fetch_all_records_ch_failure(MockEDGAR, MockCH):
+    MockEDGAR.return_value.fetch.return_value = EDGAR_PROFILE
+    MockCH.return_value.fetch.side_effect = ValueError("Company not found: Unknown")
+
+    gatherer = DataGatherer(sec_email="test@example.com", ch_api_key="key")
+    result = gatherer.fetch_all(ticker="AAPL", company_name="Unknown")
+
+    assert result.source_statuses["companies_house"].startswith("failed:")
+    assert result.profile is EDGAR_PROFILE
+
+
+@patch("agents.data_gathering.CompaniesHouseFetcher")
+@patch("agents.data_gathering.EDGARFetcher")
+def test_fetch_company_profile_returns_profile(MockEDGAR, MockCH):
+    MockEDGAR.return_value.fetch.return_value = EDGAR_PROFILE
+
+    gatherer = DataGatherer(sec_email="test@example.com", ch_api_key="key")
+    profile = gatherer.fetch_company_profile(ticker="AAPL", index="SP500")
+
+    assert isinstance(profile, CompanyProfile)
+    assert profile.ticker == "AAPL"
+    assert profile.index == "SP500"
+
+
+@patch("agents.data_gathering.CompaniesHouseFetcher")
+@patch("agents.data_gathering.EDGARFetcher")
+def test_fetch_company_profile_raises_when_no_data(MockEDGAR, MockCH):
+    MockEDGAR.return_value.fetch.side_effect = ValueError("CIK not found")
+
+    gatherer = DataGatherer(sec_email="test@example.com", ch_api_key="key")
+    with pytest.raises(ValueError, match="No data found"):
+        gatherer.fetch_company_profile(ticker="UNKNOWN")
