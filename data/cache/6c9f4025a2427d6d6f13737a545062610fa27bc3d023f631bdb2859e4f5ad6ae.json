@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's environmental credibility on GHG emissions presents a mixed picture that warrants investor scrutiny. While the company demonstrates strong talent acquisition in sustainability-related roles, suggesting genuine operational commitment, this contrasts sharply with notably weak disclosure practices that undermine transparency around actual emissions performance. The moderate alignment across regulatory compliance, capital allocation, and supply chain metrics indicates incremental progress, but the disconnect between workforce investment and formal reporting raises questions about whether stated climate ambitions are being matched by comprehensive accountability measures.",
+  "cost_usd": 0.011265,
+  "input_tokens": 226,
+  "model": "claude-opus-4-5",
+  "output_tokens": 105,
+  "purpose": "Narrative synthesis: GHG Emissions",
+  "temperature": 0.2
+}

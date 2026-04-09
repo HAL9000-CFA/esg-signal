@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's air quality commitments present a mixed credibility picture, with notable tension between strong talent signals and absent formal disclosure. While the company appears to be investing in relevant human capital and maintaining moderate alignment across regulatory, financial, and supply chain dimensions, the complete lack of structured disclosure on air quality metrics raises questions about transparency and accountability. This gap between operational activity and formal reporting suggests investors should seek greater clarity on how BP measures and reports progress against its stated air quality objectives.",
+  "cost_usd": 0.010695,
+  "input_tokens": 223,
+  "model": "claude-opus-4-5",
+  "output_tokens": 98,
+  "purpose": "Narrative synthesis: Air Quality",
+  "temperature": 0.2
+}

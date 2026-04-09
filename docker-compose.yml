@@ -1,5 +1,7 @@
 x-airflow-common: &airflow-common
-  image: apache/airflow:2.9.3-python3.11
+  build:
+    context: .
+    dockerfile: Dockerfile.airflow
   env_file: .env
   environment:
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
@@ -13,6 +15,7 @@ x-airflow-common: &airflow-common
     - ./pipeline:/opt/airflow/dags
     - ./pipeline:/opt/airflow/src/pipeline
     - ./agents:/opt/airflow/src/agents
+    - ./config:/opt/airflow/config
     - ./data:/opt/airflow/data
     - ./scripts:/opt/airflow/src/scripts
     - ./requirements-airflow.txt:/opt/airflow/src/requirements-airflow.txt
@@ -70,6 +73,7 @@ services:
       - ./ui:/app/ui
       - ./agents:/app/agents
       - ./pipeline:/app/pipeline
+      - ./config:/app/config
       - ./data:/app/data
     restart: unless-stopped
 

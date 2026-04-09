@@ -1,3 +1,4 @@
+import logging
 import os
 import re
 from functools import lru_cache
@@ -10,6 +11,8 @@ from pipeline.fetchers.base import BaseFetcher
 from pipeline.models import CompanyProfile, FilingMetadata
 
 load_dotenv()
+
+LOGGER = logging.getLogger(__name__)
 
 
 class EDGARFetcher(BaseFetcher):
@@ -109,12 +112,14 @@ class EDGARFetcher(BaseFetcher):
             return {}
 
     def fetch(self, ticker: str) -> CompanyProfile:
+        LOGGER.info("EDGAR: starting fetch for ticker=%s", ticker)
         errors: List[str] = []
         source_urls: List[str] = []
 
         cik = self.get_cik(ticker)
         if not cik:
             raise ValueError(f"CIK not found for {ticker}")
+        LOGGER.info("EDGAR: resolved ticker=%s to CIK=%s", ticker, cik)
 
         submissions = self.get_submissions(cik)
         company_name = submissions.get("name", ticker)
@@ -135,21 +140,32 @@ class EDGARFetcher(BaseFetcher):
                 period_of_report=filing.get("period_of_report"),
                 document_url=report_url,
             )
+            LOGGER.info("EDGAR: downloading 10-K document for CIK=%s", cik)
             document = self.download_10k_document(cik, filing)
             if document:
                 annual_report_text = self.strip_html_to_text(document)
+                LOGGER.info("EDGAR: 10-K downloaded and stripped — %d chars", len(annual_report_text))
             else:
                 errors.append("Failed to download 10-K document")
+                LOGGER.warning("EDGAR: 10-K document download returned nothing for CIK=%s", cik)
         else:
             errors.append("No 10-K filing found in recent submissions")
+            LOGGER.info("EDGAR: no 10-K found for ticker=%s (may file 20-F)", ticker)
 
         raw_financials: Dict = {}
         try:
+            LOGGER.info("EDGAR: fetching XBRL financials for CIK=%s", cik)
             facts = self.get_xbrl(cik)
             raw_financials = self.extract_financials(facts)
+            LOGGER.info("EDGAR: XBRL done — keys=%s", list(raw_financials.keys()))
         except Exception as e:
             errors.append(f"XBRL fetch failed: {e}")
+            LOGGER.warning("EDGAR: XBRL fetch failed for CIK=%s: %s", cik, e)
 
+        LOGGER.info(
+            "EDGAR: fetch complete ticker=%s name=%r sic=%s report_chars=%d errors=%d",
+            ticker, company_name, sic_code, len(annual_report_text), len(errors),
+        )
         return CompanyProfile(
             ticker=ticker.upper(),
             name=company_name,

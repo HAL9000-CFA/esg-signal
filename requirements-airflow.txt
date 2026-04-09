@@ -1,1 +1,13 @@
-apache-airflow==2.9.3
+# Pipeline runtime dependencies for Airflow workers.
+# apache-airflow is already in the base image — do NOT add it here.
+# Dev tools (pytest, ruff, black) are not needed at runtime — do NOT add them.
+# This file is read by Dockerfile.airflow at image build time.
+
+anthropic==0.34.2
+google-generativeai==0.7.2
+requests==2.32.3
+beautifulsoup4==4.12.3
+openpyxl==3.1.5
+pdfplumber==0.11.2
+pandas==3.0.2
+python-dotenv==1.0.1

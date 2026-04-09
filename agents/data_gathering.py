@@ -1,3 +1,4 @@
+import logging
 import os
 import time
 
@@ -14,6 +15,8 @@ from pipeline.fetchers.pdf_extractor import PDFExtractor
 from pipeline.models import CompanyProfile, DataGathererResult
 
 load_dotenv()
+
+LOGGER = logging.getLogger(__name__)
 
 
 class DataGatherer:
@@ -47,6 +50,7 @@ class DataGatherer:
         ch_profile = None
 
         # EDGAR — US annual report (10-K), financials, SIC code
+        LOGGER.info("fetch_all [1/6]: starting EDGAR fetch ticker=%s", ticker)
         try:
             edgar_profile = self.edgar.fetch(ticker)
             if index:
@@ -54,11 +58,14 @@ class DataGatherer:
             source_statuses["edgar"] = "success"
         except Exception as e:
             source_statuses["edgar"] = f"failed: {e}"
+            LOGGER.warning("fetch_all [1/6]: EDGAR failed ticker=%s: %s", ticker, e)
+        LOGGER.info("fetch_all [1/6]: EDGAR done status=%s", source_statuses.get("edgar"))
 
         time.sleep(0.3)  # SEC rate limit
 
         # Companies House — UK annual accounts, SIC code
         if company_name:
+            LOGGER.info("fetch_all [2/6]: starting Companies House fetch company=%r", company_name)
             try:
                 ch_profile = self.ch.fetch(company_name)
                 if index:
@@ -66,6 +73,10 @@ class DataGatherer:
                 source_statuses["companies_house"] = "success"
             except Exception as e:
                 source_statuses["companies_house"] = f"failed: {e}"
+                LOGGER.warning("fetch_all [2/6]: Companies House failed company=%r: %s", company_name, e)
+            LOGGER.info("fetch_all [2/6]: Companies House done status=%s", source_statuses.get("companies_house"))
+        else:
+            LOGGER.info("fetch_all [2/6]: Companies House skipped (no company_name)")
 
         # PDF extraction — populate annual_report_text from the filing document URL.
         # Tried for whichever profile succeeded (EDGAR 10-K or CH annual accounts).
@@ -77,6 +88,10 @@ class DataGatherer:
             and _active_profile.latest_annual_filing is not None
             and _active_profile.latest_annual_filing.document_url
         ):
+            LOGGER.info(
+                "fetch_all [3/6]: starting PDF extraction url=%s",
+                _active_profile.latest_annual_filing.document_url,
+            )
             try:
                 pdf_text = PDFExtractor().extract(
                     url=_active_profile.latest_annual_filing.document_url,
@@ -88,6 +103,10 @@ class DataGatherer:
                 )
             except Exception as e:
                 source_statuses["pdf_extraction"] = f"failed: {e}"
+                LOGGER.warning("fetch_all [3/6]: PDF extraction failed: %s", e)
+            LOGGER.info("fetch_all [3/6]: PDF extraction done status=%s", source_statuses.get("pdf_extraction"))
+        else:
+            LOGGER.info("fetch_all [3/6]: PDF extraction skipped (text already present or no filing URL)")
 
         # EPA / NRC regulatory fetchers — US companies only.
         # List is built here (not at module level) so @patch decorators work in tests.
@@ -98,6 +117,7 @@ class DataGatherer:
                 ("echo", ECHOFetcher),
                 ("nrc", NRCFetcher),
             ]:
+                LOGGER.info("fetch_all [4/6]: starting %s fetch company=%r", source.upper(), name)
                 try:
                     fetcher = fetcher_cls()
                     df = fetcher.fetch(company_name=name)
@@ -111,6 +131,10 @@ class DataGatherer:
                         regulatory_paths[source] = processed_path
                 except Exception as e:
                     source_statuses[source] = f"failed: {e}"
+                    LOGGER.warning("fetch_all [4/6]: %s failed company=%r: %s", source.upper(), name, e)
+                LOGGER.info("fetch_all [4/6]: %s done status=%s", source.upper(), source_statuses.get(source))
+        else:
+            LOGGER.info("fetch_all [4/6]: EPA/NRC fetchers skipped (no EDGAR profile)")
 
         # EA / EU ETS regulatory fetchers — UK/EU companies only.
         # List is built here (not at module level) so @patch decorators work in tests.
@@ -120,6 +144,7 @@ class DataGatherer:
                 ("ea_pollution", EAPollutionFetcher),
                 ("eu_ets", EUETSFetcher),
             ]:
+                LOGGER.info("fetch_all [5/6]: starting %s fetch company=%r", source.upper(), name)
                 try:
                     fetcher = fetcher_cls()
                     df = fetcher.fetch(company_name=name)
@@ -133,9 +158,19 @@ class DataGatherer:
                         regulatory_paths[source] = processed_path
                 except Exception as e:
                     source_statuses[source] = f"failed: {e}"
+                    LOGGER.warning("fetch_all [5/6]: %s failed company=%r: %s", source.upper(), name, e)
+                LOGGER.info("fetch_all [5/6]: %s done status=%s", source.upper(), source_statuses.get(source))
+        else:
+            LOGGER.info("fetch_all [5/6]: EA/EU ETS fetchers skipped (no Companies House profile)")
 
         # Prefer EDGAR profile; fall back to CH if EDGAR failed
         profile = edgar_profile or ch_profile
+        LOGGER.info(
+            "fetch_all [6/6]: complete ticker=%s profile_source=%s statuses=%s",
+            ticker,
+            "edgar" if edgar_profile else "companies_house" if ch_profile else "none",
+            source_statuses,
+        )
 
         return DataGathererResult(
             profile=profile,

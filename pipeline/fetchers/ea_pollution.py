@@ -1,10 +1,13 @@
 import io
+import logging
 from typing import Optional
 
 import pandas as pd
 import requests
 
 from pipeline.fetchers.base_regulatory import BaseRegulatoryFetcher
+
+LOGGER = logging.getLogger(__name__)
 
 # UK Environment Agency Pollution Inventory — no API key required.
 # Published annually as a structured CSV via the gov.uk open data portal.
@@ -52,22 +55,31 @@ class EAPollutionFetcher(BaseRegulatoryFetcher):
         OperatorName contains the company name (case-insensitive).
         Returns an empty DataFrame if no matching records are found.
         """
+        LOGGER.info("EA Pollution: fetching inventory for company=%r", company_name)
         try:
             csv_url = self._get_csv_url()
             if not csv_url:
+                LOGGER.warning("EA Pollution: could not discover CSV URL from CKAN API")
                 return pd.DataFrame(columns=list(_COLUMNS.values()))
 
-            r = requests.get(csv_url, timeout=60)
+            LOGGER.info("EA Pollution: downloading CSV from %s", csv_url)
+            r = requests.get(csv_url, timeout=30)
             r.raise_for_status()
-        except Exception:
+        except requests.exceptions.Timeout:
+            LOGGER.warning("EA Pollution: CSV download timed out (30s) for company=%r", company_name)
+            return pd.DataFrame(columns=list(_COLUMNS.values()))
+        except Exception as exc:
+            LOGGER.warning("EA Pollution: fetch failed for company=%r: %s", company_name, exc)
             return pd.DataFrame(columns=list(_COLUMNS.values()))
 
         if not r.text.strip():
+            LOGGER.warning("EA Pollution: CSV response is empty for company=%r", company_name)
             return pd.DataFrame(columns=list(_COLUMNS.values()))
 
         try:
             df = pd.read_csv(io.StringIO(r.text))
-        except Exception:
+        except Exception as exc:
+            LOGGER.warning("EA Pollution: CSV parse failed: %s", exc)
             return pd.DataFrame(columns=list(_COLUMNS.values()))
 
         # filter to company
@@ -79,6 +91,7 @@ class EAPollutionFetcher(BaseRegulatoryFetcher):
         df = df[mask].copy()
 
         if df.empty:
+            LOGGER.info("EA Pollution: no records found for company=%r", company_name)
             return pd.DataFrame(columns=list(_COLUMNS.values()))
 
         present = {k: v for k, v in _COLUMNS.items() if k in df.columns}
@@ -90,4 +103,6 @@ class EAPollutionFetcher(BaseRegulatoryFetcher):
         if "year" in df.columns:
             df = df.sort_values("year", ascending=False)
 
-        return df.reset_index(drop=True)
+        result = df.reset_index(drop=True)
+        LOGGER.info("EA Pollution: done — %d records for company=%r", len(result), company_name)
+        return result

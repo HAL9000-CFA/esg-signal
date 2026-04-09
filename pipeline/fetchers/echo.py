@@ -1,9 +1,12 @@
+import logging
 from typing import List, Optional
 
 import pandas as pd
 import requests
 
 from pipeline.fetchers.base_regulatory import BaseRegulatoryFetcher
+
+LOGGER = logging.getLogger(__name__)
 
 # EPA ECHO (Enforcement and Compliance History Online) — no API key required.
 # Returns enforcement actions, penalties, and violation history across:
@@ -41,14 +44,21 @@ class ECHOFetcher(BaseRegulatoryFetcher):
         enforcement and penalty history for each facility.
         Returns an empty DataFrame if no facilities are found.
         """
+        LOGGER.info("ECHO: searching facilities for company=%r", company_name)
         try:
             facilities = self._search_facilities(company_name)
-        except Exception:
+        except requests.exceptions.Timeout:
+            LOGGER.warning("ECHO: facility search timed out (30s) for company=%r", company_name)
+            return pd.DataFrame()
+        except Exception as exc:
+            LOGGER.warning("ECHO: facility search failed for company=%r: %s", company_name, exc)
             return pd.DataFrame()
 
         if not facilities:
+            LOGGER.info("ECHO: no facilities found for company=%r", company_name)
             return pd.DataFrame()
 
+        LOGGER.info("ECHO: found %d facilities for company=%r — fetching enforcement data", len(facilities), company_name)
         rows = []
         for facility in facilities:
             registry_id = facility.get("RegistryID") or facility.get("REGISTRY_ID")
@@ -70,7 +80,17 @@ class ECHOFetcher(BaseRegulatoryFetcher):
                         "last_inspection_date": fac_info.get("LastInspectionDate"),
                     }
                 )
-            except Exception:
+            except requests.exceptions.Timeout:
+                LOGGER.warning("ECHO: enforcement lookup timed out for registry_id=%s", registry_id)
+                rows.append(
+                    {
+                        "facility_name": facility.get("FacName") or facility.get("FAC_NAME"),
+                        "registry_id": registry_id,
+                        "state": facility.get("StateCode") or facility.get("STATE_CODE"),
+                    }
+                )
+            except Exception as exc:
+                LOGGER.warning("ECHO: enforcement lookup failed for registry_id=%s: %s", registry_id, exc)
                 # record partial row with just facility identity if enforcement call fails
                 rows.append(
                     {
@@ -83,4 +103,6 @@ class ECHOFetcher(BaseRegulatoryFetcher):
         if not rows:
             return pd.DataFrame()
 
-        return pd.DataFrame(rows).reset_index(drop=True)
+        result = pd.DataFrame(rows).reset_index(drop=True)
+        LOGGER.info("ECHO: done — %d facility rows for company=%r", len(result), company_name)
+        return result
