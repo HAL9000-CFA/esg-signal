@@ -68,6 +68,29 @@ class RelevanceFilterResult:
 
 
 @dataclass
+class FactorScore:
+    factor_id: str
+    factor_name: str
+    score: float  # weighted average across streams (0.0–1.0)
+    flag: str  # "green" | "amber" | "red"
+    stream_scores: Dict[str, float]  # {"disclosure": 0.85, "regulatory": 0.5, ...}
+    evidence: List[str]  # human-readable notes per stream
+    sources: List[str]  # URLs from CompanyProfile.source_urls
+    narrative: str  # Claude-generated synthesis
+
+
+@dataclass
+class CredibilityReport:
+    ticker: Optional[str]
+    company_name: str
+    sasb_industry: Optional[str]
+    factor_scores: List[FactorScore]
+    overall_score: float  # mean of per-factor scores
+    overall_flag: str  # "green" | "amber" | "red"
+    errors: List[str]
+
+
+@dataclass
 class DataGathererResult:
     profile: Optional["CompanyProfile"]
     source_statuses: Dict[str, str] = field(default_factory=dict)
