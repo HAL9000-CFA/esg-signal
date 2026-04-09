@@ -7,9 +7,11 @@ x-airflow-common: &airflow-common
     AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dags
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     AIRFLOW__WEBSERVER__SECRET_KEY: "change-me-in-production"
+    AIRFLOW__API__AUTH_BACKENDS: airflow.api.auth.backend.basic_auth
     PYTHONPATH: /opt/airflow/src
   volumes:
     - ./pipeline:/opt/airflow/dags
+    - ./pipeline:/opt/airflow/src/pipeline
     - ./agents:/opt/airflow/src/agents
     - ./data:/opt/airflow/data
     - ./scripts:/opt/airflow/src/scripts
@@ -62,9 +64,12 @@ services:
     ports:
       - "8501:8501"
     env_file: .env
+    environment:
+      AIRFLOW_URL: http://airflow-webserver:8080
     volumes:
       - ./ui:/app/ui
       - ./agents:/app/agents
+      - ./pipeline:/app/pipeline
       - ./data:/app/data
     restart: unless-stopped
 
