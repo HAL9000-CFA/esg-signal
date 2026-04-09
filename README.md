@@ -97,7 +97,7 @@ pytest
 ## Making Contributions
 
 1. Pull latest `main`
-2. Create branches as `issue/<number>-short-description` (or else 5 lashes)
+2. Create branches as `issue/<number>-short-description`
 3. Pre-commit hooks run automatically on `git commit` (it'll handle formatting)
 4. Open a pull request into `main` when done, CI runs pytest and ruff
 5. Ask another team member to review before merge
