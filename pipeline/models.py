@@ -120,3 +120,46 @@ class DataGathererResult:
     # e.g. {"edgar": "success", "ghgrp": "failed: no facilities found"}
     regulatory_paths: Dict[str, str] = field(default_factory=dict)
     # e.g. {"ghgrp": "data/processed/ghgrp_AAPL.csv"} — read by credibility scorer
+
+
+# ---------------------------------------------------------------------------
+# DCF Mapper models
+# ---------------------------------------------------------------------------
+
+
+@dataclass
+class DcfLineItem:
+    """A single row label parsed from the analyst's Excel DCF model."""
+
+    sheet_name: str
+    row_index: int
+    label: str  # raw text label from the spreadsheet cell
+
+
+@dataclass
+class EsgDcfMapping:
+    """Maps one material ESG factor to the specific DCF line items it affects."""
+
+    factor_id: str
+    factor_name: str
+    financial_impacts: List[str]  # SASB categories: revenue_impact / cost_impact / ...
+    mapped_line_items: List[DcfLineItem]  # which rows in the DCF are affected
+    scenario_low: Optional[float]  # low scenario financial impact (USD)
+    scenario_mid: Optional[float]  # mid scenario financial impact (USD)
+    scenario_high: Optional[float]  # high scenario financial impact (USD)
+    scenario_currency: str  # "USD" | "GBP" | "EUR"
+    scenario_source: str  # citation for the range
+    credibility_flag: Optional[str] = None  # green / amber / red from CredibilityReport
+
+
+@dataclass
+class DcfMapperResult:
+    """Output of the DCF mapper for one company."""
+
+    ticker: Optional[str]
+    excel_path: str
+    sheet_names: List[str]  # sheets found in the workbook
+    line_item_count: int  # total DCF line items parsed
+    mappings: List[EsgDcfMapping]  # one entry per mapped factor
+    unmapped_factors: List[str]  # factor names with no matching DCF line
+    errors: List[str]
