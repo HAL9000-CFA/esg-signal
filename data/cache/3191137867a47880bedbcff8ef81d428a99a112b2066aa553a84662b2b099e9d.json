@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "NIKE's data security credibility raises significant concerns, with a notable disconnect between moderate regulatory compliance and supply chain indicators versus a complete absence of specialized talent investment in this area. The company's disclosure practices appear weak, suggesting limited transparency around cybersecurity measures and incident management. This pattern indicates NIKE may be meeting baseline compliance requirements without demonstrating the deeper organizational commitment to data protection that institutional investors increasingly expect from consumer-facing companies handling substantial customer information.",
+  "cost_usd": 0.010424999999999999,
+  "input_tokens": 225,
+  "model": "claude-opus-4-5",
+  "output_tokens": 94,
+  "purpose": "Narrative synthesis: Data Security",
+  "temperature": 0.2
+}
