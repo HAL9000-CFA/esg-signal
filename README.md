@@ -445,6 +445,10 @@ Indeed blocks RSS scraping (403). The pipeline falls back to SerpAPI (Google Job
 
 The SASB Navigator `companySearch` endpoint is unreliable for short tickers (e.g. `BP` matches unrelated companies). Industry resolution uses SIC code mapping via `data/sasb_map.json` as the reliable fallback. The Navigator is used for live factor lists once the industry code is known.
 
+### PDF export — malformed output
+
+The PDF export button is present but currently produces a malformed document. Use **Download JSON** instead, it captures the full report including pipeline trace and can be reloaded via the **Load previous report** tab with no loss of information.
+
 ---
 
 ## Roadmap
