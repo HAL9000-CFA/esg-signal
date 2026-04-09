@@ -1,0 +1,769 @@
+{
+  "version": "SASB Standards 2023",
+  "note": "SIC codes mapped to SASB Sustainable Industry Classification System (SICS). Mapping is best-effort — not an official SASB publication. financial_impacts: revenue_impact | cost_impact | asset_impact | liability_impact.",
+  "industries": {
+    "software_it_services": {
+      "name": "Software & IT Services",
+      "sasb_sector": "Technology & Communications",
+      "sic_codes": ["7370", "7371", "7372", "7373", "7374", "7375", "7376", "7377", "7378", "7379"],
+      "material_factors": {
+        "data_security": {
+          "name": "Data Security",
+          "dimension": "Social Capital",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        },
+        "customer_privacy": {
+          "name": "Customer Privacy",
+          "dimension": "Social Capital",
+          "financial_impacts": ["liability_impact"]
+        },
+        "employee_engagement_diversity": {
+          "name": "Employee Engagement, Diversity & Inclusion",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact"]
+        },
+        "energy_management": {
+          "name": "Energy Management",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact"]
+        },
+        "systemic_risk_management": {
+          "name": "Systemic Risk Management",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        }
+      }
+    },
+    "hardware": {
+      "name": "Hardware",
+      "sasb_sector": "Technology & Communications",
+      "sic_codes": ["3570", "3571", "3572", "3575", "3576", "3577", "3578", "3579", "3670", "3671", "3672", "3673", "3675", "3676", "3677", "3678", "3679"],
+      "material_factors": {
+        "product_lifecycle_management": {
+          "name": "Product Lifecycle Management",
+          "dimension": "Business Model & Innovation",
+          "financial_impacts": ["revenue_impact", "asset_impact"]
+        },
+        "energy_management": {
+          "name": "Energy Management",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact"]
+        },
+        "labor_practices": {
+          "name": "Labor Practices",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact", "liability_impact"]
+        },
+        "materials_sourcing": {
+          "name": "Materials Sourcing & Efficiency",
+          "dimension": "Business Model & Innovation",
+          "financial_impacts": ["cost_impact"]
+        },
+        "data_security": {
+          "name": "Data Security",
+          "dimension": "Social Capital",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        }
+      }
+    },
+    "semiconductors": {
+      "name": "Semiconductors",
+      "sasb_sector": "Technology & Communications",
+      "sic_codes": ["3674"],
+      "material_factors": {
+        "water_management": {
+          "name": "Water & Wastewater Management",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact", "asset_impact"]
+        },
+        "energy_management": {
+          "name": "Energy Management",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact"]
+        },
+        "materials_sourcing": {
+          "name": "Materials Sourcing & Efficiency",
+          "dimension": "Business Model & Innovation",
+          "financial_impacts": ["cost_impact"]
+        },
+        "labor_practices": {
+          "name": "Labor Practices",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact"]
+        },
+        "product_lifecycle_management": {
+          "name": "Product Lifecycle Management",
+          "dimension": "Business Model & Innovation",
+          "financial_impacts": ["revenue_impact"]
+        }
+      }
+    },
+    "telecommunications": {
+      "name": "Telecommunication Services",
+      "sasb_sector": "Technology & Communications",
+      "sic_codes": ["4810", "4811", "4812", "4813", "4899"],
+      "material_factors": {
+        "data_security": {
+          "name": "Data Security",
+          "dimension": "Social Capital",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        },
+        "customer_privacy": {
+          "name": "Customer Privacy",
+          "dimension": "Social Capital",
+          "financial_impacts": ["liability_impact"]
+        },
+        "energy_management": {
+          "name": "Energy Management",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact"]
+        },
+        "employee_engagement_diversity": {
+          "name": "Employee Engagement, Diversity & Inclusion",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact"]
+        },
+        "competitive_behavior": {
+          "name": "Competitive Behavior",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        }
+      }
+    },
+    "internet_media_services": {
+      "name": "Internet Media & Services",
+      "sasb_sector": "Technology & Communications",
+      "sic_codes": ["7380", "7382", "7389", "7319"],
+      "material_factors": {
+        "data_security": {
+          "name": "Data Security",
+          "dimension": "Social Capital",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        },
+        "customer_privacy": {
+          "name": "Customer Privacy",
+          "dimension": "Social Capital",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        },
+        "selling_practices": {
+          "name": "Selling Practices & Product Labeling",
+          "dimension": "Social Capital",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        },
+        "employee_engagement_diversity": {
+          "name": "Employee Engagement, Diversity & Inclusion",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact"]
+        },
+        "competitive_behavior": {
+          "name": "Competitive Behavior",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        }
+      }
+    },
+    "commercial_banks": {
+      "name": "Commercial Banks",
+      "sasb_sector": "Financials",
+      "sic_codes": ["6020", "6021", "6022", "6029", "6035", "6036"],
+      "material_factors": {
+        "data_security": {
+          "name": "Data Security",
+          "dimension": "Social Capital",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        },
+        "financial_inclusion": {
+          "name": "Access & Affordability",
+          "dimension": "Social Capital",
+          "financial_impacts": ["revenue_impact"]
+        },
+        "business_ethics": {
+          "name": "Business Ethics",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        },
+        "systemic_risk_management": {
+          "name": "Systemic Risk Management",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["asset_impact", "liability_impact"]
+        },
+        "employee_engagement_diversity": {
+          "name": "Employee Engagement, Diversity & Inclusion",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact"]
+        }
+      }
+    },
+    "investment_banking": {
+      "name": "Investment Banking & Brokerage",
+      "sasb_sector": "Financials",
+      "sic_codes": ["6211", "6282", "6199", "6159"],
+      "material_factors": {
+        "business_ethics": {
+          "name": "Business Ethics",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        },
+        "systemic_risk_management": {
+          "name": "Systemic Risk Management",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["asset_impact", "liability_impact"]
+        },
+        "competitive_behavior": {
+          "name": "Competitive Behavior",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        },
+        "employee_engagement_diversity": {
+          "name": "Employee Engagement, Diversity & Inclusion",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact"]
+        }
+      }
+    },
+    "insurance": {
+      "name": "Insurance",
+      "sasb_sector": "Financials",
+      "sic_codes": ["6311", "6321", "6331", "6351", "6361", "6371", "6399", "6411"],
+      "material_factors": {
+        "climate_physical_risk": {
+          "name": "Physical Impacts of Climate Change",
+          "dimension": "Business Model & Innovation",
+          "financial_impacts": ["asset_impact", "liability_impact"]
+        },
+        "systemic_risk_management": {
+          "name": "Systemic Risk Management",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["asset_impact", "liability_impact"]
+        },
+        "business_ethics": {
+          "name": "Business Ethics",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["liability_impact"]
+        },
+        "customer_privacy": {
+          "name": "Customer Privacy",
+          "dimension": "Social Capital",
+          "financial_impacts": ["liability_impact"]
+        }
+      }
+    },
+    "pharmaceuticals": {
+      "name": "Biotechnology & Pharmaceuticals",
+      "sasb_sector": "Health Care",
+      "sic_codes": ["2830", "2833", "2834", "2835", "2836", "8731"],
+      "material_factors": {
+        "product_quality_safety": {
+          "name": "Product Quality & Safety",
+          "dimension": "Social Capital",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        },
+        "access_affordability": {
+          "name": "Access & Affordability",
+          "dimension": "Social Capital",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        },
+        "business_ethics": {
+          "name": "Business Ethics",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["liability_impact"]
+        },
+        "business_model_resilience": {
+          "name": "Business Model Resilience",
+          "dimension": "Business Model & Innovation",
+          "financial_impacts": ["revenue_impact", "asset_impact"]
+        },
+        "supply_chain_management": {
+          "name": "Supply Chain Management",
+          "dimension": "Business Model & Innovation",
+          "financial_impacts": ["cost_impact"]
+        }
+      }
+    },
+    "medical_equipment": {
+      "name": "Medical Equipment & Supplies",
+      "sasb_sector": "Health Care",
+      "sic_codes": ["3841", "3842", "3843", "3844", "3845"],
+      "material_factors": {
+        "product_quality_safety": {
+          "name": "Product Quality & Safety",
+          "dimension": "Social Capital",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        },
+        "business_ethics": {
+          "name": "Business Ethics",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["liability_impact"]
+        },
+        "supply_chain_management": {
+          "name": "Supply Chain Management",
+          "dimension": "Business Model & Innovation",
+          "financial_impacts": ["cost_impact"]
+        },
+        "labor_practices": {
+          "name": "Labor Practices",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact"]
+        }
+      }
+    },
+    "oil_gas_ep": {
+      "name": "Oil & Gas — Exploration & Production",
+      "sasb_sector": "Extractives & Minerals Processing",
+      "sic_codes": ["1311", "1381", "1382", "1389"],
+      "material_factors": {
+        "ghg_emissions": {
+          "name": "GHG Emissions",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact", "asset_impact"]
+        },
+        "air_quality": {
+          "name": "Air Quality",
+          "dimension": "Environment",
+          "financial_impacts": ["liability_impact"]
+        },
+        "water_management": {
+          "name": "Water & Wastewater Management",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact", "liability_impact"]
+        },
+        "ecological_impacts": {
+          "name": "Ecological Impacts",
+          "dimension": "Environment",
+          "financial_impacts": ["liability_impact", "asset_impact"]
+        },
+        "critical_incident_risk": {
+          "name": "Critical Incident Risk Management",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["asset_impact", "liability_impact"]
+        },
+        "employee_health_safety": {
+          "name": "Employee Health & Safety",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact", "liability_impact"]
+        },
+        "business_ethics": {
+          "name": "Business Ethics",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["liability_impact"]
+        }
+      }
+    },
+    "oil_gas_refining": {
+      "name": "Oil & Gas — Refining & Marketing",
+      "sasb_sector": "Extractives & Minerals Processing",
+      "sic_codes": ["2911", "2990", "5171", "5172"],
+      "material_factors": {
+        "ghg_emissions": {
+          "name": "GHG Emissions",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact", "asset_impact"]
+        },
+        "air_quality": {
+          "name": "Air Quality",
+          "dimension": "Environment",
+          "financial_impacts": ["liability_impact"]
+        },
+        "water_management": {
+          "name": "Water & Wastewater Management",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact", "liability_impact"]
+        },
+        "critical_incident_risk": {
+          "name": "Critical Incident Risk Management",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["asset_impact", "liability_impact"]
+        },
+        "employee_health_safety": {
+          "name": "Employee Health & Safety",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact", "liability_impact"]
+        }
+      }
+    },
+    "metals_mining": {
+      "name": "Metals & Mining",
+      "sasb_sector": "Extractives & Minerals Processing",
+      "sic_codes": ["1040", "1090", "1094", "1400", "1410", "1422", "1423", "1429", "1440", "1446", "3310", "3312", "3316", "3317", "3320", "3325", "3330", "3334", "3339", "3350", "3353", "3356", "3357", "3360", "3390"],
+      "material_factors": {
+        "ghg_emissions": {
+          "name": "GHG Emissions",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact"]
+        },
+        "water_management": {
+          "name": "Water & Wastewater Management",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact", "liability_impact"]
+        },
+        "ecological_impacts": {
+          "name": "Ecological Impacts",
+          "dimension": "Environment",
+          "financial_impacts": ["liability_impact", "asset_impact"]
+        },
+        "employee_health_safety": {
+          "name": "Employee Health & Safety",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact", "liability_impact"]
+        },
+        "community_relations": {
+          "name": "Human Rights & Community Relations",
+          "dimension": "Social Capital",
+          "financial_impacts": ["asset_impact", "revenue_impact"]
+        },
+        "business_ethics": {
+          "name": "Business Ethics",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["liability_impact"]
+        }
+      }
+    },
+    "automobiles": {
+      "name": "Automobiles",
+      "sasb_sector": "Transportation",
+      "sic_codes": ["3710", "3711", "3713", "3714", "3715", "3716"],
+      "material_factors": {
+        "product_lifecycle_management": {
+          "name": "Product Design & Lifecycle Management",
+          "dimension": "Business Model & Innovation",
+          "financial_impacts": ["revenue_impact", "asset_impact"]
+        },
+        "ghg_emissions": {
+          "name": "GHG Emissions",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact", "asset_impact"]
+        },
+        "supply_chain_management": {
+          "name": "Supply Chain Management",
+          "dimension": "Business Model & Innovation",
+          "financial_impacts": ["cost_impact"]
+        },
+        "materials_sourcing": {
+          "name": "Materials Sourcing & Efficiency",
+          "dimension": "Business Model & Innovation",
+          "financial_impacts": ["cost_impact"]
+        },
+        "labor_practices": {
+          "name": "Labor Practices",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact"]
+        }
+      }
+    },
+    "airlines": {
+      "name": "Airlines",
+      "sasb_sector": "Transportation",
+      "sic_codes": ["4512", "4522"],
+      "material_factors": {
+        "ghg_emissions": {
+          "name": "GHG Emissions",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact", "asset_impact"]
+        },
+        "employee_health_safety": {
+          "name": "Employee Health & Safety",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact", "liability_impact"]
+        },
+        "labor_practices": {
+          "name": "Labor Practices",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact"]
+        },
+        "competitive_behavior": {
+          "name": "Competitive Behavior",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["revenue_impact"]
+        }
+      }
+    },
+    "food_beverage": {
+      "name": "Processed Foods",
+      "sasb_sector": "Food & Beverage",
+      "sic_codes": ["2000", "2010", "2011", "2013", "2020", "2024", "2030", "2040", "2041", "2050", "2060", "2070", "2080", "2082", "2084", "2086", "2090", "2095", "2099"],
+      "material_factors": {
+        "ghg_emissions": {
+          "name": "GHG Emissions",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact"]
+        },
+        "water_management": {
+          "name": "Water & Wastewater Management",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact", "asset_impact"]
+        },
+        "product_quality_safety": {
+          "name": "Product Quality & Safety",
+          "dimension": "Social Capital",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        },
+        "supply_chain_management": {
+          "name": "Supply Chain Management",
+          "dimension": "Business Model & Innovation",
+          "financial_impacts": ["cost_impact", "revenue_impact"]
+        },
+        "labor_practices": {
+          "name": "Labor Practices",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact"]
+        },
+        "packaging": {
+          "name": "Waste & Hazardous Materials Management",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact"]
+        }
+      }
+    },
+    "retail": {
+      "name": "Multiline and Specialty Retailers",
+      "sasb_sector": "Consumer Goods",
+      "sic_codes": ["5200", "5211", "5251", "5261", "5300", "5311", "5331", "5399", "5400", "5411", "5412", "5500", "5511", "5531", "5600", "5611", "5621", "5641", "5651", "5661", "5700", "5712", "5731", "5734", "5800", "5812", "5900", "5912", "5940", "5941", "5945", "5961", "5999"],
+      "material_factors": {
+        "labor_practices": {
+          "name": "Labor Practices",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact", "liability_impact"]
+        },
+        "supply_chain_management": {
+          "name": "Supply Chain Management",
+          "dimension": "Business Model & Innovation",
+          "financial_impacts": ["cost_impact", "revenue_impact"]
+        },
+        "customer_privacy": {
+          "name": "Customer Privacy",
+          "dimension": "Social Capital",
+          "financial_impacts": ["liability_impact"]
+        },
+        "energy_management": {
+          "name": "Energy Management",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact"]
+        },
+        "product_quality_safety": {
+          "name": "Product Quality & Safety",
+          "dimension": "Social Capital",
+          "financial_impacts": ["revenue_impact", "liability_impact"]
+        }
+      }
+    },
+    "chemicals": {
+      "name": "Chemicals",
+      "sasb_sector": "Resource Transformation",
+      "sic_codes": ["2810", "2812", "2813", "2816", "2819", "2820", "2821", "2822", "2823", "2824", "2840", "2841", "2842", "2843", "2844", "2850", "2851", "2860", "2861", "2865", "2869", "2870", "2879", "2890", "2891", "2892", "2893", "2895", "2899"],
+      "material_factors": {
+        "ghg_emissions": {
+          "name": "GHG Emissions",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact"]
+        },
+        "air_quality": {
+          "name": "Air Quality",
+          "dimension": "Environment",
+          "financial_impacts": ["liability_impact"]
+        },
+        "water_management": {
+          "name": "Water & Wastewater Management",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact", "liability_impact"]
+        },
+        "ecological_impacts": {
+          "name": "Ecological Impacts",
+          "dimension": "Environment",
+          "financial_impacts": ["liability_impact"]
+        },
+        "employee_health_safety": {
+          "name": "Employee Health & Safety",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact", "liability_impact"]
+        },
+        "product_quality_safety": {
+          "name": "Product Quality & Safety",
+          "dimension": "Social Capital",
+          "financial_impacts": ["liability_impact"]
+        }
+      }
+    },
+    "aerospace_defense": {
+      "name": "Aerospace & Defense",
+      "sasb_sector": "Resource Transformation",
+      "sic_codes": ["3760", "3761", "3764", "3769", "3812"],
+      "material_factors": {
+        "business_ethics": {
+          "name": "Business Ethics",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["liability_impact", "revenue_impact"]
+        },
+        "employee_health_safety": {
+          "name": "Employee Health & Safety",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact"]
+        },
+        "supply_chain_management": {
+          "name": "Supply Chain Management",
+          "dimension": "Business Model & Innovation",
+          "financial_impacts": ["cost_impact"]
+        },
+        "labor_practices": {
+          "name": "Labor Practices",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact"]
+        }
+      }
+    },
+    "electric_utilities": {
+      "name": "Electric Utilities & Power Generators",
+      "sasb_sector": "Infrastructure",
+      "sic_codes": ["4911", "4931", "4941"],
+      "material_factors": {
+        "ghg_emissions": {
+          "name": "GHG Emissions",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact", "asset_impact"]
+        },
+        "air_quality": {
+          "name": "Air Quality",
+          "dimension": "Environment",
+          "financial_impacts": ["liability_impact", "cost_impact"]
+        },
+        "water_management": {
+          "name": "Water & Wastewater Management",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact", "asset_impact"]
+        },
+        "waste_management": {
+          "name": "Waste & Hazardous Materials Management",
+          "dimension": "Environment",
+          "financial_impacts": ["liability_impact"]
+        },
+        "critical_incident_risk": {
+          "name": "Critical Incident Risk Management",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["asset_impact", "liability_impact"]
+        },
+        "employee_health_safety": {
+          "name": "Employee Health & Safety",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact"]
+        }
+      }
+    },
+    "gas_utilities": {
+      "name": "Gas Utilities & Distributors",
+      "sasb_sector": "Infrastructure",
+      "sic_codes": ["4922", "4923", "4924", "4925"],
+      "material_factors": {
+        "ghg_emissions": {
+          "name": "GHG Emissions",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact", "asset_impact"]
+        },
+        "critical_incident_risk": {
+          "name": "Critical Incident Risk Management",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["asset_impact", "liability_impact"]
+        },
+        "employee_health_safety": {
+          "name": "Employee Health & Safety",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact", "liability_impact"]
+        },
+        "business_model_resilience": {
+          "name": "Business Model Resilience",
+          "dimension": "Business Model & Innovation",
+          "financial_impacts": ["asset_impact", "revenue_impact"]
+        }
+      }
+    },
+    "real_estate": {
+      "name": "Real Estate",
+      "sasb_sector": "Infrastructure",
+      "sic_codes": ["6500", "6510", "6512", "6513", "6514", "6515", "6519", "6531", "6532", "6552"],
+      "material_factors": {
+        "energy_management": {
+          "name": "Energy Management",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact", "revenue_impact"]
+        },
+        "water_management": {
+          "name": "Water & Wastewater Management",
+          "dimension": "Environment",
+          "financial_impacts": ["cost_impact"]
+        },
+        "climate_physical_risk": {
+          "name": "Physical Impacts of Climate Change",
+          "dimension": "Business Model & Innovation",
+          "financial_impacts": ["asset_impact"]
+        },
+        "community_relations": {
+          "name": "Human Rights & Community Relations",
+          "dimension": "Social Capital",
+          "financial_impacts": ["revenue_impact"]
+        },
+        "labor_practices": {
+          "name": "Labor Practices",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact"]
+        }
+      }
+    },
+    "construction": {
+      "name": "Engineering & Construction Services",
+      "sasb_sector": "Infrastructure",
+      "sic_codes": ["1520", "1521", "1522", "1531", "1540", "1541", "1542", "1600", "1610", "1620", "1623", "1629", "1700", "1711", "1731", "1740", "1741", "1742", "1750", "1761", "1771", "1781", "1791"],
+      "material_factors": {
+        "employee_health_safety": {
+          "name": "Employee Health & Safety",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact", "liability_impact"]
+        },
+        "business_ethics": {
+          "name": "Business Ethics",
+          "dimension": "Leadership & Governance",
+          "financial_impacts": ["liability_impact"]
+        },
+        "community_relations": {
+          "name": "Human Rights & Community Relations",
+          "dimension": "Social Capital",
+          "financial_impacts": ["revenue_impact"]
+        },
+        "climate_physical_risk": {
+          "name": "Physical Impacts of Climate Change",
+          "dimension": "Business Model & Innovation",
+          "financial_impacts": ["asset_impact"]
+        },
+        "labor_practices": {
+          "name": "Labor Practices",
+          "dimension": "Human Capital",
+          "financial_impacts": ["cost_impact"]
+        }
+      }
+    }
+  },
+  "fallback_factors": {
+    "ghg_emissions": {
+      "name": "GHG Emissions",
+      "dimension": "Environment",
+      "financial_impacts": ["cost_impact", "asset_impact"]
+    },
+    "energy_management": {
+      "name": "Energy Management",
+      "dimension": "Environment",
+      "financial_impacts": ["cost_impact"]
+    },
+    "labor_practices": {
+      "name": "Labor Practices",
+      "dimension": "Human Capital",
+      "financial_impacts": ["cost_impact"]
+    },
+    "business_ethics": {
+      "name": "Business Ethics",
+      "dimension": "Leadership & Governance",
+      "financial_impacts": ["liability_impact"]
+    },
+    "data_security": {
+      "name": "Data Security",
+      "dimension": "Social Capital",
+      "financial_impacts": ["revenue_impact", "liability_impact"]
+    }
+  }
+}

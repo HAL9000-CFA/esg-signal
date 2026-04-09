@@ -49,6 +49,25 @@ class TalentSignalResult:
 
 
 @dataclass
+class MaterialFactor:
+    factor_id: str  # e.g. "ghg_emissions"
+    name: str  # e.g. "GHG Emissions"
+    dimension: str  # SASB dimension: "Environment", "Social Capital", etc.
+    financial_impacts: List[
+        str
+    ]  # subset of revenue_impact / cost_impact / asset_impact / liability_impact
+
+
+@dataclass
+class RelevanceFilterResult:
+    ticker: Optional[str]
+    sic_code: Optional[str]
+    sasb_industry: Optional[str]  # None if SIC not mapped
+    material_factors: List[MaterialFactor]
+    errors: List[str]
+
+
+@dataclass
 class DataGathererResult:
     profile: Optional["CompanyProfile"]
     source_statuses: Dict[str, str] = field(default_factory=dict)
