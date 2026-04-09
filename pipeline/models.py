@@ -68,6 +68,28 @@ class RelevanceFilterResult:
 
 
 @dataclass
+class CommitmentCheck:
+    commitment_text: str  # verbatim quote from report (≤200 chars)
+    claimed_amount: Optional[float]  # monetary figure in source currency (None if not stated)
+    currency: str  # ISO 4217 code or "UNKNOWN"
+    horizon_year: Optional[int]  # target year stated in the commitment
+    category: str  # "capex" | "opex" | "reduction_target" | "other"
+    financials_label: Optional[str]  # raw_financials key used for comparison
+    financials_value: Optional[float]  # actual financial figure used
+    flag: str  # "consistent" | "plausible" | "gap" | "unverifiable"
+    notes: str  # human-readable explanation of the verdict
+
+
+@dataclass
+class WordsMoneyResult:
+    ticker: Optional[str]
+    factor_id: str
+    commitment_checks: List["CommitmentCheck"]
+    score: float  # 0.0–1.0 mean of per-commitment flag scores
+    errors: List[str]
+
+
+@dataclass
 class FactorScore:
     factor_id: str
     factor_name: str
@@ -77,6 +99,7 @@ class FactorScore:
     evidence: List[str]  # human-readable notes per stream
     sources: List[str]  # URLs from CompanyProfile.source_urls
     narrative: str  # Claude-generated synthesis
+    words_money_checks: Optional[List["CommitmentCheck"]] = None  # per-commitment detail
 
 
 @dataclass
