@@ -92,7 +92,7 @@ class TestCallGeminiLive:
         assert len(cache_files) == 1
         cached = json.loads(cache_files[0].read_text())
         assert cached["content"] == "Cached content."
-        assert cached["model"] == "gemini-2.0-flash"
+        assert cached["model"] == "gemini-2.5-flash"
 
     def test_logs_llm_call(self, tmp_path, monkeypatch):
         monkeypatch.setattr(llm_client, "CACHE_DIR", tmp_path)
@@ -126,7 +126,7 @@ class TestCallGeminiLive:
         mock_log.assert_called_once()
         call_kwargs = mock_log.call_args.kwargs
         assert call_kwargs["agent"] == "scorer"
-        assert call_kwargs["model"] == "gemini-2.0-flash"
+        assert call_kwargs["model"] == "gemini-2.5-flash"
         assert call_kwargs["cached"] is False
 
 
@@ -142,7 +142,7 @@ class TestCallGeminiCached:
 
         # Pre-write a cache entry
         payload = {
-            "model": "gemini-2.0-flash",
+            "model": "gemini-2.5-flash",
             "max_tokens": 8192,
             "temperature": 0.0,
             "prompt": "Cached prompt.",
@@ -153,7 +153,7 @@ class TestCallGeminiCached:
             "input_tokens": 30,
             "output_tokens": 60,
             "cost_usd": 0.0004,
-            "model": "gemini-2.0-flash",
+            "model": "gemini-2.5-flash",
             "agent": "test_agent",
             "purpose": "cached test",
             "temperature": 0.0,
@@ -215,4 +215,4 @@ class TestCallGeminiModelValidation:
             )
 
         used_model = mock_log.call_args.kwargs["model"]
-        assert used_model == "gemini-2.0-flash"
+        assert used_model == "gemini-2.5-flash"

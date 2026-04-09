@@ -124,7 +124,7 @@ class PDFExtractor:
             import os
 
             genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-            model = genai.GenerativeModel("gemini-2.0-flash")
+            model = genai.GenerativeModel("gemini-2.5-flash")
             response = model.generate_content(prompt_parts)
             content = response.text
             LOGGER.info(f"Gemini extracted {len(content):,} chars from {url}")

@@ -40,7 +40,7 @@ USE_CACHED = os.getenv("USE_CACHED", "false") == "true"
 # Not true to API, updated as needed and add to /config/pricing.json
 VALID_MODELS = {
     "claude": ["claude-opus-4-5"],
-    "gemini": ["gemini-2.0-flash"],
+    "gemini": ["gemini-2.5-flash"],
 }
 
 
