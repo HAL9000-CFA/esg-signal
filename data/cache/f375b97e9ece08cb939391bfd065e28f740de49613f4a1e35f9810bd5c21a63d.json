@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "Nike's labor practices credibility presents significant concerns, with a notable disconnect between the company's public positioning and underlying evidence. While regulatory compliance and supply chain indicators suggest moderate alignment with stated commitments, the complete absence of positive talent signals\u2014such as workforce sentiment or retention metrics\u2014undermines confidence in genuine human capital investment. The weak disclosure score further suggests the company may be selectively communicating its labor practices, leaving material gaps that sophisticated investors should view skeptically.",
+  "cost_usd": 0.01059,
+  "input_tokens": 226,
+  "model": "claude-opus-4-5",
+  "output_tokens": 96,
+  "purpose": "Narrative synthesis: Labor Practices",
+  "temperature": 0.2
+}

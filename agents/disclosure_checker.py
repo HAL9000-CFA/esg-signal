@@ -174,6 +174,34 @@ def grade_all_factors(
     ]
 
 
+_CHUNK_SIZE = 20_000   # characters per chunk
+_CHUNK_OVERLAP = 2_000  # overlap between consecutive chunks
+
+# Grade priority: QUANTIFIED > VAGUE > UNDISCLOSED
+_GRADE_PRIORITY = {"QUANTIFIED": 2, "VAGUE": 1, "UNDISCLOSED": 0}
+
+
+def _chunk_text(text: str) -> list[str]:
+    """
+    Splits text into overlapping chunks of _CHUNK_SIZE chars with _CHUNK_OVERLAP
+    chars of overlap between consecutive chunks.  Returns a list with at least
+    one element (the full text when it is already within the size limit).
+    """
+    if len(text) <= _CHUNK_SIZE:
+        return [text]
+    step = _CHUNK_SIZE - _CHUNK_OVERLAP
+    return [text[i : i + _CHUNK_SIZE] for i in range(0, len(text), step) if text[i : i + _CHUNK_SIZE]]
+
+
+def _merge_grades(grades: list[dict]) -> dict:
+    """
+    Merges per-chunk grade dicts using QUANTIFIED > VAGUE > UNDISCLOSED priority.
+    The evidence from the highest-priority result is kept.
+    """
+    best = max(grades, key=lambda g: _GRADE_PRIORITY.get(g.get("grade", "UNDISCLOSED"), 0))
+    return best
+
+
 def grade_single_factor(
     report_text: str,
     factor: str,
@@ -182,6 +210,11 @@ def grade_single_factor(
 ) -> dict:
     """
     Grades a single ESG factor as QUANTIFIED, VAGUE or UNDISCLOSED.
+
+    When report_text exceeds 20,000 characters it is split into overlapping
+    chunks of 20,000 chars (2,000 char overlap) and each chunk is graded
+    independently.  The highest-priority grade across all chunks is returned:
+    QUANTIFIED > VAGUE > UNDISCLOSED.
 
     Prefer grade_all_factors() when evaluating multiple factors — it sends the
     report text only once, saving (N-1) * report_tokens input tokens per run.
@@ -192,33 +225,40 @@ def grade_single_factor(
         company: company name
         run_id: Airflow run ID for audit log grouping (optional)
     """
+    chunks = _chunk_text(report_text)
+    chunk_results = []
+    for idx, chunk in enumerate(chunks):
+        prompt = dedent(
+            f"""
+            Company: {company}
+            ESG factor: {factor}
 
-    prompt = dedent(
-        f"""
-        Company: {company}
-        ESG factor: {factor}
+            Report:
+            {chunk}
+        """
+        )
 
-        Report:
-        {report_text}
-    """
-    )
+        response = call_claude(
+            agent=AGENT,
+            model=MODEL_NAME,
+            version=MODEL_VERSION,
+            purpose=PURPOSE,
+            system=_SYSTEM_PROMPT_SINGLE,
+            max_tokens=500,
+            temperature=TEMPERATURE,
+            prompt=prompt,
+            run_id=run_id,
+        )
 
-    response = call_claude(
-        agent=AGENT,
-        model=MODEL_NAME,
-        version=MODEL_VERSION,
-        purpose=PURPOSE,
-        system=_SYSTEM_PROMPT_SINGLE,
-        max_tokens=500,
-        temperature=TEMPERATURE,
-        prompt=prompt,
-        run_id=run_id,
-    )
+        response = response.replace("```json", "").replace("```", "").strip()
+        result = json.loads(response)
+        chunk_results.append(result)
 
-    response = response.replace("```json", "").replace("```", "").strip()
-    result = json.loads(response)
+        # Short-circuit: no need to check remaining chunks once QUANTIFIED is found
+        if result.get("grade") == "QUANTIFIED":
+            break
 
-    return result
+    return _merge_grades(chunk_results)
 
 
 def detect_drift(current_grades: list, previous_grades: list) -> list:
