@@ -49,16 +49,34 @@ class EDGARFetcher(BaseFetcher):
         return r.json()
 
     def get_latest_10k(self, submissions: Dict) -> Optional[Dict]:
+        """Returns the latest 10-K filing, or 20-F as a fallback for foreign private issuers."""
         data = submissions["filings"]["recent"]
         period_list = data.get("periodOfReport", [])
+
+        # First pass: look for 10-K
         for i, form in enumerate(data["form"]):
             if form == "10-K":
+                LOGGER.info("EDGAR: found 10-K filing dated %s", data["filingDate"][i])
                 return {
                     "accession": data["accessionNumber"][i],
                     "filing_date": data["filingDate"][i],
                     "period_of_report": period_list[i] if i < len(period_list) else None,
                     "primary_doc": data["primaryDocument"][i],
+                    "form_type": "10-K",
                 }
+
+        # Fallback: look for 20-F (foreign private issuers, e.g. BP)
+        for i, form in enumerate(data["form"]):
+            if form == "20-F":
+                LOGGER.info("EDGAR: no 10-K found — falling back to 20-F dated %s", data["filingDate"][i])
+                return {
+                    "accession": data["accessionNumber"][i],
+                    "filing_date": data["filingDate"][i],
+                    "period_of_report": period_list[i] if i < len(period_list) else None,
+                    "primary_doc": data["primaryDocument"][i],
+                    "form_type": "20-F",
+                }
+
         return None
 
     def download_10k_document(self, cik: str, filing: Dict) -> Optional[str]:
@@ -131,26 +149,27 @@ class EDGARFetcher(BaseFetcher):
         annual_report_text = ""
 
         if filing:
+            form_type = filing.get("form_type", "10-K")
             accession = filing["accession"].replace("-", "")
             report_url = f"{self.BASE_ARCHIVES}{cik}/{accession}/{filing['primary_doc']}"
             source_urls.append(report_url)
             latest_annual_filing = FilingMetadata(
-                filing_type="10-K",
+                filing_type=form_type,
                 filed_date=filing["filing_date"],
                 period_of_report=filing.get("period_of_report"),
                 document_url=report_url,
             )
-            LOGGER.info("EDGAR: downloading 10-K document for CIK=%s", cik)
+            LOGGER.info("EDGAR: downloading %s document for CIK=%s", form_type, cik)
             document = self.download_10k_document(cik, filing)
             if document:
                 annual_report_text = self.strip_html_to_text(document)
-                LOGGER.info("EDGAR: 10-K downloaded and stripped — %d chars", len(annual_report_text))
+                LOGGER.info("EDGAR: %s downloaded and stripped — %d chars", form_type, len(annual_report_text))
             else:
-                errors.append("Failed to download 10-K document")
-                LOGGER.warning("EDGAR: 10-K document download returned nothing for CIK=%s", cik)
+                errors.append(f"Failed to download {form_type} document")
+                LOGGER.warning("EDGAR: %s document download returned nothing for CIK=%s", form_type, cik)
         else:
-            errors.append("No 10-K filing found in recent submissions")
-            LOGGER.info("EDGAR: no 10-K found for ticker=%s (may file 20-F)", ticker)
+            errors.append("No 10-K or 20-F filing found in recent submissions")
+            LOGGER.info("EDGAR: no 10-K or 20-F found for ticker=%s", ticker)
 
         raw_financials: Dict = {}
         try:

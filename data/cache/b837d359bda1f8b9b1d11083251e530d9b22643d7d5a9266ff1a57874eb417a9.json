@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n[]\n```",
+  "cost_usd": 0.450525,
+  "input_tokens": 29990,
+  "model": "claude-opus-4-5",
+  "output_tokens": 9,
+  "purpose": "Commitment extraction: GHG Emissions",
+  "temperature": 0.0
+}

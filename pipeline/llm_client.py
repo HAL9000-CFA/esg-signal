@@ -11,6 +11,7 @@ import hashlib
 import json
 import logging
 import os
+import time
 from pathlib import Path
 from typing import Optional
 
@@ -22,7 +23,7 @@ except Exception:  # protobuf C extension fails on Python 3.14 — deferred to r
     genai = None  # type: ignore[assignment]
     _GEMINI_AVAILABLE = False
 
-from anthropic import Anthropic
+from anthropic import Anthropic, RateLimitError
 from dotenv import load_dotenv
 
 from pipeline.audit_log import compute_cost, log_llm_call
@@ -36,6 +37,10 @@ logging.basicConfig(
 
 CACHE_DIR = Path(os.getenv("CACHE_DIR", "data/cache/"))
 USE_CACHED = os.getenv("USE_CACHED", "false") == "true"
+
+# Exponential backoff delays (seconds) for Anthropic 429 rate limit retries.
+# Up to 5 retries: 5s → 10s → 20s → 40s → 80s.
+_RATE_LIMIT_BACKOFF = [5, 10, 20, 40, 80]
 
 # Not true to API, updated as needed and add to /config/pricing.json
 VALID_MODELS = {
@@ -113,7 +118,25 @@ def call_claude(
         content = cached_call["content"]
     else:  # No cache
         client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-        response = client.messages.create(**payload)
+        response = None
+        for attempt, wait in enumerate(_RATE_LIMIT_BACKOFF, start=1):
+            try:
+                response = client.messages.create(**payload)
+                break
+            except RateLimitError:
+                if attempt == len(_RATE_LIMIT_BACKOFF):
+                    LOGGER.warning(
+                        "call_claude: 429 rate limit — all %d retries exhausted, raising",
+                        len(_RATE_LIMIT_BACKOFF),
+                    )
+                    raise
+                LOGGER.warning(
+                    "call_claude: 429 rate limit hit (attempt %d/%d) — waiting %ds before retry",
+                    attempt,
+                    len(_RATE_LIMIT_BACKOFF),
+                    wait,
+                )
+                time.sleep(wait)
 
         input_tokens = response.usage.input_tokens
         output_tokens = response.usage.output_tokens

@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "NIKE's environmental credibility on GHG emissions presents a mixed picture that warrants investor scrutiny. While the company demonstrates strong internal commitment through talent acquisition in sustainability roles, this contrasts sharply with the absence of formal climate-related disclosures, suggesting a gap between operational intent and transparent reporting. The moderate alignment across regulatory compliance, capital allocation, and supply chain practices indicates incremental progress, but the disconnect between workforce investment and disclosure practices raises questions about whether stated climate ambitions are being systematically embedded across the organization.",
+  "cost_usd": 0.011744999999999998,
+  "input_tokens": 228,
+  "model": "claude-opus-4-5",
+  "output_tokens": 111,
+  "purpose": "Narrative synthesis: GHG Emissions",
+  "temperature": 0.2
+}
