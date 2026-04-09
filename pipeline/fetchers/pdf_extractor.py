@@ -32,7 +32,7 @@ class PDFExtractor:
         text = extractor.extract(url="https://...")
     """
 
-    def __init__(self, timeout: int = 60):
+    def __init__(self, timeout: int = 30):
         self.timeout = timeout
 
     def extract(self, url: str, agent: str = "pdf_extractor", run_id: Optional[str] = None) -> str:
@@ -70,12 +70,17 @@ class PDFExtractor:
     # ------------------------------------------------------------------
 
     def _download(self, url: str) -> Optional[bytes]:
+        LOGGER.info("PDFExtractor: downloading from %s (timeout=%ds)", url, self.timeout)
         try:
             resp = requests.get(url, timeout=self.timeout)
             resp.raise_for_status()
+            LOGGER.info("PDFExtractor: downloaded %d bytes", len(resp.content))
             return resp.content
+        except requests.exceptions.Timeout:
+            LOGGER.warning("PDFExtractor: download timed out (%ds) for %s", self.timeout, url)
+            return None
         except Exception as exc:
-            LOGGER.warning(f"Failed to download PDF from {url}: {exc}")
+            LOGGER.warning("PDFExtractor: download failed for %s: %s", url, exc)
             return None
 
     def _extract_with_pdfplumber(self, pdf_bytes: bytes) -> str:

@@ -1,9 +1,12 @@
+import logging
 from typing import Optional
 
 import pandas as pd
 import requests
 
 from pipeline.fetchers.base_regulatory import BaseRegulatoryFetcher
+
+LOGGER = logging.getLogger(__name__)
 
 # NRC (National Response Center) — legally mandated spill and release reports.
 # Companies must report incidents to the NRC within 24 hours; reports are public.
@@ -25,6 +28,7 @@ class NRCFetcher(BaseRegulatoryFetcher):
         if year is not None:
             payload["year"] = year
 
+        LOGGER.info("NRC: fetching incident reports for company=%r", company_name)
         try:
             r = requests.post(
                 f"{_BASE}/incidents",
@@ -33,11 +37,16 @@ class NRCFetcher(BaseRegulatoryFetcher):
             )
             r.raise_for_status()
             data = r.json()
-        except Exception:
+        except requests.exceptions.Timeout:
+            LOGGER.warning("NRC: request timed out (30s) for company=%r", company_name)
+            return pd.DataFrame()
+        except Exception as exc:
+            LOGGER.warning("NRC: request failed for company=%r: %s", company_name, exc)
             return pd.DataFrame()
 
         incidents = data if isinstance(data, list) else data.get("incidents", [])
         if not incidents:
+            LOGGER.info("NRC: no incidents found for company=%r", company_name)
             return pd.DataFrame()
 
         df = pd.DataFrame(incidents)
@@ -58,4 +67,6 @@ class NRCFetcher(BaseRegulatoryFetcher):
         if "incident_date" in df.columns:
             df = df.sort_values("incident_date", ascending=False)
 
-        return df.reset_index(drop=True)
+        result = df.reset_index(drop=True)
+        LOGGER.info("NRC: done — %d incidents for company=%r", len(result), company_name)
+        return result
