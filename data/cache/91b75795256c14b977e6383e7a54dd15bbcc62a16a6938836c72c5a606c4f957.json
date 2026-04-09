@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Energy Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Labor Practices\", \"grade\": \"VAGUE\", \"evidence\": \"We require the contractors that directly manufacture our products and our licensees that make products using our intellectual property (including, indirectly, their contract manufacturers) to comply with a code of conduct and other environmental, human rights, health and safety standards for the benefit of workers.\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"VAGUE\", \"evidence\": \"Our international operations are also subject to compliance with the U.S. Foreign Corrupt Practices Act (the 'FCPA'), and other anti-bribery laws applicable to our operations... We have an ethics and compliance program to address compliance with the FCPA and similar laws by us, our employees, agents, suppliers and other partners.\"},\n  {\"factor\": \"Data Security\", \"grade\": \"VAGUE\", \"evidence\": \"At NIKE, cybersecurity risk management is an important part of our overall risk management efforts. We have cybersecurity processes, technologies and controls in place to aid in our efforts to assess, identify and manage material risks associated with cybersecurity threats.\"}\n]",
+  "cost_usd": 1.773225,
+  "input_tokens": 116710,
+  "model": "claude-opus-4-5",
+  "output_tokens": 301,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

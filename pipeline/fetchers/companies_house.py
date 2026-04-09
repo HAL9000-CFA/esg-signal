@@ -1,3 +1,4 @@
+import logging
 import os
 from typing import Dict, List, Optional
 
@@ -8,6 +9,8 @@ from pipeline.fetchers.base import BaseFetcher
 from pipeline.models import CompanyProfile, FilingMetadata
 
 load_dotenv()
+
+LOGGER = logging.getLogger(__name__)
 
 CH_FILING_BASE = "https://find-and-update.company-information.service.gov.uk"
 
@@ -67,12 +70,14 @@ class CompaniesHouseFetcher(BaseFetcher):
         return None
 
     def fetch(self, company_name: str) -> CompanyProfile:
+        LOGGER.info("Companies House: starting fetch for company=%r", company_name)
         errors: List[str] = []
         source_urls: List[str] = []
 
         number = self.search(company_name)
         if not number:
             raise ValueError(f"Company not found: {company_name}")
+        LOGGER.info("Companies House: resolved %r to company_number=%s", company_name, number)
 
         profile = self.get_profile(number)
         name = profile.get("company_name", company_name)
@@ -82,6 +87,7 @@ class CompaniesHouseFetcher(BaseFetcher):
 
         latest_annual_filing = None
         try:
+            LOGGER.info("Companies House: fetching filing history for number=%s", number)
             filing = self.get_latest_annual_accounts(number)
             if filing:
                 latest_annual_filing = FilingMetadata(
@@ -92,11 +98,18 @@ class CompaniesHouseFetcher(BaseFetcher):
                 )
                 if filing["document_url"]:
                     source_urls.append(filing["document_url"])
+                LOGGER.info("Companies House: latest AA filing dated %s", filing["filed_date"])
             else:
                 errors.append("No annual accounts (AA) filing found")
+                LOGGER.info("Companies House: no AA filing found for number=%s", number)
         except Exception as e:
             errors.append(f"Filing history fetch failed: {e}")
+            LOGGER.warning("Companies House: filing history failed for number=%s: %s", number, e)
 
+        LOGGER.info(
+            "Companies House: fetch complete company=%r number=%s sic=%s errors=%d",
+            name, number, sic_code, len(errors),
+        )
         return CompanyProfile(
             ticker=None,
             name=name,

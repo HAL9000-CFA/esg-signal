@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's critical incident risk management credibility is severely undermined by a complete absence of meaningful disclosure on this topic and no apparent talent investment in incident prevention or response capabilities. While regulatory compliance and supply chain practices show moderate alignment, the disconnect between the company's operational rhetoric and its failure to transparently address incident management\u2014particularly given BP's history with major incidents\u2014raises substantial concerns about genuine governance commitment in this area.",
+  "cost_usd": 0.00987,
+  "input_tokens": 228,
+  "model": "claude-opus-4-5",
+  "output_tokens": 86,
+  "purpose": "Narrative synthesis: Critical Incident Risk Management",
+  "temperature": 0.2
+}

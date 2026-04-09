@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's employee health and safety claims face significant credibility challenges, with the company providing no meaningful disclosure on safety metrics and showing no evidence of talent investment in this area. While regulatory compliance and supply chain practices appear moderately aligned with stated commitments, the complete absence of transparency around safety performance data and workforce development suggests the company's public positioning may substantially overstate its actual operational commitment to worker wellbeing.",
+  "cost_usd": 0.00975,
+  "input_tokens": 225,
+  "model": "claude-opus-4-5",
+  "output_tokens": 85,
+  "purpose": "Narrative synthesis: Employee Health & Safety",
+  "temperature": 0.2
+}

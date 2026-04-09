@@ -1,10 +1,13 @@
 import io
+import logging
 from typing import Optional
 
 import pandas as pd
 import requests
 
 from pipeline.fetchers.base_regulatory import BaseRegulatoryFetcher
+
+LOGGER = logging.getLogger(__name__)
 
 # EPA EnviroFacts — facility-level GHG emissions, no API key required
 # Companies emitting ≥25,000 metric tons CO2e/year must report under the GHGRP.
@@ -28,6 +31,7 @@ class GHGRPFetcher(BaseRegulatoryFetcher):
         Searches by PARENT_CO_NAME containing the company name (case-insensitive).
         Returns an empty DataFrame if no facilities are found.
         """
+        LOGGER.info("GHGRP: fetching GHG emissions for company=%r", company_name)
         url = (
             f"{_BASE}/GHG_EMITTER_FACILITIES"
             f"/PARENT_CO_NAME/containing/{requests.utils.quote(company_name)}/CSV"
@@ -35,10 +39,15 @@ class GHGRPFetcher(BaseRegulatoryFetcher):
         try:
             r = requests.get(url, timeout=30)
             r.raise_for_status()
-        except Exception:
+        except requests.exceptions.Timeout:
+            LOGGER.warning("GHGRP: request timed out (30s) for company=%r", company_name)
+            return pd.DataFrame(columns=list(_COLUMNS.values()))
+        except Exception as exc:
+            LOGGER.warning("GHGRP: request failed for company=%r: %s", company_name, exc)
             return pd.DataFrame(columns=list(_COLUMNS.values()))
 
         if not r.text.strip():
+            LOGGER.info("GHGRP: no records found for company=%r", company_name)
             return pd.DataFrame(columns=list(_COLUMNS.values()))
 
         df = pd.read_csv(io.StringIO(r.text))
@@ -53,4 +62,6 @@ class GHGRPFetcher(BaseRegulatoryFetcher):
         if "year" in df.columns:
             df = df.sort_values("year", ascending=False)
 
-        return df.reset_index(drop=True)
+        result = df.reset_index(drop=True)
+        LOGGER.info("GHGRP: done — %d records for company=%r", len(result), company_name)
+        return result

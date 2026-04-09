@@ -1,4 +1,5 @@
 import io
+import logging
 import zipfile
 from typing import Optional
 
@@ -6,6 +7,8 @@ import pandas as pd
 import requests
 
 from pipeline.fetchers.base_regulatory import BaseRegulatoryFetcher
+
+LOGGER = logging.getLogger(__name__)
 
 # EU ETS (Emissions Trading System) verified emissions — no API key required.
 # Published annually by the European Environment Agency from the EU Transaction Log (EUTL).
@@ -35,21 +38,28 @@ class EUETSFetcher(BaseRegulatoryFetcher):
         accountHolderName contains the company name (case-insensitive).
         Returns an empty DataFrame if no matching records are found.
         """
+        LOGGER.info("EU ETS: fetching dataset for company=%r", company_name)
         try:
-            r = requests.get(_EEA_URL, timeout=60)
+            r = requests.get(_EEA_URL, timeout=30)
             r.raise_for_status()
             content = r.content
-        except Exception:
+        except requests.exceptions.Timeout:
+            LOGGER.warning("EU ETS: download timed out (30s) for company=%r", company_name)
+            return pd.DataFrame(columns=list(_COLUMNS.values()))
+        except Exception as exc:
+            LOGGER.warning("EU ETS: download failed for company=%r: %s", company_name, exc)
             return pd.DataFrame(columns=list(_COLUMNS.values()))
 
         try:
             with zipfile.ZipFile(io.BytesIO(content)) as zf:
                 csv_name = next((n for n in zf.namelist() if n.endswith(".csv")), None)
                 if csv_name is None:
+                    LOGGER.warning("EU ETS: ZIP contains no CSV file")
                     return pd.DataFrame(columns=list(_COLUMNS.values()))
                 with zf.open(csv_name) as f:
                     df = pd.read_csv(f, encoding="utf-8", low_memory=False)
-        except Exception:
+        except Exception as exc:
+            LOGGER.warning("EU ETS: ZIP parse failed: %s", exc)
             return pd.DataFrame(columns=list(_COLUMNS.values()))
 
         # filter to company
@@ -64,6 +74,7 @@ class EUETSFetcher(BaseRegulatoryFetcher):
         df = df[mask].copy()
 
         if df.empty:
+            LOGGER.info("EU ETS: no records found for company=%r", company_name)
             return pd.DataFrame(columns=list(_COLUMNS.values()))
 
         present = {k: v for k, v in _COLUMNS.items() if k in df.columns}
@@ -75,4 +86,6 @@ class EUETSFetcher(BaseRegulatoryFetcher):
         if "year" in df.columns:
             df = df.sort_values("year", ascending=False)
 
-        return df.reset_index(drop=True)
+        result = df.reset_index(drop=True)
+        LOGGER.info("EU ETS: done — %d records for company=%r", len(result), company_name)
+        return result
