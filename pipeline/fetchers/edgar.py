@@ -100,6 +100,10 @@ class EDGARFetcher(BaseFetcher):
                 or latest("RevenueFromContractWithCustomerExcludingAssessedTax"),
                 "operating_income": latest("OperatingIncomeLoss"),
                 "total_assets": latest("Assets"),
+                # capex — payments to acquire property, plant and equipment
+                "capex": latest("PaymentsToAcquirePropertyPlantAndEquipment"),
+                # total operating expenses for opex-type ESG commitment checks
+                "total_opex": latest("OperatingExpenses") or latest("CostsAndExpenses"),
             }
         except Exception:
             return {}

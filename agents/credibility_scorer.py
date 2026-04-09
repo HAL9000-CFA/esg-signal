@@ -32,6 +32,7 @@ from typing import Dict, List, Optional
 from agents.disclosure_checker import grade_all_factors
 from pipeline.llm_client import call_claude
 from pipeline.models import (
+    CommitmentCheck,
     CompanyProfile,
     CredibilityReport,
     FactorScore,
@@ -39,6 +40,8 @@ from pipeline.models import (
     RelevanceFilterResult,
     TalentSignalResult,
 )
+from pipeline.words_vs_money import check as words_money_check
+from pipeline.words_vs_money import evidence_string as words_money_evidence
 
 LOGGER = logging.getLogger(__name__)
 
@@ -216,9 +219,12 @@ class CredibilityScorer:
         stream_scores["talent"] = tal_score
         evidence.append(tal_evidence)
 
-        # Stream 4: Words vs Money (stub — issue #12)
-        stream_scores["words_money"] = 0.5
-        evidence.append("Words vs Money: pending issue #12 — neutral score applied")
+        # Stream 4: Words vs Money — capex/opex vs stated ESG commitments
+        wm_score, wm_evidence, wm_checks = self._score_words_money(
+            factor=factor, profile=profile, run_id=run_id
+        )
+        stream_scores["words_money"] = wm_score
+        evidence.append(wm_evidence)
 
         # Stream 5: Supply chain (stub — no issue assigned yet)
         stream_scores["supply_chain"] = 0.5
@@ -248,6 +254,7 @@ class CredibilityScorer:
             evidence=evidence,
             sources=list(profile.source_urls),
             narrative=narrative,
+            words_money_checks=wm_checks,
         )
 
     # ------------------------------------------------------------------
@@ -336,6 +343,30 @@ class CredibilityScorer:
             f"{talent_result.ghost_count} ghost flags)"
         )
         return round(float(raw), 4), note
+
+    def _score_words_money(
+        self,
+        factor: MaterialFactor,
+        profile: CompanyProfile,
+        run_id: Optional[str],
+    ) -> tuple[float, str, Optional[List[CommitmentCheck]]]:
+        """
+        Run the Words vs Money check and return (score, evidence_string, checks).
+
+        Delegates to pipeline.words_vs_money.check(), which uses Claude only for
+        structured commitment extraction; all arithmetic is pure Python.
+        """
+        try:
+            result = words_money_check(profile=profile, factor=factor, run_id=run_id)
+            ev = words_money_evidence(factor.name, result)
+            return result.score, ev, result.commitment_checks or None
+        except Exception as exc:
+            LOGGER.warning("Words vs Money failed for %s: %s", factor.name, exc)
+            return (
+                0.5,
+                f"Words vs Money ({factor.name}): error — {exc} — neutral applied",
+                None,
+            )
 
     # ------------------------------------------------------------------
     # Claude narrative synthesis
