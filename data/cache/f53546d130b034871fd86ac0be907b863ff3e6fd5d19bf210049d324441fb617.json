@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"GHG emissions data, page 38\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"Melody Meyer... Deep understanding of the factors influencing safe, efficient and commercially high-performing projects... Expertise in the execution of major capital projects, technology, R&D, creation of businesses in new countries, strategic business planning, merger integration, leading change, and safe and reliable operations.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"Safety and sustainability committee\"}\n]\n```",
+  "cost_usd": 0.03144,
+  "input_tokens": 5243,
+  "model": "claude-opus-4-5",
+  "output_tokens": 209,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

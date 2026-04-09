@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"maintaining bp's commitment to safe, reliable and compliant operations\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.029630000000000004,
+  "input_tokens": 5176,
+  "model": "claude-opus-4-5",
+  "output_tokens": 150,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

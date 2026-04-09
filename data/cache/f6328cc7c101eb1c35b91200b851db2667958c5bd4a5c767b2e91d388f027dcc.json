@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates solid credibility on Critical Incident Risk Management based on the available evidence streams. Disclosure quality is strong, with quantified metrics showing a 29% reduction in tier 1 and 2 process safety events, and the words-money alignment indicates consistency between stated commitments and financial backing across all 10 commitments examined. However, with only two of five streams active and regulatory data absent, this assessment reflects partial evidence; the excluded streams (regulatory filings, talent signals, and supply chain) represent gaps in visibility rather than negative findings.",
+  "cost_usd": 0.00568,
+  "input_tokens": 546,
+  "model": "claude-opus-4-5",
+  "output_tokens": 118,
+  "purpose": "Narrative synthesis: Critical Incident Risk Management",
+  "temperature": 0.2
+}

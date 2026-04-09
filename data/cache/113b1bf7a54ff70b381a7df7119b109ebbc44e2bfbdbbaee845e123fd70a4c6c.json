@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"VAGUE\", \"evidence\": \"In 2025 our focus remained on four priority areas of climate, nature, plastics and livelihoods. The Committee monitored progress against these priorities, tested the robustness of management's plans and the focus of the innovation pipeline, and supported the disciplined execution of Unilever's sustainability strategy and targets.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"the health, safety and wellbeing of employees is fundamental to everything we do. We ensured these matters were appropriately considered and resourced within Unilever's broader risk management and decision-making frameworks.\"},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"Internal Audit's plan, which focused on Unilever's risk areas, including cyber security, financial control processes, and product safety and quality\"}\n]\n```",
+  "cost_usd": 0.029885000000000002,
+  "input_tokens": 4467,
+  "model": "claude-opus-4-5",
+  "output_tokens": 302,
+  "purpose": "Batch grade 6 ESG factors",
+  "temperature": 0.0
+}

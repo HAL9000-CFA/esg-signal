@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "UNILEVER PLC demonstrates strong disclosure practices for Product Design & Lifecycle Management, with quantified commitments around SKU rationalization and formulation streamlining, supported by equally robust supply chain management signals. However, the talent stream presents a notable contradiction: despite high confidence (n=22), there is zero hiring activity aligned with this factor, suggesting limited organizational investment in building dedicated capabilities. With regulatory and monetary commitment data unavailable, the overall amber rating reflects solid public positioning that lacks corroborating evidence of internal resource allocation.",
+  "cost_usd": 0.005675,
+  "input_tokens": 570,
+  "model": "claude-opus-4-5",
+  "output_tokens": 113,
+  "purpose": "Narrative synthesis: Product Design & Lifecycle Management",
+  "temperature": 0.2
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "Unilever's product quality and safety credibility presents a weak overall signal based on available evidence. Disclosure language is vague, offering generic commitments to \"safe and high-quality products\" without substantive detail, while talent data suggests limited organizational emphasis on this factor with no relevant expertise detected among sampled leadership (n=12, medium confidence). The words-money alignment is neutral given no specific monetary commitments were identified, and with regulatory and supply chain streams excluded, the assessment reflects incomplete coverage rather than comprehensive poor performance.",
+  "cost_usd": 0.005105,
+  "input_tokens": 461,
+  "model": "claude-opus-4-5",
+  "output_tokens": 112,
+  "purpose": "Narrative synthesis: Product Quality & Safety",
+  "temperature": 0.2
+}

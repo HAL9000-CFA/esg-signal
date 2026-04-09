@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"the board approved the sale of a 65% shareholding in Castrol to Stonepeak, at an enterprise value of $10.1 billion\",\n      \"amount\": 10100000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"the transaction expected to generate approximately $6.0 billion in net proceeds for bp upon completion\",\n      \"amount\": 6000000000,\n      \"currency\": \"USD\",\n      \"year\": 2026,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"the committee has monitored progress against bp's 2027 $4-5 billion structural cost reduction target\",\n      \"amount\": 4000000000,\n      \"currency\": \"USD\",\n      \"year\": 2027,\n      \"category\": \"reduction_target\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.032505000000000006,
+  "input_tokens": 4836,
+  "model": "claude-opus-4-5",
+  "output_tokens": 333,
+  "purpose": "WvM extraction chunk 23/79 (10 factors)",
+  "temperature": 0.0
+}

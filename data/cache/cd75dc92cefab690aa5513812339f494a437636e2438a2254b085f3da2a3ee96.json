@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "UNILEVER PLC demonstrates strong disclosure practices for Product Design & Lifecycle Management, with quantified evidence of SKU rationalization and formulation streamlining efforts, complemented by robust supply chain management signals. However, talent market data presents a notable contradiction\u2014despite high confidence from 22 job postings with 68% at senior level, the weak score of 0.25 suggests limited active hiring focus on lifecycle management capabilities, which may indicate either mature internal capabilities or potential underinvestment in this area. With regulatory and monetary commitment streams excluded due to data unavailability rather than poor performance, the overall amber rating reflects genuine tension between strong stated commitments and modest organizational resourcing signals.",
+  "cost_usd": 0.006575,
+  "input_tokens": 570,
+  "model": "claude-opus-4-5",
+  "output_tokens": 149,
+  "purpose": "Narrative synthesis: Product Design & Lifecycle Management",
+  "temperature": 0.2
+}

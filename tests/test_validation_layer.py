@@ -35,7 +35,7 @@ from pipeline.validation_layer import (
 
 def _make_factor_score(
     factor_id="ghg_emissions",
-    score=0.72,
+    score=0.85,
     flag="green",
     stream_scores=None,
     sources=None,
@@ -47,6 +47,8 @@ def _make_factor_score(
         factor_name="GHG Emissions",
         score=score,
         flag=flag,
+        coverage=1.0,
+        confidence=1.0,
         stream_scores=stream_scores
         or {
             "disclosure": 0.85,
@@ -62,7 +64,7 @@ def _make_factor_score(
     )
 
 
-def _make_report(factor_scores=None, overall_score=0.72, overall_flag="green") -> CredibilityReport:
+def _make_report(factor_scores=None, overall_score=0.85, overall_flag="green") -> CredibilityReport:
     return CredibilityReport(
         ticker="TEST",
         company_name="Test Corp",
@@ -152,7 +154,7 @@ class TestClamp:
 
 class TestExpectedFlag:
     def test_green_at_threshold(self):
-        assert _expected_flag(0.65) == "green"
+        assert _expected_flag(0.80) == "green"
 
     def test_green_above_threshold(self):
         assert _expected_flag(0.9) == "green"
@@ -161,7 +163,7 @@ class TestExpectedFlag:
         assert _expected_flag(0.40) == "amber"
 
     def test_amber_just_below_green(self):
-        assert _expected_flag(0.64) == "amber"
+        assert _expected_flag(0.79) == "amber"
 
     def test_red_below_amber(self):
         assert _expected_flag(0.39) == "red"
@@ -172,7 +174,7 @@ class TestExpectedFlag:
 
 class TestFlagMismatch:
     def test_correct_flag_returns_none(self):
-        assert _flag_mismatch(0.70, "green") is None
+        assert _flag_mismatch(0.80, "green") is None
 
     def test_mismatch_returns_message(self):
         msg = _flag_mismatch(0.70, "red")
@@ -302,10 +304,10 @@ class TestFlagValidation:
         assert any(w.code == FLAG_INCONSISTENT for w in result.warnings)
 
     def test_mismatched_flag_corrected(self):
-        # score=0.72 → should be "green", but flag="red" is an error.
+        # score=0.80 → should be "green", but flag="red" is an error.
         # Correction sets flag to "green", then the error triggers a confidence
         # downgrade (green → amber).  Final adjusted flag is "amber".
-        report = _make_report(overall_score=0.72, overall_flag="red")
+        report = _make_report(overall_score=0.80, overall_flag="red")
         result = ValidationLayer().validate(report)
         assert result.adjusted_report.overall_flag == "amber"
 
@@ -315,8 +317,8 @@ class TestFlagValidation:
         assert any(w.code == INVALID_FLAG_VALUE for w in result.warnings)
 
     def test_factor_flag_inconsistency_corrected(self):
-        fs = _make_factor_score(score=0.72, flag="red")
-        report = _make_report(factor_scores=[fs], overall_score=0.72, overall_flag="green")
+        fs = _make_factor_score(score=0.80, flag="red")
+        report = _make_report(factor_scores=[fs], overall_score=0.80, overall_flag="green")
         result = ValidationLayer().validate(report)
         corrected_flag = result.adjusted_report.factor_scores[0].flag
         assert corrected_flag == "green"
@@ -457,7 +459,7 @@ class TestNarrativeNumberScan:
     def test_untraced_warning_does_not_cause_failure(self):
         # Narrative warnings don't flip passed → False (only errors do)
         fs = _make_factor_score(
-            score=0.72,
+            score=0.85,
             flag="green",
             narrative="The 0.93 figure is notable.",
         )

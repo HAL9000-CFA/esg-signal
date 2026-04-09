@@ -114,7 +114,7 @@ _TRUSTED_DOMAINS = frozenset(
 # Flag thresholds — must match agents/credibility_scorer.py _flag()
 # ---------------------------------------------------------------------------
 
-_GREEN_THRESHOLD = 0.65
+_GREEN_THRESHOLD = 0.80
 _AMBER_THRESHOLD = 0.40
 
 # Regex: decimal numbers in the range (0.0, 1.0) exclusive, with at least
@@ -261,9 +261,15 @@ class ValidationLayer:
                     value=report.overall_flag,
                 )
             )
-            report.overall_flag = _expected_flag(report.overall_score)
+            mean_cov = sum(getattr(fs, "coverage", 1.0) for fs in report.factor_scores) / max(
+                len(report.factor_scores), 1
+            )
+            report.overall_flag = _expected_flag(report.overall_score, mean_cov)
 
-        flag_issue = _flag_mismatch(report.overall_score, report.overall_flag)
+        mean_cov = sum(getattr(fs, "coverage", 1.0) for fs in report.factor_scores) / max(
+            len(report.factor_scores), 1
+        )
+        flag_issue = _flag_mismatch(report.overall_score, report.overall_flag, mean_cov)
         if flag_issue:
             warnings.append(
                 ValidationWarning(
@@ -274,7 +280,7 @@ class ValidationLayer:
                     value=report.overall_flag,
                 )
             )
-            report.overall_flag = _expected_flag(report.overall_score)
+            report.overall_flag = _expected_flag(report.overall_score, mean_cov)
 
     # ------------------------------------------------------------------
     # Check 2–3: per-factor scores and flags
@@ -312,10 +318,10 @@ class ValidationLayer:
                     value=fs.flag,
                 )
             )
-            fs.flag = _expected_flag(fs.score)
+            fs.flag = _expected_flag(fs.score, getattr(fs, "coverage", 1.0))
 
         # Flag–score consistency
-        flag_issue = _flag_mismatch(fs.score, fs.flag)
+        flag_issue = _flag_mismatch(fs.score, fs.flag, getattr(fs, "coverage", 1.0))
         if flag_issue:
             warnings.append(
                 ValidationWarning(
@@ -326,10 +332,12 @@ class ValidationLayer:
                     value=fs.flag,
                 )
             )
-            fs.flag = _expected_flag(fs.score)
+            fs.flag = _expected_flag(fs.score, getattr(fs, "coverage", 1.0))
 
-        # Stream scores
+        # Stream scores — None means intentionally excluded, skip validation for those
         for stream_name, stream_score in list(fs.stream_scores.items()):
+            if stream_score is None:
+                continue
             if not _in_unit_interval(stream_score):
                 warnings.append(
                     ValidationWarning(
@@ -434,6 +442,8 @@ class ValidationLayer:
         known.add(f"{fs.score:.2f}")
         known.add(str(round(fs.score, 2)))
         for v in fs.stream_scores.values():
+            if v is None:
+                continue
             known.add(f"{v:.4f}")
             known.add(f"{v:.2f}")
             known.add(str(round(v, 2)))
@@ -538,21 +548,21 @@ def _clamp(value: float) -> float:
     return round(max(0.0, min(1.0, float(value))), 4)
 
 
-def _expected_flag(score: float) -> str:
-    """Compute the correct flag for a given score."""
-    if score >= _GREEN_THRESHOLD:
+def _expected_flag(score: float, coverage: float = 1.0) -> str:
+    """Compute the correct flag for a given score and coverage."""
+    if score >= _GREEN_THRESHOLD and coverage >= 0.75:
         return "green"
     if score >= _AMBER_THRESHOLD:
         return "amber"
     return "red"
 
 
-def _flag_mismatch(score: float, flag: str) -> Optional[str]:
+def _flag_mismatch(score: float, flag: str, coverage: float = 1.0) -> Optional[str]:
     """
     Return a human-readable mismatch message if flag is inconsistent with score,
     or None if they agree.
     """
-    expected = _expected_flag(score)
+    expected = _expected_flag(score, coverage)
     if flag != expected:
         return (
             f"flag is '{flag}' but score {score:.4f} implies '{expected}' "

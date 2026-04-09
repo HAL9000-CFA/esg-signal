@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Capital expenditure in 2025 was $14.5 billion, including $0.9 billion of inorganic capital expenditure. We expect capital expenditure of around $13.0-13.5 billion in 2026 including inorganic expenditure... In 2025 the return on average capital employed was 13.9% at an average of $69 per barrel. The return on average capital employed is targeted to be over 16% in 2027 at $70 per barrel\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"VAGUE\", \"evidence\": \"Code of ethics\"},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"VAGUE\", \"evidence\": \"Regulation of the group's business... International trade sanctions\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Gulf of America oil spill (31) (51) (57)... 2023 primarily relates to charges related to the control, abatement, clean-up or elimination of environmental pollution and legal settlements\"}\n]\n```",
+  "cost_usd": 0.041485,
+  "input_tokens": 6127,
+  "model": "claude-opus-4-5",
+  "output_tokens": 434,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

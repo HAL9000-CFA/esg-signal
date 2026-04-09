@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"72% absolute reduction in Scope 1 & 2 greenhouse gas emissions since 2015\"},\n  {\"factor\": \"Energy Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Labor Practices\", \"grade\": \"QUANTIFIED\", \"evidence\": \"79% engagement score in our employee survey\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"VAGUE\", \"evidence\": \"Values: Pioneering, Respect, Integrity, Responsibility\"},\n  {\"factor\": \"Data Security\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.031155000000000002,
+  "input_tokens": 5381,
+  "model": "claude-opus-4-5",
+  "output_tokens": 170,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

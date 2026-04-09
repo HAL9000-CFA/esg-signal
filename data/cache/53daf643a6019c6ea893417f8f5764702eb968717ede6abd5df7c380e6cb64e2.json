@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [],\n  \"Business Ethics\": [\n    {\n      \"text\": \"In 2025 payments in relation to tax with an aggregate US dollar equivalent value of approximately $3,000 were made from a bp trust account held with Tadvin Co. to Iranian public entities\",\n      \"amount\": 3000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"Together, the accounts hold around $60,000\",\n      \"amount\": 60000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    }\n  ],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.02982,
+  "input_tokens": 4689,
+  "model": "claude-opus-4-5",
+  "output_tokens": 255,
+  "purpose": "WvM extraction chunk 69/79 (10 factors)",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"QUANTIFIED\", \"evidence\": \"The return on average capital employed is targeted to be over 16% in 2027 at $70 per barrel in 2024 real terms... This is supported by a target compound annual growth rate in adjusted free cash flow of over 20% from 2024 to 2027\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Gulf of America oil spill liabilities... $1,533 million less than 1 year, $6,834 million more than 1 year, $8,367 million Total\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"We manage our cash position so that the group has adequate cover to respond to potential short-term market liquidity, short-term price environment volatility\"}\n]\n```",
+  "cost_usd": 0.036025,
+  "input_tokens": 5210,
+  "model": "claude-opus-4-5",
+  "output_tokens": 399,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

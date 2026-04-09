@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n[]\n```",
+  "cost_usd": 0.09705500000000002,
+  "input_tokens": 19366,
+  "model": "claude-opus-4-5",
+  "output_tokens": 9,
+  "purpose": "Commitment extraction: Critical Incident Risk Management",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"Water Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"Innovation grounded in scientific expertise continues to shape our portfolio. We are focusing on scalable, multi-year innovations and leveraging leading-edge bioscience.\"},\n  {\"factor\": \"Product Design & Lifecycle Management\", \"grade\": \"VAGUE\", \"evidence\": \"Our product mix is now significantly simplified, more global, and centred on our Power Brands. We have streamlined our brands and, since 2022, reduced our number of SKUs by over 20%, unlocking operational efficiency.\"},\n  {\"factor\": \"Supply Chain Management\", \"grade\": \"VAGUE\", \"evidence\": \"AI-enabled workflows are streamlining supplier onboarding in our supply chain, and improving procurement competitiveness through real\u2011time data, faster sourcing decisions and greater efficiency across our global buying operations.\"}\n]\n```",
+  "cost_usd": 0.031560000000000005,
+  "input_tokens": 5152,
+  "model": "claude-opus-4-5",
+  "output_tokens": 232,
+  "purpose": "Batch grade 4 ESG factors",
+  "temperature": 0.0
+}

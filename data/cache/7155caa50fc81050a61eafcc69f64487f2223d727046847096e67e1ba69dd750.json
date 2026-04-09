@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"bp's aim to reach net zero greenhouse gas emissions by 2050 or sooner\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"VAGUE\", \"evidence\": \"The group's assumptions for investment appraisal form part of an investment decision-making framework for currently unsanctioned future capital expenditure on property, plant and equipment, and intangibles including exploration and appraisal assets, that is designed to support the effective and resilient implementation of bp's strategy.\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"VAGUE\", \"evidence\": \"This requires management's best estimate of how future changes to relevant carbon emission cost policies and/or legislation are likely to affect the future cash flows of the group's applicable CGUs, whether currently enacted or not.\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.04028,
+  "input_tokens": 6106,
+  "model": "claude-opus-4-5",
+  "output_tokens": 390,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

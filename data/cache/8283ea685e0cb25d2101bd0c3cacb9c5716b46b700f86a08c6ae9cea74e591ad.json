@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "Unilever's data security credibility presents a weak signal, with the company providing no disclosure on this factor and talent market evidence suggesting limited organizational focus on data security capabilities (score of 0.20 based on 12 hiring signals at medium confidence). The words-versus-money stream shows neutral alignment, though this reflects an absence of monetary commitments rather than positive investment. With regulatory and supply chain streams excluded from analysis, the available evidence points to a genuine gap in data security emphasis rather than simply missing data.",
+  "cost_usd": 0.00495,
+  "input_tokens": 440,
+  "model": "claude-opus-4-5",
+  "output_tokens": 110,
+  "purpose": "Narrative synthesis: Data Security",
+  "temperature": 0.2
+}

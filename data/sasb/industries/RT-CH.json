@@ -1,0 +1,150 @@
+{
+  "fetched_at": "2026-04-11T18:03:09.884220+00:00",
+  "data": {
+    "industry_code": "RT-CH",
+    "industry_name": "Chemicals",
+    "industry_description": "Entities in the Chemicals industry transform organic and inorganic feedstocks into more than 70,000 diverse products with a range of industrial, pharmaceutical, agricultural, housing, automotive and consumer applications. The industry commonly is segmented into basic (commodity) chemicals, agricultural chemicals and specialty chemicals. Basic chemicals, the largest segment by volume produced, include bulk polymers, petrochemicals, inorganic chemicals and other industrial chemicals. Agricultural chemicals include fertilisers, crop chemicals and agricultural biotechnology. Specialty chemicals include paints and coatings, agrochemicals, sealants, adhesives, dyes, industrial gases, resins and catalysts. Larger entities may produce basic, agricultural and specialty chemicals, but most entities are specialised. Chemicals entities typically manufacture and sell products globally.",
+    "industry_gics": [
+      {
+        "gic_code": 110,
+        "gic_name": "GHG Emissions",
+        "gic_description": "The category addresses direct (Scope 1) greenhouse gas (GHG) emissions that a company generates through its operations. This includes GHG emissions from stationary (e.g., factories, power plants) and mobile sources (e.g., trucks, delivery vehicles, planes), whether a result of combustion of fuel or non-combusted direct releases during activities such as natural resource extraction, power generation, land use, or biogenic processes. The category further includes management of regulatory risks, environmental compliance, and reputational risks and opportunities, as they related to direct GHG emissions. The seven GHGs covered under the Kyoto Protocol are included within the category\u2014carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur hexafluoride (SF6), and nitrogen trifluoride (NF3).",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "RT-CH-110a",
+            "topic_name": "Greenhouse Gas Emissions",
+            "topic_description": "Chemical manufacturing generates direct (Scope 1) greenhouse gas (GHG) emissions from fossil fuel combustion in manufacturing and cogeneration processes, as well as process emissions from the chemical transformation of feedstocks. GHG emissions may result in regulatory compliance costs or penalties and operating risks for chemicals entities. However, the financial effects may vary depending on the magnitude of emissions and the prevailing emissions regulations. The industry may be subject to increasingly stringent regulations as countries try to limit or reduce emissions. Entities that cost-effectively manage GHG emissions through greater energy efficiency, the use of alternative fuels or manufacturing process advances may benefit from improved operating efficiency and reduced regulatory risk, among other financial benefits."
+          }
+        ]
+      },
+      {
+        "gic_code": 120,
+        "gic_name": "Air Quality",
+        "gic_description": "The category addresses management of air quality impacts resulting from stationary (e.g., factories, power plants) and mobile sources (e.g., trucks, delivery vehicles, planes) as well as industrial emissions. Relevant airborne pollutants include, but are not limited to, oxides of nitrogen (NOx), oxides of sulfur (SOx), volatile organic compounds (VOCs), heavy metals, particulate matter, and chlorofluorocarbons. The category does not include GHG emissions, which are addressed in a separate category.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "RT-CH-120a",
+            "topic_name": "Air Quality",
+            "topic_description": "In addition to greenhouse gases (GHGs), chemical manufacturing may produce air emissions including sulphur dioxides (SOx), nitrogen oxides (NOx) and Hazardous Air Pollutants (HAPs). As with GHGs, these emissions typically stem from fuel combustion and feedstock processing. Relative to other industries, the Chemicals industry is a more significant source of some of these emissions. Entities face operating costs, regulatory compliance costs, regulatory penalties in the event of non-compliance and capital expenditures related to emissions management, although related financial effects may vary depending on the magnitude of emissions and the prevailing regulations. As such, an entity that actively manages the issue through technological process improvements or other strategies may mitigate such impacts, improve financial performance and enhance brand value."
+          }
+        ]
+      },
+      {
+        "gic_code": 130,
+        "gic_name": "Energy Management",
+        "gic_description": "The category addresses environmental impacts associated with energy consumption. It addresses the company\u2019s management of energy in manufacturing and/or for provision of products and services derived from utility providers (grid energy) not owned or controlled by the company. More specifically, it includes management of energy efficiency and intensity, energy mix, as well as grid reliance. Upstream (e.g., suppliers) and downstream (e.g., product use) energy use is not included in the scope.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "RT-CH-130a",
+            "topic_name": "Energy Management",
+            "topic_description": "Chemical manufacturing is typically energy-intensive, with energy used to power processing units, cogeneration plants, machinery and non-manufacturing facilities. The type of energy used, amount consumed and energy management strategies depends on the type of products manufactured. Typically, fossil fuels such as natural gas and natural gas liquids are the predominant form of non-feedstock energy used, while purchased electricity also may be a significant share. Therefore, energy purchases may be a significant share of production costs. An entity\u2019s energy mix may include energy generated on-site, purchased grid electricity and fossil fuels, and renewable and alternative energy. Trade-offs in the use of energy sources include cost, reliability of supply, related water use and air emissions, and regulatory compliance and risk. As such, an entity\u2019s energy intensity and energy sourcing decisions may affect its operating efficiency and risk profile over time."
+          }
+        ]
+      },
+      {
+        "gic_code": 140,
+        "gic_name": "Water & Wastewater Management",
+        "gic_description": "The category addresses a company\u2019s water use, water consumption, wastewater generation, and other impacts of operations on water resources, which may be influenced by regional differences in the availability and quality of and competition for water resources. More specifically, it addresses management strategies including, but not limited to, water efficiency, intensity, and recycling. Lastly, the category also addresses management of wastewater treatment and discharge, including groundwater and aquifer pollution.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "RT-CH-140a",
+            "topic_name": "Water Management",
+            "topic_description": "Used primarily for cooling, steam generation and feedstock processing, water is a critical input in chemicals production. Long-term historical increases in water scarcity and cost, and expectations of continued increases\u2014because of over-consumption and reduced supplies resulting from population growth and shifts, pollution and climate change\u2014show the importance of water management. Water scarcity may result in a higher risk of operational disruption for entities with water-intensive operations, and can increase water procurement costs and capital expenditures. Meanwhile, chemical manufacturing may generate process wastewater that must be treated before disposal. Non-compliance with water quality regulations may result in regulatory compliance and mitigation costs or legal expenses stemming from litigation. Reducing water use and consumption through increased efficiency and other water management strategies may result in lower operating costs over time and may mitigate financial effects of regulations, water supply shortages and community-related disruptions of operations."
+          }
+        ]
+      },
+      {
+        "gic_code": 150,
+        "gic_name": "Waste & Hazardous Materials Management",
+        "gic_description": "The category addresses environmental issues associated with hazardous and non-hazardous waste generated by companies. It addresses a company\u2019s management of solid wastes in manufacturing, agriculture, and other industrial processes. It covers treatment, handling, storage, disposal, and regulatory compliance. The category does not cover emissions to air or wastewater nor does it cover waste from end-of-life of products, which are addressed in separate categories.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "RT-CH-150a",
+            "topic_name": "Hazardous Waste Management",
+            "topic_description": "Chemical manufacturing may generate hazardous process waste which may include heavy metals, spent acids, catalysts and wastewater treatment sludge. Entities face regulatory and operational challenges in managing waste, since some wastes are subject to regulations pertaining to their transport, treatment, storage and disposal. Waste management strategies include reduced generation, effective treatment and disposal, and recycling and recovery, if possible. Such activities, although requiring initial investment or operating costs, may reduce an entity\u2019s long-term cost structure and mitigate the risk of remediation liabilities or regulatory penalties."
+          }
+        ]
+      },
+      {
+        "gic_code": 210,
+        "gic_name": "Human Rights & Community Relations",
+        "gic_description": "The category addresses management of the relationship between businesses and the communities in which they operate, including, but not limited to, management of direct and indirect impacts on core human rights and the treatment of indigenous peoples. More specifically, such management may cover socio-economic community impacts, community engagement, environmental justice, cultivation of local workforces, impact on local businesses, license to operate, and environmental/social impact assessments. The category does not include environmental impacts such as air pollution or waste which, although they may impact the health and safety of members of local communities, are addressed in separate categories.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "RT-CH-210a",
+            "topic_name": "Community Relations",
+            "topic_description": "Chemical entities are important economic contributors to many communities, providing employment opportunities and community development through taxes and capital generation. Meanwhile, issues including environmental policy, community health and process safety have important regulatory, operational, financial and reputational implications for entities. Environmental externalities including air emissions and water use may affect the health of people living near chemical facilities over the long term. Meanwhile, process safety incidents may endanger community health and safety, resulting in regulatory penalties, legal action and mitigation costs. Consequently, chemicals entities may benefit from building strong relationships with communities to mitigate potential operating disruption, reduce regulatory risk, retain top employees, lower the risk of litigation expenses in the event of process safety incidents and ensure a strong social licence to operate. Entities may adopt various community engagement strategies, such as developing community engagement plans, establishing codes and guidelines to ensure alignment of the organisation\u2019s interests with those of their surrounding communities, or conducting impact assessments to evaluate projects and mitigate potential adverse impacts."
+          }
+        ]
+      },
+      {
+        "gic_code": 320,
+        "gic_name": "Employee Health & Safety",
+        "gic_description": "The category addresses a company\u2019s ability to create and maintain a safe and healthy workplace environment that is free of injuries, fatalities, and illness (both chronic and acute). It is traditionally accomplished through implementing safety management plans, developing training requirements for employees and contractors, and conducting regular audits of their own practices as well as those of their subcontractors. The category further captures how companies ensure physical and mental health of workforce through technology, training, corporate culture, regulatory compliance, monitoring and testing, and personal protective equipment.",
+        "gic_dimension": "Human Capital",
+        "gic_topics": [
+          {
+            "topic_code": "RT-CH-320a",
+            "topic_name": "Workforce Health & Safety",
+            "topic_description": "Employees in chemical manufacturing facilities face health and safety risks from exposure to heavy machinery, harmful substances, electrical hazards and high pressure and temperatures, among others. Creating an effective safety culture is critical to mitigate safety impacts proactively, which might otherwise result in financial consequences including higher healthcare costs, litigation and work disruption. By maintaining a safe work environment and promoting a culture of safety, entities can minimise safety-related expenses and potentially improve productivity."
+          }
+        ]
+      },
+      {
+        "gic_code": 410,
+        "gic_name": "Product Design & Lifecycle Management",
+        "gic_description": "The category addresses incorporation of environmental, social, and governance (ESG) considerations in characteristics of products and services provided or sold by the company. It includes, but is not limited to, managing the lifecycle impacts of products and services, such as those related to packaging, distribution, use-phase resource intensity, and other environmental and social externalities that may occur during their use-phase or at the end of life. The category captures a company\u2019s ability to address customer and societal demand for more sustainable products and services as well as to meet evolving environmental and social regulation. It does not address direct environmental or social impacts of the company\u2019s operations nor does it address health and safety risks to consumers from product use, which are covered in other categories.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "RT-CH-410a",
+            "topic_name": "Product Design for Use-phase Efficiency",
+            "topic_description": "As increasing resource scarcity and regulations encourage greater materials efficiency and lower energy consumption and emissions, the Chemicals industry may benefit from developing products that enhance customer efficiency. From reducing automobile emissions through materials optimisation to improving building insulation performance, Chemicals industry products can enhance efficiency across many applications. Entities that develop cost-effective solutions to meet customer demand for improved efficiency may benefit from increased revenue and market share, stronger competitive positioning and enhanced brand value."
+          },
+          {
+            "topic_code": "RT-CH-410b",
+            "topic_name": "Safety & Environmental Stewardship of Chemicals",
+            "topic_description": "Product safety and stewardship is a critical issue for entities in the Chemicals industry. The potential for human health or environmental impacts of chemicals during the use-phase can influence product demand and regulatory risk, which in turn can affect revenues and result in higher operating, regulatory compliance and mitigation expenses. The industry can mitigate regulatory risk and grow market share by developing innovative approaches to manage the potential impacts of products during the use-phase, including developing alternative products with reduced toxicity. This could contribute to shareholder value through improved competitive positioning, greater market share, reduced regulatory risks and higher brand value."
+          },
+          {
+            "topic_code": "RT-CH-410c",
+            "topic_name": "Genetically Modified Organisms",
+            "topic_description": "Some chemical entities produce crop seeds developed using genetically modified organism (GMO) technology. GMO technology has improved some crop yields, including corn and soy, by altering the crop\u2019s resistance to pesticides and herbicides and improving drought tolerance, among other factors. At the same time, consumers and regulators in some areas have expressed concern over the use of GMO technology because of perceived health, environmental and social impacts of GMO cultivation and consumption. Thus, entities that employ such technology face both market opportunities and risks related to its use. The adoption of GMO crop technology is significant in some regions, although in other regions regulators have implemented bans, quotas or labelling requirements on GMO-based products. Such product bans or labelling requirements may decrease revenues or increase costs for manufacturers, and regulatory scrutiny and public perception may affect reputational risk. As such, entities that effectively respond to market drivers related to GMO products can mitigate risks and capitalise on opportunities."
+          }
+        ]
+      },
+      {
+        "gic_code": 530,
+        "gic_name": "Management of the Legal & Regulatory Environment",
+        "gic_description": "The category addresses a company\u2019s approach to engaging with regulators in cases where conflicting corporate and public interests may have the potential for long-term adverse direct or indirect environmental and social impacts. The category addresses a company\u2019s level of reliance upon regulatory policy or monetary incentives (such as subsidies and taxes), actions to influence industry policy (such as through lobbying), overall reliance on a favorable regulatory environment for business competitiveness, and ability to comply with relevant regulations. It may relate to the alignment of management and investor views of regulatory engagement and compliance at large.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "RT-CH-530a",
+            "topic_name": "Management of the Legal & Regulatory Environment",
+            "topic_description": "The Chemicals industry faces strict regulation governing air emissions, water discharge, chemical safety and process safety, among other issues. Anticipating and adapting to regulatory developments, both in the short and long term, is a critical issue for the industry, as regulatory developments can significantly affect product demand, manufacturing costs and brand value. Therefore, entities with a clear strategy for managing the regulatory environment that aligns corporate performance with sustainable environmental outcomes and accounts for societal externalities may benefit from increased regulatory certainty, stronger brand value and improved competitive positioning."
+          }
+        ]
+      },
+      {
+        "gic_code": 540,
+        "gic_name": "Critical Incident Risk Management",
+        "gic_description": "The category addresses the company\u2019s use of management systems and scenario planning to identify, understand, and prevent or minimize the occurrence of low-probability, high-impact accidents and emergencies with significant potential environmental and social externalities. It relates to the culture of safety at a company, its relevant safety management systems and technological controls, the potential human, environmental, and social implications of such events occurring, and the long-term effects to an organization, its workers, and society should these events occur.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "RT-CH-540a",
+            "topic_name": "Operational Safety, Emergency Preparedness & Response",
+            "topic_description": "Health, safety and emergency management is a critical issue for entities in the Chemicals industry. Technical failure, human error or external factors such as weather may result in accidental releases of chemical substances into the environment at processing facilities or during storage and transportation. Furthermore, the combustible nature of some chemical substances, combined with the high operating temperatures and pressures involved in manufacturing, increases the risk of explosions, hazardous spills or other emergency situations. Such events may harm workers or people in nearby communities through the release of harmful air emissions and chemical substances, and they may impact the environment adversely. Entities may face operational disruptions, damage to facilities, reputational harm, and increased regulatory compliance and remediation costs in the event of a process incident. As such, strong process safety management may reduce operational downtime, mitigate costs and regulatory risk, and ensure workforce productivity."
+          }
+        ]
+      }
+    ]
+  }
+}

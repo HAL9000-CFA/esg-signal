@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"BP Exploration & Production Inc. (BPXP) was lease operator of Mississippi Canyon, Block 252 in the Gulf of America, where the semi-submersible rig Deepwater Horizon was deployed at the time of the 20 April 2010 explosion and fire and resulting oil spill (the Incident). Lawsuits and claims arising from the Incident were brought principally in US federal and state courts.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.03379,
+  "input_tokens": 5593,
+  "model": "claude-opus-4-5",
+  "output_tokens": 233,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

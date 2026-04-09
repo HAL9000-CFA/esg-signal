@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates solid disclosure practices for critical incident risk management, with quantified reporting on process safety events showing a 29% reduction in tier 1 and 2 incidents. The words_money stream suggests strong alignment between stated commitments and financial backing, with all 10 extracted commitments showing consistency. However, with only two of five evidence streams active and regulatory data absent, this assessment reflects partial visibility rather than comprehensive verification of the company's incident risk management credibility.",
+  "cost_usd": 0.00523,
+  "input_tokens": 546,
+  "model": "claude-opus-4-5",
+  "output_tokens": 100,
+  "purpose": "Narrative synthesis: Critical Incident Risk Management",
+  "temperature": 0.2
+}

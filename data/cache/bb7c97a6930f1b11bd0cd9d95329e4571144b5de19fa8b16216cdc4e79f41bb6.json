@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"On 24 December 2025, bp announced an agreement with Stonepeak to divest a 65% shareholding in the Castrol business with bp retaining a 35% interest... Cash proceeds are estimated at $6 billion\",\n      \"amount\": 6000000000,\n      \"currency\": \"USD\",\n      \"year\": 2026,\n      \"category\": \"other\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [\n    {\n      \"text\": \"The extension of the Levy to 31 March 2030 was substantively enacted in 2025 resulting in a non-cash deferred tax charge of $539 million in the year\",\n      \"amount\": 539000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"German federal government substantively enacted a number of changes to its tax legislation, including a 5% reduction in the corporate income tax rate by 2032... resulted in a non-cash deferred tax charge of $235 million in the year\",\n      \"amount\": 235000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.03472,
+  "input_tokens": 4929,
+  "model": "claude-opus-4-5",
+  "output_tokens": 403,
+  "purpose": "WvM extraction chunk 43/79 (10 factors)",
+  "temperature": 0.0
+}

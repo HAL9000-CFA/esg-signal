@@ -1,0 +1,119 @@
+{
+  "fetched_at": "2026-04-11T18:03:07.447144+00:00",
+  "data": {
+    "industry_code": "HC-BP",
+    "industry_name": "Biotechnology & Pharmaceuticals",
+    "industry_description": "The Biotechnology & Pharmaceuticals industry develops, manufactures, and markets a range of brand-name and generic medications. A significant portion of the industry is driven by research and development, a high risk of product failure during clinical trials, and the need to obtain regulatory approval. Concerns over pricing practices and consolidation within the sector have created downward pricing pressures. Demand for the industry\u2019s products is largely driving by population demographics, rates of insurance coverage, disease profiles, and economic conditions.",
+    "industry_gics": [
+      {
+        "gic_code": 210,
+        "gic_name": "Human Rights & Community Relations",
+        "gic_description": "The category addresses management of the relationship between businesses and the communities in which they operate, including, but not limited to, management of direct and indirect impacts on core human rights and the treatment of indigenous peoples. More specifically, such management may cover socio-economic community impacts, community engagement, environmental justice, cultivation of local workforces, impact on local businesses, license to operate, and environmental/social impact assessments. The category does not include environmental impacts such as air pollution or waste which, although they may impact the health and safety of members of local communities, are addressed in separate categories.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "HC-BP-210a",
+            "topic_name": "Safety of Clinical Trial Participants",
+            "topic_description": "Clinical trials are an essential part of the biotechnology and pharmaceutical products approval process. Clinical trial participant safety is a critical component of an entity\u2019s ability to bring a product to market successfully. Oversight of these trials is an important factor in the industry because of the numerous clinical trials conducted by third-party contract research organisations. Biotechnology & Pharmaceuticals entities that manage clinical trials effectively may enhance shareholder value through the incremental revenue associated with new products."
+          }
+        ]
+      },
+      {
+        "gic_code": 240,
+        "gic_name": "Access & Affordability",
+        "gic_description": "The category addresses a company\u2019s ability to ensure broad access to its products and services, specifically in the context of underserved markets and/or population groups. It includes the management of issues related to universal needs, such as the accessibility and affordability of health care, financial services, utilities, education, and telecommunications.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "HC-BP-240a",
+            "topic_name": "Access to Medicines",
+            "topic_description": "Biotechnology and pharmaceuticals entities play an important role in providing access to the industry\u2019s products around the world. Entities may develop product pricing frameworks that account for varying levels of economic development and different health care needs across various countries. Strategies related to improving access to medicines may yield growth opportunities, innovation and unique partnerships, which may enhance shareholder value."
+          },
+          {
+            "topic_code": "HC-BP-240b",
+            "topic_name": "Affordability & Pricing",
+            "topic_description": "Stakeholder emphasis on health care cost containment and increased access may continue to place downward pricing pressures on the Biotechnology & Pharmaceuticals industry. As a result, entities that have relied on raising drug prices, contractual advantages and reverse payments to protect profits may be challenged by efforts to reduce costs. Entities that effectively manage their global pricing practices and associated stakeholder scrutiny of pricing practices may limit their risk exposure to regulatory action or adverse reputational effects."
+          }
+        ]
+      },
+      {
+        "gic_code": 250,
+        "gic_name": "Product Quality & Safety",
+        "gic_description": "The category addresses issues involving unintended characteristics of products sold or services provided that may create health or safety risks to end-users. It addresses a company\u2019s ability to offer manufactured products and/or services that meet customer expectations with respect to their health and safety characteristics. It includes, but is not limited to, issues involving liability, management of recalls and market withdrawals, product testing, and chemicals/content/ingredient management in products.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "HC-BP-250a",
+            "topic_name": "Drug Safety",
+            "topic_description": "Important product safety information may be discovered after controlled clinical trials and regulatory approval. Subsequently, entities may be exposed to the financial implications of associate adverse events and product recalls. Product safety concerns, manufacturing defects or inadequate disclosure of product-related risks may result in significant product liability claims. Biotechnology & Pharmaceuticals entities that mitigate the incidence of product recalls, safety concerns and enforcement actions may better preserve shareholder value. In addition, concern over the abuse or resale of certain medications has resulted in the development of mandated take-back programmes. Entities that successfully engage in these programmes may limit future liabilities."
+          }
+        ]
+      },
+      {
+        "gic_code": 260,
+        "gic_name": "Customer Welfare",
+        "gic_description": "The category addresses customer welfare concerns over issues including, but not limited to, health and nutrition of foods and beverages, antibiotic use in animal production, and management of controlled substances. The category addresses the company\u2019s ability to provide consumers with manufactured products and services that are aligned with societal expectations. It does not include issues directly related to quality and safety malfunctions of manufactured products and services, but instead addresses qualities inherent to the design and delivery of products and services where customer welfare may be in question. The scope of the category also captures companies\u2019 ability to prevent counterfeit products.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "HC-BP-260a",
+            "topic_name": "Counterfeit Drugs",
+            "topic_description": "Fake or substandard medication presents a significant risk to consumers in all countries. Biotechnology & Pharmaceuticals entities may face added costs as jurisdictions implement drug supply chain regulations to prevent counterfeit, substandard or mislabelled drugs from entering the pharmaceutical distribution system. Entities that fail to manage this issue effectively may face material risks associated with the loss of public confidence and reduced revenue."
+          }
+        ]
+      },
+      {
+        "gic_code": 270,
+        "gic_name": "Selling Practices & Product Labeling",
+        "gic_description": "The category addresses social issues that may arise from a failure to manage the transparency, accuracy, and comprehensibility of marketing statements, advertising, and labeling of products and services. It includes, but is not limited to, advertising standards and regulations, ethical and responsible marketing practices, misleading or deceptive labeling, as well as discriminatory or predatory selling and lending practices. This may include deceptive or aggressive selling practices in which incentive structures for employees could encourage the sale of products or services that are not in the best interest of customers or clients.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "HC-BP-270a",
+            "topic_name": "Ethical Marketing",
+            "topic_description": "Biotechnology & Pharmaceuticals entities face challenges associated with the marketing of specific products. Direct-to-consumer advertisements for prescription drugs provide opportunities for increasing market share. However, marketing off-label uses may result in significant fines and settlements. Corporate disclosure of legal and regulatory fines and the codes of ethics that govern marketing activities may allow investors to better understand performance in this area."
+          }
+        ]
+      },
+      {
+        "gic_code": 330,
+        "gic_name": "Employee Engagement, Diversity & Inclusion",
+        "gic_description": "The category addresses a company\u2019s ability to ensure that its culture and hiring and promotion practices embrace the building of a diverse and inclusive workforce that reflects the makeup of local talent pools and its customer base. It addresses the issues of discriminatory practices on the bases of race, gender, ethnicity, religion, sexual orientation, and other factors.",
+        "gic_dimension": "Human Capital",
+        "gic_topics": [
+          {
+            "topic_code": "HC-BP-330a",
+            "topic_name": "Employee Recruitment, Development & Retention",
+            "topic_description": "Biotechnology & Pharmaceuticals entities face intense competition for recruiting and retaining employees. The industry relies on highly skilled employees to develop new products, conduct clinical trials, manage government regulations and commercialise new products. Entities that attract and retain employees despite a constrained talent pool may be better positioned to protect and enhance shareholder value."
+          }
+        ]
+      },
+      {
+        "gic_code": 430,
+        "gic_name": "Supply Chain Management",
+        "gic_description": "The category addresses management of environmental, social, and governance (ESG) risks within a company\u2019s supply chain. It addresses issues associated with environmental and social externalities created by suppliers through their operational activities. Such issues include, but are not limited to, environmental responsibility, human rights, labour practices, and ethics and corruption. Management may involve screening, selection, monitoring, and engagement with suppliers on their environmental and social impacts. The category does not address the impacts of external factors \u2013 such as climate change and other environmental and social factors \u2013 on suppliers\u2019 operations and/or on the availability and pricing of key resources, which is covered in a separate category.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "HC-BP-430a",
+            "topic_name": "Supply Chain Management",
+            "topic_description": "For the Biotechnology & Pharmaceuticals industry, managing supply chain quality is essential for protecting consumer health and corporate value. Biotechnology and pharmaceuticals entities that fail to ensure quality throughout their supply chains may be susceptible to lost revenue, supply disruptions and reputational damage. Disclosure of supply chain audit programmes may provide investors with an understanding of how entities in this industry are protecting shareholder value."
+          }
+        ]
+      },
+      {
+        "gic_code": 510,
+        "gic_name": "Business Ethics",
+        "gic_description": "The category addresses the company\u2019s approach to managing risks and opportunities surrounding ethical conduct of business, including fraud, corruption, bribery and facilitation payments, fiduciary responsibilities, and other behaviour that may have an ethical component. This includes sensitivity to business norms and standards as they shift over time, jurisdiction, and culture. It addresses the company\u2019s ability to provide services that satisfy the highest professional and ethical standards of the industry, which means to avoid conflicts of interest, misrepresentation, bias, and negligence through training employees adequately and implementing policies and procedures to ensure employees provide services free from bias and error.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "HC-BP-510a",
+            "topic_name": "Business Ethics",
+            "topic_description": "Biotechnology & Pharmaceuticals entities are subject to various jurisdictional laws and regulations pertaining to bribery, corruption and health care fraud and abuse. The ability of entities to ensure compliance throughout their global and domestic operational footprint may have material implications. Corporate disclosure of legal and regulatory fines and the codes of ethics that govern their interactions with health care professionals may allow investors to monitor performance in this area."
+          }
+        ]
+      }
+    ]
+  }
+}

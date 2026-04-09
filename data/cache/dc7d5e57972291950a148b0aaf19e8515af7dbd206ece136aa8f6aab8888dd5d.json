@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"For 2025 our sustainability measure was linked to our operated carbon emissions. This measure covers Scope 1 and 2 emissions based on our net zero operations aim. Our 2023-25 long-term incentive plan scorecard was linked to emissions reductions against our 2019 baseline (15%). For 2026-28 the scorecard measure will focus on reducing Scope 1 and 2 operational emissions (20%).\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"We have a range of measures to manage this risk, including the use of cyber security policies and procedures, security protection tools, threat monitoring and event detection capabilities, and incident response plans. We conduct exercises to test our response to, and recovery from, cyber attacks.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"QUANTIFIED\", \"evidence\": \"The bonus scorecard for 2025 against which eligible employees are measured incentivized them through three themes: safety and sustainability (30%); operational performance (15%); and financial performance (55%).\"}\n]\n```",
+  "cost_usd": 0.03082,
+  "input_tokens": 4524,
+  "model": "claude-opus-4-5",
+  "output_tokens": 328,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

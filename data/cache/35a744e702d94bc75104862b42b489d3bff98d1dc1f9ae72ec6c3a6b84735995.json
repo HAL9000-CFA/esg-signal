@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"The percentage change in greenhouse gas (GHG) emissions from energy and refrigerant use in our operations in the given period in 2025, in comparison to the same period in 2015. (76.0%) (76.6%) above target... We are aiming to reduce our operational Scope 1 and 2 GHG emissions by 80%\u201390% by 2028, compared to the 2015 baseline.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Nature The cumulative total hectares of land, forests and oceans (as measured by ocean floor area) that Unilever programmes help protect and/or regenerate. 700k 931k significantly above target... The 2026\u20132028 SPI target of 1.25m\u20131.75m hectares is a step-up from the prior SPI target of 1m\u20131.5m hectares, compared to the 2021 baseline.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.037445000000000006,
+  "input_tokens": 5689,
+  "model": "claude-opus-4-5",
+  "output_tokens": 360,
+  "purpose": "Batch grade 6 ESG factors",
+  "temperature": 0.0
+}

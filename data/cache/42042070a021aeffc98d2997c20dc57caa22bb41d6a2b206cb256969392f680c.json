@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"In November and December bp completed a two-phase divestment of non-controlling interests in Permian and Eagle Ford midstream assets to investor Sixth Street for a total of $1.5 billion.\",\n      \"amount\": 1500000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"bp announced it has agreed for Apollo-managed funds to purchase a 25% non-controlling stake in BP Pipelines (TANAP) Limited...for consideration of approximately $1.0 billion.\",\n      \"amount\": 1000000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.03688,
+  "input_tokens": 5926,
+  "model": "claude-opus-4-5",
+  "output_tokens": 290,
+  "purpose": "WvM extraction chunk 63/79 (10 factors)",
+  "temperature": 0.0
+}

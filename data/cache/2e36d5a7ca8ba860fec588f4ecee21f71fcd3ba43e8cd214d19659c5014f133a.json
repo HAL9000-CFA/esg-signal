@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"The analyses also assume the impact of increases in carbon price on operational GHG emissions are fully absorbed as a decrease in net revenue (and vice versa) rather than reflecting how carbon prices or other carbon emissions costs may ultimately be incorporated by the market.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.026250000000000002,
+  "input_tokens": 4305,
+  "model": "claude-opus-4-5",
+  "output_tokens": 189,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

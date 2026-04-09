@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"'new material capex investment' means a decision taken by the resource commitment meeting (RCM) in 2024 to incur inorganic or organic investments greater than $250 million\",\n      \"amount\": 250000000,\n      \"currency\": \"USD\",\n      \"year\": 2024,\n      \"category\": \"capex\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.029580000000000002,
+  "input_tokens": 4916,
+  "model": "claude-opus-4-5",
+  "output_tokens": 200,
+  "purpose": "WvM extraction chunk 75/79 (10 factors)",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [\n    {\n      \"text\": \"CO\u2082 equivalent (CO\u2082e) emissions in Current Trajectory peak in the mid-2020s and by 2050 are around 25% below 2023 levels\",\n      \"amount\": 25,\n      \"currency\": null,\n      \"year\": 2050,\n      \"category\": \"reduction_target\"\n    },\n    {\n      \"text\": \"explores how different elements of the energy system might change to achieve a substantial reduction in carbon emissions (a net 90% fall in CO\u2082e emissions by 2050)\",\n      \"amount\": 90,\n      \"currency\": null,\n      \"year\": 2050,\n      \"category\": \"reduction_target\"\n    },\n    {\n      \"text\": \"Once fully operational NZT will have the ability to capture up to 2 million tonnes of CO\u2082 per annum for storage via the NEP storage infrastructure\",\n      \"amount\": 2000000,\n      \"currency\": null,\n      \"year\": 2028,\n      \"category\": \"other\"\n    }\n  ],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Critical Incident Risk Management\": [],\n  \"Employee Health & Safety\": []\n}\n```",
+  "cost_usd": 0.032285,
+  "input_tokens": 4887,
+  "model": "claude-opus-4-5",
+  "output_tokens": 314,
+  "purpose": "WvM extraction chunk 3/79 (5 factors)",
+  "temperature": 0.0
+}

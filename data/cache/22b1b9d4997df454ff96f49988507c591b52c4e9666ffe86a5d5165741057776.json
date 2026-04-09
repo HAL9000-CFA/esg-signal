@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates solid disclosure practices for GHG emissions, providing quantified operational control figures of 34.3 MtCO2e for 2024, while regulatory records from the EU ETS show no violations across 9 records. However, with only two of five evidence streams active and insufficient talent posting data to assess operational commitment, the overall credibility assessment carries moderate confidence. The words-money analysis found only one of six commitments verifiable as consistent, though this reflects data limitations rather than a confirmed gap between stated ambitions and financial backing.",
+  "cost_usd": 0.005665,
+  "input_tokens": 543,
+  "model": "claude-opus-4-5",
+  "output_tokens": 118,
+  "purpose": "Narrative synthesis: GHG Emissions",
+  "temperature": 0.2
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates strong disclosure practices for Employee Health & Safety, with quantified reporting of process safety events showing year-over-year improvement (27 tier 1 and 2 events in 2024 versus 38 previously). However, talent signals suggest moderate concerns, with workforce sentiment data indicating below-average perceptions of safety culture despite adequate sample confidence. With only two of five evidence streams active, this assessment should be interpreted cautiously; regulatory, monetary commitment, and supply chain dimensions remain unmeasured rather than indicating poor performance.",
+  "cost_usd": 0.0055450000000000004,
+  "input_tokens": 539,
+  "model": "claude-opus-4-5",
+  "output_tokens": 114,
+  "purpose": "Narrative synthesis: Employee Health & Safety",
+  "temperature": 0.2
+}

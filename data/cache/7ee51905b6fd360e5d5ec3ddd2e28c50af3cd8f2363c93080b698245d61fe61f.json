@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "Unilever's Air Quality credibility presents a mixed picture with moderate overall confidence. The regulatory stream provides a strong positive signal with 74 pollution records showing no violations, while talent data suggests organizational capability in this area, though with medium confidence given the limited sample size of 12 relevant hires. However, the company's non-disclosure on air quality metrics creates a notable gap between its clean regulatory record and transparency practices, and the absence of identified monetary commitments means stated environmental intentions remain unverified against actual capital allocation.",
+  "cost_usd": 0.00502,
+  "input_tokens": 444,
+  "model": "claude-opus-4-5",
+  "output_tokens": 112,
+  "purpose": "Narrative synthesis: Air Quality",
+  "temperature": 0.2
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"The CGU\u2011specific one \u2011year cash flows are taken directly from the Group's strategic plan, which includes both the initiatives underway to reduce carbon emissions in line with our CTAP and management's assessment of the potential impact of climate change on operations.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.038145000000000005,
+  "input_tokens": 6544,
+  "model": "claude-opus-4-5",
+  "output_tokens": 217,
+  "purpose": "Batch grade 6 ESG factors",
+  "temperature": 0.0
+}

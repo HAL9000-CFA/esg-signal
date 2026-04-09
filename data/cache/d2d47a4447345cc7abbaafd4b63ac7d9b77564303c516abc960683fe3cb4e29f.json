@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's disclosure stream provides a strong quantified signal on Employee Health & Safety, reporting specific process safety event metrics with year-over-year comparison, which indicates substantive transparency on this factor. However, with only one of five evidence streams active, the overall credibility assessment carries limited confidence\u2014regulatory, talent, and financial commitment data are absent rather than negative, meaning we cannot corroborate or challenge the disclosure-based signal. The amber rating reflects solid disclosure practices but insufficient multi-source evidence to draw broader conclusions about operational health and safety credibility.",
+  "cost_usd": 0.0054800000000000005,
+  "input_tokens": 521,
+  "model": "claude-opus-4-5",
+  "output_tokens": 115,
+  "purpose": "Narrative synthesis: Employee Health & Safety",
+  "temperature": 0.2
+}

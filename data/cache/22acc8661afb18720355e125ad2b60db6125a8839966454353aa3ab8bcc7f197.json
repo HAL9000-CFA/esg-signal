@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [\n    {\n      \"text\": \"We are aiming for an 8-10% reduction by the end of 2030 compared to our 2019 baseline\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2030,\n      \"category\": \"reduction_target\"\n    },\n    {\n      \"text\": \"In 2025 a total of 14 new emissions reduction projects and actions contributed to reductions of 0.27 MtCO2e\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2025,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"27 emissions reduction projects delivered in 2024, which achieved a reduction of 0.42MtCO2e\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2024,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"Archaea Energy purchased renewable energy certificates (RECs) equivalent to 125ktCO2e in emissions savings\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2025,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"A further 144ktCO2e of emissions reductions were achieved through energy efficiency improvements\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ],\n  \"Air Quality\": [\n    {\n      \"text\": \"We remain on track to reach zero routine flaring by 2030 in line with our aim under the World Bank's Zero Routine Flaring Initiative\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2030,\n      \"category\": \"reduction_target\"\n    }\n  ],\n  \"Water & Wastewater Management\": [],\n  \"Critical Incident Risk Management\": [],\n  \"Employee Health & Safety\": []\n}\n```",
+  "cost_usd": 0.03740500000000001,
+  "input_tokens": 5006,
+  "model": "claude-opus-4-5",
+  "output_tokens": 495,
+  "purpose": "WvM extraction chunk 10/79 (5 factors)",
+  "temperature": 0.0
+}

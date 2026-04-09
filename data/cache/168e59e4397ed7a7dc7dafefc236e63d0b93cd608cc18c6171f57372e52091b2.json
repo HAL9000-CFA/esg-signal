@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Critical Incident Risk Management\": [\n    {\n      \"text\": \"bp shipping maintains marine oil pollution liability insurance in respect of its operated ships to a maximum limit of $1 billion for each occurrence\",\n      \"amount\": 1000000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    }\n  ],\n  \"Employee Health & Safety\": []\n}\n```",
+  "cost_usd": 0.026330000000000003,
+  "input_tokens": 4591,
+  "model": "claude-opus-4-5",
+  "output_tokens": 135,
+  "purpose": "WvM extraction chunk 68/79 (5 factors)",
+  "temperature": 0.0
+}

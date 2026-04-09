@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Scope 1 (direct) emissions: 33.7 MtCO2e in 2025; Scope 2 (indirect) emissions \u2013 location-based: 1.7 MtCO2e in 2025; Scope 2 (indirect) emissions \u2013 market-based: 0.7 MtCO2e in 2025. The average carbon intensity of our sold energy products was 79 gCO2e/MJ. This represents a 7% reduction from our 2019 baseline.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.031155000000000002,
+  "input_tokens": 4926,
+  "model": "claude-opus-4-5",
+  "output_tokens": 261,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

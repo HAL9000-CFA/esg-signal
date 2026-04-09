@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"QUANTIFIED\", \"evidence\": \"In the 1.5\u00b0C family, the potential downside in 2030 suggested by the lowest oil prices in the Catalogue (the IEA WEO 2024 Net Zero Emissions by 2050 (NZE) scenario) is around 23% of group adjusted EBITDA in 2030.\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"VAGUE\", \"evidence\": \"To enable us to understand and respond to the changing pace of the energy transition, we monitor and assess key indicators and metrics, such as policy development, renewables installed capacity, EV sales and low carbon technology costs.\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"We have identified a number of physical risks which may affect our business and assets, the frequency or severity of which could be affected by climate change. Exposure to physical climate-related risk is highly dependent on geographical location and on factors such as asset design, and we seek to manage these risks accordingly.\"}\n]\n```",
+  "cost_usd": 0.034530000000000005,
+  "input_tokens": 4691,
+  "model": "claude-opus-4-5",
+  "output_tokens": 443,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

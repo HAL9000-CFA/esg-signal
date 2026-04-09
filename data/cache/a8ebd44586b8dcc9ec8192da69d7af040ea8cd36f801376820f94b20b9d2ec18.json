@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates strong disclosure practices for GHG emissions, providing quantified operational control figures of 34.3 MtCO2e, while regulatory records from the EU ETS show no violations across 9 entries. The talent signal suggests some workforce alignment with emissions-related roles, though the small sample size (n=7) and absence of senior positions limits confidence in this indicator. There is insufficient evidence to assess financial commitment to emissions reduction, as no monetary data was extracted from the available text.",
+  "cost_usd": 0.00544,
+  "input_tokens": 553,
+  "model": "claude-opus-4-5",
+  "output_tokens": 107,
+  "purpose": "Narrative synthesis: GHG Emissions",
+  "temperature": 0.2
+}

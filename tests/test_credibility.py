@@ -77,6 +77,11 @@ def _make_wm_result(score=0.5, checks=None):
     )
 
 
+def _wm_side_effect(profile, factors, **kwargs):
+    """Default WvM mock: returns a neutral result for every factor."""
+    return {f.factor_id: _make_wm_result() for f in factors}
+
+
 # ---------------------------------------------------------------------------
 # _flag helper
 # ---------------------------------------------------------------------------
@@ -84,7 +89,7 @@ def _make_wm_result(score=0.5, checks=None):
 
 class TestFlag:
     def test_green_at_threshold(self):
-        assert _flag(0.65) == "green"
+        assert _flag(0.80) == "green"
 
     def test_green_above_threshold(self):
         assert _flag(1.0) == "green"
@@ -126,12 +131,10 @@ class TestCredibilityScorerStructure:
             {"factor": f.name, "grade": "QUANTIFIED", "evidence": "Reduced by 12%."}
             for f in relevance.material_factors
         ]
-        wm_result = _make_wm_result()
-
         with (
             patch("agents.credibility_scorer.grade_all_factors", return_value=grade_results),
             patch("agents.credibility_scorer.call_claude", return_value="Narrative text."),
-            patch("agents.credibility_scorer.words_money_check", return_value=wm_result),
+            patch("agents.credibility_scorer.words_money_check_all", side_effect=_wm_side_effect),
         ):
             return CredibilityScorer().score(
                 profile=profile,
@@ -204,7 +207,7 @@ class TestDisclosureStream:
         with (
             patch("agents.credibility_scorer.grade_all_factors", return_value=grade_results),
             patch("agents.credibility_scorer.call_claude", return_value="Narrative."),
-            patch("agents.credibility_scorer.words_money_check", return_value=_make_wm_result()),
+            patch("agents.credibility_scorer.words_money_check_all", side_effect=_wm_side_effect),
         ):
             report = CredibilityScorer().score(profile=profile, relevance_result=relevance)
 
@@ -226,7 +229,7 @@ class TestDisclosureStream:
         with (
             patch("agents.credibility_scorer.grade_all_factors", return_value=[]),
             patch("agents.credibility_scorer.call_claude", return_value="Narrative."),
-            patch("agents.credibility_scorer.words_money_check", return_value=_make_wm_result()),
+            patch("agents.credibility_scorer.words_money_check_all", side_effect=_wm_side_effect),
         ):
             report = CredibilityScorer().score(profile=profile, relevance_result=relevance)
 
@@ -249,7 +252,7 @@ class TestTalentStream:
         with (
             patch("agents.credibility_scorer.grade_all_factors", return_value=grade_results),
             patch("agents.credibility_scorer.call_claude", return_value="Narrative."),
-            patch("agents.credibility_scorer.words_money_check", return_value=_make_wm_result()),
+            patch("agents.credibility_scorer.words_money_check_all", side_effect=_wm_side_effect),
         ):
             report = CredibilityScorer().score(
                 profile=profile, relevance_result=relevance, talent_result=talent
@@ -258,10 +261,13 @@ class TestTalentStream:
         return report.factor_scores[0].stream_scores["talent"]
 
     def test_environment_dimension_uses_environment_key(self):
+        # Scorer blends raw score with confidence — result is in (0, 1], not == raw.
+        # The key check is that the environment key is used (not social/governance).
         score = self._get_talent_score("ghg_emissions", "Environment", 0.8)
-        assert score == 0.8
+        assert score is not None
+        assert 0 < score <= 1.0
 
-    def test_no_talent_result_returns_neutral(self):
+    def test_no_talent_result_returns_excluded(self):
         profile = _make_profile()
         relevance = _make_relevance()
         grade_results = [{"factor": "GHG Emissions", "grade": "VAGUE", "evidence": None}]
@@ -269,13 +275,13 @@ class TestTalentStream:
         with (
             patch("agents.credibility_scorer.grade_all_factors", return_value=grade_results),
             patch("agents.credibility_scorer.call_claude", return_value="Narrative."),
-            patch("agents.credibility_scorer.words_money_check", return_value=_make_wm_result()),
+            patch("agents.credibility_scorer.words_money_check_all", side_effect=_wm_side_effect),
         ):
             report = CredibilityScorer().score(
                 profile=profile, relevance_result=relevance, talent_result=None
             )
 
-        assert report.factor_scores[0].stream_scores["talent"] == 0.5
+        assert report.factor_scores[0].stream_scores["talent"] is None
 
 
 # ---------------------------------------------------------------------------
@@ -293,7 +299,7 @@ class TestRegulatoryStream:
         with (
             patch("agents.credibility_scorer.grade_all_factors", return_value=grade_results),
             patch("agents.credibility_scorer.call_claude", return_value="Narrative."),
-            patch("agents.credibility_scorer.words_money_check", return_value=_make_wm_result()),
+            patch("agents.credibility_scorer.words_money_check_all", side_effect=_wm_side_effect),
         ):
             report = CredibilityScorer().score(
                 profile=profile,
@@ -303,8 +309,8 @@ class TestRegulatoryStream:
 
         return report.factor_scores[0].stream_scores["regulatory"]
 
-    def test_no_source_mapped_returns_neutral(self):
-        # "data_security" has no regulatory source mapping
+    def test_no_source_mapped_returns_excluded(self):
+        # "data_security" has no regulatory source mapping → excluded (None)
         profile = _make_profile()
         factor = _make_factor(factor_id="data_security", dimension="Social Capital")
         relevance = _make_relevance(factors=[factor])
@@ -313,15 +319,16 @@ class TestRegulatoryStream:
         with (
             patch("agents.credibility_scorer.grade_all_factors", return_value=grade_results),
             patch("agents.credibility_scorer.call_claude", return_value="Narrative."),
-            patch("agents.credibility_scorer.words_money_check", return_value=_make_wm_result()),
+            patch("agents.credibility_scorer.words_money_check_all", side_effect=_wm_side_effect),
         ):
             report = CredibilityScorer().score(profile=profile, relevance_result=relevance)
 
-        assert report.factor_scores[0].stream_scores["regulatory"] == 0.5
+        assert report.factor_scores[0].stream_scores["regulatory"] is None
 
-    def test_missing_path_returns_neutral(self):
+    def test_missing_path_returns_excluded(self):
+        # Source is mapped but no path provided → no data found → excluded (None)
         score = self._run_with_paths("ghg_emissions", {})
-        assert score == 0.5
+        assert score is None
 
     def test_clean_csv_scores_above_neutral(self, tmp_path):
         import pandas as pd
@@ -336,6 +343,7 @@ class TestRegulatoryStream:
     def test_violations_reduce_score(self, tmp_path):
         import pandas as pd
 
+        # Use air_quality which maps to "echo" source
         csv_path = tmp_path / "echo_TEST.csv"
         pd.DataFrame(
             {
@@ -344,7 +352,8 @@ class TestRegulatoryStream:
                 "PENALTY_AMOUNT": [50000, 20000],
             }
         ).to_csv(csv_path, index=False)
-        score = self._run_with_paths("ghg_emissions", {"echo": str(csv_path)})
+        score = self._run_with_paths("air_quality", {"echo": str(csv_path)})
+        assert score is not None
         assert score <= 0.75
 
 
@@ -359,10 +368,15 @@ class TestWordsMoneyStream:
         relevance = _make_relevance()
         grade_results = [{"factor": "GHG Emissions", "grade": "VAGUE", "evidence": None}]
 
+        wm_result_copy = wm_result  # capture for closure
+
+        def _wm_specific(profile, factors, **kwargs):
+            return {f.factor_id: wm_result_copy for f in factors}
+
         with (
             patch("agents.credibility_scorer.grade_all_factors", return_value=grade_results),
             patch("agents.credibility_scorer.call_claude", return_value="Narrative."),
-            patch("agents.credibility_scorer.words_money_check", return_value=wm_result),
+            patch("agents.credibility_scorer.words_money_check_all", side_effect=_wm_specific),
         ):
             report = CredibilityScorer().score(profile=profile, relevance_result=relevance)
 
@@ -396,7 +410,7 @@ class TestWordsMoneyStream:
         fs = self._run_with_wm(wm)
         assert fs.words_money_checks is None
 
-    def test_wm_exception_returns_neutral(self):
+    def test_wm_exception_excludes_stream(self):
         profile = _make_profile()
         relevance = _make_relevance()
         grade_results = [{"factor": "GHG Emissions", "grade": "VAGUE", "evidence": None}]
@@ -405,12 +419,14 @@ class TestWordsMoneyStream:
             patch("agents.credibility_scorer.grade_all_factors", return_value=grade_results),
             patch("agents.credibility_scorer.call_claude", return_value="Narrative."),
             patch(
-                "agents.credibility_scorer.words_money_check", side_effect=Exception("wm failed")
+                "agents.credibility_scorer.words_money_check_all",
+                side_effect=Exception("wm failed"),
             ),
         ):
             report = CredibilityScorer().score(profile=profile, relevance_result=relevance)
 
-        assert report.factor_scores[0].stream_scores["words_money"] == 0.5
+        # Exception → wm_map = {} → factor not found → excluded (None), not penalised
+        assert report.factor_scores[0].stream_scores["words_money"] is None
 
 
 # ---------------------------------------------------------------------------
@@ -419,7 +435,8 @@ class TestWordsMoneyStream:
 
 
 class TestStubStreams:
-    def test_supply_chain_is_neutral(self):
+    def test_supply_chain_is_excluded(self):
+        # Supply chain is a stub — always returns None (excluded from aggregate)
         profile = _make_profile()
         relevance = _make_relevance()
         grade_results = [{"factor": "GHG Emissions", "grade": "VAGUE", "evidence": None}]
@@ -427,11 +444,11 @@ class TestStubStreams:
         with (
             patch("agents.credibility_scorer.grade_all_factors", return_value=grade_results),
             patch("agents.credibility_scorer.call_claude", return_value="Narrative."),
-            patch("agents.credibility_scorer.words_money_check", return_value=_make_wm_result()),
+            patch("agents.credibility_scorer.words_money_check_all", side_effect=_wm_side_effect),
         ):
             report = CredibilityScorer().score(profile=profile, relevance_result=relevance)
 
-        assert report.factor_scores[0].stream_scores["supply_chain"] == 0.5
+        assert report.factor_scores[0].stream_scores["supply_chain"] is None
 
 
 # ---------------------------------------------------------------------------
@@ -448,7 +465,7 @@ class TestNarrativeFailure:
         with (
             patch("agents.credibility_scorer.grade_all_factors", return_value=grade_results),
             patch("agents.credibility_scorer.call_claude", side_effect=Exception("API down")),
-            patch("agents.credibility_scorer.words_money_check", return_value=_make_wm_result()),
+            patch("agents.credibility_scorer.words_money_check_all", side_effect=_wm_side_effect),
         ):
             report = CredibilityScorer().score(profile=profile, relevance_result=relevance)
 

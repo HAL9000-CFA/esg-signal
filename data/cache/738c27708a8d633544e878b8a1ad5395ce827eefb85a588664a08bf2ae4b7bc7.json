@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"GHG emissions data, page 38\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"VAGUE\", \"evidence\": \"the directors consider that, during the financial year ended 31 December 2025, they have acted in a way that they consider, in good faith, would most likely promote the success of the company for the benefit of its members as a whole, having regard to the likely consequences of any decision in the long term and the broader interests of other stakeholders\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"Safety and sustainability committee\"},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"VAGUE\", \"evidence\": \"In early 2025 the board's focus moved from the resetting of strategy to overseeing disciplined performance and the delivery of our four primary financial targets.\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"VAGUE\", \"evidence\": \"In accordance with the requirements of Section 172 of the Companies Act 2006 (the Act), the directors consider that, during the financial year ended 31 December 2025, they have acted in a way that they consider, in good faith, would most likely promote the success of the company\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"Operational excellence and risk management\"}\n]\n```",
+  "cost_usd": 0.037635,
+  "input_tokens": 5277,
+  "model": "claude-opus-4-5",
+  "output_tokens": 450,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

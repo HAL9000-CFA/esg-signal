@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "Unilever demonstrates solid credibility on GHG emissions, with disclosure indicating strong quantified progress at 72% absolute reduction in Scope 1 & 2 emissions since 2015. Regulatory records from EU ETS show no violations, while talent signals indicate genuine organisational capability with a high proportion of senior sustainability professionals and no evidence of superficial hiring. However, with supply chain evidence unavailable for this industry and no monetary commitment data extracted, the assessment reflects only direct operational performance rather than the full value chain exposure typical of consumer goods companies.",
+  "cost_usd": 0.005745,
+  "input_tokens": 554,
+  "model": "claude-opus-4-5",
+  "output_tokens": 119,
+  "purpose": "Narrative synthesis: GHG Emissions",
+  "temperature": 0.2
+}

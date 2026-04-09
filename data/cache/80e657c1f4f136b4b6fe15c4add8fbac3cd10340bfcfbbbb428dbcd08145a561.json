@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [\n    {\n      \"text\": \"Once fully operational NZT will have the ability to capture up to 2 million tonnes of CO2 per annum for storage via the NEP storage infrastructure which is sized for an initial 4 million tonnes of CO2 per annum\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2028,\n      \"category\": \"other\"\n    }\n  ],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"Net debt $22.2bn $14-18bn by end 2027\",\n      \"amount\": 22200000000,\n      \"currency\": \"USD\",\n      \"year\": 2027,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"Structural cost reduction $2.8bn (cumulative since 2023) $5.5-6.5bn by end 2027\",\n      \"amount\": 2800000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"reduction_target\"\n    },\n    {\n      \"text\": \"$5.5-6.5bn by end 2027\",\n      \"amount\": 5500000000,\n      \"currency\": \"USD\",\n      \"year\": 2027,\n      \"category\": \"reduction_target\"\n    },\n    {\n      \"text\": \"We achieved around $1.6 billion in cumulative structural cost reductions (2024-25)\",\n      \"amount\": 1600000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"reduction_target\"\n    },\n    {\n      \"text\": \"of which $2 billion in 2025 and $750 million in 2024\",\n      \"amount\": 2000000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"reduction_target\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.040115,
+  "input_tokens": 5208,
+  "model": "claude-opus-4-5",
+  "output_tokens": 563,
+  "purpose": "WvM extraction chunk 3/79 (10 factors)",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Critical Incident Risk Management\": [\n    {\n      \"text\": \"2025 includes $ 8,367 million ( 2024 $ 9,520 million ) in relation to the Gulf of America oil spill, of which $ 6,834 million ( 2024 $ 8,383 million ) matures in greater than one year\",\n      \"amount\": 8367000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ],\n  \"Employee Health & Safety\": []\n}\n```",
+  "cost_usd": 0.030590000000000003,
+  "input_tokens": 5243,
+  "model": "claude-opus-4-5",
+  "output_tokens": 175,
+  "purpose": "WvM extraction chunk 52/79 (5 factors)",
+  "temperature": 0.0
+}

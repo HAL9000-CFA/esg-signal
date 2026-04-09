@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"Developments in policy, law, regulation, technology and markets, including societal and investor sentiment, related to the issue of climate change and the transition to a lower carbon economy could increase costs, reduce revenues, constrain our operations and affect our business plans and financial performance.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"VAGUE\", \"evidence\": \"The selection and design of our major projects need to be resilient to the impact of severe weather events (e.g. metocean criteria) and other environmental factors (e.g. water scarcity).\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"bp operates in complex and high-risk environments where process safety, personal safety, occupational health, technical integrity, transportation, marine operations, and environmental risks could result in major incidents with significant human, environmental, financial, and reputational consequences.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"These risks extend to both the public and our workforce and contractors, including physical safety, life-saving rule violations, and occupational health exposures such as chemical, biological, psychosocial, or infectious risks.\"}\n]\n```",
+  "cost_usd": 0.028495,
+  "input_tokens": 4059,
+  "model": "claude-opus-4-5",
+  "output_tokens": 328,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [\n    {\n      \"text\": \"The UK region includes a $287-million gain which is offset by corresponding charges primarily in the US region, relating to the group self-insurance programme.\",\n      \"amount\": 287000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    }\n  ],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.04539,
+  "input_tokens": 8143,
+  "model": "claude-opus-4-5",
+  "output_tokens": 187,
+  "purpose": "WvM extraction chunk 58/79 (10 factors)",
+  "temperature": 0.0
+}

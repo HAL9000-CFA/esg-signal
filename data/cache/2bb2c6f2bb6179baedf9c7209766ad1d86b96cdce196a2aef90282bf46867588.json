@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "UNILEVER PLC demonstrates strong credibility on GHG Emissions, with quantified disclosure citing a 72% absolute reduction in Scope 1 & 2 emissions since 2015, supported by a clean regulatory record across EU ETS with no violations detected. Talent signals suggest alignment, though the moderate sample size (n=12) warrants some caution in interpretation. The words-versus-money stream shows no identified monetary commitments against these environmental claims, which neither confirms nor undermines the disclosure but represents a gap worth monitoring.",
+  "cost_usd": 0.005390000000000001,
+  "input_tokens": 483,
+  "model": "claude-opus-4-5",
+  "output_tokens": 119,
+  "purpose": "Narrative synthesis: GHG Emissions",
+  "temperature": 0.2
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"Water Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Design & Lifecycle Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Supply Chain Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"In 2025, approximately 86% of our procurement spend (including Ice Cream) was with suppliers that met the mandatory requirements of the RPP.\"}\n]\n```",
+  "cost_usd": 0.026185000000000003,
+  "input_tokens": 4532,
+  "model": "claude-opus-4-5",
+  "output_tokens": 141,
+  "purpose": "Batch grade 4 ESG factors",
+  "temperature": 0.0
+}

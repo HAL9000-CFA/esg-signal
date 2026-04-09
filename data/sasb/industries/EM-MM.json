@@ -1,0 +1,158 @@
+{
+  "fetched_at": "2026-04-11T18:06:25.203609+00:00",
+  "data": {
+    "industry_code": "EM-MM",
+    "industry_name": "Metals & Mining",
+    "industry_description": "The Metals & Mining industry is involved in extracting metals and minerals, producing ores, quarrying stones, smelting and manufacturing metals, refining metals, and providing mining support activities. Entities also produce iron ores, rare earth metals, and precious metals and stones. Larger entities in this industry are integrated vertically \u2013 from mining across global operations to wholesaling metals to customers.",
+    "industry_gics": [
+      {
+        "gic_code": 110,
+        "gic_name": "GHG Emissions",
+        "gic_description": "The category addresses direct (Scope 1) greenhouse gas (GHG) emissions that a company generates through its operations. This includes GHG emissions from stationary (e.g., factories, power plants) and mobile sources (e.g., trucks, delivery vehicles, planes), whether a result of combustion of fuel or non-combusted direct releases during activities such as natural resource extraction, power generation, land use, or biogenic processes. The category further includes management of regulatory risks, environmental compliance, and reputational risks and opportunities, as they related to direct GHG emissions. The seven GHGs covered under the Kyoto Protocol are included within the category\u2014carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur hexafluoride (SF6), and nitrogen trifluoride (NF3).",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "EM-MM-110a",
+            "topic_name": "Greenhouse Gas Emissions",
+            "topic_description": "Mining operations are energy-intensive and generate significant direct greenhouse gas (GHG) emissions, including carbon dioxide from fuel use during mining, ore processing and smelting activities. The extent and type of GHG emissions can vary depending on the metal mined and processed. Regulatory efforts to reduce GHG emissions in response to climate change- related risks may result in additional regulatory compliance costs and risks for metals and mining entities. Entities can achieve operational efficiencies through the cost-effective reduction of GHG emissions. Such efficiencies can mitigate the potential financial effect of increased fuel costs from regulations to limit\u2014or put a price on\u2014GHG emissions."
+          }
+        ]
+      },
+      {
+        "gic_code": 120,
+        "gic_name": "Air Quality",
+        "gic_description": "The category addresses management of air quality impacts resulting from stationary (e.g., factories, power plants) and mobile sources (e.g., trucks, delivery vehicles, planes) as well as industrial emissions. Relevant airborne pollutants include, but are not limited to, oxides of nitrogen (NOx), oxides of sulfur (SOx), volatile organic compounds (VOCs), heavy metals, particulate matter, and chlorofluorocarbons. The category does not include GHG emissions, which are addressed in a separate category.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "EM-MM-120a",
+            "topic_name": "Air Quality",
+            "topic_description": "Non-greenhouse gas (GHG) air emissions from the Metals & Mining industry include hazardous air pollutants from smelting and refining activities. These air pollutants can create significant and localised environmental or health risks. Depending on the metal, uncaptured sulphur dioxide, lead, mercury, cadmium and arsenic are among the chief pollutants, along with particulate matter. Financial effects resulting from air emissions will vary depending on the specific location of operations and the applicable air emissions regulations. Active management of the issue\u2014through technological and process improvements\u2014could allow entities to limit the effects of increasingly stringent air quality regulations globally. Entities could also benefit from operational efficiencies that could lead to a lower cost structure over time."
+          }
+        ]
+      },
+      {
+        "gic_code": 130,
+        "gic_name": "Energy Management",
+        "gic_description": "The category addresses environmental impacts associated with energy consumption. It addresses the company\u2019s management of energy in manufacturing and/or for provision of products and services derived from utility providers (grid energy) not owned or controlled by the company. More specifically, it includes management of energy efficiency and intensity, energy mix, as well as grid reliance. Upstream (e.g., suppliers) and downstream (e.g., product use) energy use is not included in the scope.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "EM-MM-130a",
+            "topic_name": "Energy Management",
+            "topic_description": "Mining and metals production is often energy-intensive, with a significant proportion of energy consumption in the industry accounted for by purchased electricity. Although fuel combustion on-site contributes to the industry\u2019s direct (Scope 1) GHG emissions, electricity purchases from the grid can result in indirect, Scope 2 emissions. The energy intensity of operations may increase with decreasing grades of deposits and increasing depth and scale of mining operations. The choice between on-site versus grid-sourced electricity and the use of alternative energy can be important in influencing both the costs and reliability of energy supply. Affordable and easily accessible energy is an important competitive factor in a commodity market driven by global competition, and purchased fuels and electricity can account for a significant proportion of total production costs. The way in which an entity manages its overall energy efficiency and intensity, its reliance on different types of energy, and its ability to access alternative sources of energy, can therefore be a material factor."
+          }
+        ]
+      },
+      {
+        "gic_code": 140,
+        "gic_name": "Water & Wastewater Management",
+        "gic_description": "The category addresses a company\u2019s water use, water consumption, wastewater generation, and other impacts of operations on water resources, which may be influenced by regional differences in the availability and quality of and competition for water resources. More specifically, it addresses management strategies including, but not limited to, water efficiency, intensity, and recycling. Lastly, the category also addresses management of wastewater treatment and discharge, including groundwater and aquifer pollution.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "EM-MM-140a",
+            "topic_name": "Water Management",
+            "topic_description": "Mining and metals production can affect both the availability and the quality of local water resources. Metals and mining entities face operational, regulatory and reputational risks because of water scarcity, costs of water acquisition, regulations on effluents or the amount of water used, and competition with local communities and other industries for limited water resources. Effects associated with water management may include higher costs, liabilities and lost revenues because of curtailment or suspension of operations. The severity of these risks may vary depending on the region\u2019s water availability and the regulatory environment. Entities in the industry may deploy new technologies to manage risks related to water risk, including desalination, water recirculation and innovative waste-disposal solutions. Reducing water use and contamination can create operational efficiencies for entities and reduce their operating costs."
+          }
+        ]
+      },
+      {
+        "gic_code": 150,
+        "gic_name": "Waste & Hazardous Materials Management",
+        "gic_description": "The category addresses environmental issues associated with hazardous and non-hazardous waste generated by companies. It addresses a company\u2019s management of solid wastes in manufacturing, agriculture, and other industrial processes. It covers treatment, handling, storage, disposal, and regulatory compliance. The category does not cover emissions to air or wastewater nor does it cover waste from end-of-life of products, which are addressed in separate categories.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "EM-MM-150a",
+            "topic_name": "Waste & Hazardous Materials Management",
+            "topic_description": "The Metals & Mining industry generates large volumes of non-mineral and mineral wastes, including waste rock, tailings, slurries, slags, sludges, smelting and industrial wastes, some of which may contain toxic, hazardous or chemically reactive substances. Mineral processing sometimes also requires the use of hazardous materials for metal extraction. Waste produced during mining operations, depending on its type, can be treated, discarded, or stored in on- or off-site impoundments or old mining pits. Improper hazardous materials storage or disposal can present a significant long-term threat to human health and ecosystems through potential contamination of groundwater or surface water used for drinking or agriculture purposes. Entities that reduce waste streams while implementing policies to manage risks related to handling hazardous materials may reduce regulatory and litigation risks, remediation liabilities and costs."
+          }
+        ]
+      },
+      {
+        "gic_code": 160,
+        "gic_name": "Ecological Impacts",
+        "gic_description": "The category addresses management of the company\u2019s impacts on ecosystems and biodiversity through activities including, but not limited to, land use for exploration, natural resource extraction, and cultivation, as well as project development, construction, and siting. The impacts include, but are not limited to, biodiversity loss, habitat destruction, and deforestation at all stages \u2013 planning, land acquisition, permitting, development, operations, and site remediation. The category does not cover impacts of climate change on ecosystems and biodiversity.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "EM-MM-160a",
+            "topic_name": "Biodiversity Impacts",
+            "topic_description": "The development, operation, closure and remediation of mines can have a range of impacts on biodiversity, such as alterations of landscape, vegetation removal and impacts on wildlife habitats. A particularly concerning effect of coal operations is acid rock drainage, in which surface and shallow subsurface water encounters coal mining overburden, contaminating the water with heavy metals and rendering it highly acidic, with harmful effects on humans, animals and vegetation. Biodiversity impacts of mining operations can affect the valuation of reserves and create operational risks. Because of increasing interest in the protection of ecosystems, the environmental characteristics of the land where reserves are located may lead to higher extraction costs. Entities might also face regulatory or reputational barriers to accessing reserves in areas with protected conservation status. Metals and mining entities face regulatory risks related to site reclamation after a mine is decommissioned, in accordance with applicable regulatory requirements to restore mined property according to a previously approved reclamation plan. Material costs may arise from removing or covering refuse piles, meeting water treatment obligations and dismantling infrastructure at the end of life. Furthermore, mining operations are subject to laws protecting endangered species. Entities with an effective environmental management plan for each stage of the project lifecycle may minimise their compliance costs and legal liabilities, face less resistance in developing new mines, and avoid difficulties in obtaining permits, accessing reserves and completing projects."
+          }
+        ]
+      },
+      {
+        "gic_code": 210,
+        "gic_name": "Human Rights & Community Relations",
+        "gic_description": "The category addresses management of the relationship between businesses and the communities in which they operate, including, but not limited to, management of direct and indirect impacts on core human rights and the treatment of indigenous peoples. More specifically, such management may cover socio-economic community impacts, community engagement, environmental justice, cultivation of local workforces, impact on local businesses, license to operate, and environmental/social impact assessments. The category does not include environmental impacts such as air pollution or waste which, although they may impact the health and safety of members of local communities, are addressed in separate categories.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "EM-MM-210a",
+            "topic_name": "Security, Human Rights & Rights of Indigenous Peoples",
+            "topic_description": "Metals and mining entities face additional community-related risks when operating in conflict zones and in areas with weak or absent governance institutions, rule of law or legislation to protect human rights; or in areas with vulnerable communities such as indigenous peoples. Entities using private or government security forces to protect their workers and assets may knowingly, or unknowingly, contribute to human rights violations, including the use of excessive force. Entities perceived as contributing to human rights violations or failing to account for indigenous peoples\u2019 rights may be affected by protests, riots or suspension of permits. These entities could face substantial costs related to compensation or settlement payments, and write-downs in the value of their reserves in such areas. In the absence of applicable jurisdictional laws or regulations to address such cases, several international instruments have emerged to provide guidelines for entities. These instruments include obtaining the free, prior and informed consent of indigenous peoples for decisions that affect them. Several countries have implemented specific laws protecting indigenous peoples\u2019 rights, increasing the regulatory risk for entities that violate those rights."
+          },
+          {
+            "topic_code": "EM-MM-210b",
+            "topic_name": "Community Relations",
+            "topic_description": "Mining facilities are frequently active over long periods and can have a wide range of adverse effects on communities. Community rights and interests may be affected through environmental and social impacts of mining operations, such as competition for access to local energy or water resources, air and water emissions, and waste from operations. Mining entities rely upon support from local communities to obtain permits and leases as well as to conduct activities without disruptions. Entities may experience adverse financial effects if the community interferes, or lobbies government to interfere, with the rights of a mining entity in relation to their ability to access, develop and produce reserves. In addition to community concerns about the direct impacts of projects, the presence of mining activities may give rise to associated socio-economic concerns, such as education, health, livelihoods and food security for the community. Metals and mining entities engaging in rent-seeking and exploiting a community\u2019s resources without providing proportional socio-economic benefits in return may be exposed to actions by host governments and communities that restrict their activities or impose additional costs. These could include imposition of ad hoc taxes and export restrictions. Entities can adopt various community engagement strategies in their global operations to manage risks and opportunities associated with community rights and interests. Strategies are often underpinned by community engagement integrated into the project cycle. Entities are beginning to adopt a \u2018shared value\u2019 approach to provide significant socio-economic benefits to communities and allow them to operate profitably."
+          }
+        ]
+      },
+      {
+        "gic_code": 310,
+        "gic_name": "Labour Practices",
+        "gic_description": "The category addresses the company\u2019s ability to uphold commonly accepted labour standards in the workplace, including compliance with labour laws and internationally accepted norms and standards. This includes, but is not limited to, ensuring basic human rights related to child labour, forced or bonded labour, exploitative labour, fair wages and overtime pay, and other basic workers\u2019 rights. It also includes minimum wage policies and provision of benefits, which may influence how a workforce is attracted, retained, and motivated. The category further addresses a company\u2019s relationship with organized labour and freedom of association.",
+        "gic_dimension": "Human Capital",
+        "gic_topics": [
+          {
+            "topic_code": "EM-MM-310a",
+            "topic_name": "Labour Practices",
+            "topic_description": "Working conditions related to metal and mining operations may be physically demanding and hazardous. Labour unions play an important role in representing workers\u2019 interests and managing collective bargaining for better wages and working conditions. At the same time, metals and mining entities often operate in areas where worker rights are inadequately protected. The nuances of worker concerns make management of labour relations critical for metals and mining entities. Conflict with workers can result in labour strikes and other disruptions that can delay or stop production. Work stoppages frequently result in lost revenue and reputational damage. Persistent labour disputes can adversely affect the long-term profitability of mining entities."
+          }
+        ]
+      },
+      {
+        "gic_code": 320,
+        "gic_name": "Employee Health & Safety",
+        "gic_description": "The category addresses a company\u2019s ability to create and maintain a safe and healthy workplace environment that is free of injuries, fatalities, and illness (both chronic and acute). It is traditionally accomplished through implementing safety management plans, developing training requirements for employees and contractors, and conducting regular audits of their own practices as well as those of their subcontractors. The category further captures how companies ensure physical and mental health of workforce through technology, training, corporate culture, regulatory compliance, monitoring and testing, and personal protective equipment.",
+        "gic_dimension": "Human Capital",
+        "gic_topics": [
+          {
+            "topic_code": "EM-MM-320a",
+            "topic_name": "Workforce Health & Safety",
+            "topic_description": "Safety is critical to mining operations because of the hazardous working conditions involved. The Metals & Mining industry has relatively high fatality rates compared to other industries. Fatalities and injuries can result from the many hazards associated with the industry, including working with powered haulage and machinery, as well as mine integrity. Poor health and safety records can result in fines and penalties, and an increase in regulatory compliance costs resulting from more stringent oversight. An entity\u2019s ability to protect employee health and safety, and to create a culture of safety and well-being among employees at all levels, may prevent accidents, mitigate costs, reduce operational downtime and enhance workforce productivity."
+          }
+        ]
+      },
+      {
+        "gic_code": 510,
+        "gic_name": "Business Ethics",
+        "gic_description": "The category addresses the company\u2019s approach to managing risks and opportunities surrounding ethical conduct of business, including fraud, corruption, bribery and facilitation payments, fiduciary responsibilities, and other behaviour that may have an ethical component. This includes sensitivity to business norms and standards as they shift over time, jurisdiction, and culture. It addresses the company\u2019s ability to provide services that satisfy the highest professional and ethical standards of the industry, which means to avoid conflicts of interest, misrepresentation, bias, and negligence through training employees adequately and implementing policies and procedures to ensure employees provide services free from bias and error.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "EM-MM-510a",
+            "topic_name": "Business Ethics & Transparency",
+            "topic_description": "Managing business ethics and maintaining an appropriate level of transparency in payments to governments or individuals are significant issues for the mining industry. This is because government relations are important to entities\u2019 conducting business in this industry to gain access to mining reserves. Anti-corruption, anti-bribery, and payments-transparency laws and initiatives create regulatory mechanisms to reduce the risk of misconduct. Violations of these laws could result in significant one-time costs or higher compliance costs, whereas successful compliance with such regulations could avoid adverse outcomes. Entities with significant reserves or operations in corruption-prone countries could face heightened risks. Entities must ensure their governance structures and business practices reduce the risks associated with corruption and wilful or unintentional participation in illegal or unethical payments, or with gifts to government officials or private individuals."
+          }
+        ]
+      },
+      {
+        "gic_code": 540,
+        "gic_name": "Critical Incident Risk Management",
+        "gic_description": "The category addresses the company\u2019s use of management systems and scenario planning to identify, understand, and prevent or minimize the occurrence of low-probability, high-impact accidents and emergencies with significant potential environmental and social externalities. It relates to the culture of safety at a company, its relevant safety management systems and technological controls, the potential human, environmental, and social implications of such events occurring, and the long-term effects to an organization, its workers, and society should these events occur.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "EM-MM-540a",
+            "topic_name": "Tailings Storage Facilities Management",
+            "topic_description": "The Metals & Mining industry faces significant operational hazards, particularly those associated with the structural integrity of tailings storage facilities (TSFs). A catastrophic failure of such facilities (for example, a dam failure) can release significant volumes of waste streams and potentially harmful materials into the environment, leading to significant impacts on ecosystems, human livelihood, local economies and communities. Such catastrophic incidents may result in significant financial losses for entities and may impair social licence to operate. Robust approaches to tailings facilities design, management, operation and closure, as well as appropriate management of associated risks, can help prevent such incidents from occurring. Entities that adopt comprehensive practices to maintain the integrity and safety of TSFs may do so through ensuring accountability for tailings management at the highest levels of the entity, conducting frequent internal and external independent technical reviews of TSFs and ensuring mitigation measures are implemented in a timely manner in case of a safety concern. Additionally, a strong safety culture and well-established emergency preparedness and response plans can mitigate the impacts and financial implications of such events should they occur. Entity obligations related to long-term remediation and compensation for damages may result in additional financial effects in case of failure. The ability of entities to meet such obligations after an incident has occurred is an additional component of emergency preparedness."
+          }
+        ]
+      }
+    ]
+  }
+}

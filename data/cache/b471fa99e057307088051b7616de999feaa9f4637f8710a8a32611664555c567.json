@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's Critical Incident Risk Management credibility presents a mixed picture. Disclosure is strong with quantified process safety metrics showing year-over-year improvement, and financial commitments appear largely consistent with stated ambitions. However, talent signals suggest weak organizational capability in this area, though this finding should be interpreted cautiously given the small sample size (n=7, 35% confidence); regulatory evidence from NRC sources returned no data, leaving enforcement history unclear rather than indicating poor performance.",
+  "cost_usd": 0.005300000000000001,
+  "input_tokens": 550,
+  "model": "claude-opus-4-5",
+  "output_tokens": 102,
+  "purpose": "Narrative synthesis: Critical Incident Risk Management",
+  "temperature": 0.2
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"Payables related to the Gulf of America oil spill include amounts payable under the 2016 consent decree and settlement agreement with the United States and five Gulf coast states, including amounts payable for natural resource damages, state claims and Clean Water Act penalties.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.03175,
+  "input_tokens": 5390,
+  "model": "claude-opus-4-5",
+  "output_tokens": 192,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"GHG emissions data, page 38\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"We seek to manage process safety, personal safety, and environmental risks through our Operating Management System (OMS), which defines the standards and systematic practices for safe, reliable, and compliant operations. Key activities include inspection, maintenance, testing, incident investigation, and workforce competency development.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"We seek to manage process safety, personal safety, and environmental risks through our Operating Management System (OMS), which defines the standards and systematic practices for safe, reliable, and compliant operations... Production & operations plays a central role in managing safety and environmental risks across hydrocarbon operations. It is accountable for maintaining safe, compliant, and reliable performance and promotes a strong safety culture across sites and partners.\"}\n]\n```",
+  "cost_usd": 0.02886,
+  "input_tokens": 4347,
+  "model": "claude-opus-4-5",
+  "output_tokens": 285,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

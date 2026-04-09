@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates strong disclosure practices for GHG emissions, with quantified operational control data showing 34.3 MtCO2e in the most recent period, and regulatory records from the EU ETS indicate compliance with no violations detected across 9 records. However, talent market signals suggest weaker positioning, with a blended score of 0.39 from sufficient sample size (n=20) indicating limited specialist hiring activity in emissions-related roles. With supply chain evidence unavailable and monetary commitment verification inconclusive (5 of 6 commitments unverifiable), the overall amber rating reflects solid foundational disclosure offset by gaps in demonstrable operational follow-through.",
+  "cost_usd": 0.00643,
+  "input_tokens": 561,
+  "model": "claude-opus-4-5",
+  "output_tokens": 145,
+  "purpose": "Narrative synthesis: GHG Emissions",
+  "temperature": 0.2
+}

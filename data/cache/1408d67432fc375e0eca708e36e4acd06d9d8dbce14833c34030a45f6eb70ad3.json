@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [\n    {\n      \"text\": \"Emission reduction projects totalling 0.27MtCO 2 e implemented by our business in 2025\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"bp generated modified free cash flow of $12.4 billion\",\n      \"amount\": 12400000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"structural cost reduction measure, delivering $2.0 billion of reductions\",\n      \"amount\": 2000000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"reduction_target\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.03595,
+  "input_tokens": 5630,
+  "model": "claude-opus-4-5",
+  "output_tokens": 312,
+  "purpose": "WvM extraction chunk 28/79 (10 factors)",
+  "temperature": 0.0
+}

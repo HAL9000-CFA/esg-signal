@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [\n    {\n      \"text\": \"We paid $8.3 billion in corporate income and production taxes to governments in 2025\",\n      \"amount\": 8300000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.029125,
+  "input_tokens": 4925,
+  "model": "claude-opus-4-5",
+  "output_tokens": 180,
+  "purpose": "WvM extraction chunk 16/79 (10 factors)",
+  "temperature": 0.0
+}

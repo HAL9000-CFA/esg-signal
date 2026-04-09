@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Business Ethics\", \"grade\": \"VAGUE\", \"evidence\": \"The committee is satisfied that the advice received is objective and independent. The committee is comfortable that both the PwC and WTW engagement partners and team who provide remuneration advice to the committee do not have connections with the company or its directors that may impair their independence.\"},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"VAGUE\", \"evidence\": \"Freshfields LLP (Freshfields) provided legal advice on specific compliance matters to the committee.\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.036795,
+  "input_tokens": 5639,
+  "model": "claude-opus-4-5",
+  "output_tokens": 344,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

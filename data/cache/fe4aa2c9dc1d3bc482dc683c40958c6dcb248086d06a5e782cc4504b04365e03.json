@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"Total development expenditure, excluding midstream activities, was $13,336 million in 2025 ($8,387 million for subsidiaries and $4,949 million for equity-accounted entities).\",\n      \"amount\": 13336000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"capex\"\n    },\n    {\n      \"text\": \"Of the $8,387 million of total development expenditure for our subsidiaries, approximately $4,900 million was used for development activity to progress proved undeveloped reserves to proved developed.\",\n      \"amount\": 4900000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"capex\"\n    },\n    {\n      \"text\": \"Of the $4,949 million development expenditure for our equity-accounted entities, approximately $1,800 million was used for development activity to progress proved undeveloped reserves to proved developed.\",\n      \"amount\": 1800000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"capex\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.03560000000000001,
+  "input_tokens": 5185,
+  "model": "claude-opus-4-5",
+  "output_tokens": 387,
+  "purpose": "WvM extraction chunk 64/79 (10 factors)",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"We delivered Scope 1 and 2 greenhouse gas emissions reductions of 12.9% against our 2019 baseline... Our performance was strong and we delivered 1.6MteCO2e ahead of our scorecard target, which resulted in an outcome of 73% of maximum.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Safety performance is measured against the number of tier 1 and tier 2 process safety events each year (7.5% weighting each). For 2025, we achieved a combined outcome of 87.5% of maximum for this measure. We reported five tier 1 process safety events during the year... Tier 2 performance was strong with a significant reduction in the number of events compared to prior year (22 events in 2025 compared to 35 events in 2024)\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"QUANTIFIED\", \"evidence\": \"However, we are deeply saddened by the four workforce fatalities during the year \u2013 three at TravelCenters of America and one at Thorntons... In respect of the group score, it was agreed that that a downward adjustment was justified when reflecting on the fatality at Thorntons and broader safety performance, and the entire bonus score was reduced by 4 points for all participants.\"}\n]\n```",
+  "cost_usd": 0.03348,
+  "input_tokens": 4731,
+  "model": "claude-opus-4-5",
+  "output_tokens": 393,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

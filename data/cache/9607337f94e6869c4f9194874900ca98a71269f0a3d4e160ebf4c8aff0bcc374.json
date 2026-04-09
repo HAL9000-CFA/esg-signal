@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"VAGUE\", \"evidence\": \"While there is the potential for concerns about the energy transition to impact banks' or debt investors' appetite to finance hydrocarbon activity, we do not anticipate any material change to the group's funding or liquidity in the short to medium term as a result of such concerns.\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"QUANTIFIED\", \"evidence\": \"2025 includes $8,367 million (2024 $9,520 million) in relation to the Gulf of America oil spill, of which $6,834 million (2024 $8,383 million) matures in greater than one year.\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"2025 includes $8,367 million (2024 $9,520 million) in relation to the Gulf of America oil spill, of which $6,834 million (2024 $8,383 million) matures in greater than one year.\"}\n]\n```",
+  "cost_usd": 0.03696,
+  "input_tokens": 5197,
+  "model": "claude-opus-4-5",
+  "output_tokens": 439,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

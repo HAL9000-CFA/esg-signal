@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's critical incident risk management shows moderate credibility based on limited but meaningful evidence. The company provides strong quantified disclosure of process safety events, reporting 27 tier 1 and 2 incidents in the current period against 38 previously, though the absence of monetary commitments to incident prevention yields only a neutral words-versus-money alignment. With regulatory data unavailable and talent signals below threshold, the evidence base is too narrow to draw firm conclusions about operational execution, though disclosed metrics suggest active tracking of safety performance.",
+  "cost_usd": 0.005135000000000001,
+  "input_tokens": 472,
+  "model": "claude-opus-4-5",
+  "output_tokens": 111,
+  "purpose": "Narrative synthesis: Critical Incident Risk Management",
+  "temperature": 0.2
+}

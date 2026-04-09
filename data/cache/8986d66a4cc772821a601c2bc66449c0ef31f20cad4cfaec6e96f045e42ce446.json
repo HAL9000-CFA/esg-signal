@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"Water Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"Through a combination of breakthrough science, elevated sensorials and premium aesthetics, Dove Beauty grew double-digit in the US in 2025.\"},\n  {\"factor\": \"Product Design & Lifecycle Management\", \"grade\": \"VAGUE\", \"evidence\": \"Protecting and enhancing the value of our business through innovation, operational efficiency and long-term resilience. Climate Nature Plastics Livelihoods\"},\n  {\"factor\": \"Supply Chain Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.028745000000000003,
+  "input_tokens": 4899,
+  "model": "claude-opus-4-5",
+  "output_tokens": 170,
+  "purpose": "Batch grade 4 ESG factors",
+  "temperature": 0.0
+}

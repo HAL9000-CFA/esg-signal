@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"Delivery of our strategy is supported by our Climate Transition Action Plan (CTAP), which outlines our mitigation, adaptation and advocacy actions to address climate-related risks.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.027385000000000003,
+  "input_tokens": 4482,
+  "model": "claude-opus-4-5",
+  "output_tokens": 199,
+  "purpose": "Batch grade 6 ESG factors",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "Based on the provided report text, I need to evaluate each ESG factor. The document appears to be a legal/administrative filing (Form 20-F signature page and exhibit references) rather than a sustainability report with ESG disclosures.\n\n```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.008975,
+  "input_tokens": 725,
+  "model": "claude-opus-4-5",
+  "output_tokens": 214,
+  "purpose": "Batch grade 6 ESG factors",
+  "temperature": 0.0
+}

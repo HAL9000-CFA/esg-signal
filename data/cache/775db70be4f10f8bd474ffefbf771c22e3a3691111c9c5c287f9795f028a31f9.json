@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates moderate credibility on water and wastewater management based on limited but positive evidence. The disclosure score indicates quantified commitments around freshwater management plans in stressed catchments, while regulatory data from Environment Agency pollution records shows no violations detected across 7 records. However, with only two of five evidence streams active and insufficient talent posting data to assess operational prioritisation, the overall assessment should be interpreted with caution.",
+  "cost_usd": 0.004945,
+  "input_tokens": 544,
+  "model": "claude-opus-4-5",
+  "output_tokens": 89,
+  "purpose": "Narrative synthesis: Water & Wastewater Management",
+  "temperature": 0.2
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "Unilever's labor practices credibility shows a moderate signal with limited evidence coverage. The disclosure stream indicates strong quantified reporting with specific engagement metrics (79% employee survey score), while talent data from 22 reviews suggests moderately positive but not exceptional employee sentiment, with notably high senior representation lending credibility to the signal. With regulatory, monetary commitment, and supply chain streams excluded due to data unavailability rather than poor performance, the overall assessment reflects genuine but incomplete evidence\u2014the amber rating stems from partial coverage rather than identified weaknesses.",
+  "cost_usd": 0.005485,
+  "input_tokens": 527,
+  "model": "claude-opus-4-5",
+  "output_tokens": 114,
+  "purpose": "Narrative synthesis: Labor Practices",
+  "temperature": 0.2
+}

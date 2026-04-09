@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Total (100%) Scope 1 (direct) GHG emissions from source activities operated by bp or otherwise within bp's operational control boundary. bp's reported GHG emissions include CH4 and CO2... In 2025 bp made an adjustment to the operational control boundary for Scope 1 and 2 GHG emissions. This means certain operations, assets or sources which were previously included such as power generation on contractor-operated drilling rigs are now excluded. This change has a less than 1% impact on reported operational emissions... all investment cases with anticipated annual operational GHG emissions (Scope 1 and 2) above 20,000 tonnes of CO2 equivalent (bp net), must estimate those anticipated GHG emissions and include an associated carbon cost in the investment economics\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"Gulf of America oil spill payments (pre-tax) Around $1.6bn pre-tax, of which $0.4bn in the first quarter and $1.1bn in the second quarter... All underpinned by our commitment to safety in everything we do\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"All underpinned by our commitment to safety in everything we do\"}\n]\n```",
+  "cost_usd": 0.033125,
+  "input_tokens": 4725,
+  "model": "claude-opus-4-5",
+  "output_tokens": 380,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

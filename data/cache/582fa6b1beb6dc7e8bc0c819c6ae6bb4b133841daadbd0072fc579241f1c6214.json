@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"Climate change and the transition to a lower carbon economy continues to be identified as a principal risk... We recognize risk associated with the potential for increased water stress due to climate change and other factors and the impact this could have on our operations and in the catchments where we operate.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"VAGUE\", \"evidence\": \"We anticipate adopting site-level activities as part of our aim to reduce our net freshwater use in stressed catchments where we operate. We anticipate adopting a focused freshwater management approach, addressing water-related business risk where it is greatest, and we anticipate that our freshwater withdrawal in stressed catchments will be covered by freshwater management plans by 2028.\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"Our group operational risk committee provides oversight of safety and operational risk management performance for the group, where appropriate. Climate-related factors may affect certain sources of safety and operational risk, such as severe weather events.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"The impact criteria outlined on page 63 include health and safety, environmental, financial and non-financial (such as regulatory impact) criteria and are used for assessing risks, including climate-related risks.\"}\n]\n```",
+  "cost_usd": 0.029880000000000004,
+  "input_tokens": 4221,
+  "model": "claude-opus-4-5",
+  "output_tokens": 351,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

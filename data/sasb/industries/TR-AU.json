@@ -1,0 +1,67 @@
+{
+  "fetched_at": "2026-04-11T18:03:08.726596+00:00",
+  "data": {
+    "industry_code": "TR-AU",
+    "industry_name": "Automobiles",
+    "industry_description": "Automobiles industry entities manufacture passenger vehicles, light trucks and motorcycles. Industry players design, build and sell vehicles that use a range of traditional and alternative fuels and powertrains. They sell these vehicles to dealers for consumer retail sales as well as sell directly to fleet customers, including car rental and leasing entities, commercial fleets and governments. Because of the industry\u2019s global nature, nearly all entities have manufacturing facilities, assembly plants and service locations in several countries around the world. The Automobiles industry is concentrated, with a few large manufacturers and a diversified supply chain. Given the industry\u2019s reliance on natural resources and sensitivity to the business cycle, revenue is typically cyclical.",
+    "industry_gics": [
+      {
+        "gic_code": 250,
+        "gic_name": "Product Quality & Safety",
+        "gic_description": "The category addresses issues involving unintended characteristics of products sold or services provided that may create health or safety risks to end-users. It addresses a company\u2019s ability to offer manufactured products and/or services that meet customer expectations with respect to their health and safety characteristics. It includes, but is not limited to, issues involving liability, management of recalls and market withdrawals, product testing, and chemicals/content/ingredient management in products.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "TR-AU-250a",
+            "topic_name": "Product Safety",
+            "topic_description": "Driving is a risky activity, since factors such as distracted driving, drunk driving, speeding and dangerous weather conditions may result in accidents that expose drivers, passengers and bystanders to injuries and deaths. Defective vehicles may also cause accidents, and failure to detect defects before vehicles are sold may result in significant financial repercussions for auto manufacturers. In many countries, defective vehicles that do not meet safety requirements must be recalled and repaired or replaced at the manufacturer\u2019s cost. Recalls may damage brand value, which may reduce revenues and growth potential and increase an entity\u2019s risk profile and cost of capital. Entities that ensure vehicle safety and respond quickly when they identify defects may reduce the risks of regulatory action or customer lawsuits that may adversely affect their margins. Through effective management of vehicle safety, entities may improve brand value and sales over the long term."
+          }
+        ]
+      },
+      {
+        "gic_code": 310,
+        "gic_name": "Labour Practices",
+        "gic_description": "The category addresses the company\u2019s ability to uphold commonly accepted labour standards in the workplace, including compliance with labour laws and internationally accepted norms and standards. This includes, but is not limited to, ensuring basic human rights related to child labour, forced or bonded labour, exploitative labour, fair wages and overtime pay, and other basic workers\u2019 rights. It also includes minimum wage policies and provision of benefits, which may influence how a workforce is attracted, retained, and motivated. The category further addresses a company\u2019s relationship with organized labour and freedom of association.",
+        "gic_dimension": "Human Capital",
+        "gic_topics": [
+          {
+            "topic_code": "TR-AU-310a",
+            "topic_name": "Labour Practices",
+            "topic_description": "Collective bargaining agreements cover many workers in the Automobiles industry guiding fair wage discussions, safe working conditions and freedom of association, which are among basic workers\u2019 rights. Because of the global nature of the industry, auto entities may also operate in countries where workers\u2019 rights are inadequately protected. Effective communication by management regarding issues such as pay and working conditions may prevent conflicts between workers and management that may result in strikes, which slow or suspend manufacturing, reduce revenues and increase operational risk. Auto manufacturers that manage workers\u2019 rights effectively may improve the long-term financial sustainability of their operations by enhancing worker productivity."
+          }
+        ]
+      },
+      {
+        "gic_code": 410,
+        "gic_name": "Product Design & Lifecycle Management",
+        "gic_description": "The category addresses incorporation of environmental, social, and governance (ESG) considerations in characteristics of products and services provided or sold by the company. It includes, but is not limited to, managing the lifecycle impacts of products and services, such as those related to packaging, distribution, use-phase resource intensity, and other environmental and social externalities that may occur during their use-phase or at the end of life. The category captures a company\u2019s ability to address customer and societal demand for more sustainable products and services as well as to meet evolving environmental and social regulation. It does not address direct environmental or social impacts of the company\u2019s operations nor does it address health and safety risks to consumers from product use, which are covered in other categories.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "TR-AU-410a",
+            "topic_name": "Fuel Economy & Use-phase Emissions",
+            "topic_description": "Motor vehicle fossil fuel combustion accounts for a significant share of the greenhouse gas (GHG) emissions contributing to global climate change. Engine exhaust also generates local air pollutants such as nitrogen oxides (NO?), volatile organic compounds (VOCs) and particulate matter (PM), which can threaten human health and the environment. In this context, vehicle emissions increasingly concern consumers and regulators around the world. Although use-phase emissions are downstream from auto manufacturers, regulations often focus on auto manufacturers to reduce these emissions, such as through fuel economy standards. More stringent emissions standards and changing consumer demands are driving electric vehicle and hybrid market expansion, as well as for high fuel-efficiency conventional vehicles. Moreover, manufacturers are designing innovative vehicles made with lighter-weight materials to improve fuel efficiency. Entities that meet current fuel-efficiency and emissions standards and continue to innovate to meet or exceed future regulatory standards in various markets may strengthen their competitive position and expand their market share, while mitigating the risk of reduced demand for conventional vehicles."
+          }
+        ]
+      },
+      {
+        "gic_code": 440,
+        "gic_name": "Materials Sourcing & Efficiency",
+        "gic_description": "The category addresses issues related to the resilience of materials supply chains to impacts of climate change and other external environmental and social factors. It captures the impacts of such external factors on operational activity of suppliers, which can further affect availability and pricing of key resources. It addresses a company\u2019s ability to manage these risks through product design, manufacturing, and end-of-life management, such as by using of recycled and renewable materials, reducing the use of key materials (dematerialization), maximizing resource efficiency in manufacturing, and making R&D investments in substitute materials. Additionally, companies can manage these issues by screening, selection, monitoring, and engagement with suppliers to ensure their resilience to external risks. It does not address issues associated with environmental and social externalities created by operational activity of individual suppliers, which is covered in a separate category.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "TR-AU-440a",
+            "topic_name": "Materials Sourcing",
+            "topic_description": "Entities in the Automobiles industry commonly rely on rare earth metals and other critical materials as important inputs. Many of these inputs have few substitutes and often are sourced from a few countries, many of which may be subject to geopolitical uncertainty. Other sustainability impacts related to climate change, land use, resource scarcity and conflict in regions where the industry\u2019s supply chain operates are also increasingly shaping the industry\u2019s ability to source materials. Additionally, increased competition for these materials because of growing global demand from other sectors may result in price increases and supply risks. These materials play a crucial role in clean energy technologies, such as electric and hybrid vehicles. As regulators strive to reduce greenhouse gas emissions and consumer demand grows for more fuel-efficient vehicles, the share of hybrids and zero emission vehicles (ZEVs) produced by the Automobiles industry may continue to increase in the future. Entities that limit the use of critical materials, secure their sourcing and develop alternatives may mitigate supply disruptions and volatile input prices, which could adversely affect their margins, risk profile and cost of capital."
+          },
+          {
+            "topic_code": "TR-AU-440b",
+            "topic_name": "Materials Efficiency & Recycling",
+            "topic_description": "Auto manufacturing involves the use of significant amounts of materials (including steel, iron, aluminium and plastics) and can generate substantial amounts of waste (including scrap metal, paint sludge and shipping materials). As the rate of vehicle ownership expands globally and millions of vehicles reach the end of their useful lives each year, automobile lifecycle environmental impacts are increasing. Automobile entities may focus on innovation in design as well as process and technological improvements to mitigate these impacts and achieve financial benefits. Entities that improve materials efficiency in their production processes, including reducing waste and reusing or recycling waste and scrapped vehicles, may reduce vehicle lifecycle environmental impacts. Through such innovation, entities may achieve cost savings by reducing input costs and mitigating potential regulatory fines or penalties. They may also mitigate production input price fluctuations from periodic or long-term resource scarcity."
+          }
+        ]
+      }
+    ]
+  }
+}

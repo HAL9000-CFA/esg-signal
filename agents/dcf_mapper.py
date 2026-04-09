@@ -562,10 +562,13 @@ class DcfMapper:
             for sheet, lbls in by_sheet.items()
         )
 
-        factors_section = "\n".join(
-            f"- {f.factor_id}: \"{f.name}\" → affects {', '.join(f.financial_impacts)}"
-            for f in material_factors
-        )
+        def _factor_line(f: MaterialFactor) -> str:
+            line = f"- {f.factor_id}: \"{f.name}\" → affects {', '.join(f.financial_impacts)}"
+            if f.description:
+                line += f"\n  Context: {f.description.strip()}"
+            return line
+
+        factors_section = "\n".join(_factor_line(f) for f in material_factors)
 
         prompt = dedent(
             f"""

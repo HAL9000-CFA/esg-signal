@@ -39,6 +39,8 @@ def _make_credibility_report(factor_id="ghg_emissions", flag="amber"):
         factor_name="GHG Emissions",
         score=0.55,
         flag=flag,
+        coverage=1.0,
+        confidence=1.0,
         stream_scores={},
         evidence=[],
         sources=[],

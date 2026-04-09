@@ -1,0 +1,18 @@
+{
+  "fetched_at": "2026-04-11T22:50:45.694623+00:00",
+  "data": [
+    {
+      "id": 91559,
+      "company_ticker": "AAPL",
+      "isin": "US0378331005",
+      "company_name": "Apple Inc.",
+      "sector": "Technology & Communications",
+      "sector_hs_value": "Technology & Communications",
+      "industry_code": "TC-HW",
+      "industry": "Hardware",
+      "industry_hs_value": "Hardware",
+      "industry_description": "Hardware industry entities design and sell technology hardware products, including computers, consumer electronics, communications equipment, storage devices, components and peripherals. Many entities in the industry rely heavily upon the Electronic Manufacturing Services & Original Design Manufacturing (EMS & ODM) industry for manufacturing services. The industry is expected to continue to grow as technology use rapidly increases, especially among emerging market consumers.",
+      "web_prepend_text": null
+    }
+  ]
+}

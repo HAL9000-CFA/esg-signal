@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"The assumptions for UK North Sea were \u00a365/tCO2e in 2026 gradually increasing to \u00a3243/tCO2e in 2050.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"VAGUE\", \"evidence\": \"A key input into the determination of impairment is the assumption, aligned with bp's aim to reach net zero greenhouse gas emissions by 2050 or sooner, that the current recognized portfolio of oil and gas properties and refining assets will have an immaterial carrying value by 2050.\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"VAGUE\", \"evidence\": \"Decommissioning cost estimates are based on the known regulatory and external environment. These cost estimates may change in the future, including as a result of the transition to a lower carbon economy.\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.031515,
+  "input_tokens": 4298,
+  "model": "claude-opus-4-5",
+  "output_tokens": 401,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

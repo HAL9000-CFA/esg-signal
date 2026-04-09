@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's Human Rights & Community Relations credibility shows consistent signals across the available evidence, though coverage is limited to two of five streams. The disclosure score of 0.85 reflects quantified community investment commitments ($64m in the current period), and the words-money alignment of 0.80 suggests the single commitment examined was consistent with financial backing. However, with regulatory, talent, and supply chain streams excluded due to data limitations rather than poor performance, there is insufficient evidence to draw broader conclusions about operational implementation of these commitments.",
+  "cost_usd": 0.00542,
+  "input_tokens": 514,
+  "model": "claude-opus-4-5",
+  "output_tokens": 114,
+  "purpose": "Narrative synthesis: Human Rights & Community Relations",
+  "temperature": 0.2
+}

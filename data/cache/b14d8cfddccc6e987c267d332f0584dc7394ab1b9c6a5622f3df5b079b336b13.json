@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"The analyses also assume the impact of increases in carbon price on operational GHG emissions are fully absorbed as a decrease in net revenue\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Net revenue increases of this magnitude in isolation could indicatively lead to an increase in the carrying amount of bp's currently held upstream oil and gas properties in the range of $1-2 billion which is approximately 2-3% of the associated net book value of property, plant and equipment as at 31 December 2025\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.030695000000000004,
+  "input_tokens": 4339,
+  "model": "claude-opus-4-5",
+  "output_tokens": 360,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

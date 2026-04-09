@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "Unilever demonstrates strong credibility on GHG emissions, with quantified disclosure of a 77% reduction against its 2030 target and clean regulatory standing across EU ETS records. Talent signals suggest alignment, though the moderate sample size (n=12) warrants some caution in interpretation. The absence of identifiable monetary commitments in the words-versus-money stream neither supports nor undermines the company's stated climate ambitions, but represents a gap worth monitoring given the scale of decarbonization required.",
+  "cost_usd": 0.005370000000000001,
+  "input_tokens": 509,
+  "model": "claude-opus-4-5",
+  "output_tokens": 113,
+  "purpose": "Narrative synthesis: GHG Emissions",
+  "temperature": 0.2
+}

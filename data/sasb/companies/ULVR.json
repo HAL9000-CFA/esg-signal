@@ -1,0 +1,18 @@
+{
+  "fetched_at": "2026-04-11T22:50:44.836130+00:00",
+  "data": [
+    {
+      "id": 140644,
+      "company_ticker": "ULVR",
+      "isin": "GB00B10RZP78",
+      "company_name": "Unilever PLC",
+      "sector": "Consumer Goods",
+      "sector_hs_value": "Consumer Goods",
+      "industry_code": "CG-HP",
+      "industry": "Household & Personal Products",
+      "industry_hs_value": "Household & Personal Products",
+      "industry_description": "Household & Personal Products industry entities manufacture a wide range of goods for personal and commercial consumption, including cosmetics, household and industrial cleaning supplies, soaps and detergents, sanitary paper products, household batteries, razors and kitchen utensils. Household and personal products entities operate globally and typically sell their products to mass merchants, grocery stores, membership club stores, drug stores, high-frequency stores, distributors and e-commerce retailers. Some entities sell products through independent representatives rather than third-party retail establishments.",
+      "web_prepend_text": null
+    }
+  ]
+}

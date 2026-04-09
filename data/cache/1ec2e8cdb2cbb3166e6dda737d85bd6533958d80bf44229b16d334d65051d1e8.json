@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "Unilever's Data Security credibility assessment draws on limited evidence, with only two of five streams providing usable signals. The disclosure stream shows no available report text, while talent data suggests modest organizational capacity in this area, though with medium confidence given the sample size of 12 roles. With three streams excluded due to data unavailability rather than poor performance, there is insufficient evidence to draw firm conclusions about the company's data security practices, and the low overall score primarily reflects evidence gaps rather than demonstrated weaknesses.",
+  "cost_usd": 0.004935,
+  "input_tokens": 442,
+  "model": "claude-opus-4-5",
+  "output_tokens": 109,
+  "purpose": "Narrative synthesis: Data Security",
+  "temperature": 0.2
+}

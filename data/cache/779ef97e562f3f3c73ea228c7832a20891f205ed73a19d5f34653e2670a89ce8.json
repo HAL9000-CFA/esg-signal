@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [\n    {\n      \"text\": \"aiming for a 45-50% reduction by the end of 2030, both against our 2019 baseline\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2030,\n      \"category\": \"reduction_target\"\n    },\n    {\n      \"text\": \"We achieved a reduction of 37% against a targeted 20% reduction in our operational emissions by end-2025\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2025,\n      \"category\": \"reduction_target\"\n    },\n    {\n      \"text\": \"aiming for an 8-10% reduction by the end of 2030 compared to our 2019 baseline\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2030,\n      \"category\": \"reduction_target\"\n    }\n  ],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Critical Incident Risk Management\": [],\n  \"Employee Health & Safety\": []\n}\n```",
+  "cost_usd": 0.034195,
+  "input_tokens": 5459,
+  "model": "claude-opus-4-5",
+  "output_tokens": 276,
+  "purpose": "WvM extraction chunk 9/79 (5 factors)",
+  "temperature": 0.0
+}

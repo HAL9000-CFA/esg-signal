@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "UNILEVER PLC demonstrates solid credibility on Supply Chain Management, with strong disclosure quality featuring quantified metrics around supplier engagement programs and consistent alignment between stated commitments and financial backing. However, the talent signal presents a notable contradiction\u2014despite high confidence data (n=22, predominantly senior hires), there is zero hiring activity in supply chain management roles, which may indicate reliance on existing capabilities rather than active capability building. The regulatory stream is excluded due to no mapped mandatory disclosure requirements, limiting the assessment to voluntary reporting and operational signals.",
+  "cost_usd": 0.005520000000000001,
+  "input_tokens": 539,
+  "model": "claude-opus-4-5",
+  "output_tokens": 113,
+  "purpose": "Narrative synthesis: Supply Chain Management",
+  "temperature": 0.2
+}

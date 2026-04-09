@@ -53,7 +53,9 @@ from ui.components import (
     credibility_header,
     dcf_mapping_panel,
     factor_panel,
+    pipeline_trace_panel,
     source_citation,
+    task_progress_panel,
 )
 from ui.export import to_json, to_pdf
 
@@ -81,9 +83,85 @@ _POLL_INTERVAL_SECONDS = 5
 
 st.set_page_config(
     page_title="ESG Signal",
-    page_icon="🟢",
+    page_icon=":material/finance_mode:",
     layout="wide",
     initial_sidebar_state="collapsed",
+)
+
+# Bootstrap Icons — loaded once at startup; used throughout components.py via
+# <i class="bi bi-icon-name"></i> in unsafe_allow_html markdown blocks.
+st.markdown(
+    '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">',
+    unsafe_allow_html=True,
+)
+
+# Global style overrides
+st.markdown(
+    """
+    <style>
+    /* Constrain report width — reads as a document rather than spanning
+       the full browser viewport on wide displays */
+    .block-container {
+        max-width: 1050px !important;
+        padding-left: 2.5rem !important;
+        padding-right: 2.5rem !important;
+    }
+
+    /* Page title (h1) */
+    h1 {
+        font-size: 2.1rem !important;
+    }
+
+    /* Section headings (h2, h3) */
+    h2 {
+        font-size: 1.55rem !important;
+    }
+    h3 {
+        font-size: 1.25rem !important;
+    }
+
+    /* Increase base font size for readability — Streamlit default is 14px */
+    .stMarkdown p, .stMarkdown li, .stCaption, [data-testid="stCaptionContainer"] {
+        font-size: 1.0rem !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Evidence notes (bullet captions inside expanders) */
+    .stExpander .stMarkdown p {
+        font-size: 0.97rem !important;
+    }
+
+    /* Selectbox / dropdown label and selected value */
+    [data-testid="stSelectbox"] label,
+    [data-testid="stSelectbox"] > div > div {
+        font-size: 1.0rem !important;
+    }
+
+    /* Dropdown option list items */
+    [data-testid="stSelectbox"] ul li,
+    div[role="listbox"] li {
+        font-size: 1.0rem !important;
+    }
+
+    /* Expander header (factor names) */
+    [data-testid="stExpander"] summary,
+    .streamlit-expanderHeader {
+        font-size: 1.05rem !important;
+        font-weight: 600 !important;
+    }
+
+    /* Metric labels */
+    [data-testid="stMetricLabel"] {
+        font-size: 0.88rem !important;
+    }
+
+    /* Metric values */
+    [data-testid="stMetricValue"] {
+        font-size: 1.3rem !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
 )
 
 # ---------------------------------------------------------------------------
@@ -98,6 +176,11 @@ def _init_state() -> None:
         "profile_dict": None,
         "credibility_dict": None,
         "dcf_dict": None,
+        "relevance_dict": None,
+        "talent_dict": None,
+        "audit_dict": None,
+        "task_instances": [],  # live task status list from Airflow
+        "partial_xcoms": {},  # task_id → XCom dict, populated as tasks complete
         "error_message": None,
     }
     for k, v in defaults.items():
@@ -112,6 +195,11 @@ def _reset_state() -> None:
         "profile_dict",
         "credibility_dict",
         "dcf_dict",
+        "relevance_dict",
+        "talent_dict",
+        "audit_dict",
+        "task_instances",
+        "partial_xcoms",
         "error_message",
     ):
         if k in st.session_state:
@@ -161,7 +249,28 @@ def _get_dag_run_state(run_id: str) -> str:
     return resp.json().get("state", "unknown")
 
 
-def _get_xcom(run_id: str, task_id: str) -> Optional[dict]:
+def _get_task_instances(run_id: str) -> list:
+    """
+    Fetch all task instance states for a DAG run.
+
+    Returns a list of dicts from the Airflow REST API, each with at minimum:
+        task_id, state, start_date, end_date, duration
+    Returns [] on any failure so callers can treat absence gracefully.
+    """
+    try:
+        resp = requests.get(
+            f"{_AIRFLOW_API}/dags/{_DAG_ID}/dagRuns/{run_id}/taskInstances",
+            auth=_AIRFLOW_AUTH,
+            timeout=10,
+        )
+        resp.raise_for_status()
+        return resp.json().get("task_instances", [])
+    except Exception as exc:
+        LOGGER.warning("_get_task_instances(%s) failed: %s", run_id, exc)
+        return []
+
+
+def _get_xcom(run_id: str, task_id: str, retries: int = 3) -> Optional[dict]:
     """
     Fetch the return_value XCom for a task instance.
 
@@ -169,23 +278,43 @@ def _get_xcom(run_id: str, task_id: str) -> Optional[dict]:
     The Airflow REST API returns XCom values as a JSON-encoded string inside
     the "value" field.
     """
-    try:
-        resp = requests.get(
-            f"{_AIRFLOW_API}/dags/{_DAG_ID}/dagRuns/{run_id}"
-            f"/taskInstances/{task_id}/xcomEntries/return_value",
-            auth=_AIRFLOW_AUTH,
-            timeout=15,
-        )
-        resp.raise_for_status()
-        raw = resp.json().get("value")
-        if raw is None:
-            return None
-        # Airflow serialises the Python value to JSON; the REST API wraps it
-        # as a JSON string in the "value" field → double-decode.
-        return json.loads(raw) if isinstance(raw, str) else raw
-    except Exception as exc:
-        LOGGER.warning("_get_xcom(%s, %s) failed: %s", run_id, task_id, exc)
-        return None
+    for attempt in range(1, retries + 1):
+        try:
+            resp = requests.get(
+                f"{_AIRFLOW_API}/dags/{_DAG_ID}/dagRuns/{run_id}"
+                f"/taskInstances/{task_id}/xcomEntries/return_value",
+                auth=_AIRFLOW_AUTH,
+                timeout=60,
+            )
+            resp.raise_for_status()
+            raw = resp.json().get("value")
+            if raw is None:
+                LOGGER.warning("_get_xcom(%s, %s): value is null in response", run_id, task_id)
+                return None
+            # Airflow serialises the Python value to JSON; the REST API wraps it
+            # as a JSON string in the "value" field → double-decode.
+            # Some Airflow configurations return Python repr (single-quoted) instead
+            # of JSON — fall back to ast.literal_eval in that case.
+            if not isinstance(raw, str):
+                return raw
+            try:
+                return json.loads(raw)
+            except json.JSONDecodeError:
+                import ast
+
+                return ast.literal_eval(raw)
+        except Exception as exc:
+            LOGGER.warning(
+                "_get_xcom(%s, %s) attempt %d/%d failed: %s",
+                run_id,
+                task_id,
+                attempt,
+                retries,
+                exc,
+            )
+            if attempt < retries:
+                time.sleep(2)
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -221,6 +350,8 @@ def _credibility_from_dict(d: dict) -> CredibilityReport:
             factor_name=fs["factor_name"],
             score=fs["score"],
             flag=fs["flag"],
+            coverage=fs.get("coverage", 1.0),
+            confidence=fs.get("confidence", fs.get("coverage", 1.0)),
             stream_scores=fs.get("stream_scores") or {},
             evidence=fs.get("evidence") or [],
             sources=fs.get("sources") or [],
@@ -337,118 +468,212 @@ def main() -> None:
         if st.session_state.run_state == "failed" and st.session_state.error_message:
             st.error(f"Previous run failed: {st.session_state.error_message}")
 
-        with st.form("run_form"):
-            st.subheader("Company")
-            col1, col2, col3 = st.columns([2, 3, 1])
-            with col1:
-                ticker = st.text_input(
-                    "Ticker",
-                    placeholder="e.g. BP or AAPL",
-                    help="FTSE 100 or S&P 500 ticker symbol",
-                )
-            with col2:
-                company_name = st.text_input(
-                    "Company name *",
-                    placeholder="e.g. Amazon.com, Inc.",
+        tab_run, tab_load = st.tabs(["Run analysis", "Load previous report"])
+
+        # ------------------------------------------------------------------
+        # Tab 2: Load a previously exported JSON report
+        # ------------------------------------------------------------------
+        with tab_load:
+            st.caption(
+                "Upload a JSON file exported from a previous ESG Signal run to view the report without re-running the pipeline."
+            )
+            uploaded_json = st.file_uploader("Report JSON", type=["json"], key="report_upload")
+            if uploaded_json:
+                _load_error = None
+                _load_ready = False
+                try:
+                    data = json.loads(uploaded_json.read())
+                    credibility_dict = data.get("credibility_report")
+                    if not credibility_dict:
+                        _load_error = "Invalid report file — missing 'credibility_report' key."
+                    else:
+                        trace = data.get("pipeline_trace") or {}
+                        st.session_state.credibility_dict = credibility_dict
+                        st.session_state.profile_dict = data.get("company_profile")
+                        st.session_state.dcf_dict = data.get("dcf_result")
+                        st.session_state.relevance_dict = trace.get("relevance")
+                        st.session_state.talent_dict = trace.get("talent")
+                        st.session_state.audit_dict = trace.get("audit")
+                        st.session_state.partial_xcoms = (
+                            {"fetch_data": trace["fetch_result"]}
+                            if trace.get("fetch_result")
+                            else {}
+                        )
+                        st.session_state.run_state = "success"
+                        _load_ready = True
+                except Exception as exc:
+                    _load_error = f"Could not parse report file: {exc}"
+                if _load_error:
+                    st.error(_load_error)
+                if _load_ready:
+                    # st.rerun() raises internally — must be outside try/except
+                    st.rerun()
+
+        # ------------------------------------------------------------------
+        # Tab 1: Run a fresh analysis
+        # ------------------------------------------------------------------
+        with tab_run:
+            with st.form("run_form"):
+                st.subheader("Company")
+                col1, col2, col3 = st.columns([2, 3, 1])
+                with col1:
+                    ticker = st.text_input(
+                        "Ticker",
+                        placeholder="e.g. BP or AAPL",
+                        help="FTSE 100 or S&P 500 ticker symbol",
+                    )
+                with col2:
+                    company_name = st.text_input(
+                        "Company name *",
+                        placeholder="e.g. Amazon.com, Inc.",
+                        help=(
+                            "Required — used for EDGAR / Companies House filing search "
+                            "and job-posting queries. Use the legal name as registered "
+                            "(e.g. 'Amazon.com, Inc.' not 'Amazon')."
+                        ),
+                    )
+                with col3:
+                    index = st.selectbox("Index", ["SP500", "FTSE100"])
+
+                st.subheader("DCF Model (optional)")
+                dcf_file = st.file_uploader(
+                    "Upload analyst DCF (.xlsx)",
+                    type=["xlsx"],
                     help=(
-                        "Required — used for EDGAR / Companies House filing search "
-                        "and job-posting queries. Use the legal name as registered "
-                        "(e.g. 'Amazon.com, Inc.' not 'Amazon')."
+                        "Your Excel DCF model.  Only row labels are sent to the AI — "
+                        "financial figures never leave your machine."
                     ),
                 )
-            with col3:
-                index = st.selectbox("Index", ["SP500", "FTSE100"])
+                if dcf_file:
+                    sheet_names, label_count = _preview_dcf_upload(dcf_file)
+                    if sheet_names:
+                        st.success(
+                            f"Parsed: {len(sheet_names)} sheet(s) "
+                            f"({', '.join(sheet_names[:4])}"
+                            + (" …" if len(sheet_names) > 4 else "")
+                            + f"), {label_count} row labels"
+                        )
 
-            st.subheader("DCF Model (optional)")
-            dcf_file = st.file_uploader(
-                "Upload analyst DCF (.xlsx)",
-                type=["xlsx"],
-                help=(
-                    "Your Excel DCF model.  Only row labels are sent to the AI — "
-                    "financial figures never leave your machine."
-                ),
-            )
-            if dcf_file:
-                sheet_names, label_count = _preview_dcf_upload(dcf_file)
-                if sheet_names:
-                    st.success(
-                        f"Parsed: {len(sheet_names)} sheet(s) "
-                        f"({', '.join(sheet_names[:4])}"
-                        + (" …" if len(sheet_names) > 4 else "")
-                        + f"), {label_count} row labels"
+                submitted = st.form_submit_button("Run Analysis", type="primary")
+
+            if submitted:
+                if not ticker.strip():
+                    st.error("Ticker is required.")
+                    st.stop()
+                if not company_name.strip():
+                    st.error("Company name is required.")
+                    st.stop()
+
+                dcf_airflow_path = ""
+                if dcf_file:
+                    _, dcf_airflow_path = _save_dcf_upload(dcf_file, ticker.strip())
+
+                try:
+                    run_id = _trigger_dag(
+                        ticker=ticker.strip(),
+                        company_name=company_name.strip(),
+                        index=index,
+                        dcf_airflow_path=dcf_airflow_path,
                     )
+                    st.session_state.dag_run_id = run_id
+                    st.session_state.run_state = "running"
+                    st.session_state.ticker = ticker.strip().upper()
+                except Exception as exc:
+                    st.session_state.run_state = "failed"
+                    st.session_state.error_message = str(exc)
+                    st.error(f"Failed to trigger DAG: {exc}")
+                    st.stop()
 
-            submitted = st.form_submit_button("Run Analysis", type="primary")
-
-        if submitted:
-            if not ticker.strip():
-                st.error("Ticker is required.")
-                st.stop()
-            if not company_name.strip():
-                st.error("Company name is required.")
-                st.stop()
-
-            dcf_airflow_path = ""
-            if dcf_file:
-                _, dcf_airflow_path = _save_dcf_upload(dcf_file, ticker.strip())
-
-            try:
-                run_id = _trigger_dag(
-                    ticker=ticker.strip(),
-                    company_name=company_name.strip(),
-                    index=index,
-                    dcf_airflow_path=dcf_airflow_path,
-                )
-                st.session_state.dag_run_id = run_id
-                st.session_state.run_state = "running"
-            except Exception as exc:
-                st.session_state.run_state = "failed"
-                st.session_state.error_message = str(exc)
-                st.error(f"Failed to trigger DAG: {exc}")
-                st.stop()
-
-            # st.rerun() raises a Streamlit-internal exception to interrupt
-            # execution — must be outside try/except to avoid being caught.
-            st.rerun()
+                # st.rerun() raises a Streamlit-internal exception to interrupt
+                # execution — must be outside try/except to avoid being caught.
+                st.rerun()
 
     # ------------------------------------------------------------------
-    # Polling display
+    # Polling display — live pipeline observability
     # ------------------------------------------------------------------
     elif st.session_state.run_state == "running":
         run_id = st.session_state.dag_run_id
-        st.info(f"Analysis running — DAG run: `{run_id}`")
+        st.info(f"Analysis running — `{run_id}`")
 
-        with st.spinner("Waiting for pipeline to complete…"):
-            try:
-                state = _get_dag_run_state(run_id)
-            except Exception as exc:
-                st.warning(f"Could not reach Airflow: {exc}")
-                state = "unknown"
+        # Poll overall DAG state and per-task states in one pass
+        try:
+            dag_state = _get_dag_run_state(run_id)
+        except Exception as exc:
+            st.warning(f"Could not reach Airflow: {exc}")
+            dag_state = "unknown"
 
-        if state == "success":
-            # Fetch XComs
-            fetch_xcom = _get_xcom(run_id, "fetch_data")
-            credibility_xcom = _get_xcom(run_id, "run_credibility_scorer")
-            dcf_xcom = _get_xcom(run_id, "run_dcf_mapper")
+        try:
+            task_instances = _get_task_instances(run_id)
+            st.session_state.task_instances = task_instances
+        except Exception:
+            task_instances = st.session_state.task_instances
+
+        # Fetch XCom for any task that just reached "success" and isn't cached yet
+        partial_xcoms: dict = st.session_state.partial_xcoms
+        for ti in task_instances:
+            tid = ti.get("task_id", "")
+            ti_state = (ti.get("state") or "").lower()
+            if ti_state == "success" and tid not in partial_xcoms:
+                xcom = _get_xcom(run_id, tid)
+                if xcom:
+                    partial_xcoms[tid] = xcom
+        st.session_state.partial_xcoms = partial_xcoms
+
+        # Render live task progress
+        task_progress_panel(task_instances, partial_xcoms)
+
+        if dag_state == "success":
+            # All tasks done — collect final XComs and transition
+            fetch_xcom = partial_xcoms.get("fetch_data") or _get_xcom(run_id, "fetch_data")
+            credibility_xcom = partial_xcoms.get("run_credibility_scorer") or _get_xcom(
+                run_id, "run_credibility_scorer"
+            )
+            dcf_xcom = partial_xcoms.get("run_dcf_mapper") or _get_xcom(run_id, "run_dcf_mapper")
+            relevance_xcom = partial_xcoms.get("run_relevance_filter") or _get_xcom(
+                run_id, "run_relevance_filter"
+            )
+            talent_xcom = partial_xcoms.get("run_talent") or _get_xcom(run_id, "run_talent")
+            audit_xcom = partial_xcoms.get("audit_summary") or _get_xcom(run_id, "audit_summary")
 
             if not credibility_xcom:
-                st.session_state.run_state = "failed"
-                st.session_state.error_message = "Credibility scorer XCom not found."
-                st.rerun()
+                # XCom fetch failed — try the on-disk fallback written by the DAG task
+                ticker = st.session_state.get("ticker", "").upper()
+                disk_path = f"data/processed/credibility_{ticker}.json"
+                try:
+                    with open(disk_path) as f:
+                        credibility_xcom = json.load(f)
+                    LOGGER.info("Loaded credibility result from disk fallback: %s", disk_path)
+                except Exception:
+                    pass
+
+            if not credibility_xcom:
+                st.error(
+                    "DAG completed but could not retrieve credibility scorer results. "
+                    "The run may still be finalising — wait a moment and click Retry, "
+                    "or view results directly in **Airflow UI → Admin → XComs**."
+                )
+                if st.button("Retry fetch"):
+                    st.rerun()
+                if st.button("Reset"):
+                    _reset_state()
+                    st.rerun()
+                st.stop()
 
             st.session_state.profile_dict = fetch_xcom.get("profile") if fetch_xcom else None
             st.session_state.credibility_dict = credibility_xcom
             st.session_state.dcf_dict = dcf_xcom
+            st.session_state.relevance_dict = relevance_xcom
+            st.session_state.talent_dict = talent_xcom
+            st.session_state.audit_dict = audit_xcom
             st.session_state.run_state = "success"
             st.rerun()
 
-        elif state in ("failed", "upstream_failed"):
+        elif dag_state in ("failed", "upstream_failed"):
             st.session_state.run_state = "failed"
-            st.session_state.error_message = f"DAG run ended with state: {state}"
+            st.session_state.error_message = f"DAG run ended with state: {dag_state}"
             st.rerun()
 
         else:
-            # Still running — auto-poll
             col_refresh, col_cancel = st.columns([1, 5])
             with col_refresh:
                 if st.button("Refresh now"):
@@ -467,6 +692,9 @@ def main() -> None:
         credibility_dict = st.session_state.credibility_dict
         profile_dict = st.session_state.profile_dict
         dcf_dict = st.session_state.dcf_dict
+        relevance_dict = st.session_state.relevance_dict
+        talent_dict = st.session_state.talent_dict
+        audit_dict = st.session_state.audit_dict
 
         if not credibility_dict:
             st.error("No results available.")
@@ -491,6 +719,17 @@ def main() -> None:
             )
         report = vl_result.adjusted_report
         dcf_result = vl_result.adjusted_dcf
+
+        # --- Pipeline trace (data provenance) ---
+        fetch_result = st.session_state.partial_xcoms.get("fetch_data") or (
+            {"source_statuses": {}, "regulatory_paths": {}}
+        )
+        pipeline_trace_panel(
+            fetch_result=fetch_result,
+            relevance_dict=relevance_dict,
+            talent_dict=talent_dict,
+            audit_dict=audit_dict,
+        )
 
         # --- Header ---
         credibility_header(report)
@@ -525,8 +764,15 @@ def main() -> None:
                 expanded=False,
             ):
                 for w in vl_result.warnings:
-                    icon = "🔴" if w.severity == "error" else "🟡"
-                    st.caption(f"{icon} **{w.code}** [{w.field}]: {w.message}")
+                    bi_icon = (
+                        '<i class="bi bi-x-circle-fill" style="color:#dc3545"></i>'
+                        if w.severity == "error"
+                        else '<i class="bi bi-exclamation-circle-fill" style="color:#ffc107"></i>'
+                    )
+                    st.markdown(
+                        f"{bi_icon} <strong>{w.code}</strong> [{w.field}]: {w.message}",
+                        unsafe_allow_html=True,
+                    )
 
         # --- Per-factor panels ---
         st.subheader("Factor Scores")
@@ -564,7 +810,22 @@ def main() -> None:
             )
 
         with col_json:
-            json_str = to_json(report, profile, dcf_result)
+            fetch_result_for_export = st.session_state.partial_xcoms.get("fetch_data") or (
+                st.session_state.partial_xcoms.get("fetch_result")
+                if st.session_state.partial_xcoms
+                else None
+            )
+            json_str = to_json(
+                report,
+                profile,
+                dcf_result,
+                pipeline_trace={
+                    "fetch_result": fetch_result_for_export,
+                    "relevance": st.session_state.relevance_dict,
+                    "talent": st.session_state.talent_dict,
+                    "audit": st.session_state.audit_dict,
+                },
+            )
             st.download_button(
                 label="Download JSON",
                 data=json_str,

@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's Business Ethics credibility shows moderate strength based on limited but meaningful evidence. The disclosure stream indicates robust ethics reporting with nearly 5,000 concerns reported and clear accountability through approximately 1,300 separations, while the words_money assessment suggests reasonable alignment between stated commitments and financial backing, though one commitment could not be verified. With only two of five streams providing usable signals, confidence in this assessment remains constrained, and the excluded regulatory, talent, and supply chain streams reflect data availability limitations rather than performance concerns.",
+  "cost_usd": 0.005475000000000001,
+  "input_tokens": 535,
+  "model": "claude-opus-4-5",
+  "output_tokens": 112,
+  "purpose": "Narrative synthesis: Business Ethics",
+  "temperature": 0.2
+}

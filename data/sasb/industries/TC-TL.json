@@ -1,0 +1,88 @@
+{
+  "fetched_at": "2026-04-11T18:03:05.879258+00:00",
+  "data": {
+    "industry_code": "TC-TL",
+    "industry_name": "Telecommunication Services",
+    "industry_description": "Telecommunication Services industry entities provide a range of services from wireless and wireline telecommunications to cable and satellite services. The wireless services segment provides direct communication through radio-based cellular networks and operates and maintains the associated switching and transmission facilities. The wireline segment provides local and long-distance voice communication via the Public Switched Telephone Network. Wireline carriers also offer voice over internet protocol (VoIP) telephone, television and broadband internet services over an expanding network of fibre optic cables. Cable providers distribute television programming from cable networks to subscribers. They typically also provide consumers with video services, high-speed internet service and VoIP. Traditionally, these services are bundled into packages that charge subscribers a single payment. Satellite entities distribute TV programming through broadcasting satellites orbiting the earth or through ground stations. Entities serve customers primarily in their domestic markets, although some entities operate in more than one country.",
+    "industry_gics": [
+      {
+        "gic_code": 130,
+        "gic_name": "Energy Management",
+        "gic_description": "The category addresses environmental impacts associated with energy consumption. It addresses the company\u2019s management of energy in manufacturing and/or for provision of products and services derived from utility providers (grid energy) not owned or controlled by the company. More specifically, it includes management of energy efficiency and intensity, energy mix, as well as grid reliance. Upstream (e.g., suppliers) and downstream (e.g., product use) energy use is not included in the scope.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "TC-TL-130a",
+            "topic_name": "Environmental Footprint of Operations",
+            "topic_description": "Individual Telecommunication Services entities consume substantial amounts of energy. Depending on the source of energy and generation efficiency, electricity consumption by telecom network infrastructure can contribute significantly to environmental externalities, such as climate change, creating sustainability risks for the industry. Although network equipment and data centres are becoming more energy efficient, their overall energy consumption is increasing with the expansion in telecommunications infrastructure and data traffic. How Telecommunication Services entities manage their overall energy efficiency or intensity, reliance on different types of energy, and how they access alternative sources of energy may become increasingly material as the global regulatory focus on climate change increases, creating incentives for energy efficiency and renewable energy as well as pricing of greenhouse gas (GHG) emissions. Because energy expenditures may be significant in the industry, entities that improve operational energy efficiency may increase cost savings and profit margins."
+          }
+        ]
+      },
+      {
+        "gic_code": 220,
+        "gic_name": "Customer Privacy",
+        "gic_description": "The category addresses management of risks related to the use of personally identifiable information (PII) and other customer or user data for secondary purposes including but not limited to marketing through affiliates and non-affiliates. The scope of the category includes social issues that may arise from a company\u2019s approach to collecting data, obtaining consent (e.g., opt-in policies), managing user and customer expectations regarding how their data is used, and managing evolving regulation. It excludes social issues arising from cybersecurity risks, which are covered in a separate category.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "TC-TL-220a",
+            "topic_name": "Data Privacy",
+            "topic_description": "As customers increasingly pay attention to privacy issues associated with cell phone, internet and email services, Telecommunication Services entities must implement strong management practices and guidelines related to their use of customer data. Telecommunication Services entities use growing volumes of customer location, web browsing and demographic data to improve their services as well as generate revenue by selling such data to third parties. Growing public concern about privacy may result in increased regulatory scrutiny over the use, collection and sale of consumer data. These trends increase the importance of Telecommunication Services entities adopting and communicating policies about providing customer data to third parties transparently, including the amount and type of data provided and the nature of its use (for example, use for commercial purposes). Additionally, Telecommunication Services entities receive, and must determine whether to comply with, government requests for customer information. Entities in the industry that fail to manage data privacy may be susceptible to decreased revenues because of lost consumer confidence and churn, as well as to financial effects stemming from legal exposures."
+          }
+        ]
+      },
+      {
+        "gic_code": 230,
+        "gic_name": "Data Security",
+        "gic_description": "The category addresses management of risks related to collection, retention, and use of sensitive, confidential, and/or proprietary customer or user data. It includes social issues that may arise from incidents such as data breaches in which personally identifiable information (PII) and other user or customer data may be exposed. It addresses a company\u2019s strategy, policies, and practices related to IT infrastructure, staff training, record keeping, cooperation with law enforcement, and other mechanisms used to ensure security of customer or user data.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "TC-TL-230a",
+            "topic_name": "Data Security",
+            "topic_description": "The Telecommunication Services industry is particularly vulnerable to data security threats because entities manage an increasing volume of customer data, including personally identifiable information, as well as demographic, behavioural and location data. Inadequate prevention, detection and remediation of data security threats may influence customer acquisition and retention and result in decreased market share and lower demand for the entity\u2019s products. In addition to reputational damage and increased customer turnover, data breaches also may result in increased expenses, commonly associated with remediation efforts such as identity protection offerings and employee training on data protection. As the providers of critical infrastructure, the ability of entities to combat cyber-attacks may affect reputation and brand value, with a long-term effect on market share and revenue growth potential. Therefore, entities that identify and manage data security risks in a timely manner may be in a better position to protect market share and brand value while also reducing risk exposure to cyber-attacks. Additionally, new and emerging data security standards and regulations may affect the operating expenses of entities through increased costs of compliance."
+          }
+        ]
+      },
+      {
+        "gic_code": 440,
+        "gic_name": "Materials Sourcing & Efficiency",
+        "gic_description": "The category addresses issues related to the resilience of materials supply chains to impacts of climate change and other external environmental and social factors. It captures the impacts of such external factors on operational activity of suppliers, which can further affect availability and pricing of key resources. It addresses a company\u2019s ability to manage these risks through product design, manufacturing, and end-of-life management, such as by using of recycled and renewable materials, reducing the use of key materials (dematerialization), maximizing resource efficiency in manufacturing, and making R&D investments in substitute materials. Additionally, companies can manage these issues by screening, selection, monitoring, and engagement with suppliers to ensure their resilience to external risks. It does not address issues associated with environmental and social externalities created by operational activity of individual suppliers, which is covered in a separate category.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "TC-TL-440a",
+            "topic_name": "Product End-of-life Management",
+            "topic_description": "Because of the rapid obsolescence of communications devices, particularly mobile phones, they represent an increasing proportion of electronic waste (e-waste) going to landfills, driven in part by a low recycling rate. Telecommunication Services entities face growing regulatory risks related to this issue. Numerous jurisdictions have implemented e-waste recycling laws mandating that electronics retailers and manufacturers create a system for recycling, reuse or proper disposal of electronic devices. Although in their early days many of these laws covered a limited scope of products, recent laws extend to mobile devices, requiring entities to finance the collection, treatment, recycling or proper disposal of e-waste, as concerns around e-waste from communications devices increase. E-waste laws often require vendors or manufacturers to pay for waste recycling or product take-back and recycling programmes. Penalties or costs, because of such laws, together with potential revenues generated from refurbishing and re-selling products, increasingly are providing incentives for entities in the industry to manage end-of-life impacts. Many Telecommunication Services entities work in partnership with phone manufacturers to bundle telecom services and mobile devices, and therefore have a shared responsibility for end-of-life management of such devices. Their relationship with customers provides an opportunity for effective management of product recycling, reuse and disposal. Establishing take-back programmes to recover end-of-life materials for further reuse, recycling or remanufacturing may increase cost savings and develop a more resilient supply of manufacturing materials."
+          }
+        ]
+      },
+      {
+        "gic_code": 520,
+        "gic_name": "Competitive Behaviour",
+        "gic_description": "The category covers social issues associated with existence of monopolies, which may include, but are not limited to, excessive prices, poor quality of service, and inefficiencies. It addresses a company\u2019s management of legal and social expectation around monopolistic and anti-competitive practices, including issues related to bargaining power, collusion, price fixing or manipulation, and protection of patents and intellectual property (IP).",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "TC-TL-520a",
+            "topic_name": "Competitive Behaviour & Open Internet",
+            "topic_description": "The Telecommunication Services industry contains classic examples of natural monopolies, where high capital costs allow them to offer the most efficient production. Given the concentrated nature of telecommunications, cable and satellite entities, they must manage their growth strategies within the parameters of a regulatory landscape designed to ensure competition. In addition to natural monopoly, many entities in this industry benefit from terminal access monopolies over the so-called \u2018last-mile\u2019 of their networks, given their contractual relationship with each subscriber and the barriers for subscribers to change service providers. The nature of this relationship is the basis of much of the discussion regarding an open internet, where all data on the internet is treated equally in terms of performance and access. The industry faces legislative and regulatory actions to ensure competition, which may limit the market share and growth potential of some larger players. Merger and acquisition activity by dominant market players has come under regulatory scrutiny. This has resulted in entities abandoning plans to consolidate, affecting their value. Strong reliance on market dominance also may be a source of risk if entities are vulnerable to legal challenges, increasing their risk profile and cost of capital."
+          }
+        ]
+      },
+      {
+        "gic_code": 550,
+        "gic_name": "Systemic Risk Management",
+        "gic_description": "The category addresses the company\u2019s contributions to or management of systemic risks resulting from large-scale weakening or collapse of systems upon which the economy and society depend. This includes financial systems, natural resource systems, and technological systems. It addresses the mechanisms a company has in place to reduce its contributions to systemic risks and to improve safeguards that may mitigate the impacts of systemic failure. For financial institutions, the category also captures the company\u2019s ability to absorb shocks arising from financial and economic stress and meet stricter regulatory requirements related to the complexity and interconnectedness of companies in the industry.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "TC-TL-550a",
+            "topic_name": "Managing Systemic Risks from Technology Disruptions",
+            "topic_description": "Given the systemic importance of telecommunications networks, systemic or economy-wide disruption may result if the Telecommunication Services network infrastructure is unreliable and prone to business continuity risks. As the frequency of extreme weather events associated with climate change increases, Telecommunication Services entities may face growing physical threats to network infrastructure, with potentially significant social or systemic impacts. In the absence of resilient and reliable infrastructure, entities may lose revenue associated with service disruptions or face unplanned capital expenditures to repair damaged or compromised equipment. Entities that successfully manage business continuity risks, including identifying critical business operations, and that enhance resilience of the system may substantially reduce their risk exposure and decrease their cost of capital. While implementation of such measures may have upfront costs, entities may gain long-term benefits in terms of lower remediation expenses in cases of high-impact disruptions."
+          }
+        ]
+      }
+    ]
+  }
+}

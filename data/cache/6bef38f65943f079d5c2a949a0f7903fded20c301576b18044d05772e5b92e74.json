@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's air quality credibility shows moderately positive signals from the two available evidence streams. Disclosure practices indicate quantified commitments with specific reference to MARPOL sulphur cap compliance, while regulatory records suggest clean performance with no violations detected across seven Environment Agency pollution records. However, with only 40% of evidence streams active and insufficient talent data to assess operational priorities, this assessment carries medium confidence and should be interpreted as directionally positive rather than conclusive.",
+  "cost_usd": 0.00511,
+  "input_tokens": 532,
+  "model": "claude-opus-4-5",
+  "output_tokens": 98,
+  "purpose": "Narrative synthesis: Air Quality",
+  "temperature": 0.2
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"Capital expenditure in 2025 was $14.5 billion, including $0.9 billion of inorganic capital expenditure\",\n      \"amount\": 14500000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"capex\"\n    },\n    {\n      \"text\": \"We expect capital expenditure of around $13.0-13.5 billion in 2026 including inorganic expenditure\",\n      \"amount\": 13250000000,\n      \"currency\": \"USD\",\n      \"year\": 2026,\n      \"category\": \"capex\"\n    },\n    {\n      \"text\": \"Capital expenditure Committed 13,049 16,724 29,773\",\n      \"amount\": 29773000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"capex\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [\n    {\n      \"text\": \"Gulf of America oil spill liabilities d 1,533 6,834 8,367\",\n      \"amount\": 8367000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    }\n  ],\n  \"Critical Incident Risk Management\": [\n    {\n      \"text\": \"Gulf of America settlement liabilities was $57.8 billion\",\n      \"amount\": 57800000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"Gulf of America oil spill liabilities d 1,533 6,834 8,367\",\n      \"amount\": 8367000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    }\n  ]\n}\n```",
+  "cost_usd": 0.041285,
+  "input_tokens": 5577,
+  "model": "claude-opus-4-5",
+  "output_tokens": 536,
+  "purpose": "WvM extraction chunk 62/79 (10 factors)",
+  "temperature": 0.0
+}

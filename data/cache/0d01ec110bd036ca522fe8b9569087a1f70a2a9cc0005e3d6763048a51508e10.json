@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Scope 1 and 2, in SECR table page 39; Scope 3 (related to category 11) emissions page 38\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Number of major operating sites in regions with high to extremely high water stress, page 59; Freshwater withdrawals and consumption at major operating sites in regions with high or extremely high water stress, page 59\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"There were 27 PSEs in 2025 (2024 38), of which five were tier 1 (2024 3) and 22 were tier 2 (2024 35). In 2025 the number of oil spills increased to 110, compared with 96 in 2024.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"QUANTIFIED\", \"evidence\": \"We deeply regret the four fatalities and three life-changing injuries that occurred in 2025. Our recordable injury frequency (RIF) also decreased by 21% compared to 2024.\"}\n]\n```",
+  "cost_usd": 0.03287,
+  "input_tokens": 4939,
+  "model": "claude-opus-4-5",
+  "output_tokens": 327,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

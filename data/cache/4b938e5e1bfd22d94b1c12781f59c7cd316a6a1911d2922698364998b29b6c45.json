@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"bp's commitment to safe, reliable and compliant operations\"},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"VAGUE\", \"evidence\": \"bpx energy continues to operate as a separate business while remaining part of the OP&O segment. With its own governance, systems, and processes, it is structured to increase competitive performance through swift decision making and innovation\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"VAGUE\", \"evidence\": \"In February 2026 General Licences 48, 49 and 50 were issued by OFAC which authorized contractors and certain companies including bp plc and its subsidiaries to progress with oil and gas projects in Venezuela. bp is therefore authorized to progress with the development of the Manakin-Cocuina project subject to the conditions contained in the General Licences.\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.037895000000000005,
+  "input_tokens": 5559,
+  "model": "claude-opus-4-5",
+  "output_tokens": 404,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

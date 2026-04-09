@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates strong disclosure practices for GHG emissions with quantified operational data, and regulatory records from the EU ETS show no violations across 9 records. However, the words-money analysis suggests a potential gap between stated commitments and verifiable financial backing, with 29 of 39 commitments unverifiable, while talent signals remain inconclusive due to limited sample size (n=7) despite the positive raw score.",
+  "cost_usd": 0.005115,
+  "input_tokens": 553,
+  "model": "claude-opus-4-5",
+  "output_tokens": 94,
+  "purpose": "Narrative synthesis: GHG Emissions",
+  "temperature": 0.2
+}

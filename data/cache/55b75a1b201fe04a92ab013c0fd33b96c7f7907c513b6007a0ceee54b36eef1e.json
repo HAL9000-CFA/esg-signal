@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "Unilever's water management credentials show strong credibility across multiple evidence streams. Quantified disclosure commitments targeting 100 water-stressed locations, combined with a clean regulatory record across 74 pollution monitoring records and solid talent signals (n=22, predominantly senior roles), indicate genuine operational capability in this area. The absence of extracted monetary commitments from the text window means financial backing cannot be assessed, though the consistency across disclosure, regulatory, and supply chain signals suggests substantive rather than performative engagement.",
+  "cost_usd": 0.00545,
+  "input_tokens": 550,
+  "model": "claude-opus-4-5",
+  "output_tokens": 108,
+  "purpose": "Narrative synthesis: Water Management",
+  "temperature": 0.2
+}

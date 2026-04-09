@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "UNILEVER PLC demonstrates strong credibility on Supply Chain Management, with quantified disclosure detailing specific initiatives like the Supplier Climate Programme and consistent alignment between stated commitments and financial backing. However, talent signals present a notable concern: despite high confidence data (n=22, 68% senior roles), the low score of 0.25 indicates weak internal capability investment in supply chain management expertise, suggesting potential execution risk. The regulatory stream is excluded due to no mapped mandatory disclosure requirements, meaning compliance posture cannot be assessed rather than indicating any deficiency.",
+  "cost_usd": 0.0056700000000000006,
+  "input_tokens": 539,
+  "model": "claude-opus-4-5",
+  "output_tokens": 119,
+  "purpose": "Narrative synthesis: Supply Chain Management",
+  "temperature": 0.2
+}

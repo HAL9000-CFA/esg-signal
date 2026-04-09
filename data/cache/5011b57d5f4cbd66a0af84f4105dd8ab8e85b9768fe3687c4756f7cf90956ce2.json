@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"the investment economics for all investment cases where bp's share of annual greenhouse gas (GHG) emissions from operations are anticipated to exceed specific thresholds include a carbon price for those emissions, which rises from $67/tCO2e in 2026 to $135/tCO2e (2024 $ real) in 2030\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"VAGUE\", \"evidence\": \"Recognizing the potential impact of climate change and other factors on water resources, as part of our water aim, we are taking steps to be more efficient in operational freshwater use\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"we have continued to undertake screening of present-day and future potential physical risk exposure for selected key assets and identified those sites with potential for heightened exposure to physical risks in order to prioritize these for further site-based assessment\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.029750000000000002,
+  "input_tokens": 4485,
+  "model": "claude-opus-4-5",
+  "output_tokens": 293,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

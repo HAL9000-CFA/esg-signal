@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "Unilever demonstrates strong ecological credibility through quantified disclosure of regenerative agriculture targets with measurable progress tracking, supported by a clean regulatory record across 74 pollution-related records with no violations detected. Talent signals suggest organizational commitment to ecological priorities, though the sample size of 12 provides moderate rather than definitive evidence. The words-versus-money stream found no specific monetary commitments tied to ecological claims, which neither confirms nor contradicts the company's stated ambitions but represents a gap in verifiable financial backing.",
+  "cost_usd": 0.00524,
+  "input_tokens": 488,
+  "model": "claude-opus-4-5",
+  "output_tokens": 112,
+  "purpose": "Narrative synthesis: Ecological Impacts",
+  "temperature": 0.2
+}

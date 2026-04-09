@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [\n    {\n      \"text\": \"bp set out anticipated investment in transition businesses through to 2027 as part of our reset strategy in February 2025. This investment was $2.3 billion in 2025 including $0.8 billion of inorganic spend.\",\n      \"amount\": 2300000000,\n      \"currency\": \"USD\",\n      \"year\": 2027,\n      \"category\": \"capex\"\n    },\n    {\n      \"text\": \"In June bp and its partners agreed the final investment decision for the $2.9 billion Shah Deniz Compression project.\",\n      \"amount\": 2900000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"capex\"\n    }\n  ],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Critical Incident Risk Management\": [],\n  \"Employee Health & Safety\": []\n}\n```",
+  "cost_usd": 0.030965000000000003,
+  "input_tokens": 5003,
+  "model": "claude-opus-4-5",
+  "output_tokens": 238,
+  "purpose": "WvM extraction chunk 6/79 (5 factors)",
+  "temperature": 0.0
+}

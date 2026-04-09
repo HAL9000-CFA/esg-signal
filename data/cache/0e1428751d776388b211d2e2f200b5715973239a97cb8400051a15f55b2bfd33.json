@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"The percentage change in greenhouse gas (GHG) emissions from energy and refrigerant use in our operations in the given period in 2025, in comparison to the same period in 2015. Target (76.0%), 2025 actual (76.6%)\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Nature: The cumulative total hectares of land, forests and oceans (as measured by ocean floor area) that Unilever programmes help protect and/or regenerate. Target 700k, 2025 actual 931k\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.0339,
+  "input_tokens": 5435,
+  "model": "claude-opus-4-5",
+  "output_tokens": 269,
+  "purpose": "Batch grade 6 ESG factors",
+  "temperature": 0.0
+}

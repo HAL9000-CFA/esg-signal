@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"Liabilities for emissions are recognized when the cumulative volumes of gases emitted by the group at the end of the reporting period exceed the allowances granted free of charge held for own use or a set baseline for emissions.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"The group is subject to claims and actions for which no provisions have been recognized. The facts and circumstances relating to particular cases are evaluated regularly in determining whether a provision relating to a specific litigation should be recognized or revised.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"Wages, salaries, bonuses, social security contributions, paid annual leave and sick leave are accrued in the period in which the associated services are rendered by employees of the group.\"}\n]\n```",
+  "cost_usd": 0.028185,
+  "input_tokens": 4322,
+  "model": "claude-opus-4-5",
+  "output_tokens": 263,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

@@ -1,0 +1,106 @@
+{
+  "fetched_at": "2026-04-11T18:04:05.013540+00:00",
+  "data": {
+    "industry_code": "IF-WU",
+    "industry_name": "Water Utilities & Services",
+    "industry_description": "Water Utilities & Services industry entities own and operate water supply and wastewater treatment systems (generally structured as regulated utility businesses) or provide operational and other specialised water services to system owners (usually market-based operations). Water supply systems include the sourcing, treatment and distribution of water to residences, businesses and other entities such as governments. Wastewater systems collect and treat wastewater, including sewage, greywater, industrial waste fluids and stormwater runoff, before discharging the resulting effluent back into the environment.",
+    "industry_gics": [
+      {
+        "gic_code": 130,
+        "gic_name": "Energy Management",
+        "gic_description": "The category addresses environmental impacts associated with energy consumption. It addresses the company\u2019s management of energy in manufacturing and/or for provision of products and services derived from utility providers (grid energy) not owned or controlled by the company. More specifically, it includes management of energy efficiency and intensity, energy mix, as well as grid reliance. Upstream (e.g., suppliers) and downstream (e.g., product use) energy use is not included in the scope.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "IF-WU-130a",
+            "topic_name": "Energy Management",
+            "topic_description": "Entities in the Water Utilities & Services industry consume significant amounts of energy for the withdrawal, conveyance, treatment, and distribution or discharge of potable water and wastewater. Typically, an entity\u2019s largest operating cost after purchased water, chemicals, labour and utility operating costs is energy use. Purchased grid electricity is the most common energy input. In more remote locations, entities may use on-site generation to power equipment. The inefficient use of purchased grid electricity creates environmental externalities, such as increased Scope 2 greenhouse gas emissions. Environmental regulations may affect the future grid energy mix, resulting in price increases. Additionally, climate change is expected to impact grid reliability and affect the availability of water resources. As a result, water utility energy intensity may increase in the future as water resource access becomes more difficult. Alternative water treatment, such as recycling and desalination, also can require more energy. Together with decisions about the use of alternative fuels, renewable energy and on-site electricity generation, energy efficiency can influence both the cost and the reliability of the energy supply."
+          }
+        ]
+      },
+      {
+        "gic_code": 140,
+        "gic_name": "Water & Wastewater Management",
+        "gic_description": "The category addresses a company\u2019s water use, water consumption, wastewater generation, and other impacts of operations on water resources, which may be influenced by regional differences in the availability and quality of and competition for water resources. More specifically, it addresses management strategies including, but not limited to, water efficiency, intensity, and recycling. Lastly, the category also addresses management of wastewater treatment and discharge, including groundwater and aquifer pollution.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "IF-WU-140a",
+            "topic_name": "Distribution Network Efficiency",
+            "topic_description": "Water utilities develop, maintain and operate complex interconnected infrastructure networks that include extensive pipelines, canals, reservoirs and pump stations. Distribution networks may lose significant volumes of water (called \u2018non-revenue water\u2019 because it is a distributed volume of water not reflected in customer billings). This water is lost primarily because of infrastructure failures and inefficiencies, such as leaking pipes and service connections. Non-revenue real water losses may impact financial performance, raise customer rates, and squander water and other resources such as energy and treatment chemicals. Conversely, improvements to infrastructure and operating processes may limit non-revenue losses, increase revenue and reduce costs. Efficiently directing operational and maintenance expenses or capital expenditures to distribution systems including primarily pipeline and service connection repair, refurbishment, or replacement may improve entity value and provide strong investment returns."
+          },
+          {
+            "topic_code": "IF-WU-140b",
+            "topic_name": "Effluent Quality Management",
+            "topic_description": "Water and wastewater treatment facilities produce effluent that may pose risks to the environment and human health. Effluent includes residuals and solids that consist of chemicals used in the treatment process and contaminants removed from raw water or wastewater inputs. Facilities discharge treated effluent into surface water or pump it into groundwater. Potential environmental impacts vary depending on the treatment and disposal process. Additionally, consumers and regulators are becoming increasingly concerned by substances that may not be treated by wastewater facilities, such as endocrine disrupting chemicals (EDCs). Because of the environmental risks associated with effluent, treatment facilities are subject to extensive environmental regulations to control and monitor their impact. As public and regulatory scrutiny of effluent quality increases with emerging concerns about some potentially harmful substances, entities may need to innovate to ensure effluent is not harmful to the environment or human health. Effluent discharges exceeding jurisdictional limits may result in significant regulatory penalties, and frequent or severe episodes may jeopardise a utility\u2019s social licence to operate. Entities can avoid the financial consequences of poor effluent quality management through infrastructure and equipment planning, maintenance and operations, as well as the deployment of appropriately trained and experienced labour."
+          }
+        ]
+      },
+      {
+        "gic_code": 240,
+        "gic_name": "Access & Affordability",
+        "gic_description": "The category addresses a company\u2019s ability to ensure broad access to its products and services, specifically in the context of underserved markets and/or population groups. It includes the management of issues related to universal needs, such as the accessibility and affordability of health care, financial services, utilities, education, and telecommunications.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "IF-WU-240a",
+            "topic_name": "Water Affordability & Access",
+            "topic_description": "Reliable clean water access is considered a basic human right in most jurisdictions. Affordable pricing and sufficient access are essential components of this right. Thus, structuring water rates in a way that the community perceives to be fair is an important part of the operations and functions of entities in the Water Utilities & Services industry. Entities that collabourate with regulators to implement rate structures that are well-received by the communities they service may be better able to maintain financial stability and take advantage of opportunities for growth\u2014especially because of the widespread underfunding of water infrastructure in many regions. Entities that use rate mechanisms that inhibit access to water through prohibitive costs or otherwise, may face community opposition. Entities should ensure fair pricing and access, as well as rates that can adequately fund infrastructure over the long term, provide safe drinking water and wastewater treatment, and receive appropriate returns on capital."
+          }
+        ]
+      },
+      {
+        "gic_code": 250,
+        "gic_name": "Product Quality & Safety",
+        "gic_description": "The category addresses issues involving unintended characteristics of products sold or services provided that may create health or safety risks to end-users. It addresses a company\u2019s ability to offer manufactured products and/or services that meet customer expectations with respect to their health and safety characteristics. It includes, but is not limited to, issues involving liability, management of recalls and market withdrawals, product testing, and chemicals/content/ingredient management in products.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "IF-WU-250a",
+            "topic_name": "Drinking Water Quality",
+            "topic_description": "Entities in the industry must ensure that drinking water conforms to health regulations, satisfies customer expectations and is supplied reliably. To protect human health, entities must protect water sources from contamination, which also may reduce treatment processes and costs for entities. Comprehensive treatment processes are designed, developed and maintained to meet water quality standards, and the finished water output is monitored routinely for compliance and safety. Natural disasters, such as forest fires and flooding, may also affect water quality. Overall, entities invest significant resources to deliver safe drinking water consistently to customers. Failure to ensure adequate water quality may result in regulatory fines, litigation, increased operating costs or capital expenditures, reputational risk, and asset or business seizure."
+          }
+        ]
+      },
+      {
+        "gic_code": 420,
+        "gic_name": "Business Model Resilience",
+        "gic_description": "The category addresses an industry\u2019s capacity to manage risks and opportunities associated with incorporating social, environmental, and political transitions into long-term business model planning. This includes responsiveness to the transition to a low-carbon and climate-constrained economy, as well as growth and creation of new markets among unserved and underserved socio-economic populations. The category highlights industries in which evolving environmental and social realities may challenge companies to fundamentally adapt or may put their business models at risk.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "IF-WU-420a",
+            "topic_name": "End-Use Efficiency",
+            "topic_description": "Consumer level water efficiency and conservation\u2014whether a product of government mandates, environmental consciousness or demographic trends\u2014is increasingly important for long-term resource availability and the financial performance of the water supply segment of the industry. How utilities work with regulators to mitigate revenue declines while increasing end-use resource efficiency may be financially material. Water efficiency mechanisms, including rate decoupling, may ensure that a utility\u2019s revenue can adequately cover its fixed costs and provide the desired level of returns regardless of sales volume, while incentivising customers to conserve water. Efficiency mechanisms can align utilities\u2019 economic incentives with environmental and social interests, including improved resource efficiency, lower rates and increased capital investments in infrastructure. Water utilities may manage rate mechanism impacts through positive regulatory relations, forward-looking rate cases that incorporate efficiency and a strong execution of efficiency strategy."
+          }
+        ]
+      },
+      {
+        "gic_code": 440,
+        "gic_name": "Materials Sourcing & Efficiency",
+        "gic_description": "The category addresses issues related to the resilience of materials supply chains to impacts of climate change and other external environmental and social factors. It captures the impacts of such external factors on operational activity of suppliers, which can further affect availability and pricing of key resources. It addresses a company\u2019s ability to manage these risks through product design, manufacturing, and end-of-life management, such as by using of recycled and renewable materials, reducing the use of key materials (dematerialization), maximizing resource efficiency in manufacturing, and making R&D investments in substitute materials. Additionally, companies can manage these issues by screening, selection, monitoring, and engagement with suppliers to ensure their resilience to external risks. It does not address issues associated with environmental and social externalities created by operational activity of individual suppliers, which is covered in a separate category.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "IF-WU-440a",
+            "topic_name": "Water Supply Resilience",
+            "topic_description": "Water supply systems obtain water from groundwater and surface water sources. Water supplies either may be accessed directly or purchased from a third party, often a government entity. Water scarcity, water source contamination, infrastructure failures, regulatory restrictions, competing users and overconsumption by customers are all factors that may jeopardise sufficient water supply access. These issues, combined with an increasing risk of extreme and frequent drought conditions because of climate change, may result in inadequate supplies or mandated water restrictions. The related financial impacts may manifest in diverse ways, depending on rate structure, but are most likely to impact entity value through decreased revenue. Water supply challenges also may increase the price of purchased water, which could result in higher operating costs. Failures of critical infrastructure such as aqueducts and canals, which could result from events such as earthquakes, can present catastrophic risks to customers of the water supply system and could inflict untold financial consequences. Entities may mitigate water supply risks (and the resulting financial risks) through diversification of water supplies, sustainable withdrawal levels, technological and infrastructure improvements, contingency planning, positive relations with regulators and other major users, as well as rate structures."
+          }
+        ]
+      },
+      {
+        "gic_code": 450,
+        "gic_name": "Physical Impacts of Climate Change",
+        "gic_description": "The category addresses the company\u2019s ability to manage risks and opportunities associated with direct exposure of its owned or controlled assets and operations to actual or potential physical impacts of climate change. It captures environmental and social issues that may arise from operational disruptions due to physical impacts of climate change. It further captures socio-economic issues resulting from companies failing to incorporate climate change consideration in products and services sold, such as insurance policies and mortgages. The category relates to the company\u2019s ability to adapt to increased frequency and severity of extreme weather, shifting climate, sea level risk, and other expected physical impacts of climate change. Management may involve enhancing resiliency of physical assets and/or surrounding infrastructure as well as incorporation of climate change-related considerations into key business activities (e.g., mortgage and insurance underwriting, planning and development of real estate projects).",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "IF-WU-450a",
+            "topic_name": "Network Resiliency & Impacts of Climate Change",
+            "topic_description": "Climate change may create uncertainty for water supply systems and wastewater systems because of potential impacts on infrastructure and operations. Climate change may result in increased water stress, more frequent severe weather events, reduced water quality and rising sea levels that could impair utility assets and operations. Water supply and wastewater disposal are basic services for which maintaining operational continuity is of utmost importance. The increasing frequency and severity of storms challenge water and wastewater treatment facilities, and these factors can affect service continuity. Intense precipitation may result in sewage volumes that exceed treatment facility capacity resulting in the release of untreated effluent. Minimising current and future risks of service disruptions and improving service quality may require additional capital expenditures and operational expenses. As the likelihood of extreme weather events increases, entities that address these risks through redundancies and strategic planning may better serve customers and improve performance."
+          }
+        ]
+      }
+    ]
+  }
+}

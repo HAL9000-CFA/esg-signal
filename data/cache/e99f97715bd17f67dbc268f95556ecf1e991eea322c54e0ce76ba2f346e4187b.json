@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"A major turnaround was delivered eight days earlier than the scheduled time, supported by new robotic tools that reduced confined\u2011space work and improved reliability and efficiency.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"We safely loaded the first cargo of LNG for export from our Greater Tortue Ahmeyim (GTA) Phase 1 project offshore Mauritania and Senegal.\"}\n]\n```",
+  "cost_usd": 0.034745000000000005,
+  "input_tokens": 5899,
+  "model": "claude-opus-4-5",
+  "output_tokens": 210,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

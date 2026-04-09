@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"34.3 MtCO2e GHG emissions \u2013 operational control (2024 33.6 MtCO2e)\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"27 tier 1 and 2 process safety events (2024 38)\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"Sadly in 2025, four colleagues working in bp's US retail operations lost their lives. On behalf of the board, I would like to extend our sincere condolences to their families, friends and colleagues. Safety will always be the board's highest priority.\"}\n]\n```",
+  "cost_usd": 0.032985,
+  "input_tokens": 5387,
+  "model": "claude-opus-4-5",
+  "output_tokens": 242,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

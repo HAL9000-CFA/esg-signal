@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"The Paris Agreement which aims to hold the increase in the global average temperature to well below 2\u00b0C above pre-industrial levels and to pursue efforts to limit the temperature increase to 1.5\u00b0C above pre-industrial levels. Signatories aim to reach global peaking of greenhouse gas (GHG) emissions as soon as possible and to undertake rapid reductions thereafter\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Operating and capital expenditure on the prevention, control, treatment or elimination of air and water emissions and solid waste... Environmental operating expenditure of $435 million in 2025 (2024 $575 million) showed an overall decrease of 24%\"},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"VAGUE\", \"evidence\": \"Operating and capital expenditure on the prevention, control, treatment or elimination of air and water emissions and solid waste is often not incurred as a separately identifiable transaction\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Clean-up costs were $16 million in 2025 (2024 $20 million), representing oil spill clean-up costs and other associated remediation and disposal costs\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.030480000000000004,
+  "input_tokens": 4396,
+  "model": "claude-opus-4-5",
+  "output_tokens": 340,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

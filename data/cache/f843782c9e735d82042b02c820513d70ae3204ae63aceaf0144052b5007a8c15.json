@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"VAGUE\", \"evidence\": \"They help us address key external and internal risks to the business \u2013 such as fraudulent behaviour or a failure to respect, uphold and advance human rights \u2013 and play a key role in ensuring compliance with laws and regulations. As a result, they help us to protect our brands and reputation, and to prevent harm to people or the environment.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.028485000000000003,
+  "input_tokens": 4547,
+  "model": "claude-opus-4-5",
+  "output_tokens": 230,
+  "purpose": "Batch grade 6 ESG factors",
+  "temperature": 0.0
+}

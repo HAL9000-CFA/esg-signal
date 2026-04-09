@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [\n    {\n      \"text\": \"We delivered Scope 1 and 2 greenhouse gas emissions reductions of 12.9% against our 2019 baseline.\",\n      \"amount\": 12.9,\n      \"currency\": null,\n      \"year\": null,\n      \"category\": \"reduction_target\"\n    },\n    {\n      \"text\": \"Our performance was strong and we delivered 1.6MteCO2e ahead of our scorecard target\",\n      \"amount\": 1.6,\n      \"currency\": null,\n      \"year\": 2025,\n      \"category\": \"reduction_target\"\n    }\n  ],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Critical Incident Risk Management\": [\n    {\n      \"text\": \"We reported five tier 1 process safety events during the year\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2025,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"Tier 2 performance was strong with a significant reduction in the number of events compared to prior year (22 events in 2025 compared to 35 events in 2024)\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ],\n  \"Employee Health & Safety\": [\n    {\n      \"text\": \"we are deeply saddened by the four workforce fatalities during the year \u2013 three at TravelCenters of America and one at Thorntons\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2025,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"the entire bonus score was reduced by 4 points for all participants\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ]\n}\n```",
+  "cost_usd": 0.036305000000000004,
+  "input_tokens": 4811,
+  "model": "claude-opus-4-5",
+  "output_tokens": 490,
+  "purpose": "WvM extraction chunk 26/79 (5 factors)",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"the CEO's authority includes a limit on the nature and type of investments, capital expenditure and financial commitments she may take in isolation\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": null,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"any inorganic acquisition or divestment opportunities of more than $1 billion\",\n      \"amount\": 1000000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.030475000000000002,
+  "input_tokens": 4875,
+  "model": "claude-opus-4-5",
+  "output_tokens": 244,
+  "purpose": "WvM extraction chunk 22/79 (10 factors)",
+  "temperature": 0.0
+}

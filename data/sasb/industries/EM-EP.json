@@ -1,0 +1,145 @@
+{
+  "fetched_at": "2026-04-11T20:08:44.190018+00:00",
+  "data": {
+    "industry_code": "EM-EP",
+    "industry_name": "Oil & Gas \u2013 Exploration & Production",
+    "industry_description": "Oil & Gas - Exploration & Production (E&P) entities explore for, extract or produce energy products such as crude oil and natural gas, which comprise the upstream operations of the oil and gas value chain. Entities in the industry develop conventional and unconventional oil and gas reserves; these include shale oil or gas reserves, oil sands and gas hydrates. Activities covered by this standard include the development of both on-shore and off-shore reserves. The E&P industry creates contracts with the Oil and Gas Services industry to conduct several E&P activities and to obtain equipment and oilfield services.",
+    "industry_gics": [
+      {
+        "gic_code": 110,
+        "gic_name": "GHG Emissions",
+        "gic_description": "The category addresses direct (Scope 1) greenhouse gas (GHG) emissions that a company generates through its operations. This includes GHG emissions from stationary (e.g., factories, power plants) and mobile sources (e.g., trucks, delivery vehicles, planes), whether a result of combustion of fuel or non-combusted direct releases during activities such as natural resource extraction, power generation, land use, or biogenic processes. The category further includes management of regulatory risks, environmental compliance, and reputational risks and opportunities, as they related to direct GHG emissions. The seven GHGs covered under the Kyoto Protocol are included within the category\u2014carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur hexafluoride (SF6), and nitrogen trifluoride (NF3).",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "EM-EP-110a",
+            "topic_name": "Greenhouse Gas Emissions",
+            "topic_description": "Exploration & Production (E&P) activities generate significant direct greenhouse gas (GHG) emissions from a variety of sources. Emissions may be combusted, including those arising from flaring or power generation equipment, or uncombusted, including those emissions arising from gas processing equipment, venting, flaring and fugitive methane. Regulatory efforts to reduce GHG emissions in response to climate change related risks may result in additional regulatory compliance costs and risks for E&P entities. With natural gas production from shale resources expanding, the management of the emission of methane, a highly potent GHG, from oil and gas E&P systems has emerged as a major operational, reputational and regulatory risk for entities. Furthermore, the development of unconventional hydrocarbon resources may be more or less GHG-intensive than conventional oil and gas, with associated effects on regulatory risk. Energy efficiency, use of less carbon-intensive fuels, or process improvements to reduce fugitive emissions, venting and flaring, can provide direct benefits to E&P entities in the form of reduced costs or increased revenue."
+          }
+        ]
+      },
+      {
+        "gic_code": 120,
+        "gic_name": "Air Quality",
+        "gic_description": "The category addresses management of air quality impacts resulting from stationary (e.g., factories, power plants) and mobile sources (e.g., trucks, delivery vehicles, planes) as well as industrial emissions. Relevant airborne pollutants include, but are not limited to, oxides of nitrogen (NOx), oxides of sulfur (SOx), volatile organic compounds (VOCs), heavy metals, particulate matter, and chlorofluorocarbons. The category does not include GHG emissions, which are addressed in a separate category.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "EM-EP-120a",
+            "topic_name": "Air Quality",
+            "topic_description": "Air emissions from Exploration & Production (E&P) operations other than greenhouse gas emissions include air pollutants and volatile organic compounds (VOCs), which can create significant and localised environmental or health risks. Of particular concern are sulphur dioxide, nitrogen dioxide and VOC emissions. The financial consequences entities face from air emissions vary depending on the specific locations of operations and the prevailing air emissions regulations. Impacts on human health may be exacerbated if E&P operations breach air emissions limits close to population centres. Amid increasing regulatory and public concerns about air quality, active air quality management through technological and process improvements could allow entities to mitigate adverse financial effects of regulations. Entities could benefit from operational efficiencies that may result in a lower cost structure over time."
+          }
+        ]
+      },
+      {
+        "gic_code": 140,
+        "gic_name": "Water & Wastewater Management",
+        "gic_description": "The category addresses a company\u2019s water use, water consumption, wastewater generation, and other impacts of operations on water resources, which may be influenced by regional differences in the availability and quality of and competition for water resources. More specifically, it addresses management strategies including, but not limited to, water efficiency, intensity, and recycling. Lastly, the category also addresses management of wastewater treatment and discharge, including groundwater and aquifer pollution.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "EM-EP-140a",
+            "topic_name": "Water Management",
+            "topic_description": "Depending on the extraction technique, exploration and production operations may consume significant quantities of water, which may expose entities to the risk of reduced water availability, regulations limiting use, or related cost increases, particularly in water-stressed regions. Contamination of local water resources can result from incidents involving produced water, flowback water, hydraulic fracturing fluids and other well fluids. Historically, the possible impacts of hydraulic fracturing operations and the risk of groundwater supply contamination have raised concerns. Reducing water use and contamination through recycling, other water management strategies, and use of non-toxic fracturing fluids could create operational efficiency for entities and reduce their operating costs. Such strategies could also minimise the effects that regulations, water supply shortages and community-related disruptions have on operations."
+          }
+        ]
+      },
+      {
+        "gic_code": 160,
+        "gic_name": "Ecological Impacts",
+        "gic_description": "The category addresses management of the company\u2019s impacts on ecosystems and biodiversity through activities including, but not limited to, land use for exploration, natural resource extraction, and cultivation, as well as project development, construction, and siting. The impacts include, but are not limited to, biodiversity loss, habitat destruction, and deforestation at all stages \u2013 planning, land acquisition, permitting, development, operations, and site remediation. The category does not cover impacts of climate change on ecosystems and biodiversity.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "EM-EP-160a",
+            "topic_name": "Biodiversity Impacts",
+            "topic_description": "The Exploration & Production (E&P) industry\u2019s activities can have significant impacts on biodiversity. Examples include habitat loss and alteration through land use for exploration, production, disposal of drilling and associated wastes, and decommissioning of onshore and offshore wells. Oil spills and leaks are a threat to species and habitats affected by hydrocarbon contamination. Biodiversity impacts of E&P operations can affect the valuation of oil and gas reserves and create operational risks. Because of increasing protection of ecosystems through popular consensus and legislation, the environmental characteristics of the land where reserves are located may lead to higher, or even prohibitive extraction costs. Entities could also face regulatory or reputational barriers to accessing reserves in ecologically sensitive areas. This may include new protection statuses afforded to areas where reserves are located. Examples of such areas include the Arctic and shorelines with mangroves and swamps, which are not only extremely ecologically sensitive, but also entail more complex and expensive clean-up operations for hydrocarbon spills or leaks. Depreciation in the future value of reserves may be mitigated by considering the proximity of reserves in or near protected areas as part of the decision-making process. Entities with a good reputation for minimising biodiversity impacts could gain a competitive advantage in accessing new reserves in or near protected areas. Ongoing E&P operations could be at risk in the absence of effective environmental management plans for various stages of the project lifecycle because of regulatory penalties, litigation, community protests and associated costs."
+          }
+        ]
+      },
+      {
+        "gic_code": 210,
+        "gic_name": "Human Rights & Community Relations",
+        "gic_description": "The category addresses management of the relationship between businesses and the communities in which they operate, including, but not limited to, management of direct and indirect impacts on core human rights and the treatment of indigenous peoples. More specifically, such management may cover socio-economic community impacts, community engagement, environmental justice, cultivation of local workforces, impact on local businesses, license to operate, and environmental/social impact assessments. The category does not include environmental impacts such as air pollution or waste which, although they may impact the health and safety of members of local communities, are addressed in separate categories.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "EM-EP-210a",
+            "topic_name": "Security, Human Rights & Rights of Indigenous Peoples",
+            "topic_description": "Exploration & Production (E&P) entities face additional community-related risks when operating in conflict zones; in areas with weak or absent governance institutions, rule of law, or legislation to protect human rights; or in areas with vulnerable communities such as indigenous peoples. Entities using private or government security forces to protect their workers and assets may knowingly or unknowingly contribute to human rights violations, including the use of excessive force. Entities perceived as contributing to human rights violations or failing to account for indigenous peoples\u2019 rights may be affected by protests, riots or suspension of permits. These entities could face substantial costs related to compensation or settlement payments, and write-downs in the value of their reserves in such areas. In the absence of applicable jurisdictional laws or regulations to address such cases, several international instruments have emerged to provide guidelines for entities. These instruments include obtaining the free, prior and informed consent of indigenous peoples for decisions that affect them. Several countries have implemented specific laws protecting indigenous peoples\u2019 rights, creating increasing regulatory risk for entities that violate those rights."
+          },
+          {
+            "topic_code": "EM-EP-210b",
+            "topic_name": "Community Relations",
+            "topic_description": "Exploration & Production (E&P) activities take place over many years and can have a wide range of adverse effects on communities. Community rights and interests may be affected by the environmental and social impacts of E&P operations, such as competition for access to local energy or water resources, air and water emissions, and waste. Entities frequently need support from local communities to obtain permits and leases and conduct their activities without disruptions. Entities may experience adverse financial impacts if the community interferes, or lobbies its government to interfere, with the rights of an E&P entity in relation to their ability to access, develop and produce reserves. In addition to community concerns about the direct impacts of projects, the presence of E&P activities may create associated socioeconomic concerns related to education, health, livelihoods and food security for the community. E&P entities engaging in rent-seeking and exploiting a community\u2019s resources without providing proportional socioeconomic benefits in return may be exposed to actions by host governments and communities that restrict their activities or impose additional costs. These could include imposition of ad hoc taxes and export restrictions. These risks vary depending on the country and could be higher in countries heavily reliant on oil and gas for their economic growth. Entities in the extractives industries can adopt various community engagement strategies in their global operations to manage risks and opportunities associated with community rights and interests, such as integrating community engagement into each phase of the project cycle. Entities are beginning to adopt a \u2018shared value\u2019 approach to provide significant socioeconomic benefits to communities and allow them to operate profitably."
+          }
+        ]
+      },
+      {
+        "gic_code": 320,
+        "gic_name": "Employee Health & Safety",
+        "gic_description": "The category addresses a company\u2019s ability to create and maintain a safe and healthy workplace environment that is free of injuries, fatalities, and illness (both chronic and acute). It is traditionally accomplished through implementing safety management plans, developing training requirements for employees and contractors, and conducting regular audits of their own practices as well as those of their subcontractors. The category further captures how companies ensure physical and mental health of workforce through technology, training, corporate culture, regulatory compliance, monitoring and testing, and personal protective equipment.",
+        "gic_dimension": "Human Capital",
+        "gic_topics": [
+          {
+            "topic_code": "EM-EP-320a",
+            "topic_name": "Workforce Health & Safety",
+            "topic_description": "Workers involved in Exploration & Production (E&P) activities face significant health and safety risks because of the harsh working environments and the hazards of handling oil and gas. In addition to acute harms resulting from accidents, workers may develop chronic health conditions, including those caused by silica or dust inhalation, as well as mental health problems. A significant proportion of the workforce at oil and gas drilling sites consists of temporary workers and employees of oil and gas service entities. An entity\u2019s ability to protect employee health and safety, and to create a culture of safety and well-being among all employees, may prevent accidents, mitigate costs, reduce operational downtime and enhance workforce productivity. Additional health and safety protocols may be needed to protect groups such as women and minorities in regions where they continue to face discrimination."
+          }
+        ]
+      },
+      {
+        "gic_code": 420,
+        "gic_name": "Business Model Resilience",
+        "gic_description": "The category addresses an industry\u2019s capacity to manage risks and opportunities associated with incorporating social, environmental, and political transitions into long-term business model planning. This includes responsiveness to the transition to a low-carbon and climate-constrained economy, as well as growth and creation of new markets among unserved and underserved socio-economic populations. The category highlights industries in which evolving environmental and social realities may challenge companies to fundamentally adapt or may put their business models at risk.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "EM-EP-420a",
+            "topic_name": "Reserves Valuation & Capital Expenditures",
+            "topic_description": "Exploration and production (E&P) entities may be unable to extract a significant proportion of their proved and probable oil and gas reserves if greenhouse gas (GHG) emissions are controlled to limit global temperature increases. Entities with more carbon-intensive reserves and production and higher capital costs may face greater risks. Regulatory limits on GHG emissions, together with improved competitiveness of alternative energy technologies, could reduce global demand growth, and therefore reduce prices for oil and gas products. Extraction costs could increase with regulations that put a price on GHG emissions. These factors could affect the economic viability of oil and gas reserves. Regulatory actions that are more abrupt than anticipated, or those focusing on industries with high emissions, could impair asset values over a short period. Stewardship of capital resources and production decisions that consider near- and long-term trends related to climate change may mitigate potential asset impairment and maintain profitability and creditworthiness."
+          }
+        ]
+      },
+      {
+        "gic_code": 510,
+        "gic_name": "Business Ethics",
+        "gic_description": "The category addresses the company\u2019s approach to managing risks and opportunities surrounding ethical conduct of business, including fraud, corruption, bribery and facilitation payments, fiduciary responsibilities, and other behaviour that may have an ethical component. This includes sensitivity to business norms and standards as they shift over time, jurisdiction, and culture. It addresses the company\u2019s ability to provide services that satisfy the highest professional and ethical standards of the industry, which means to avoid conflicts of interest, misrepresentation, bias, and negligence through training employees adequately and implementing policies and procedures to ensure employees provide services free from bias and error.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "EM-EP-510a",
+            "topic_name": "Business Ethics & Transparency",
+            "topic_description": "Managing business ethics and maintaining an appropriate level of transparency in payments to governments or individuals are significant issues for Exploration & Production (E&P) entities. Relationships with governments are especially important to entities in the E&P industry since entities compete for access to oil and gas reserves. Anti-corruption, anti-bribery, and payments transparency laws and initiatives globally create regulatory mechanisms to reduce the risk of misconduct. Violations of these could result in significant one-time costs or higher compliance costs, whereas successful compliance with such regulations could avoid adverse outcomes. Enforcement of these laws could affect an entity\u2019s social licence to operate. Entities with significant reserves or operations in corruption-prone countries could face increased risks. Entities must ensure their governance structures and business practices reduce the risks associated with corruption and wilful or unintentional participation in illegal or unethical payments, or with gifts to government officials or private individuals."
+          }
+        ]
+      },
+      {
+        "gic_code": 530,
+        "gic_name": "Management of the Legal & Regulatory Environment",
+        "gic_description": "The category addresses a company\u2019s approach to engaging with regulators in cases where conflicting corporate and public interests may have the potential for long-term adverse direct or indirect environmental and social impacts. The category addresses a company\u2019s level of reliance upon regulatory policy or monetary incentives (such as subsidies and taxes), actions to influence industry policy (such as through lobbying), overall reliance on a favorable regulatory environment for business competitiveness, and ability to comply with relevant regulations. It may relate to the alignment of management and investor views of regulatory engagement and compliance at large.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "EM-EP-530a",
+            "topic_name": "Management of the Legal & Regulatory Environment",
+            "topic_description": "The Exploration & Production (E&P) industry is subject to numerous sustainability-related regulations and a rapidly changing regulatory environment. Entities in the industry regularly participate in the regulatory and legislative process on a wide variety of environmental and societal issues, and they may do so directly or through representation by an industry association. Entities may participate in these processes to ensure industry views are represented in the development of regulations affecting the industry, as well as to represent shareholder interests. However, such attempts to influence environmental laws and regulations may have an adverse effect on entities\u2019 reputations with stakeholders and ultimately affect the entity\u2019s social licence to operate. Entities that can balance these tensions may be better positioned to respond to medium-to-long-term regulatory developments."
+          }
+        ]
+      },
+      {
+        "gic_code": 540,
+        "gic_name": "Critical Incident Risk Management",
+        "gic_description": "The category addresses the company\u2019s use of management systems and scenario planning to identify, understand, and prevent or minimize the occurrence of low-probability, high-impact accidents and emergencies with significant potential environmental and social externalities. It relates to the culture of safety at a company, its relevant safety management systems and technological controls, the potential human, environmental, and social implications of such events occurring, and the long-term effects to an organization, its workers, and society should these events occur.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "EM-EP-540a",
+            "topic_name": "Critical Incident Risk Management",
+            "topic_description": "The Exploration & Production (E&P) industry faces significant hazards associated with exploration, development and production activities. Accidental releases of hydrocarbons or other hazardous substances can also have significant consequences for an entity\u2019s workforce, as well as negative social and environmental externalities. In addition to effective process safety management practices, many entities prioritise developing a culture of safety to reduce the probability of accidents and other health and safety incidents. If accidents and other emergencies do occur, entities with a strong safety culture are often able to detect and respond to such incidents more effectively. A culture that engages and empowers employees and contractors to work with management to safeguard their own health, safety and well-being and prevent accidents may help entities reduce production downtime, mitigate costs, ensure workforce productivity and maintain their licence to operate."
+          }
+        ]
+      }
+    ]
+  }
+}

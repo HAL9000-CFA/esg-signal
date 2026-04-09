@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"VAGUE\", \"evidence\": \"Payables related to the Gulf of America oil spill include amounts payable under the 2016 consent decree and settlement agreement with the United States and five Gulf coast states, including amounts payable for natural resource damages, state claims and Clean Water Act penalties.\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"On a discounted basis the amounts included in payables related to the Gulf of America oil spill for these elements of the agreements are $3,207 million payable over seven years, $1,748 million payable over eight years and $2,276 million payable over seven years respectively at 31 December 2025.\"}\n]\n```",
+  "cost_usd": 0.03692,
+  "input_tokens": 5424,
+  "model": "claude-opus-4-5",
+  "output_tokens": 392,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

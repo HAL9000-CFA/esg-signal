@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"VAGUE\", \"evidence\": \"We monitor our air emissions \u2013 sulphur oxides, nitrogen oxides and non-methane hydrocarbons \u2013 and, where possible, put measures in place to reduce the potential impact of our operational activities on local communities and the environment. In 2025 our total air emissions were flat compared to 2024.\"},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Since 2020 we have reduced freshwater withdrawals (excluding once through cooling water) by 15% and freshwater consumption by 15% against the baseline. At our major operating sites, 13% (2024 11%) of our total freshwater withdrawals and 22% (2024 20%) of freshwater consumption were from regions with high or extremely high water stress in 2025.\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"An effective approach to risk management is central to how bp operates, supporting safe, compliant, and reliable operations as well as greater efficiency and sustainable financial results that contribute to long-term business resilience.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"Group operational risk committee \u2013 for health, safety, security, environment and operations integrity risks.\"}\n]\n```",
+  "cost_usd": 0.029505000000000003,
+  "input_tokens": 4166,
+  "model": "claude-opus-4-5",
+  "output_tokens": 347,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

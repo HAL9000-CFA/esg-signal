@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Energy Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Labor Practices\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Data Security\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]",
+  "cost_usd": 0.03003,
+  "input_tokens": 5381,
+  "model": "claude-opus-4-5",
+  "output_tokens": 125,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

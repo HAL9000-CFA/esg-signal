@@ -94,14 +94,20 @@ def to_pdf(report, profile=None, dcf_result=None) -> bytes:
         return b"%PDF-1.4\n% Export error\n"
 
 
-def to_json(report, profile=None, dcf_result=None) -> str:
+def to_json(
+    report,
+    profile=None,
+    dcf_result=None,
+    pipeline_trace=None,
+) -> str:
     """
     Serialise the pipeline output to a structured JSON string.
 
-    The JSON contains three top-level keys:
+    The JSON contains four top-level keys:
       - "credibility_report": full CredibilityReport as a dict
       - "company_profile": CompanyProfile dict (None if not provided)
       - "dcf_result": DcfMapperResult dict (None if not provided)
+      - "pipeline_trace": dict with fetch_result, relevance, talent, audit dicts
 
     Returns:
         UTF-8 JSON string.
@@ -111,6 +117,7 @@ def to_json(report, profile=None, dcf_result=None) -> str:
             "credibility_report": dataclasses.asdict(report),
             "company_profile": dataclasses.asdict(profile) if profile else None,
             "dcf_result": dataclasses.asdict(dcf_result) if dcf_result else None,
+            "pipeline_trace": pipeline_trace or {},
         }
         return json.dumps(payload, indent=2, default=str)
     except Exception as exc:
@@ -209,11 +216,11 @@ def _build_pdf(report, profile, dcf_result) -> bytes:
                 fs.factor_name,
                 f"{fs.score:.2f}",
                 fs.flag.upper(),
-                f"{ss.get('disclosure', 0):.2f}" if "disclosure" in ss else "—",
-                f"{ss.get('regulatory', 0):.2f}" if "regulatory" in ss else "—",
-                f"{ss.get('talent', 0):.2f}" if "talent" in ss else "—",
-                f"{ss.get('words_money', 0):.2f}" if "words_money" in ss else "—",
-                f"{ss.get('supply_chain', 0):.2f}" if "supply_chain" in ss else "—",
+                f"{ss['disclosure']:.2f}" if ss.get("disclosure") is not None else "—",
+                f"{ss['regulatory']:.2f}" if ss.get("regulatory") is not None else "—",
+                f"{ss['talent']:.2f}" if ss.get("talent") is not None else "—",
+                f"{ss['words_money']:.2f}" if ss.get("words_money") is not None else "—",
+                f"{ss['supply_chain']:.2f}" if ss.get("supply_chain") is not None else "—",
             ]
         )
 

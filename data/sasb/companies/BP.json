@@ -1,0 +1,31 @@
+{
+  "fetched_at": "2026-04-11T22:50:44.599095+00:00",
+  "data": [
+    {
+      "id": 93433,
+      "company_ticker": "BP",
+      "isin": "CA0563621063",
+      "company_name": "Backstageplay Inc",
+      "sector": "Technology & Communications",
+      "sector_hs_value": "Technology & Communications",
+      "industry_code": "TC-SI",
+      "industry": "Software & IT Services",
+      "industry_hs_value": "Software & IT Services",
+      "industry_description": "The Software & Information Technology (IT) Services industry offers products and services globally to retail, business and government customers, and includes entities that develop and sell applications software, infrastructure software and middleware. The industry generally is competitive but with dominant players in some segments. Although relatively immature, the industry is characterised by high-growth entities that place a heavy emphasis on innovation and depend on human and intellectual capital. The industry also includes IT services entities delivering specialised IT functions, such as consulting and outsourced services. New industry business models include cloud computing, software as a service, virtualisation, machine-to-machine communication, big data analysis and machine learning. Additionally, brand value is important for entities in the industry to scale and achieve network effects, whereby wide adoption of a particular software product may result in self-perpetuating growth in sales.",
+      "web_prepend_text": null
+    },
+    {
+      "id": 95840,
+      "company_ticker": "BP",
+      "isin": "US0556221044",
+      "company_name": "BP PLC",
+      "sector": "Extractives & Minerals Processing",
+      "sector_hs_value": "Extractives & Mineral Processing",
+      "industry_code": "EM-EP",
+      "industry": "Oil & Gas \u2013 Exploration & Production",
+      "industry_hs_value": "Oil & Gas - Exploration & Production",
+      "industry_description": "Oil & Gas - Exploration & Production (E&P) entities explore for, extract or produce energy products such as crude oil and natural gas, which comprise the upstream operations of the oil and gas value chain. Entities in the industry develop conventional and unconventional oil and gas reserves; these include shale oil or gas reserves, oil sands and gas hydrates. Activities covered by this standard include the development of both on-shore and off-shore reserves. The E&P industry creates contracts with the Oil and Gas Services industry to conduct several E&P activities and to obtain equipment and oilfield services.",
+      "web_prepend_text": null
+    }
+  ]
+}

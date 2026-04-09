@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates strong disclosure practices for GHG emissions with quantified operational data, and regulatory records from the EU ETS show no violations, indicating solid compliance on this factor. However, the words-money alignment suggests potential concern, with only one of six commitments verifiable as financially backed while five remain unverifiable\u2014this warrants monitoring rather than alarm given the inherent difficulty of tracing capital allocation to specific climate pledges. With talent and supply chain streams excluded due to insufficient data and industry inapplicability respectively, the overall amber rating reflects credible but incomplete evidence across the available signals.",
+  "cost_usd": 0.00583,
+  "input_tokens": 541,
+  "model": "claude-opus-4-5",
+  "output_tokens": 125,
+  "purpose": "Narrative synthesis: GHG Emissions",
+  "temperature": 0.2
+}

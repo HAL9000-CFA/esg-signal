@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates solid disclosure practices for air quality with quantified reporting on emissions prevention expenditure, and regulatory records from environmental agencies show no violations across seven records. However, the words-money stream reveals that both identified commitments lack verifiable financial backing, suggesting a potential gap between stated ambitions and concrete resource allocation. Talent signals remain inconclusive given the small sample size of seven postings with no senior-level roles, providing insufficient evidence to assess organizational capability depth in this area.",
+  "cost_usd": 0.005135000000000001,
+  "input_tokens": 522,
+  "model": "claude-opus-4-5",
+  "output_tokens": 101,
+  "purpose": "Narrative synthesis: Air Quality",
+  "temperature": 0.2
+}

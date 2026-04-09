@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "Unilever demonstrates strong disclosure practices for Employee Health & Safety, with quantified metrics including Total Recordable Frequency Rate reporting, though the words-money alignment shows neutral results with no specific monetary commitments identified. The talent stream suggests potential concerns, with employee sentiment data indicating weak signals around workplace safety culture, though this finding carries only medium confidence given the limited sample size of 12 reviews. With regulatory and supply chain evidence unavailable for this assessment, the overall amber rating reflects solid formal reporting offset by softer internal indicators that warrant monitoring.",
+  "cost_usd": 0.00528,
+  "input_tokens": 481,
+  "model": "claude-opus-4-5",
+  "output_tokens": 115,
+  "purpose": "Narrative synthesis: Employee Health & Safety",
+  "temperature": 0.2
+}

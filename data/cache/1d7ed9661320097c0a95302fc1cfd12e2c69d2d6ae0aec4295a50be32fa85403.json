@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"economics of all investment cases where bp's share of annual greenhouse gas (GHG) emissions from operations are anticipated to exceed certain thresholds include a carbon price for those emissions\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"VAGUE\", \"evidence\": \"Risk exposure is heightened during drilling, production, marine transport and logistics, pipeline operations, project construction or maintenance activities \u2013 especially in environmentally sensitive (e.g. areas of water scarcity, biodiversity), remote or geologically complex locations\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"bp operates in complex and high-risk environments where process safety, personal safety, occupational health, technical integrity, transportation, marine operations, and environmental risks could result in major incidents with significant human, environmental, financial, and reputational consequences\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"These risks extend to both the public and our workforce and contractors, including physical safety, life-saving rule violations, and occupational health exposures such as chemical, biological, psychosocial, or infectious risks\"}\n]\n```",
+  "cost_usd": 0.027965000000000004,
+  "input_tokens": 4028,
+  "model": "claude-opus-4-5",
+  "output_tokens": 313,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

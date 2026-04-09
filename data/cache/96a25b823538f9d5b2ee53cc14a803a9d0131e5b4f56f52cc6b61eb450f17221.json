@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "UNILEVER PLC receives a RED credibility score for Labor Practices, though this assessment rests on limited evidence with only two of five streams active. The talent stream suggests potential concerns, with employee sentiment data (n=12, moderate confidence) yielding a weak blended score of 0.20, while disclosure data shows no available report text to evaluate. With regulatory, monetary commitment, and supply chain evidence excluded or unmapped, there is insufficient breadth of evidence to draw firm conclusions about the company's labor practices credibility.",
+  "cost_usd": 0.005085,
+  "input_tokens": 447,
+  "model": "claude-opus-4-5",
+  "output_tokens": 114,
+  "purpose": "Narrative synthesis: Labor Practices",
+  "temperature": 0.2
+}

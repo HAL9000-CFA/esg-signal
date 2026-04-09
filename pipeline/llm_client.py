@@ -23,7 +23,7 @@ except Exception:  # protobuf C extension fails on Python 3.14 — deferred to r
     genai = None  # type: ignore[assignment]
     _GEMINI_AVAILABLE = False
 
-from anthropic import Anthropic, RateLimitError
+from anthropic import Anthropic, AuthenticationError, PermissionDeniedError, RateLimitError
 from dotenv import load_dotenv
 
 from pipeline.audit_log import compute_cost, log_llm_call
@@ -108,21 +108,67 @@ def call_claude(
 
     # Handle cache
     cache_file = CACHE_DIR / f"{cache_key}.json"
+    _cache_valid = False
     if USE_CACHED and cache_file.exists():
-        LOGGER.info(f"Using cached result for agent '{agent}', purpose '{purpose}'")
-        cached_call = json.loads(cache_file.read_text())
-        input_tokens = cached_call["input_tokens"]
-        output_tokens = cached_call["output_tokens"]
-        cost_usd = cached_call["cost_usd"]
-        cached = True
-        content = cached_call["content"]
-    else:  # No cache
+        try:
+            cached_call = json.loads(cache_file.read_text())
+            _cached_content = cached_call.get("content", "")
+            if _cached_content and _cached_content.strip():
+                LOGGER.info(f"Using cached result for agent '{agent}', purpose '{purpose}'")
+                input_tokens = cached_call["input_tokens"]
+                output_tokens = cached_call["output_tokens"]
+                cost_usd = cached_call["cost_usd"]
+                cached = True
+                content = _cached_content
+                _cache_valid = True
+            else:
+                # Stale entry with empty content written before the empty-response guard.
+                # Delete it and fall through to a live API call.
+                LOGGER.warning(
+                    "call_claude: stale empty cache entry deleted — will re-call API "
+                    "(agent=%s purpose=%s file=%s)",
+                    agent,
+                    purpose,
+                    cache_file.name,
+                )
+                cache_file.unlink(missing_ok=True)
+        except Exception as exc:
+            LOGGER.warning("call_claude: cache read failed (%s) — falling back to API", exc)
+
+    if not _cache_valid:  # No valid cache — call the API
         client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
         response = None
         for attempt, wait in enumerate(_RATE_LIMIT_BACKOFF, start=1):
             try:
                 response = client.messages.create(**payload)
+                # Treat an empty response as a transient failure and retry with backoff.
+                # This covers the rare case where the API returns 200 with no text content
+                # (observed after a 429 burst — the next request succeeds but body is empty).
+                _text = response.content[0].text if response.content else ""
+                if not _text or not _text.strip():
+                    if attempt == len(_RATE_LIMIT_BACKOFF):
+                        LOGGER.warning(
+                            "call_claude: empty response — all %d retries exhausted (agent=%s)",
+                            len(_RATE_LIMIT_BACKOFF),
+                            agent,
+                        )
+                        break
+                    LOGGER.warning(
+                        "call_claude: empty response (attempt %d/%d) — waiting %ds before retry (agent=%s)",
+                        attempt,
+                        len(_RATE_LIMIT_BACKOFF),
+                        wait,
+                        agent,
+                    )
+                    time.sleep(wait)
+                    continue
                 break
+            except (AuthenticationError, PermissionDeniedError) as exc:
+                # Credit exhaustion or invalid key — retrying won't help, fail immediately
+                LOGGER.error(
+                    "call_claude: billing/auth error — check API key and credit balance: %s", exc
+                )
+                raise
             except RateLimitError:
                 if attempt == len(_RATE_LIMIT_BACKOFF):
                     LOGGER.warning(
@@ -142,25 +188,35 @@ def call_claude(
         output_tokens = response.usage.output_tokens
         cost_usd = compute_cost(model=model, input_tokens=input_tokens, output_tokens=output_tokens)
         cached = False
-        content = response.content[0].text
+        content = response.content[0].text if response.content else ""
 
-        CACHE_DIR.mkdir(parents=True, exist_ok=True)
-        cache_file.write_text(
-            json.dumps(
-                {
-                    "content": content,
-                    "input_tokens": input_tokens,
-                    "output_tokens": output_tokens,
-                    "cost_usd": cost_usd,
-                    "model": model,
-                    "agent": agent,
-                    "purpose": purpose,
-                    "temperature": temperature,
-                },
-                indent=2,
-                sort_keys=True,
+        try:
+            if not content or not content.strip():
+                LOGGER.warning(
+                    "call_claude: empty response from API — not caching (agent=%s purpose=%s)",
+                    agent,
+                    purpose,
+                )
+                return content
+            CACHE_DIR.mkdir(parents=True, exist_ok=True)
+            cache_file.write_text(
+                json.dumps(
+                    {
+                        "content": content,
+                        "input_tokens": input_tokens,
+                        "output_tokens": output_tokens,
+                        "cost_usd": cost_usd,
+                        "model": model,
+                        "agent": agent,
+                        "purpose": purpose,
+                        "temperature": temperature,
+                    },
+                    indent=2,
+                    sort_keys=True,
+                )
             )
-        )
+        except OSError as exc:
+            LOGGER.warning("call_claude: cache write failed (continuing without cache): %s", exc)
 
     # Log call and return content
     log_llm_call(
@@ -267,23 +323,33 @@ def call_gemini(
         cost_usd = compute_cost(model=model, input_tokens=input_tokens, output_tokens=output_tokens)
         cached = False
 
-        CACHE_DIR.mkdir(parents=True, exist_ok=True)
-        cache_file.write_text(
-            json.dumps(
-                {
-                    "content": content,
-                    "input_tokens": input_tokens,
-                    "output_tokens": output_tokens,
-                    "cost_usd": cost_usd,
-                    "model": model,
-                    "agent": agent,
-                    "purpose": purpose,
-                    "temperature": temperature,
-                },
-                indent=2,
-                sort_keys=True,
+        try:
+            if not content or not content.strip():
+                LOGGER.warning(
+                    "call_gemini: empty response from API — not caching (agent=%s purpose=%s)",
+                    agent,
+                    purpose,
+                )
+                return content
+            CACHE_DIR.mkdir(parents=True, exist_ok=True)
+            cache_file.write_text(
+                json.dumps(
+                    {
+                        "content": content,
+                        "input_tokens": input_tokens,
+                        "output_tokens": output_tokens,
+                        "cost_usd": cost_usd,
+                        "model": model,
+                        "agent": agent,
+                        "purpose": purpose,
+                        "temperature": temperature,
+                    },
+                    indent=2,
+                    sort_keys=True,
+                )
             )
-        )
+        except OSError as exc:
+            LOGGER.warning("call_gemini: cache write failed (continuing without cache): %s", exc)
 
     # Log call and return content
     log_llm_call(

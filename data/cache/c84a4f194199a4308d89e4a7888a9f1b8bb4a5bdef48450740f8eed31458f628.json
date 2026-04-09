@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "Unilever's Business Ethics credibility presents a weak overall signal based on available evidence. The disclosure stream offers only vague values statements without substantive governance commitments, while talent data suggests limited emphasis on ethics-related hiring with moderate confidence (n=12). The words-money stream found no monetary commitments to evaluate, and with regulatory and supply chain evidence excluded, the assessment reflects genuine weakness in disclosed ethics practices rather than data gaps, though the absent streams limit full verification.",
+  "cost_usd": 0.004815000000000001,
+  "input_tokens": 458,
+  "model": "claude-opus-4-5",
+  "output_tokens": 101,
+  "purpose": "Narrative synthesis: Business Ethics",
+  "temperature": 0.2
+}

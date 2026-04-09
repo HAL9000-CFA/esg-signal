@@ -1,10 +1,18 @@
 {
   "claude-opus-4-5": {
     "pricing_per_1m_usd": {
-      "input": 15.0,
-      "output": 75.0
+      "input": 5.0,
+      "output": 25.0
     },
-    "source": "https://www.anthropic.com/pricing",
+    "source": "https://docs.anthropic.com/en/docs/about-claude/pricing",
+    "last_updated": "2026-04-09"
+  },
+  "claude-opus-4-6": {
+    "pricing_per_1m_usd": {
+      "input": 5.0,
+      "output": 25.0
+    },
+    "source": "https://docs.anthropic.com/en/docs/about-claude/pricing",
     "last_updated": "2026-04-09"
   },
   "gemini-2.5-flash": {

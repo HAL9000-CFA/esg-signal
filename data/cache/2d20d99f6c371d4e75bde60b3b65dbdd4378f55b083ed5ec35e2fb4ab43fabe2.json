@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates solid credibility on GHG emissions, with quantified disclosure of 34.3 MtCO2e under operational control and a clean regulatory record across 9 EU ETS entries with no violations detected. However, the words-money alignment score suggests the company's public commitments on emissions lack corresponding monetary backing, which warrants investor attention. With talent signals excluded due to insufficient job posting data and supply chain analysis not yet implemented, the assessment reflects moderate confidence based on three of five evidence streams.",
+  "cost_usd": 0.005125000000000001,
+  "input_tokens": 475,
+  "model": "claude-opus-4-5",
+  "output_tokens": 110,
+  "purpose": "Narrative synthesis: GHG Emissions",
+  "temperature": 0.2
+}

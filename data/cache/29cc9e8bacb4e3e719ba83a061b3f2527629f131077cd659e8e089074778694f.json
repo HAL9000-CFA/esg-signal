@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's Human Rights & Community Relations credibility shows a mixed profile with moderately strong evidence. Disclosure indicates quantified community investment commitments ($64m in the current period), and the words-money alignment check confirms consistency between stated commitments and financial backing. However, talent market perception suggests weaker external validation of the company's social capital positioning, though this signal carries full confidence given adequate sample size; regulatory and supply chain evidence streams are unavailable for this assessment, limiting the completeness of the overall picture.",
+  "cost_usd": 0.005335,
+  "input_tokens": 532,
+  "model": "claude-opus-4-5",
+  "output_tokens": 107,
+  "purpose": "Narrative synthesis: Human Rights & Community Relations",
+  "temperature": 0.2
+}

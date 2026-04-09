@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"management identified indicators of impairment within the refining portfolio as at 31 December 2025 and concluded that no impairment charge needed to be recorded\",\n      \"amount\": null,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"an impairment of $2.0 billion as disclosed in Note 14\",\n      \"amount\": 2000000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.033735,
+  "input_tokens": 5467,
+  "model": "claude-opus-4-5",
+  "output_tokens": 256,
+  "purpose": "WvM extraction chunk 35/79 (10 factors)",
+  "temperature": 0.0
+}

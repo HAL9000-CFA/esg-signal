@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "UNILEVER PLC's Data Security credibility presents a mixed picture with limited evidence coverage. The company's non-disclosure on data security practices is a clear gap, while talent signals indicate moderate capability with 61% role alignment among a confident sample of predominantly senior hires. With regulatory, monetary commitment, and supply chain streams excluded or unmapped rather than showing poor performance, the available evidence suggests some operational investment in data security talent but insufficient transparency to fully assess the company's posture on this factor.",
+  "cost_usd": 0.005205,
+  "input_tokens": 511,
+  "model": "claude-opus-4-5",
+  "output_tokens": 106,
+  "purpose": "Narrative synthesis: Data Security",
+  "temperature": 0.2
+}

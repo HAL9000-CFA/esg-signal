@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's Business Model Resilience shows moderate credibility based on limited but meaningful evidence. The disclosure stream indicates strong quantified commitments, including specific adjusted free cash flow growth targets exceeding 20% CAGR through 2027, while the words-money analysis suggests reasonable alignment between stated commitments and financial backing, with 86 of 91 commitments verified as consistent. However, with only two of five evidence streams active and talent data insufficient for reliable assessment, the overall signal should be interpreted with appropriate caution.",
+  "cost_usd": 0.005535,
+  "input_tokens": 542,
+  "model": "claude-opus-4-5",
+  "output_tokens": 113,
+  "purpose": "Narrative synthesis: Business Model Resilience",
+  "temperature": 0.2
+}

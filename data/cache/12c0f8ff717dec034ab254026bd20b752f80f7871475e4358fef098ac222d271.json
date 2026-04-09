@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's Air Quality credibility shows moderate strength, with quantified disclosure of environmental expenditure and a clean regulatory record across 7 pollution records from the Environment Agency. The words-money alignment score of 0.50 reflects an absence of specific monetary commitments rather than a contradiction, suggesting the company's public statements on air quality lack concrete financial backing. With talent and supply chain streams excluded due to insufficient data, the assessment draws on 60% of potential evidence streams, providing reasonable but incomplete visibility into the company's air quality management practices.",
+  "cost_usd": 0.005095000000000001,
+  "input_tokens": 449,
+  "model": "claude-opus-4-5",
+  "output_tokens": 114,
+  "purpose": "Narrative synthesis: Air Quality",
+  "temperature": 0.2
+}

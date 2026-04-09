@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Total (100%) Scope 1 (direct) GHG emissions from source activities operated by bp or otherwise within bp's operational control boundary. bp's reported GHG emissions include CH4 and CO2.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"All underpinned by our commitment to safety in everything we do.\"},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Target of >20% CAGR adjusted free cash flow growth from 2024-2027 and expected progressive dividend growth of at least 4% per annum. Group ROACE target of >16% by end 2027.\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Gulf of America oil spill payments (pre-tax) Around $1.6bn pre-tax, of which $0.4bn in the first quarter and $1.1bn in the second quarter\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Gulf of America oil spill payments (pre-tax) Around $1.6bn pre-tax, of which $0.4bn in the first quarter and $1.1bn in the second quarter $1.2bn\"}\n]\n```",
+  "cost_usd": 0.03547,
+  "input_tokens": 4759,
+  "model": "claude-opus-4-5",
+  "output_tokens": 467,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

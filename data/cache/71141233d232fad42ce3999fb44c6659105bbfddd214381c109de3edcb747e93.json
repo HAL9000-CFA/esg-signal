@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"Focused the sustainability aims on those most relevant to the long-term success of our businesses and to our net zero ambition.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"Routine reviews of safety performance undertaken, including measurement against targets and ad hoc reporting, as required.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"Routine reviews of safety performance undertaken, including measurement against targets and ad hoc reporting, as required.\"}\n]\n```",
+  "cost_usd": 0.02747,
+  "input_tokens": 4474,
+  "model": "claude-opus-4-5",
+  "output_tokens": 204,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

@@ -1,0 +1,62 @@
+{
+  "fetched_at": "2026-04-11T18:09:01.501735+00:00",
+  "data": {
+    "industry_code": "IF-RE",
+    "industry_name": "Real Estate",
+    "industry_description": "Real Estate industry entities own, develop and operate income-producing real estate assets. Entities in this industry commonly are structured as real estate investment trusts (REITs) and operate in a wide range of real estate industry segments, including residential, retail, office, health care, industrial and hotel properties. REITs typically participate in direct real estate asset ownership, thereby providing investors with the opportunity to obtain real estate exposure without direct asset ownership and management. Although REITs often concentrate on individual Real Estate industry segments, many REITs diversify investments across multiple property types.",
+    "industry_gics": [
+      {
+        "gic_code": 130,
+        "gic_name": "Energy Management",
+        "gic_description": "The category addresses environmental impacts associated with energy consumption. It addresses the company\u2019s management of energy in manufacturing and/or for provision of products and services derived from utility providers (grid energy) not owned or controlled by the company. More specifically, it includes management of energy efficiency and intensity, energy mix, as well as grid reliance. Upstream (e.g., suppliers) and downstream (e.g., product use) energy use is not included in the scope.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "IF-RE-130a",
+            "topic_name": "Energy Management",
+            "topic_description": "Real estate assets consume significant amounts of energy for space heating, ventilating, air conditioning, water heating, lighting and using equipment and appliances. The type and magnitude of energy used and strategies for energy management are dependent upon the real estate asset class, among other factors. Generally, grid electricity is the predominant form of consumed energy, though on-site fuel combustion and renewable energy production also serve important roles. Energy costs may be borne by entities or property occupants; either way, energy management is a significant industry issue. To the extent that the real estate owner assumes direct responsibility for energy costs, such costs often represent significant operating costs, indicating the importance of energy management. Energy pricing volatility and a general trend of electricity price increases, energy-related regulations, potentially wide variations in energy performance in existing building stock, and opportunities for efficiency improvements through economically attractive capital investments all show the importance of energy management. Energy costs assumed by occupants, either in whole or in part, are nonetheless likely to affect entities through various channels. Building energy performance is a notable driver of tenant demand, because it allows them to control operating costs, mitigate potential environmental impacts, and, often just as importantly, maintain a reputation for resource conservation. Additionally, real estate owners may be exposed to energy-related regulations even if energy costs are the occupants\u2019 responsibility. Overall, entities that effectively manage asset energy performance may realise reduced operating costs and regulatory risks, as well as increased tenant demand, rental rates and occupancy rates\u2014all of which drive revenue and asset value appreciation. Improving energy performance is dependent upon property type and location, target tenant market, local building codes, physical and legal opportunities to deploy distributed renewable energy, the ability to measure consumption, and existing building stock, among other factors."
+          }
+        ]
+      },
+      {
+        "gic_code": 140,
+        "gic_name": "Water & Wastewater Management",
+        "gic_description": "The category addresses a company\u2019s water use, water consumption, wastewater generation, and other impacts of operations on water resources, which may be influenced by regional differences in the availability and quality of and competition for water resources. More specifically, it addresses management strategies including, but not limited to, water efficiency, intensity, and recycling. Lastly, the category also addresses management of wastewater treatment and discharge, including groundwater and aquifer pollution.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "IF-RE-140a",
+            "topic_name": "Water Management",
+            "topic_description": "Buildings consume significant amounts of water in their operations, through water fixtures, building equipment, appliances and irrigation. Water consumption operating costs may be significant depending on property type, tenant operations, geographical locations and other factors. Entities can be responsible for a building\u2019s water costs, or common area water costs, though entities commonly allocate all, or a portion, of these costs to occupants. In these arrangements, water management through tenant demand and regulatory exposure continues to be important. Tenants may assess real estate asset water efficiency to control operating costs, mitigate environmental impacts of operations, and, often just as importantly, develop a reputation for resource conservation. Additionally, real estate owners may comply with water-related regulations even if water costs are the occupants\u2019 responsibility. Overall, entities that effectively manage asset water efficiency, even if they bear no direct water costs, may realise reduced operating costs and regulatory exposure, as well as increased tenant demand, rental rates and occupancy rates\u2014all of which drive revenue and asset value appreciation. Long-term historic water expense increases and expectations of continued increases because of overconsumption and constrained supplies resulting from population growth and shifts, pollution and climate change show the importance of water management. Improving asset water efficiency is dependent upon the property type, water availability, target tenant market, local building codes, the ability to measure consumption and the existing building stock, among other factors."
+          }
+        ]
+      },
+      {
+        "gic_code": 410,
+        "gic_name": "Product Design & Lifecycle Management",
+        "gic_description": "The category addresses incorporation of environmental, social, and governance (ESG) considerations in characteristics of products and services provided or sold by the company. It includes, but is not limited to, managing the lifecycle impacts of products and services, such as those related to packaging, distribution, use-phase resource intensity, and other environmental and social externalities that may occur during their use-phase or at the end of life. The category captures a company\u2019s ability to address customer and societal demand for more sustainable products and services as well as to meet evolving environmental and social regulation. It does not address direct environmental or social impacts of the company\u2019s operations nor does it address health and safety risks to consumers from product use, which are covered in other categories.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "IF-RE-410a",
+            "topic_name": "Management of Tenant Sustainability Impacts",
+            "topic_description": "Real estate assets generate significant sustainability impacts, including resource consumption (energy and water), waste generation and impacts on occupant health through indoor environmental quality. While entities own real estate assets, the tenant operations of such assets dominate the sustainability impacts produced by the built environment. Tenants may design and construct leased spaces according to their operating needs. In turn, their operations consume significant amounts of energy and water, generate waste, and impact the health of those living, working, shopping, or visiting the properties. While these sustainability impacts often are often generated by tenant operations and activities, real estate owners play an important role in influencing tenant sustainability impacts. The way entities in the industry structure their agreements, contracts and relationships with tenants may be instrumental in managing the sustainability impacts of their tenants effectively, and ultimately, the impacts of their assets. Managing tenant sustainability impacts may include mitigating the problem of split incentives by aligning both parties\u2019 financial interests with sustainability outcomes, establishing systematic measurement and communication of resource consumption data, creating shared performance goals, and mandating minimum sustainability performance or design requirements, among other strategies. Effective management of tenant sustainability impacts, particularly related to energy, water and indoor environmental quality, may drive asset value appreciation, increase tenant demand and satisfaction, decrease direct operating costs, or decrease risks related to building codes and regulations."
+          }
+        ]
+      },
+      {
+        "gic_code": 450,
+        "gic_name": "Physical Impacts of Climate Change",
+        "gic_description": "The category addresses the company\u2019s ability to manage risks and opportunities associated with direct exposure of its owned or controlled assets and operations to actual or potential physical impacts of climate change. It captures environmental and social issues that may arise from operational disruptions due to physical impacts of climate change. It further captures socio-economic issues resulting from companies failing to incorporate climate change consideration in products and services sold, such as insurance policies and mortgages. The category relates to the company\u2019s ability to adapt to increased frequency and severity of extreme weather, shifting climate, sea level risk, and other expected physical impacts of climate change. Management may involve enhancing resiliency of physical assets and/or surrounding infrastructure as well as incorporation of climate change-related considerations into key business activities (e.g., mortgage and insurance underwriting, planning and development of real estate projects).",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "IF-RE-450a",
+            "topic_name": "Climate Change Adaptation",
+            "topic_description": "Climate change affects entities in the industry via frequent or high-impact extreme weather events and changing climate patterns. How an entity structures its business model to incorporate assessments of climate change risks, and the adaptation to such risks, may increasingly be relevant to entity value over the long-term. More specifically, investment strategies with assets located on floodplains and in coastal regions exposed to inclement weather may require increased risk mitigation and business model adaptation to long-term climate change. These strategies are especially important considering the long-term challenges associated with flood insurance rates, the financial stability of government-subsidised flood insurance programs, and financing stipulations or other creditor concerns. Besides insurance, other risk mitigation measures include improvements to physical asset resiliency and lease terms that transfer risk to tenants, although these measures can create their own costs and risks for real estate entities. To ensure long-term growth, entities must implement comprehensive climate change adaptation strategies, account for trade-offs between various risk mitigation strategies, and integrate all projected cost and benefit considerations over the long-term."
+          }
+        ]
+      }
+    ]
+  }
+}

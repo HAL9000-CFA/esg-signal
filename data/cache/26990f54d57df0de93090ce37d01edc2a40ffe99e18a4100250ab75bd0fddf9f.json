@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"Innovation grounded in scientific expertise continues to shape our portfolio. We are focusing on scalable, multi-year innovations and leveraging leading-edge bioscience.\"}\n]\n```",
+  "cost_usd": 0.030710000000000005,
+  "input_tokens": 5167,
+  "model": "claude-opus-4-5",
+  "output_tokens": 195,
+  "purpose": "Batch grade 6 ESG factors",
+  "temperature": 0.0
+}

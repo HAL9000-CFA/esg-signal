@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "UNILEVER PLC's Energy Management credibility presents a notable disconnect between operational capability and transparency. While talent data indicates strong internal capacity with a high-confidence score of 0.74 based on 22 relevant hires (68% senior), the company has not disclosed energy management metrics through standard reporting frameworks. With only two of five evidence streams active and regulatory, monetary commitment, and supply chain data unavailable for assessment, there is insufficient evidence to draw firm conclusions about overall credibility, though the absence of disclosure alongside demonstrated hiring activity warrants attention.",
+  "cost_usd": 0.0055,
+  "input_tokens": 510,
+  "model": "claude-opus-4-5",
+  "output_tokens": 118,
+  "purpose": "Narrative synthesis: Energy Management",
+  "temperature": 0.2
+}

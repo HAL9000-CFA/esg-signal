@@ -59,9 +59,12 @@ def _make_factor(factor_id="ghg_emissions", dimension="Environment"):
     )
 
 
-def _mock_claude(commitments: list):
-    """Return a patch target that makes call_claude return a JSON array."""
-    return patch("pipeline.words_vs_money.call_claude", return_value=json.dumps(commitments))
+def _mock_claude(commitments: list, factor_name: str = "GHG Emissions"):
+    """Return a patch target that makes call_claude return a JSON object keyed by factor name."""
+    return patch(
+        "pipeline.words_vs_money.call_claude",
+        return_value=json.dumps({factor_name: commitments}),
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -128,8 +131,8 @@ class TestFindFinancial:
 
 
 class TestComputeScore:
-    def test_empty_checks_returns_neutral(self):
-        assert _compute_score([]) == 0.5
+    def test_empty_checks_returns_none(self):
+        assert _compute_score([]) is None
 
     def test_all_consistent_scores_high(self):
         checks = [
@@ -152,11 +155,20 @@ class TestComputeScore:
         expected = round((0.80 + 0.10) / 2, 4)
         assert _compute_score(checks) == expected
 
-    def test_unverifiable_is_neutral(self):
+    def test_all_unverifiable_returns_none(self):
         checks = [
             CommitmentCheck("t", None, "USD", None, "other", None, None, "unverifiable", "?"),
         ]
-        assert _compute_score(checks) == 0.50
+        assert _compute_score(checks) is None
+
+    def test_mixed_unverifiable_minority_still_scores(self):
+        # 1 unverifiable out of 3 — minority, so score is computed (includes unverifiable at 0.5)
+        checks = [
+            CommitmentCheck("t", 1e6, "USD", 2030, "capex", "capex", 2e6, "consistent", "ok"),
+            CommitmentCheck("t", 1e6, "USD", 2030, "capex", "capex", 2e6, "consistent", "ok"),
+            CommitmentCheck("t", None, "USD", None, "other", None, None, "unverifiable", "?"),
+        ]
+        assert _compute_score(checks) is not None
 
 
 # ---------------------------------------------------------------------------
@@ -190,37 +202,37 @@ class TestCheck:
         with _mock_claude([]):
             result = check(profile, factor)
 
-        assert result.score == 0.5
+        assert result.score is None  # excluded — not penalised
         assert result.errors
 
-    def test_no_commitments_found_returns_neutral(self):
+    def test_no_commitments_found_returns_excluded(self):
         profile = _make_profile()
         factor = _make_factor()
 
         with _mock_claude([]):
             result = check(profile, factor)
 
-        assert result.score == 0.5
+        assert result.score is None  # excluded — not penalised
         assert result.commitment_checks == []
 
-    def test_claude_failure_returns_neutral_with_error(self):
+    def test_claude_failure_returns_excluded_with_error(self):
         profile = _make_profile()
         factor = _make_factor()
 
         with patch("pipeline.words_vs_money.call_claude", side_effect=Exception("API error")):
             result = check(profile, factor)
 
-        assert result.score == 0.5
+        assert result.score is None  # all chunks failed → excluded
         assert any("extraction failed" in e.lower() for e in result.errors)
 
-    def test_invalid_json_returns_neutral_with_error(self):
+    def test_invalid_json_returns_excluded_with_error(self):
         profile = _make_profile()
         factor = _make_factor()
 
         with patch("pipeline.words_vs_money.call_claude", return_value="not json at all"):
             result = check(profile, factor)
 
-        assert result.score == 0.5
+        assert result.score is None  # all chunks failed to parse → excluded
         assert result.errors
 
     def test_consistent_commitment_scores_high(self):
@@ -281,7 +293,7 @@ class TestCheck:
             result = check(profile, factor)
 
         assert result.commitment_checks[0].flag == "unverifiable"
-        assert result.score == 0.50
+        assert result.score is None  # majority unverifiable — stream excluded
 
     def test_no_amount_stated_flags_unverifiable(self):
         profile = _make_profile()
@@ -351,13 +363,13 @@ class TestCheck:
 
 
 class TestEvidenceString:
-    def test_no_checks_returns_neutral_message(self):
+    def test_no_checks_returns_excluded_message(self):
         result = WordsMoneyResult(
-            ticker="T", factor_id="ghg", commitment_checks=[], score=0.5, errors=[]
+            ticker="T", factor_id="ghg", commitment_checks=[], score=None, errors=[]
         )
         ev = evidence_string("GHG Emissions", result)
         assert "no monetary commitments" in ev
-        assert "neutral" in ev
+        assert "excluded" in ev
 
     def test_with_checks_summarises_flag_counts(self):
         checks = [

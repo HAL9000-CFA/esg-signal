@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"The CTAP, which includes absolute emissions reductions and an ambitious net-zero goal, is a critical component of our strategy and a key driver of long-term sustainable growth.\"},\n  {\"factor\": \"Energy Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Labor Practices\", \"grade\": \"VAGUE\", \"evidence\": \"The Board has taken part in six dedicated workforce engagement sessions in 2024. These were to ensure our plans are aligned with their interests and to ensure the overall effectiveness of the Board.\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Data Security\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.030825000000000005,
+  "input_tokens": 5155,
+  "model": "claude-opus-4-5",
+  "output_tokens": 202,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

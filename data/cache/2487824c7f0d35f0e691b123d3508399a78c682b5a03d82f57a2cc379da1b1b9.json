@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "UNILEVER PLC presents a mixed credibility picture on GHG Emissions with moderate evidence coverage. The regulatory stream indicates clean compliance across EU ETS records with no violations detected, while talent signals suggest positive internal capability, though the modest sample size (n=12) warrants some caution in interpretation. The absence of disclosure text represents a notable gap that limits full assessment, and with supply chain and monetary commitment data unavailable, the overall amber rating reflects incomplete rather than contradictory evidence.",
+  "cost_usd": 0.00496,
+  "input_tokens": 462,
+  "model": "claude-opus-4-5",
+  "output_tokens": 106,
+  "purpose": "Narrative synthesis: GHG Emissions",
+  "temperature": 0.2
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates strong disclosure practices for legal and regulatory matters, with quantified reporting on Gulf of America oil spill payments providing transparent financial accountability. The words-money alignment is robust, with all 18 extracted commitments showing consistency between stated intentions and financial backing. However, the talent signal indicates no leadership expertise mapped to this governance area (n=20, high confidence), suggesting a potential gap in dedicated senior oversight for legal and regulatory management, though two streams remain unmeasured limiting a complete assessment.",
+  "cost_usd": 0.005475000000000001,
+  "input_tokens": 575,
+  "model": "claude-opus-4-5",
+  "output_tokens": 104,
+  "purpose": "Narrative synthesis: Management of the Legal & Regulatory Environment",
+  "temperature": 0.2
+}

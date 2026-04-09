@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"Water Management\", \"grade\": \"VAGUE\", \"evidence\": \"Water is essential across our value chain. Limited availability or declining quality could constrain operations and reduce demand for water-dependent products.\"},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"The safety and quality of our products are of paramount importance for our brands and our reputation. Evolving laws and regulations concerning product formulation, nutritional standards and the use of ingredients of concern may restrict the sale of our products in specific markets, which can impact financial performance and reputation. The risk that raw materials are accidentally or maliciously contaminated throughout the supply chain or that product defects occur due to human error, equipment failure or other factors cannot be excluded.\"},\n  {\"factor\": \"Product Design & Lifecycle Management\", \"grade\": \"VAGUE\", \"evidence\": \"Reducing virgin plastic and improving packaging circularity are key methods for continued progress towards our sustainability goals... The transition to sustainable packaging requires new materials, product formats and business models.\"},\n  {\"factor\": \"Supply Chain Management\", \"grade\": \"VAGUE\", \"evidence\": \"Our supply chain network is exposed to potentially adverse events such as geopolitical tensions, physical disruptions, trade restrictions and tariffs, or issues at a key supplier, which could impact our ability to deliver orders to customers.\"}\n]\n```",
+  "cost_usd": 0.02957,
+  "input_tokens": 4374,
+  "model": "claude-opus-4-5",
+  "output_tokens": 308,
+  "purpose": "Batch grade 4 ESG factors",
+  "temperature": 0.0
+}

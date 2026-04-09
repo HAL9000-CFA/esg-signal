@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Critical Incident Risk Management\": [\n    {\n      \"text\": \"Clean-up costs were $16 million in 2025 ( 2024 $20 million ), representing oil spill clean-up costs and other associated remediation and disposal costs.\",\n      \"amount\": 16000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"opex\"\n    },\n    {\n      \"text\": \"Additions to environmental remediation provision 325\",\n      \"amount\": 325000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"Increase (decrease) in decommissioning provision 528\",\n      \"amount\": 528000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ],\n  \"Employee Health & Safety\": []\n}\n```",
+  "cost_usd": 0.029105,
+  "input_tokens": 4476,
+  "model": "claude-opus-4-5",
+  "output_tokens": 269,
+  "purpose": "WvM extraction chunk 66/79 (5 factors)",
+  "temperature": 0.0
+}

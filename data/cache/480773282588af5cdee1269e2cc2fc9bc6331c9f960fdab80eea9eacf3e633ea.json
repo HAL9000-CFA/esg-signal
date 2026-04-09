@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"Carbon taxes and costs of emissions allowances are included in estimates of future cash flows, where applicable, based on the regulatory environment in each jurisdiction in which the group operates... Forecast cash flows include the impact of all approved emission reduction projects.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.027920000000000004,
+  "input_tokens": 4654,
+  "model": "claude-opus-4-5",
+  "output_tokens": 186,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

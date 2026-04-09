@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"Lawsuits and claims arising from the Incident were brought principally in US federal and state courts. The remaining proceedings arising from the Incident broadly seek penalties, costs, damages and compensation for alleged environmental, personal injury, health and economic harm as a result of the Incident. bp believes that impact of the remaining proceedings on the group's financial position or liquidity will not be material\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.029905,
+  "input_tokens": 4896,
+  "model": "claude-opus-4-5",
+  "output_tokens": 217,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

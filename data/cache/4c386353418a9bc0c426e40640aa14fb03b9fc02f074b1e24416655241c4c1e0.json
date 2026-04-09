@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's disclosure stream provides a strong quantified signal on Employee Health & Safety, citing specific process safety event metrics with year-over-year comparison, which indicates substantive transparency on this factor. However, with only one of five evidence streams active, the overall assessment rests on limited evidence\u2014regulatory, talent, and financial commitment data are either unmapped or insufficient to evaluate. The disclosure quality is encouraging, but insufficient evidence exists from complementary streams to corroborate whether this transparency reflects broader operational commitment.",
+  "cost_usd": 0.00523,
+  "input_tokens": 521,
+  "model": "claude-opus-4-5",
+  "output_tokens": 105,
+  "purpose": "Narrative synthesis: Employee Health & Safety",
+  "temperature": 0.2
+}

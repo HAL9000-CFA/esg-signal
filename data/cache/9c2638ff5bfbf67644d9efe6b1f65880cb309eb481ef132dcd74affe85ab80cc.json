@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates solid credibility on Air Quality, with quantified disclosure of expenditure on emissions prevention and control, and a clean regulatory record across 7 Environment Agency pollution records. Talent signals suggest some relevant hiring activity, though the small sample size (n=7) with no senior roles limits confidence in this stream. The words_money stream found no extractable monetary commitments in the text window, which is uninformative rather than indicative of a gap between stated ambitions and financial backing.",
+  "cost_usd": 0.005260000000000001,
+  "input_tokens": 527,
+  "model": "claude-opus-4-5",
+  "output_tokens": 105,
+  "purpose": "Narrative synthesis: Air Quality",
+  "temperature": 0.2
+}

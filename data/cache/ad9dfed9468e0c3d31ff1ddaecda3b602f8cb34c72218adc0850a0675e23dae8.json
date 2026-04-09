@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates solid credibility on water and wastewater management, with quantified disclosure identifying water-stressed operating sites and a clean regulatory record across seven Environment Agency pollution records. The words-money stream suggests partial alignment between stated commitments and financial backing, with one verifiable consistent commitment alongside one that could not be verified. Talent signals are limited by a small sample size (n=7) with no senior-level representation, providing insufficient evidence to draw conclusions about internal capability depth in this area.",
+  "cost_usd": 0.0053950000000000005,
+  "input_tokens": 559,
+  "model": "claude-opus-4-5",
+  "output_tokens": 104,
+  "purpose": "Narrative synthesis: Water & Wastewater Management",
+  "temperature": 0.2
+}

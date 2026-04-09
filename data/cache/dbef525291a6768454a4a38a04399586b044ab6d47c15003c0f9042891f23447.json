@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Reduce absolute operational GHG emissions (Scope 1 & 2) by 100% by 2030 from a 2015 baseline... (77)% (2025)... Reduce absolute Scope 3 energy and industrial (E&I) GHG emissions by 42% by 2030 from a 2021 baseline... (11)% (2025)... Reduce absolute Scope 3 forest, land and agriculture (FLAG) GHG emissions by 30.3% by 2030 from a 2021 baseline... (17)% (2025)\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Implement water stewardship programmes in 100 locations in water-stressed areas by 2030... 29 (2025)\"},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Implement regenerative agriculture practices on 1 million hectares of agricultural land by 2030... 0.25m (2025)... Help protect and restore 1 million hectares of natural ecosystems by 2030... 0.66m (2025)... 95% volume of key crops to be verified as sustainably sourced by 2030... 81% (2025)... Maintain no deforestation across our primary deforestation-linked commodities... 97% (2025)\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"Unilever's functional standards define mandatory requirements across a range of specialist areas such as product safety and cyber security, which are key controls in mitigating these risks.\"}\n]\n```",
+  "cost_usd": 0.035915,
+  "input_tokens": 4823,
+  "model": "claude-opus-4-5",
+  "output_tokens": 472,
+  "purpose": "Batch grade 6 ESG factors",
+  "temperature": 0.0
+}

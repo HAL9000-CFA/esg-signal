@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [\n    {\n      \"text\": \"In 2025 a total of 14 new emissions reduction projects and actions contributed to reductions of 0.27 MtCO2e\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2025,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"27 emissions reduction projects delivered in 2024, which achieved a reduction of 0.42MtCO2e\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2024,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"Archaea Energy purchased renewable energy certificates (RECs) equivalent to 125ktCO2e in emissions savings\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.034785,
+  "input_tokens": 5327,
+  "model": "claude-opus-4-5",
+  "output_tokens": 326,
+  "purpose": "WvM extraction chunk 10/79 (10 factors)",
+  "temperature": 0.0
+}

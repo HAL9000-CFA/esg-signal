@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"QUANTIFIED\", \"evidence\": \"bp expects capital expenditure of around $13-13.5 billion in 2026. Total divestment and other proceeds for 2025 amounted to $5.3 billion... bp expects divestment and other proceeds to be $9-10 billion in 2026, including approximately $6 billion from the announced Castrol transaction.\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"VAGUE\", \"evidence\": \"Movements in working capital adversely impacted cash flow in the year by $4.8 billion, including an adverse impact from the Gulf of America oil spill of $1.1 billion.\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Movements in working capital adversely impacted cash flow in the year by $4.8 billion, including an adverse impact from the Gulf of America oil spill of $1.1 billion.\"}\n]\n```",
+  "cost_usd": 0.038680000000000006,
+  "input_tokens": 5606,
+  "model": "claude-opus-4-5",
+  "output_tokens": 426,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

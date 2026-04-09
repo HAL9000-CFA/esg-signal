@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"Net revenue reductions of this magnitude in isolation could indicatively lead to a reduction in the carrying amount of bp's currently held upstream oil and gas properties in the range of $ 20 - 21 billion\",\n      \"amount\": 20000000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"Net revenue increases of this magnitude in isolation could indicatively lead to an increase in the carrying amount of bp's currently held upstream oil and gas properties in the range of $ 1 - 2 billion\",\n      \"amount\": 1000000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"oil and gas properties in these segments with carrying amounts totalling $ 20,341 million (2024 $ 17,853 million ) where the headroom, based on the most recent impairment test performed in the year on those assets, was less than or equal to 20 %\",\n      \"amount\": 20341000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.035275,
+  "input_tokens": 5055,
+  "model": "claude-opus-4-5",
+  "output_tokens": 400,
+  "purpose": "WvM extraction chunk 39/79 (10 factors)",
+  "temperature": 0.0
+}

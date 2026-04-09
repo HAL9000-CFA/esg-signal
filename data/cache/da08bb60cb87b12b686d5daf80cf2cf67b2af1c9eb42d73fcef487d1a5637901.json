@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"The committee oversaw risk management and internal control processes, routinely reviewing and monitoring principal risks allocated to it by the board through a combination of business or function reviews and focused engagement with key stakeholders.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.026425,
+  "input_tokens": 4395,
+  "model": "claude-opus-4-5",
+  "output_tokens": 178,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

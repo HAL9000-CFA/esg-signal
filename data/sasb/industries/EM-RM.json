@@ -1,0 +1,127 @@
+{
+  "fetched_at": "2026-04-11T18:03:08.090434+00:00",
+  "data": {
+    "industry_code": "EM-RM",
+    "industry_name": "Oil & Gas \u2013 Refining & Marketing",
+    "industry_description": "Oil & Gas - Refining & Marketing (R&M) entities refine petroleum products, market oil and gas products, or operate gas stations, all of which comprise the downstream operations of the oil and gas value chain. The types of refinery products and crude oil inputs influence the complexity of the refining process used, with varied expenditure needs and intensity of environmental and social impacts.",
+    "industry_gics": [
+      {
+        "gic_code": 110,
+        "gic_name": "GHG Emissions",
+        "gic_description": "The category addresses direct (Scope 1) greenhouse gas (GHG) emissions that a company generates through its operations. This includes GHG emissions from stationary (e.g., factories, power plants) and mobile sources (e.g., trucks, delivery vehicles, planes), whether a result of combustion of fuel or non-combusted direct releases during activities such as natural resource extraction, power generation, land use, or biogenic processes. The category further includes management of regulatory risks, environmental compliance, and reputational risks and opportunities, as they related to direct GHG emissions. The seven GHGs covered under the Kyoto Protocol are included within the category\u2014carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur hexafluoride (SF6), and nitrogen trifluoride (NF3).",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "EM-RM-110a",
+            "topic_name": "Greenhouse Gas Emissions",
+            "topic_description": "Refining & Marketing (R&M) operations generate significant direct greenhouse gas (GHG) emissions from a variety of sources. Emissions primarily consist of carbon dioxide and methane from stationary fossil fuel combustion for energy supply. Energy costs are a significant share of refinery operating costs. GHGs also are released from process emissions, fugitive emissions resulting from leaks, emissions from venting and flaring, and from non-routine events such as equipment maintenance. The energy intensity of production, and therefore the GHG emissions intensity, can vary significantly depending on the type of crude oil feedstock used and refined product specifications. Entities that cost-effectively reduce GHG emissions from their operations may capture operational efficiencies. Such reductions also may mitigate the effects of increased fuel costs from regulations that limit\u2014or put a price on\u2014GHG emissions."
+          }
+        ]
+      },
+      {
+        "gic_code": 120,
+        "gic_name": "Air Quality",
+        "gic_description": "The category addresses management of air quality impacts resulting from stationary (e.g., factories, power plants) and mobile sources (e.g., trucks, delivery vehicles, planes) as well as industrial emissions. Relevant airborne pollutants include, but are not limited to, oxides of nitrogen (NOx), oxides of sulfur (SOx), volatile organic compounds (VOCs), heavy metals, particulate matter, and chlorofluorocarbons. The category does not include GHG emissions, which are addressed in a separate category.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "EM-RM-120a",
+            "topic_name": "Air Quality",
+            "topic_description": "Non-greenhouse gas (GHG) air emissions from Refining & Marketing (R&M) operations include air pollutants, which can create significant and localised environmental or health risks. Specific emissions of concern include sulphur dioxide, nitrogen oxides, hydrogen sulphide, particulate matter and VOCs. Releases occur from stationary combustion sources, storage vessels, flares and equipment leaks, and may also occur because of accidents. Human health impacts and financial consequences may be exacerbated the closer a facility is to population centres. Active management of the issue\u2014through technological and process improvements\u2014may allow entities to mitigate the effect of regulations and benefit from operational efficiencies that could result in reduced costs."
+          }
+        ]
+      },
+      {
+        "gic_code": 140,
+        "gic_name": "Water & Wastewater Management",
+        "gic_description": "The category addresses a company\u2019s water use, water consumption, wastewater generation, and other impacts of operations on water resources, which may be influenced by regional differences in the availability and quality of and competition for water resources. More specifically, it addresses management strategies including, but not limited to, water efficiency, intensity, and recycling. Lastly, the category also addresses management of wastewater treatment and discharge, including groundwater and aquifer pollution.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "EM-RM-140a",
+            "topic_name": "Water Management",
+            "topic_description": "Refineries can use large quantities of water depending on their size and refining process complexity. This water use exposes them to the risk of water scarcity, depending on their location, and related costs. Extraction of water from water-stressed regions or water contamination also may create tensions with local communities. Refinery operations require wastewater treatment and disposal, often via on-site wastewater treatment plants before discharge. Reducing water use and contamination through recycling and other water management strategies may permit entities to capture operational efficiencies and reduce operating costs. They also could minimise regulatory, water supply shortages and community-related disruptions on operations."
+          }
+        ]
+      },
+      {
+        "gic_code": 150,
+        "gic_name": "Waste & Hazardous Materials Management",
+        "gic_description": "The category addresses environmental issues associated with hazardous and non-hazardous waste generated by companies. It addresses a company\u2019s management of solid wastes in manufacturing, agriculture, and other industrial processes. It covers treatment, handling, storage, disposal, and regulatory compliance. The category does not cover emissions to air or wastewater nor does it cover waste from end-of-life of products, which are addressed in separate categories.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "EM-RM-150a",
+            "topic_name": "Hazardous Materials Management",
+            "topic_description": "As a by-product of their operations, Refining & Marketing (R&M) entities generate various forms of waste derived from the processing of petroleum products. Many of these substances are hazardous to human health and the environment and may be subject to regulation. Remediation of inactive or decommissioned sites may take many years to complete, and entities may accrue liabilities for past operations. Hazardous substance releases from underground storage tanks (USTs) used by refining facilities and gas stations can affect land redevelopment for abandoned or closed facilities. Spills and releases during operations can result in groundwater contamination and other negative impacts. R&M entities that reduce and recycle hazardous waste streams, as well as those that have effective and prompt clean-up and remediation measures in place for normal operations and decommissioned facilities, may reduce regulatory and litigation risks and associated costs."
+          }
+        ]
+      },
+      {
+        "gic_code": 320,
+        "gic_name": "Employee Health & Safety",
+        "gic_description": "The category addresses a company\u2019s ability to create and maintain a safe and healthy workplace environment that is free of injuries, fatalities, and illness (both chronic and acute). It is traditionally accomplished through implementing safety management plans, developing training requirements for employees and contractors, and conducting regular audits of their own practices as well as those of their subcontractors. The category further captures how companies ensure physical and mental health of workforce through technology, training, corporate culture, regulatory compliance, monitoring and testing, and personal protective equipment.",
+        "gic_dimension": "Human Capital",
+        "gic_topics": [
+          {
+            "topic_code": "EM-RM-320a",
+            "topic_name": "Workforce Health & Safety",
+            "topic_description": "Hazards associated with the operations of entities in the Refining & Marketing (R&M) industry may present risks to employee health and safety. Such hazards include the handling and processing of hydrocarbons, frequently at high temperatures and pressures during refining operations. Accidents or inadvertent exposures to chemicals and other hazards such as heat or noise may result in fatalities, severe injuries or illnesses. Releases of hydrocarbons or other hazardous substances resulting from accidents or leaks also can have negative consequences for neighbouring communities. An entity\u2019s ability to protect employee health and safety, and to create a culture of safety and well-being among employees at all levels, can help prevent accidents, mitigate costs and operational downtime, and enhance workforce productivity."
+          }
+        ]
+      },
+      {
+        "gic_code": 410,
+        "gic_name": "Product Design & Lifecycle Management",
+        "gic_description": "The category addresses incorporation of environmental, social, and governance (ESG) considerations in characteristics of products and services provided or sold by the company. It includes, but is not limited to, managing the lifecycle impacts of products and services, such as those related to packaging, distribution, use-phase resource intensity, and other environmental and social externalities that may occur during their use-phase or at the end of life. The category captures a company\u2019s ability to address customer and societal demand for more sustainable products and services as well as to meet evolving environmental and social regulation. It does not address direct environmental or social impacts of the company\u2019s operations nor does it address health and safety risks to consumers from product use, which are covered in other categories.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "EM-RM-410a",
+            "topic_name": "Product Specifications & Clean Fuel Blends",
+            "topic_description": "Some regulatory jurisdictions have implemented product specifications and renewable fuel blends, which pose significant compliance and operational risks for Refining & Marketing (R&M) entities. Entities may face long-term reductions in revenue from fossil fuel-based products and services because of GHG mitigation policies such as renewable fuel mandates or standards, as well as competition from non-fossil fuel products. To ensure regulatory compliance and position themselves for long-term competitiveness, some entities are investing in clean fuel production or purchasing ethanol and other renewable biofuels. Advanced biofuels and fuel technologies have lower lifecycle impacts than traditional biofuels, and they can be used to minimise future regulatory risks and public pressure. Although short-term costs to find commercially viable technologies can be significant, investments in R&D for such technologies could serve to support R&M entities\u2019 long-term profitability."
+          }
+        ]
+      },
+      {
+        "gic_code": 520,
+        "gic_name": "Competitive Behaviour",
+        "gic_description": "The category covers social issues associated with existence of monopolies, which may include, but are not limited to, excessive prices, poor quality of service, and inefficiencies. It addresses a company\u2019s management of legal and social expectation around monopolistic and anti-competitive practices, including issues related to bargaining power, collusion, price fixing or manipulation, and protection of patents and intellectual property (IP).",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "EM-RM-520a",
+            "topic_name": "Pricing Integrity & Transparency",
+            "topic_description": "Regulators are responsible for overseeing issues related to pricing integrity and transparency, which includes the potential for market manipulation by oil and gas entities, including Refining & Marketing (R&M) entities. Regulatory agencies focusing on refineries may investigate various competitive factors, including capacity utilisation and refinery maintenance decisions, product supply decisions, product margins, and capital planning, creating uncertainty regarding future enforcement. The focus of enforcement actions also may include prices reported to price index publishers, as well as potential price distortions through trading positions in physical transactions, and through swaps, futures and derivatives. Maintaining market integrity and ensuring transparency in product pricing can therefore reduce regulatory risks and liabilities for R&M entities and protect consumers from unfair pricing."
+          }
+        ]
+      },
+      {
+        "gic_code": 530,
+        "gic_name": "Management of the Legal & Regulatory Environment",
+        "gic_description": "The category addresses a company\u2019s approach to engaging with regulators in cases where conflicting corporate and public interests may have the potential for long-term adverse direct or indirect environmental and social impacts. The category addresses a company\u2019s level of reliance upon regulatory policy or monetary incentives (such as subsidies and taxes), actions to influence industry policy (such as through lobbying), overall reliance on a favorable regulatory environment for business competitiveness, and ability to comply with relevant regulations. It may relate to the alignment of management and investor views of regulatory engagement and compliance at large.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "EM-RM-530a",
+            "topic_name": "Management of the Legal & Regulatory Environment",
+            "topic_description": "The Refining & Marketing (R&M) industry is subject to numerous sustainability-related regulations and an often rapidly changing regulatory environment. Changes to the legal and regulatory environment may result in material effects on shareholder value. Entities in the industry regularly participate in the regulatory and legislative process on a wide variety of environmental and societal issues. Such engagement can result from entities seeking to ensure industry views are represented in the development of regulations affecting the industry as well as to represent shareholder interests. At the same time, such engagement to influence environmental laws and regulations may adversely affect entities\u2019 reputations and ultimately affect an entity\u2019s social licence to operate."
+          }
+        ]
+      },
+      {
+        "gic_code": 540,
+        "gic_name": "Critical Incident Risk Management",
+        "gic_description": "The category addresses the company\u2019s use of management systems and scenario planning to identify, understand, and prevent or minimize the occurrence of low-probability, high-impact accidents and emergencies with significant potential environmental and social externalities. It relates to the culture of safety at a company, its relevant safety management systems and technological controls, the potential human, environmental, and social implications of such events occurring, and the long-term effects to an organization, its workers, and society should these events occur.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "EM-RM-540a",
+            "topic_name": "Critical Incident Risk Management",
+            "topic_description": "The operations of Refining & Marketing (R&M) entities are often characterised by a high number of hazards, including the handling of flammable, volatile substances, the use of highly reactive chemicals, and the processing of fluids at high temperature and pressure. Accidental releases of hydrocarbons or other hazardous substances can have significant consequences for an entity\u2019s workforce, as well as external social and environmental consequences. In addition to effective process safety management practices, entities frequently prioritise developing a culture of safety to reduce the probability that accidents and other health and safety incidents will occur. If accidents and other emergencies do occur, entities with a strong safety culture often can detect and respond effectively to such incidents. A culture that engages and empowers employees and contractors to work with management to safeguard their own health, safety and well-being and prevent accidents may help entities reduce production downtime, mitigate costs, ensure workforce productivity and maintain their licence to operate."
+          }
+        ]
+      }
+    ]
+  }
+}

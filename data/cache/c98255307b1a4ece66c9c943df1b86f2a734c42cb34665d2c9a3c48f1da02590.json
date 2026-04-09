@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"we are aiming for the Scope 1 and 2 emissions from our operations \u2013 the majority of which are associated with the operating assets in our hydrocarbons portfolio (refining and upstream oil and gas combined) \u2013 to be 45-50 % lower at the end of 2030 than in 2019\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"six of our 16 major operating sites in 2025 were located in regions with high to extremely high water stress... we anticipate that our freshwater withdrawal in stressed catchments will be covered by freshwater management plans by 2028\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"The physical risks identified primarily relate to severe weather and often represent potential for increased drivers for safety and operational risks to our operations, particularly process safety, personal safety, and environmental risks\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"The physical risks identified primarily relate to severe weather and often represent potential for increased drivers for safety and operational risks to our operations, particularly process safety, personal safety, and environmental risks\"}\n]\n```",
+  "cost_usd": 0.029255000000000003,
+  "input_tokens": 4226,
+  "model": "claude-opus-4-5",
+  "output_tokens": 325,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

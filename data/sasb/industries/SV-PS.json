@@ -1,0 +1,49 @@
+{
+  "fetched_at": "2026-04-11T18:08:58.410772+00:00",
+  "data": {
+    "industry_code": "SV-PS",
+    "industry_name": "Professional & Commercial Services",
+    "industry_description": "The industry includes entities that rely on the unique skills and knowledge of their employees to serve a range of clients. Services are often provided on an assignment basis, where an individual or team is responsible for the delivery of services to clients. Offerings include, but are not limited to, management and administration consulting services, such as staffing and executive search services; legal, accounting, and tax preparation services; and financial and non-financial information services. Non-financial information service providers may specialise in an array of topics such as energy, healthcare, real estate, technology, and science. Financial information service entities include credit and rating agencies as well as data and portfolio analytics providers. Customers of professional and commercial service providers include private and public for-profit institutions and non-profit organisations.",
+    "industry_gics": [
+      {
+        "gic_code": 230,
+        "gic_name": "Data Security",
+        "gic_description": "The category addresses management of risks related to collection, retention, and use of sensitive, confidential, and/or proprietary customer or user data. It includes social issues that may arise from incidents such as data breaches in which personally identifiable information (PII) and other user or customer data may be exposed. It addresses a company\u2019s strategy, policies, and practices related to IT infrastructure, staff training, record keeping, cooperation with law enforcement, and other mechanisms used to ensure security of customer or user data.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "SV-PS-230a",
+            "topic_name": "Data Security",
+            "topic_description": "Entities in every segment of the industry are entrusted with customer data. Employment and temporary staffing agencies as well as data providers and consulting entities store, process and transmit increasing amounts of sensitive personal data about employees, clients and candidates. In addition, the clients of financial and non-financial services providers may handle sensitive information and share this information with professional and commercial services entities. The exposure of sensitive customer information through cybersecurity breaches, other malicious activities or employee negligence may result in significant risks such as identity fraud and theft. Data breaches may compromise client perception of the effectiveness of a service provider\u2019s security measures, which may result in reputational damage and affect an entity\u2019s ability to attract and retain clients adversely."
+          }
+        ]
+      },
+      {
+        "gic_code": 330,
+        "gic_name": "Employee Engagement, Diversity & Inclusion",
+        "gic_description": "The category addresses a company\u2019s ability to ensure that its culture and hiring and promotion practices embrace the building of a diverse and inclusive workforce that reflects the makeup of local talent pools and its customer base. It addresses the issues of discriminatory practices on the bases of race, gender, ethnicity, religion, sexual orientation, and other factors.",
+        "gic_dimension": "Human Capital",
+        "gic_topics": [
+          {
+            "topic_code": "SV-PS-330a",
+            "topic_name": "Workforce Diversity & Engagement",
+            "topic_description": "Developing a broad base of valued, respected and supported employees throughout an organisation is essential for the long-term growth prospects of professional and commercial services entities. Human capital is the primary source of revenue generation, contributing knowledge, talent, advice and various technical skills. Although financial and non-financial service providers may hire a diverse workforce among lower-level employees, they may lack diversity among senior management. Enhancing workforce diversity, particularly among management positions, may help entities attract and develop the best talent. Significant employee engagement, fair treatment and equitable levels of pay and advancement opportunities for all workers are all likely to contribute to increased productivity and performance through all levels of the entity."
+          }
+        ]
+      },
+      {
+        "gic_code": 510,
+        "gic_name": "Business Ethics",
+        "gic_description": "The category addresses the company\u2019s approach to managing risks and opportunities surrounding ethical conduct of business, including fraud, corruption, bribery and facilitation payments, fiduciary responsibilities, and other behaviour that may have an ethical component. This includes sensitivity to business norms and standards as they shift over time, jurisdiction, and culture. It addresses the company\u2019s ability to provide services that satisfy the highest professional and ethical standards of the industry, which means to avoid conflicts of interest, misrepresentation, bias, and negligence through training employees adequately and implementing policies and procedures to ensure employees provide services free from bias and error.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "SV-PS-510a",
+            "topic_name": "Professional Integrity",
+            "topic_description": "The business model of professional and commercial services entities is dependent on client trust and loyalty. To ensure long-term and mutually beneficial relationships, entities must provide services that meet the highest professional standards of the industry. Professional integrity is an important industry governance issue because the collective actions of professionals inside a single organisation may make the detection and prevention of conflicts of interest, bias or negligence more challenging. Training employees adequately, providing advice and distributing data free from bias and error, and taking other measures to ensure professional integrity, are important both for strengthening an entity\u2019s licence to operate as well as for attracting and retaining clients."
+          }
+        ]
+      }
+    ]
+  }
+}

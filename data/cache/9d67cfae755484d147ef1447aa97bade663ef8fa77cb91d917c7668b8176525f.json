@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"$20 billion disposal programme\",\n      \"amount\": 20000000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"achieving $2.8 billion of our $4-5 billion structural cost reduction target, which we have now increased to $5.5-6.5 billion\",\n      \"amount\": 2800000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"reduction_target\"\n    },\n    {\n      \"text\": \"structural cost reduction target, which we have now increased to $5.5-6.5 billion\",\n      \"amount\": 6500000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"reduction_target\"\n    },\n    {\n      \"text\": \"we have announced or completed over $11 billion of divestments in the first year\",\n      \"amount\": 11000000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.036455,
+  "input_tokens": 5376,
+  "model": "claude-opus-4-5",
+  "output_tokens": 383,
+  "purpose": "WvM extraction chunk 2/79 (10 factors)",
+  "temperature": 0.0
+}

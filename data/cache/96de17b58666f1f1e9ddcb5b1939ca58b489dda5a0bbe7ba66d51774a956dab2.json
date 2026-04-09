@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"The Board reviews updates to the Climate Transition Action Plan and progress with respect to it, based on reports provided by the Chair of the Corporate Responsibility Committee.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"VAGUE\", \"evidence\": \"We are taking more focused, urgent and systemic action in four priority areas: climate, nature, plastics and livelihoods.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"There is regular, ongoing investment in all aspects of Unilever's supply chain capabilities for customers globally, supporting delivery excellence and product availability.\"}\n]\n```",
+  "cost_usd": 0.030680000000000002,
+  "input_tokens": 4891,
+  "model": "claude-opus-4-5",
+  "output_tokens": 249,
+  "purpose": "Batch grade 6 ESG factors",
+  "temperature": 0.0
+}

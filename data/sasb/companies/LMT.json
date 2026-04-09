@@ -1,0 +1,16 @@
+{
+  "fetched_at": "2026-04-11T18:07:29.013174+00:00",
+  "data": {
+    "id": 90683,
+    "company_ticker": "AML",
+    "isin": "PLALMTL00023",
+    "company_name": "Alumetal SA",
+    "sector": "Extractives & Minerals Processing",
+    "sector_hs_value": "Extractives & Mineral Processing",
+    "industry_code": "EM-MM",
+    "industry": "Metals & Mining",
+    "industry_hs_value": "Metals & Mining",
+    "industry_description": "The Metals & Mining industry is involved in extracting metals and minerals, producing ores, quarrying stones, smelting and manufacturing metals, refining metals, and providing mining support activities. Entities also produce iron ores, rare earth metals, and precious metals and stones. Larger entities in this industry are integrated vertically \u2013 from mining across global operations to wholesaling metals to customers.",
+    "web_prepend_text": null
+  }
+}

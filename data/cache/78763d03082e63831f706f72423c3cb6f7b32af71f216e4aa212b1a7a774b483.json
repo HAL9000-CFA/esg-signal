@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"Water Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"an estimated amount for potential future claims relating to litigation arising from products which are no longer manufactured and sold by the Group\"},\n  {\"factor\": \"Product Design & Lifecycle Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Supply Chain Management\", \"grade\": \"VAGUE\", \"evidence\": \"The remaining costs comprise technology and supply chain projects\"}\n]\n```",
+  "cost_usd": 0.032850000000000004,
+  "input_tokens": 5870,
+  "model": "claude-opus-4-5",
+  "output_tokens": 140,
+  "purpose": "Batch grade 4 ESG factors",
+  "temperature": 0.0
+}

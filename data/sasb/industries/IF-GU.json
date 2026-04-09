@@ -1,0 +1,49 @@
+{
+  "fetched_at": "2026-04-11T18:03:10.842201+00:00",
+  "data": {
+    "industry_code": "IF-GU",
+    "industry_name": "Gas Utilities & Distributors",
+    "industry_description": "The Gas Utilities & Distributors industry consists of gas distribution and marketing entities. Gas distribution involves operating local, low-pressure pipes to transfer natural gas from larger transmission pipes to end users. Gas marketing entities are gas brokers that aggregate and deliver natural gas in quantities that meet the needs of various customers, generally through other entities\u2019 transmission and distribution lines. A relatively smaller portion of this industry is involved in propane gas distribution; therefore, this standard is focused on natural gas distribution. Both types of gas are used for heating and cooking by residential, commercial and industrial customers. In regulated markets, the utility is granted a full monopoly over the distribution and sale of natural gas. A regulator must approve the rates utilities charge to prevent the abuse of their monopoly position. In deregulated markets, distribution and marketing are separated legally, and customers have a choice of which entity from which to buy their gas. In this case, a common carrier utility is guaranteed a monopoly only over distribution and is required legally to transmit all gas equitably along its pipes for a fixed fee. Overall, entities must provide safe, reliable, low-cost gas, while effectively managing their social and environmental impacts, such as community safety and methane emissions.",
+    "industry_gics": [
+      {
+        "gic_code": 240,
+        "gic_name": "Access & Affordability",
+        "gic_description": "The category addresses a company\u2019s ability to ensure broad access to its products and services, specifically in the context of underserved markets and/or population groups. It includes the management of issues related to universal needs, such as the accessibility and affordability of health care, financial services, utilities, education, and telecommunications.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "IF-GU-240a",
+            "topic_name": "Energy Affordability",
+            "topic_description": "An objective of gas utilities is to deliver natural gas to customers in a safe, reliable and environmentally responsible manner. Entities in the industry manage these potentially competing priorities while maintaining favourable relations with customers and regulators\u2014and ultimately to earn appropriate shareholder returns. From the utility customer perspective, the affordability of energy is challenging to balance, because it often conflicts with other core objectives. Utility energy bills generally are perceived to be increasingly more expensive for low-income customers (affordability is determined by both the net cost of energy bills and the underlying economics of customers). Ensuring utility bills remain affordable is crucial for utilities in building trust (intangible asset value) with regulators and customers. The quality of regulatory relations is an important value driver for utilities, and one of the issues analysed closely by investment analysts. Regulators\u2019 willingness, or lack thereof, to grant rate requests, rate structure modifications, cost recovery and allowed returns is a primary determinant of financial performance and investment risk. Effectively managing affordability may provide opportunities to grow capital investment, revise rate structures favourably and increase allowed returns. Furthermore, utilities that ineffectively manage affordability increasingly face customers reducing their reliance upon natural gas (or reducing energy needs) and pursuing alternative energy sources (for example, industrial customers\u2019 use of combined heat and power). Managing affordability involves operating an efficient business with a comprehensive, long-term strategy, as well as working closely with regulators and public policymakers on rate structures and, potentially, bill-assistance programmes. Although utility business models and rate structures largely determine the precise nature of the financial effects, affordability is a critical business issue for utilities managing, maintaining and growing their customer bases, building intangible asset value, creating investment and return opportunities, and ultimately delivering shareholder returns."
+          }
+        ]
+      },
+      {
+        "gic_code": 420,
+        "gic_name": "Business Model Resilience",
+        "gic_description": "The category addresses an industry\u2019s capacity to manage risks and opportunities associated with incorporating social, environmental, and political transitions into long-term business model planning. This includes responsiveness to the transition to a low-carbon and climate-constrained economy, as well as growth and creation of new markets among unserved and underserved socio-economic populations. The category highlights industries in which evolving environmental and social realities may challenge companies to fundamentally adapt or may put their business models at risk.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "IF-GU-420a",
+            "topic_name": "End-Use Efficiency",
+            "topic_description": "Natural gas produces fewer greenhouse gas (GHG) emissions than other fossil fuels. Expanding its use in the economy may be an important strategy for many governments and regulators striving to reduce GHG emissions. However, despite the relatively lower emissions, the natural gas value chain still produces meaningful levels of GHG emissions overall. As policymakers and regulators seek to mitigate climate change, the efficient consumption of natural gas will be an important long-term theme. Energy efficiency is a low-lifecycle-cost method to reduce greenhouse gas (GHG) emissions. Utilities can offer customers a wide range of options to promote energy efficiency, including providing rebates for energy-efficient appliances, weatherising customers\u2019 homes and educating customers on energy saving methods. Overall, entities that sponsor efficiency initiatives may reduce the downside risks from demand fluctuations, gain returns on needed investments, decrease operating costs and earn higher risk-adjusted returns over the long term."
+          }
+        ]
+      },
+      {
+        "gic_code": 540,
+        "gic_name": "Critical Incident Risk Management",
+        "gic_description": "The category addresses the company\u2019s use of management systems and scenario planning to identify, understand, and prevent or minimize the occurrence of low-probability, high-impact accidents and emergencies with significant potential environmental and social externalities. It relates to the culture of safety at a company, its relevant safety management systems and technological controls, the potential human, environmental, and social implications of such events occurring, and the long-term effects to an organization, its workers, and society should these events occur.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "IF-GU-540a",
+            "topic_name": "Integrity of Gas Delivery Infrastructure",
+            "topic_description": "Operating a vast network of gas pipelines, equipment and storage facilities requires a multifaceted, long-term approach to ensuring infrastructure integrity and managing related risks. Although customers depend on reliable gas supplies, entities manage substantial risks\u2014including those related to human health, property and greenhouse gas (GHG) emissions\u2014that result from operating gas distribution networks and related infrastructure. Ageing infrastructure, inadequate monitoring and maintenance, and other operational factors may result in gas leaks. Gas leak safety-related risks, such as losses of containment, may result in fires or explosions that can be particularly dangerous in urban areas where entities often operate. Furthermore, gas leaks also result in fugitive emissions (methane), causing adverse environmental impacts. Regulated gas utilities generally incur no direct costs for gas leaks, because the cost of gas typically is passed on to customers (though this may vary by region). However, gas leaks that result in safety-related risks or fugitive emissions may affect entities financially through a variety of regulatory, legal and product demand channels. Accidents, particularly fatal accidents, may result in negligence claims against entities, leading to costly court battles and fines. GHG emissions may result in increased regulatory scrutiny\u2014a critical element directly connected to financial performance, given the importance of regulatory relations\u2014and potential fines and penalties. Importantly, regulated gas utilities can financially benefit from capital investment opportunities to improve performance and mitigate risks related to safety and emissions, which can be factored into their rate base. Entities manage such risks through pipeline replacements, regular inspections and monitoring, employee training and emergency preparedness, investments in technology, and other strategies such as working closely with regulators. In response to concerns about ageing infrastructure, many entities are seeking ways to expedite the replacement permitting and approval process, especially in cases where pipelines are located near densely populated areas."
+          }
+        ]
+      }
+    ]
+  }
+}

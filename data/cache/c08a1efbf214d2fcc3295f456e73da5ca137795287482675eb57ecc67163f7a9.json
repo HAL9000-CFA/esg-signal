@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates strong disclosure practices for ecological impacts, with quantified reporting on oil spills (110 in 2025, up from 96 in 2024), and regulatory records from the Environment Agency show no pollution violations across seven monitored entries. The words-to-money alignment is robust, with all 11 extracted commitments showing consistency between stated ambitions and financial backing. However, talent market signals suggest weaker positioning, with employee sentiment data indicating below-average perception of the company's ecological credentials\u2014a potential leading indicator that warrants monitoring despite the otherwise credible disclosure and regulatory profile.",
+  "cost_usd": 0.005945000000000001,
+  "input_tokens": 554,
+  "model": "claude-opus-4-5",
+  "output_tokens": 127,
+  "purpose": "Narrative synthesis: Ecological Impacts",
+  "temperature": 0.2
+}

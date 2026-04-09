@@ -1,0 +1,16 @@
+{
+  "fetched_at": "2026-04-11T18:07:29.510889+00:00",
+  "data": {
+    "id": 188845,
+    "company_ticker": "J",
+    "isin": "US46982L1089",
+    "company_name": "Jacobs Solutions Inc",
+    "sector": "Services",
+    "sector_hs_value": "Services",
+    "industry_code": "SV-PS",
+    "industry": "Professional & Commercial Services",
+    "industry_hs_value": "Professional & Commercial Services",
+    "industry_description": "The industry includes entities that rely on the unique skills and knowledge of their employees to serve a range of clients. Services are often provided on an assignment basis, where an individual or team is responsible for the delivery of services to clients. Offerings include, but are not limited to, management and administration consulting services, such as staffing and executive search services; legal, accounting, and tax preparation services; and financial and non-financial information services. Non-financial information service providers may specialise in an array of topics such as energy, healthcare, real estate, technology, and science. Financial information service entities include credit and rating agencies as well as data and portfolio analytics providers. Customers of professional and commercial service providers include private and public for-profit institutions and non-profit organisations.",
+    "web_prepend_text": null
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "fetched_at": "2026-04-11T18:03:06.462453+00:00",
+  "data": {
+    "industry_code": "FN-CB",
+    "industry_name": "Commercial Banks",
+    "industry_description": "Commercial banks accept deposits and make loans to individuals and corporations, and engage in lending to infrastructure, real estate and other projects. By providing these services, the industry serves an essential role in the functioning of global economies and in facilitating the transfer of financial resources to their most productive capacity. The industry is driven by the volume of deposits, quality of loans made, the economic environment and interest rates. The risk from mismatched assets and liabilities further characterises the industry. The regulatory environment governing the commercial banking industry witnessed significant changes in the wake of the 2008 global financial crisis and continues to evolve today. These and other regulatory trends may affect performance. Commercial banks with global operations must manage new regulations in many jurisdictions that are creating regulatory uncertainty, particularly regarding the consistent application of new rules.",
+    "industry_gics": [
+      {
+        "gic_code": 230,
+        "gic_name": "Data Security",
+        "gic_description": "The category addresses management of risks related to collection, retention, and use of sensitive, confidential, and/or proprietary customer or user data. It includes social issues that may arise from incidents such as data breaches in which personally identifiable information (PII) and other user or customer data may be exposed. It addresses a company\u2019s strategy, policies, and practices related to IT infrastructure, staff training, record keeping, cooperation with law enforcement, and other mechanisms used to ensure security of customer or user data.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "FN-CB-230a",
+            "topic_name": "Data Security",
+            "topic_description": "Ensuring personal financial data privacy and security is an essential responsibility of Commercial Banks. Entities that fail to safeguard customer data may be susceptible to decreased revenue and consumer confidence. As the growth in mobile banking and cloud storage continues and more bank operations become technology- and internet-dependent, data security management becomes increasingly important. Sophisticated technology and continuous staff training are essential amid growing cybersecurity threats. The metrics for this disclosure topic focus on providing more detail on efforts related to safeguarding data against emerging and continuously evolving cybersecurity threats and technologies, and security breaches compromising customers\u2019 information. Enhanced disclosure on management strategies to address these risks may permit shareholders to understand how commercial banks are protecting shareholder value."
+          }
+        ]
+      },
+      {
+        "gic_code": 240,
+        "gic_name": "Access & Affordability",
+        "gic_description": "The category addresses a company\u2019s ability to ensure broad access to its products and services, specifically in the context of underserved markets and/or population groups. It includes the management of issues related to universal needs, such as the accessibility and affordability of health care, financial services, utilities, education, and telecommunications.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "FN-CB-240a",
+            "topic_name": "Financial Inclusion & Capacity Building",
+            "topic_description": "As their primary business activity, commercial banks must continuously balance their capacity building efforts with the risks and opportunities associated with lending to unbanked, underbanked or underserved customers. Emerging financing models and technologies provide banks with an opportunity to offer products and services in previously underserved markets and obtain additional sources of revenue. Entities that can meet the need to extend credit and financial services to low-income populations and small businesses while avoiding predatory and irresponsible lending practices may create long-term value and improve brand reputation. These services also should be complemented by efforts to improve financial literacy, which will assist customers in making informed decisions. By disclosing their approach to financial inclusion and capacity building, commercial banks can provide investors with decision-useful information for assessing banks\u2019 ability to ensure long-term, sustainable value creation."
+          }
+        ]
+      },
+      {
+        "gic_code": 410,
+        "gic_name": "Product Design & Lifecycle Management",
+        "gic_description": "The category addresses incorporation of environmental, social, and governance (ESG) considerations in characteristics of products and services provided or sold by the company. It includes, but is not limited to, managing the lifecycle impacts of products and services, such as those related to packaging, distribution, use-phase resource intensity, and other environmental and social externalities that may occur during their use-phase or at the end of life. The category captures a company\u2019s ability to address customer and societal demand for more sustainable products and services as well as to meet evolving environmental and social regulation. It does not address direct environmental or social impacts of the company\u2019s operations nor does it address health and safety risks to consumers from product use, which are covered in other categories.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "FN-CB-410a",
+            "topic_name": "Incorporation of Environmental, Social, and Governance Factors in Credit Analysis",
+            "topic_description": "As financial intermediaries, commercial banks contribute to significant positive and negative environmental and social externalities through their lending practices. Environmental, social and governance (ESG) factors can have material implications for the underlying entities, assets and projects to which commercial banks lend across a range of industries. Therefore, entities increasingly must examine ESG factors when determining the quality of collateral. Commercial banks also may enable positive environmental and social externalities to generate significant revenue streams through their lending practices. Commercial banks that fail to address these risks and opportunities could face diminished returns and reduced value for shareholders. Commercial banks should subsequently disclose how ESG factors are integrated into lending processes and the current level of portfolio risk associated with specific sustainability trends. Specifically, investor and regulatory pressure is mounting for banks to disclose how they address climate change related risks."
+          },
+          {
+            "topic_code": "FN-CB-410b",
+            "topic_name": "Financed Emissions",
+            "topic_description": "Entities participating in commercial banking activities face risks and opportunities related to the greenhouse gas emissions associated with those activities. Counterparties, borrowers or investees with higher emissions might be more susceptible to risks associated with technological changes, shifts in supply and demand and policy change which in turn can impact the prospects of a financial institution that is providing financial services to these entities. These risks and opportunities can arise in the form of credit risk, market risk, reputational risk and other financial and operational risks. For example, credit risk might arise in relation to financing clients affected by increasingly stringent carbon taxes, fuel efficiency regulations or other policies; credit risk might also arise through related technological shifts. Reputational risk might arise from financing fossil-fuel projects. Entities participating in commercial banking activities are increasingly monitoring and managing such risks by measuring their financed emissions. This measurement serves as an indicator of an entity\u2019s exposure to climate-related risks and opportunities and how it might need to adapt its financial activities over time."
+          }
+        ]
+      },
+      {
+        "gic_code": 510,
+        "gic_name": "Business Ethics",
+        "gic_description": "The category addresses the company\u2019s approach to managing risks and opportunities surrounding ethical conduct of business, including fraud, corruption, bribery and facilitation payments, fiduciary responsibilities, and other behaviour that may have an ethical component. This includes sensitivity to business norms and standards as they shift over time, jurisdiction, and culture. It addresses the company\u2019s ability to provide services that satisfy the highest professional and ethical standards of the industry, which means to avoid conflicts of interest, misrepresentation, bias, and negligence through training employees adequately and implementing policies and procedures to ensure employees provide services free from bias and error.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "FN-CB-510a",
+            "topic_name": "Business Ethics",
+            "topic_description": "The regulatory environment surrounding the Commercial Banks industry continues to evolve internationally. Entities must adhere to a complex and often inconsistent set of rules relating to performance and conduct, as well as provide disclosure on issues including insider trading, antitrust behaviour, price fixing and market manipulation. Entities are subject to strict legal requirements against tax evasion, fraud, money laundering and corrupt practices. In some jurisdictions, enhanced rewards for whistle-blowers may increase the number of complaints brought to regulators. Entities that ensure regulatory compliance through robust internal controls may build trust with clients, increase revenue and protect shareholder value by minimising losses incurred because of legal proceedings."
+          }
+        ]
+      },
+      {
+        "gic_code": 550,
+        "gic_name": "Systemic Risk Management",
+        "gic_description": "The category addresses the company\u2019s contributions to or management of systemic risks resulting from large-scale weakening or collapse of systems upon which the economy and society depend. This includes financial systems, natural resource systems, and technological systems. It addresses the mechanisms a company has in place to reduce its contributions to systemic risks and to improve safeguards that may mitigate the impacts of systemic failure. For financial institutions, the category also captures the company\u2019s ability to absorb shocks arising from financial and economic stress and meet stricter regulatory requirements related to the complexity and interconnectedness of companies in the industry.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "FN-CB-550a",
+            "topic_name": "Systemic Risk Management",
+            "topic_description": "Commercial Bank entities that fail to manage risks to capital effectively may suffer significant losses while increasing their liabilities. Because of the interconnectedness of the global financial system, these failures can contribute to significant market disruption and financial crises. The systemic interconnectedness of financial institutions has become a central concern for regulators. As a result, many jurisdictions require that banks undergo supervised stress tests to evaluate whether the entity has sufficient capital reserves and liquidity to absorb losses, continue operations and meet obligations during adverse economic and financial conditions. Failure to meet regulatory requirements may lead to penalties and substantially increased future compliance costs. Commercial banks should improve their disclosures by measuring how well they can absorb shocks arising from systemic stresses to demonstrate how risks associated with their size, complexity, interconnectedness, substitutability and cross-jurisdictional activity are being managed. Entities that commit to enhanced disclosures may experience improved investor and shareholder confidence, potentially leading to increased revenues."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"Water Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"the production of safe and high-quality products\"},\n  {\"factor\": \"Product Design & Lifecycle Management\", \"grade\": \"VAGUE\", \"evidence\": \"data used to model lifecycle footprints is typically industry-standard data or estimates rather than relating to individual suppliers; and lifecycle models, such as the Group's, cover many but not all products and markets\"},\n  {\"factor\": \"Supply Chain Management\", \"grade\": \"VAGUE\", \"evidence\": \"disruptions in Unilever's supply chain and distribution\"}\n]\n```",
+  "cost_usd": 0.029060000000000002,
+  "input_tokens": 4967,
+  "model": "claude-opus-4-5",
+  "output_tokens": 169,
+  "purpose": "Batch grade 4 ESG factors",
+  "temperature": 0.0
+}

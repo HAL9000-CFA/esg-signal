@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [\n    {\n      \"text\": \"Payables related to the Gulf of America oil spill include amounts payable under the 2016 consent decree and settlement agreement with the United States and five Gulf coast states\",\n      \"amount\": 7255000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"net cash outflow of $1,169 million (2024 outflow of $1,192 million, 2023 outflow of $1,280 million) related to the Gulf of America oil spill\",\n      \"amount\": 1169000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ],\n  \"Critical Incident Risk Management\": [\n    {\n      \"text\": \"Payables related to the Gulf of America oil spill 1,520 5,735\",\n      \"amount\": 7255000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    }\n  ]\n}\n```",
+  "cost_usd": 0.03798,
+  "input_tokens": 5791,
+  "model": "claude-opus-4-5",
+  "output_tokens": 361,
+  "purpose": "WvM extraction chunk 48/79 (10 factors)",
+  "temperature": 0.0
+}

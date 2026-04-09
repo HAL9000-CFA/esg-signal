@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Our combined Scope 1 and 2 emissions were 34.3 MtCO2e in 2025 \u2013 an increase from 33.6 MtCO2e in 2024... In 2025 our Scope 3 category 11 emissions were 471 MtCO2e... We achieved a reduction of 37% against a targeted 20% reduction in our operational emissions by end-2025\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"VAGUE\", \"evidence\": \"Our aim is to reduce our net freshwater use in stressed catchments where we operate.\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"In our TravelCenters of America business, we are progressing a targeted business improvement plan, focused on strengthening safety and operational performance\"}\n]\n```",
+  "cost_usd": 0.03397,
+  "input_tokens": 5379,
+  "model": "claude-opus-4-5",
+  "output_tokens": 283,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

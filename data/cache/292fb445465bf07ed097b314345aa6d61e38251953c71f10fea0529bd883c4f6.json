@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "Unilever's Business Ethics credibility assessment is constrained by limited evidence, with only two of five streams providing data. The talent stream suggests weak ethical culture signals, with employee sentiment scoring low despite moderate sample confidence from predominantly senior roles. The absence of disclosure content and the exclusion of regulatory, monetary commitment, and supply chain evidence means this assessment reflects an incomplete picture rather than a definitive judgment of governance practices.",
+  "cost_usd": 0.00442,
+  "input_tokens": 444,
+  "model": "claude-opus-4-5",
+  "output_tokens": 88,
+  "purpose": "Narrative synthesis: Business Ethics",
+  "temperature": 0.2
+}

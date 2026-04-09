@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "UNILEVER PLC receives a low credibility score for Energy Management, though interpretation requires caution given data limitations. The company has not disclosed energy management metrics, and no monetary commitments were identified, suggesting a gap between public positioning and verifiable action. However, talent signals offer a moderately positive indication, with hiring activity showing some emphasis on energy-related roles, though the sample size (n=12) provides only medium confidence in this finding\u2014regulatory and supply chain evidence streams were excluded rather than reflecting poor performance.",
+  "cost_usd": 0.004945000000000001,
+  "input_tokens": 439,
+  "model": "claude-opus-4-5",
+  "output_tokens": 110,
+  "purpose": "Narrative synthesis: Energy Management",
+  "temperature": 0.2
+}

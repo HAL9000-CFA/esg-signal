@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"Water Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"Our key focus is to continue delivering consistent growth with strong profit and cash generation... We are streamlining and optimising our portfolio and accelerating science-led innovation built around products rooted in great taste.\"},\n  {\"factor\": \"Product Design & Lifecycle Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Since 2019, we have removed more than 25% of SKUs, reduced ingredients by 20% and streamlined formulations by nearly a third.\"},\n  {\"factor\": \"Supply Chain Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Our scope 3 decarbonisation efforts continue to prioritise supplier engagement, such as our Supplier Climate Programme, which now includes almost 200 suppliers and 40% of raw material scope 3 emissions.\"}\n]\n```",
+  "cost_usd": 0.030185000000000003,
+  "input_tokens": 4897,
+  "model": "claude-opus-4-5",
+  "output_tokens": 228,
+  "purpose": "Batch grade 4 ESG factors",
+  "temperature": 0.0
+}

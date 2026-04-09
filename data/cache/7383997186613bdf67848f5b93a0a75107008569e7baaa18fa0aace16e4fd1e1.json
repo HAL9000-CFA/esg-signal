@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n[]\n```",
+  "cost_usd": 0.09655500000000002,
+  "input_tokens": 19266,
+  "model": "claude-opus-4-5",
+  "output_tokens": 9,
+  "purpose": "Commitment extraction: Employee Health & Safety",
+  "temperature": 0.0
+}

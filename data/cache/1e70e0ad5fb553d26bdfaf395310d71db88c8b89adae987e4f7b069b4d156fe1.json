@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [\n    {\n      \"text\": \"Environmental operating expenditure of $435 million in 2025\",\n      \"amount\": 435000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"opex\"\n    },\n    {\n      \"text\": \"Environmental capital expenditure of $443 million in 2025\",\n      \"amount\": 443000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"capex\"\n    },\n    {\n      \"text\": \"Clean-up costs were $16 million in 2025\",\n      \"amount\": 16000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"opex\"\n    },\n    {\n      \"text\": \"Additions to environmental remediation provision 325\",\n      \"amount\": 325000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"Increase (decrease) in decommissioning provision 528\",\n      \"amount\": 528000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": [\n    {\n      \"text\": \"Clean-up costs were $16 million in 2025 ( 2024 $20 million ), representing oil spill clean-up costs and other associated remediation and disposal costs\",\n      \"amount\": 16000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"opex\"\n    }\n  ]\n}\n```",
+  "cost_usd": 0.036660000000000005,
+  "input_tokens": 4797,
+  "model": "claude-opus-4-5",
+  "output_tokens": 507,
+  "purpose": "WvM extraction chunk 66/79 (10 factors)",
+  "temperature": 0.0
+}

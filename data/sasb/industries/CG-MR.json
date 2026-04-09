@@ -1,0 +1,75 @@
+{
+  "fetched_at": "2026-04-11T18:03:09.455979+00:00",
+  "data": {
+    "industry_code": "CG-MR",
+    "industry_name": "Multiline and Specialty Retailers & Distributors",
+    "industry_description": "The Multiline and Specialty Retailers & Distributors industry encompasses a variety of retailing categories such as department stores, mass merchants, home products stores and warehouse clubs, as well as a smaller segment of distributors like electronics wholesalers and automotive wholesalers. These entities (except for the distribution segment) commonly manage global supply chains to anticipate consumer demands, keep costs low and keep products stocked in their brick-and-mortar storefronts. This is a highly competitive industry in which each category generally has a small number of important players characterised by generally low margins. The relatively substitutable nature of retail makes entities in this industry especially susceptible to reputational risks.",
+    "industry_gics": [
+      {
+        "gic_code": 130,
+        "gic_name": "Energy Management",
+        "gic_description": "The category addresses environmental impacts associated with energy consumption. It addresses the company\u2019s management of energy in manufacturing and/or for provision of products and services derived from utility providers (grid energy) not owned or controlled by the company. More specifically, it includes management of energy efficiency and intensity, energy mix, as well as grid reliance. Upstream (e.g., suppliers) and downstream (e.g., product use) energy use is not included in the scope.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "CG-MR-130a",
+            "topic_name": "Energy Management in Retail & Distribution",
+            "topic_description": "Entities in this industry require significant amounts of energy for retail facilities and warehouses. An increasing number of greenhouse gas (GHG) emissions regulations and incentives for energy efficiency and renewable energy may result in price increases for conventional electricity sources while making alternative sources more cost-competitive. Fossil fuel-based energy production and consumption contribute to significant environmental impacts, including climate change and pollution. Energy sourcing decisions can create trade-offs related to energy supply costs and operational reliability. Overall energy efficiency and access to alternative energy sources are becoming increasingly important for entities to manage. Efficiency in this area can have financial implications through direct cost savings, which are particularly beneficial in this low-margin industry."
+          }
+        ]
+      },
+      {
+        "gic_code": 230,
+        "gic_name": "Data Security",
+        "gic_description": "The category addresses management of risks related to collection, retention, and use of sensitive, confidential, and/or proprietary customer or user data. It includes social issues that may arise from incidents such as data breaches in which personally identifiable information (PII) and other user or customer data may be exposed. It addresses a company\u2019s strategy, policies, and practices related to IT infrastructure, staff training, record keeping, cooperation with law enforcement, and other mechanisms used to ensure security of customer or user data.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "CG-MR-230a",
+            "topic_name": "Data Security",
+            "topic_description": "Consumers trust retail entities with their financial and personal data every time they make a noncash transaction with a credit or debit card or other method. Credit cards and debit cards have eclipsed cash and cheques as consumers\u2019 preferred payment methods in many jurisdictions around the world. In these noncash transactions, retailers build up a relationship of trust with consumers, assuring them of the safety of their personal information. Data breaches can occur both through breaches of the physical payment technology, called point-of-sales breaches, as well as through cyber-attacks. As consumers become more educated about the threats of cybercrime, their perceptions of an entity\u2019s cybersecurity will become increasingly important to maintain or gain market share. Retailers that prevent major data breaches also can avoid harming brand value and reduce liabilities."
+          }
+        ]
+      },
+      {
+        "gic_code": 310,
+        "gic_name": "Labour Practices",
+        "gic_description": "The category addresses the company\u2019s ability to uphold commonly accepted labour standards in the workplace, including compliance with labour laws and internationally accepted norms and standards. This includes, but is not limited to, ensuring basic human rights related to child labour, forced or bonded labour, exploitative labour, fair wages and overtime pay, and other basic workers\u2019 rights. It also includes minimum wage policies and provision of benefits, which may influence how a workforce is attracted, retained, and motivated. The category further addresses a company\u2019s relationship with organized labour and freedom of association.",
+        "gic_dimension": "Human Capital",
+        "gic_topics": [
+          {
+            "topic_code": "CG-MR-310a",
+            "topic_name": "Labour Practices",
+            "topic_description": "The retail industry\u2019s significance to the global economy as a major employer often puts it at the centre of public labour-practice discussions. These discussions can have serious reputational implications for entities in the industry if their labour practices are poor. The low average wages typical of the industry, which help entities maintain low prices on products, may increase these labour-related risks. Since customers regularly interact directly with retail employees, entities may experience decreased market share and revenue from negative consumer sentiment because of poor labour relations. Entities can enhance labour productivity and employee engagement by taking a long-term approach to managing workers in areas such as compensation and workers\u2019 rights. In addition to mitigating risks, improvements in labour productivity may strengthen an entity\u2019s reputation and reduce its cost of capital."
+          }
+        ]
+      },
+      {
+        "gic_code": 330,
+        "gic_name": "Employee Engagement, Diversity & Inclusion",
+        "gic_description": "The category addresses a company\u2019s ability to ensure that its culture and hiring and promotion practices embrace the building of a diverse and inclusive workforce that reflects the makeup of local talent pools and its customer base. It addresses the issues of discriminatory practices on the bases of race, gender, ethnicity, religion, sexual orientation, and other factors.",
+        "gic_dimension": "Human Capital",
+        "gic_topics": [
+          {
+            "topic_code": "CG-MR-330a",
+            "topic_name": "Workforce Diversity & Inclusion",
+            "topic_description": "The Multiline and Specialty Retailers & Distributors industry is consumer-facing and relies on communicating effectively with customers during the sales process and adapting to changing consumer demands for products. As many developed markets undergo massive demographic shifts, including increases in minority populations, entities in this industry can benefit from ensuring that their culture and hiring and promotion practices embrace building a diverse workforce for management and junior staff. Retailers that respond to this demographic shift and employ staff who can recognise the needs of diverse populations may be better positioned to capture demand from consumer markets whose members have traditionally been overlooked, providing entities a competitive advantage. Furthermore, such entities may benefit from improved reputations among consumers, as well as decreased legal and regulatory risks."
+          }
+        ]
+      },
+      {
+        "gic_code": 410,
+        "gic_name": "Product Design & Lifecycle Management",
+        "gic_description": "The category addresses incorporation of environmental, social, and governance (ESG) considerations in characteristics of products and services provided or sold by the company. It includes, but is not limited to, managing the lifecycle impacts of products and services, such as those related to packaging, distribution, use-phase resource intensity, and other environmental and social externalities that may occur during their use-phase or at the end of life. The category captures a company\u2019s ability to address customer and societal demand for more sustainable products and services as well as to meet evolving environmental and social regulation. It does not address direct environmental or social impacts of the company\u2019s operations nor does it address health and safety risks to consumers from product use, which are covered in other categories.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "CG-MR-410a",
+            "topic_name": "Product Sourcing, Packaging & Marketing",
+            "topic_description": "Entities in the Multiline and Specialty Retailers & Distributors industry sell a wide array of products including electronics, clothing, furnishings and cosmetics, all of which have environmental and social impacts throughout their lifecycles. The size and buying power of many entities in this industry allow them to work with their suppliers to source products and packaging with lower lifecycle environmental and social impacts. Entities that perform well in this regard may benefit from increased customer demand and improved margins. To take a proactive approach to engaging suppliers, entities in the industry may employ strategies such as using certification standards and reducing the environmental impacts of packaging."
+          }
+        ]
+      }
+    ]
+  }
+}

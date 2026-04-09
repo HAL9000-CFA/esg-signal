@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates strong disclosure practices for critical incident risk management, with quantified reporting showing 27 tier 1 and 2 process safety events in the current period compared to 38 in 2024. However, talent signals suggest weak organizational capacity in this area, with minimal relevant hiring activity and no senior-level recruitment detected, though this finding carries limited confidence given the small sample size. The regulatory stream returned no data from NRC sources, which represents ambiguous absence rather than confirmed compliance, and no monetary commitments were extracted from the text window, leaving the financial backing for incident management capabilities unassessed.",
+  "cost_usd": 0.005975,
+  "input_tokens": 550,
+  "model": "claude-opus-4-5",
+  "output_tokens": 129,
+  "purpose": "Narrative synthesis: Critical Incident Risk Management",
+  "temperature": 0.2
+}

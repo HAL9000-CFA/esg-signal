@@ -1,0 +1,31 @@
+{
+  "fetched_at": "2026-04-11T20:40:21.485756+00:00",
+  "data": [
+    {
+      "id": 119769,
+      "company_ticker": "MSFT",
+      "isin": "JO3124311015",
+      "company_name": "Masafat For Specialized Transportation",
+      "sector": "Resource Transformation",
+      "sector_hs_value": "Resource Transformation",
+      "industry_code": "RT-IG",
+      "industry": "Industrial Machinery & Goods",
+      "industry_hs_value": "Industrial Machinery & Goods",
+      "industry_description": "Industrial machinery and goods industry entities manufacture equipment for a variety of industries including construction, agriculture, energy, utility, mining, manufacturing, automotive and transportation. Products include engines, earth-moving equipment, trucks, tractors, ships, industrial pumps, locomotives and turbines. Machinery manufacturers use large amounts of raw materials for production, including steel, plastics, rubber, paints and glass. Manufacturers also may machine and cast parts before final assembly. Demand in the industry is tied closely to industrial production, while government emissions standards and customer demand are encouraging innovations to improve energy efficiency and limit air emissions during product use.",
+      "web_prepend_text": null
+    },
+    {
+      "id": 120916,
+      "company_ticker": "MSFT",
+      "isin": "US5949181045",
+      "company_name": "Microsoft Corporation",
+      "sector": "Technology & Communications",
+      "sector_hs_value": "Technology & Communications",
+      "industry_code": "TC-SI",
+      "industry": "Software & IT Services",
+      "industry_hs_value": "Software & IT Services",
+      "industry_description": "The Software & Information Technology (IT) Services industry offers products and services globally to retail, business and government customers, and includes entities that develop and sell applications software, infrastructure software and middleware. The industry generally is competitive but with dominant players in some segments. Although relatively immature, the industry is characterised by high-growth entities that place a heavy emphasis on innovation and depend on human and intellectual capital. The industry also includes IT services entities delivering specialised IT functions, such as consulting and outsourced services. New industry business models include cloud computing, software as a service, virtualisation, machine-to-machine communication, big data analysis and machine learning. Additionally, brand value is important for entities in the industry to scale and achieve network effects, whereby wide adoption of a particular software product may result in self-perpetuating growth in sales.",
+      "web_prepend_text": null
+    }
+  ]
+}

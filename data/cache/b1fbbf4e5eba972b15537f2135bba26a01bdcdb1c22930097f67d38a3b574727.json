@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Total development expenditure, excluding midstream activities, was $13,336 million in 2025 ($8,387 million for subsidiaries and $4,949 million for equity-accounted entities). Of the $8,387 million of total development expenditure for our subsidiaries, approximately $4,900 million was used for development activity to progress proved undeveloped reserves to proved developed.\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"VAGUE\", \"evidence\": \"bp estimates proved reserves in accordance with SEC Rule 4-10 (a) of Regulation S-X and relevant Compliance and Disclosure Interpretations (C&DI) and Staff Accounting Bulletins as issued by the SEC staff.\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"In certain deepwater fields bp has booked proved reserves before production flow tests are conducted, in part because of the significant safety, cost and environmental implications of conducting these tests.\"}\n]\n```",
+  "cost_usd": 0.035065,
+  "input_tokens": 4818,
+  "model": "claude-opus-4-5",
+  "output_tokens": 439,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

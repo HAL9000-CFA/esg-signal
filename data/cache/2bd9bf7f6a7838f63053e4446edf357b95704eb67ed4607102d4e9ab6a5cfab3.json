@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"Transition risks, including carbon pricing, land-use restrictions and regulations on GHG-intensive ingredients, could increase costs and limit operational flexibility.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"VAGUE\", \"evidence\": \"Water is essential across our value chain. Limited availability or declining quality could constrain operations and reduce demand for water-dependent products.\"},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"VAGUE\", \"evidence\": \"Climate change, intensive agriculture and land conversion are accelerating ecosystem degradation, reducing crop yields and driving up raw material costs.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"The safety and quality of our products are of paramount importance for our brands and our reputation. Evolving laws and regulations concerning product formulation, nutritional standards and the use of ingredients of concern may restrict the sale of our products in specific markets, which can impact financial performance and reputation.\"}\n]\n```",
+  "cost_usd": 0.029395000000000004,
+  "input_tokens": 4389,
+  "model": "claude-opus-4-5",
+  "output_tokens": 298,
+  "purpose": "Batch grade 6 ESG factors",
+  "temperature": 0.0
+}

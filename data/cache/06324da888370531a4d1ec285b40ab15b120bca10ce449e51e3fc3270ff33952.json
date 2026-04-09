@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"We also delivered $2.0 billion of structural cost reductions\",\n      \"amount\": 2000000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"reduction_target\"\n    },\n    {\n      \"text\": \"we agreed the sale of a 65% shareholding in Castrol, which we expect to generate net proceeds of approximately $6 billion\",\n      \"amount\": 6000000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"$11bn completed or signed divestments, including $6bn Castrol transaction\",\n      \"amount\": 11000000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"bp delivered operating cash flow of $24.5 billion\",\n      \"amount\": 24500000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"capital expenditure 10% YoY reduction\",\n      \"amount\": 14500000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"capex\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.036535000000000005,
+  "input_tokens": 5132,
+  "model": "claude-opus-4-5",
+  "output_tokens": 435,
+  "purpose": "WvM extraction chunk 26/79 (10 factors)",
+  "temperature": 0.0
+}

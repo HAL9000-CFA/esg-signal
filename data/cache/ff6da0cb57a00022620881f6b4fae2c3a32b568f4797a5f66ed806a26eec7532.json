@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"Authorized future capital expenditure for property, plant and equipment (excluding right-of-use assets) by group companies for which contracts had been signed at 31 December 2025 amounted to $14,639 million\",\n      \"amount\": 14639000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"capex\"\n    },\n    {\n      \"text\": \"bp has contracted capital commitments amounting to $2,238 million (2024 $3,392 million, 2023 $1,580 million) in relation to joint ventures\",\n      \"amount\": 2238000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"capex\"\n    },\n    {\n      \"text\": \"bp has contracted capital commitments amounting to... $89 million (2024 $59 million, 2023 $105 million) in relation to associates\",\n      \"amount\": 89000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"capex\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.04423,
+  "input_tokens": 6916,
+  "model": "claude-opus-4-5",
+  "output_tokens": 386,
+  "purpose": "WvM extraction chunk 46/79 (10 factors)",
+  "temperature": 0.0
+}

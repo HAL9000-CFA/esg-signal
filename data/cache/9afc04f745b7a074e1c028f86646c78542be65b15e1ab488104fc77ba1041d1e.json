@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "Unilever's Energy Management credibility presents a concerning gap between workforce signals and formal disclosure. While talent data suggests moderate capability in this area with 75% senior representation, the complete absence of disclosure content (score: 0.00) raises questions about transparency. With three evidence streams excluded or unmapped and only partial data available, there is insufficient evidence to draw firm conclusions, though the disclosure gap warrants investor attention.",
+  "cost_usd": 0.004455000000000001,
+  "input_tokens": 441,
+  "model": "claude-opus-4-5",
+  "output_tokens": 90,
+  "purpose": "Narrative synthesis: Energy Management",
+  "temperature": 0.2
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"QUANTIFIED\", \"evidence\": \"It is estimated that an 11% reduction in revenue throughout each year of the remaining life of those assets, either as a result of adverse price or production conditions or a combination of each, would cause the recoverable amount to be equal to the carrying amount of goodwill and related net non-current assets of the oil production and operations segment. For the gas businesses a 9% reduction would have the same result.\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"VAGUE\", \"evidence\": \"Due to economic developments, regulatory change and emissions reduction activity arising from climate concern and other factors, future commodity prices and other assumptions may differ from the forecasts used in the calculations.\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.038375000000000006,
+  "input_tokens": 5740,
+  "model": "claude-opus-4-5",
+  "output_tokens": 387,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

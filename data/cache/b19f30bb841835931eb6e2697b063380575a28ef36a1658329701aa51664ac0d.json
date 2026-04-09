@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Cumulative reduction % in operated carbon emissions... Scope 1 and 2 GHG emissions reductions vs. 2019 baseline from operated carbon emissions including portfolio change... Below 40% 42% 43% 46% Above 48%\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"QUANTIFIED\", \"evidence\": \"For safety, however, we will revert to assessing performance on a combined tier 1 and tier 2 basis... Safety 15%... Tier 1 and tier 2 process safety events 15%\"},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"VAGUE\", \"evidence\": \"Underpin will take into account overall safety performance as well as ongoing progress towards a strong and resilient balance sheet.\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"Importantly, the framework on fatalities will continue to apply to the 2026 annual bonus and will be considered at year-end if a fatality occurs during the year.\"}\n]\n```",
+  "cost_usd": 0.039965,
+  "input_tokens": 5843,
+  "model": "claude-opus-4-5",
+  "output_tokens": 430,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

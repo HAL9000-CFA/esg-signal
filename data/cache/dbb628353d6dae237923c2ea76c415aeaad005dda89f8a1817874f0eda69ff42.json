@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"This year, we reduced emissions in our operations through efficiency improvements, implementation of power purchase agreements (PPAs), and installation of industrial-scale heat pumps and electric boilers at additional sites. Our scope 3 decarbonisation efforts continue to prioritise supplier engagement, such as our Supplier Climate Programme, which now includes almost 200 suppliers and 40% of raw material scope 3 emissions.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"Knorr continues to evolve its portfolio through innovation and product superiority.\"}\n]\n```",
+  "cost_usd": 0.031135000000000003,
+  "input_tokens": 4912,
+  "model": "claude-opus-4-5",
+  "output_tokens": 263,
+  "purpose": "Batch grade 6 ESG factors",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [\n    {\n      \"text\": \"bp's aim to reach net zero operational greenhouse gas (CO2 and methane) emissions by 2050 or sooner\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2050,\n      \"category\": \"reduction_target\"\n    },\n    {\n      \"text\": \"Any interim target or aim in respect of bp's net zero operations aim is defined in terms of absolute reductions relative to the baseline year of 2019\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": null,\n      \"category\": \"reduction_target\"\n    }\n  ],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Critical Incident Risk Management\": [],\n  \"Employee Health & Safety\": []\n}\n```",
+  "cost_usd": 0.028225000000000004,
+  "input_tokens": 4595,
+  "model": "claude-opus-4-5",
+  "output_tokens": 210,
+  "purpose": "WvM extraction chunk 75/79 (5 factors)",
+  "temperature": 0.0
+}

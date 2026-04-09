@@ -1,0 +1,75 @@
+{
+  "fetched_at": "2026-04-11T18:03:05.098782+00:00",
+  "data": {
+    "industry_code": "TC-HW",
+    "industry_name": "Hardware",
+    "industry_description": "Hardware industry entities design and sell technology hardware products, including computers, consumer electronics, communications equipment, storage devices, components and peripherals. Many entities in the industry rely heavily upon the Electronic Manufacturing Services & Original Design Manufacturing (EMS & ODM) industry for manufacturing services. The industry is expected to continue to grow as technology use rapidly increases, especially among emerging market consumers.",
+    "industry_gics": [
+      {
+        "gic_code": 230,
+        "gic_name": "Data Security",
+        "gic_description": "The category addresses management of risks related to collection, retention, and use of sensitive, confidential, and/or proprietary customer or user data. It includes social issues that may arise from incidents such as data breaches in which personally identifiable information (PII) and other user or customer data may be exposed. It addresses a company\u2019s strategy, policies, and practices related to IT infrastructure, staff training, record keeping, cooperation with law enforcement, and other mechanisms used to ensure security of customer or user data.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "TC-HW-230a",
+            "topic_name": "Product Security",
+            "topic_description": "The hardware products and related software offered by entities in the Hardware industry may have vulnerabilities that expose consumers to data security threats. Therefore, hardware manufacturers must help ensure user data security. Such vulnerabilities may occur at any stage of a product lifecycle, including product design, the manufacturing supply chain, product distribution and the product\u2019s use-phase. Entities in the industry unable to identify vulnerabilities may risk exposing consumer data to security threats and potentially eroding the trust of their customer base. Cybersecurity threats create both risks and opportunities for the Hardware industry, as effective product security may be a source of competitive advantage for entities, potentially increasing their sales and market share. Additionally, user concerns about data security and related government actions may also serve as revenue-generating opportunities for securing government contracts and providing security products."
+          }
+        ]
+      },
+      {
+        "gic_code": 330,
+        "gic_name": "Employee Engagement, Diversity & Inclusion",
+        "gic_description": "The category addresses a company\u2019s ability to ensure that its culture and hiring and promotion practices embrace the building of a diverse and inclusive workforce that reflects the makeup of local talent pools and its customer base. It addresses the issues of discriminatory practices on the bases of race, gender, ethnicity, religion, sexual orientation, and other factors.",
+        "gic_dimension": "Human Capital",
+        "gic_topics": [
+          {
+            "topic_code": "TC-HW-330a",
+            "topic_name": "Employee Diversity & Inclusion",
+            "topic_description": "Greater workforce diversity is important for innovation since it helps entities understand the needs of a diverse and global customer base, which results in the ability to design desirable products and communicate with customers effectively. Entities unable to attract and retain diverse talent may risk losing market share to competitors that successfully employ a staff capable of recognising the needs of diverse populations and capturing demand from segments of the population that have been traditionally overlooked. Furthermore, entities perceived as being more representative of a diverse, global customer base may increase brand loyalty which also may be a source of competitive advantage. Entities successful in recruiting and retaining a diverse and inclusive workforce also may achieve lower employee turnover rates, resulting in cost savings."
+          }
+        ]
+      },
+      {
+        "gic_code": 410,
+        "gic_name": "Product Design & Lifecycle Management",
+        "gic_description": "The category addresses incorporation of environmental, social, and governance (ESG) considerations in characteristics of products and services provided or sold by the company. It includes, but is not limited to, managing the lifecycle impacts of products and services, such as those related to packaging, distribution, use-phase resource intensity, and other environmental and social externalities that may occur during their use-phase or at the end of life. The category captures a company\u2019s ability to address customer and societal demand for more sustainable products and services as well as to meet evolving environmental and social regulation. It does not address direct environmental or social impacts of the company\u2019s operations nor does it address health and safety risks to consumers from product use, which are covered in other categories.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "TC-HW-410a",
+            "topic_name": "Product Lifecycle Management",
+            "topic_description": "Entities in the Hardware industry face increasing challenges associated with environmental and social externalities attributed to product manufacturing, transport, use and disposal. Rapid obsolescence of hardware products may worsen these externalities. Entities are designing more products with the entire lifecycle in mind. Specific considerations include energy efficiency of products, hazardous material inputs, and designing for and facilitating safe end-of-life disposal and recycling. Entities that prioritise designing and manufacturing products with improved environmental and social impacts may avoid costs associated with externalities, and they may be more likely to grow consumer demand and market share, while eliminating potentially harmful materials. Furthermore, entities that minimise environmental and social externalities of products may be less exposed to increasing regulation and costs, such as those related to extended producer responsibility."
+          }
+        ]
+      },
+      {
+        "gic_code": 430,
+        "gic_name": "Supply Chain Management",
+        "gic_description": "The category addresses management of environmental, social, and governance (ESG) risks within a company\u2019s supply chain. It addresses issues associated with environmental and social externalities created by suppliers through their operational activities. Such issues include, but are not limited to, environmental responsibility, human rights, labour practices, and ethics and corruption. Management may involve screening, selection, monitoring, and engagement with suppliers on their environmental and social impacts. The category does not address the impacts of external factors \u2013 such as climate change and other environmental and social factors \u2013 on suppliers\u2019 operations and/or on the availability and pricing of key resources, which is covered in a separate category.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "TC-HW-430a",
+            "topic_name": "Supply Chain Management",
+            "topic_description": "Entities in the Hardware industry commonly have relatively narrow profit margins and remain competitive by relying on complex, global supply chains and outsourced production to electronics manufacturing services (EMS) entities. Because entities in the industry typically contract with suppliers in countries with lower direct costs, entities often manufacture products in countries that have limited labour regulations or enforcement protecting workers. Entities in the industry may have limited direct control over social and environmental standards in production, making management of this issue difficult. This dynamic may increase an entity\u2019s exposure to reputational risks and impacts on short- and long-term costs and sales. Such effects may arise from increasing regulation and enforcement in response to high-profile safety or labour incidents, or through a shift in demand away from entities associated with such incidents. Entities that actively manage the impacts generated by the supply chain using supplier standards, monitoring and engagement may better protect shareholder value over the long term."
+          }
+        ]
+      },
+      {
+        "gic_code": 440,
+        "gic_name": "Materials Sourcing & Efficiency",
+        "gic_description": "The category addresses issues related to the resilience of materials supply chains to impacts of climate change and other external environmental and social factors. It captures the impacts of such external factors on operational activity of suppliers, which can further affect availability and pricing of key resources. It addresses a company\u2019s ability to manage these risks through product design, manufacturing, and end-of-life management, such as by using of recycled and renewable materials, reducing the use of key materials (dematerialization), maximizing resource efficiency in manufacturing, and making R&D investments in substitute materials. Additionally, companies can manage these issues by screening, selection, monitoring, and engagement with suppliers to ensure their resilience to external risks. It does not address issues associated with environmental and social externalities created by operational activity of individual suppliers, which is covered in a separate category.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "TC-HW-440a",
+            "topic_name": "Materials Sourcing",
+            "topic_description": "Entities in the Hardware industry rely on numerous critical materials as important inputs for finished products. Many of these inputs have few or no available substitutes and often are sourced from only a few countries, many of which may be subject to geopolitical uncertainty. Other sustainability impacts related to climate change, land use, resource scarcity and conflict in regions where the industry\u2019s supply chain operates are also increasingly shaping the industry\u2019s ability to source materials. Additionally, increased competition for these materials because of growing global demand from other sectors may result in price increases and supply risks. The ability of entities to manage potential material shortages, supply disruptions, price volatility and reputational risks is made more difficult by the practice of commonly sourcing materials from supply chains that may lack transparency. Failure to effectively manage sourcing may constrain access to necessary materials, reduce margins, impair revenue growth or increase costs of capital."
+          }
+        ]
+      }
+    ]
+  }
+}

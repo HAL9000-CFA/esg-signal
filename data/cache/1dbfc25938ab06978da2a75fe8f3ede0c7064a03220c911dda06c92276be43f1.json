@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "Unilever's Product Quality & Safety credibility presents a mixed picture with moderate evidence coverage. The talent stream indicates genuine operational capability (0.61 with high confidence from 22 relevant hires, predominantly senior), while supply chain management shows strong quantified practices. However, disclosure quality is notably weak, with only vague commitments to \"safe and high-quality products\" rather than specific metrics or targets, creating a gap between apparent operational strength and transparent reporting.",
+  "cost_usd": 0.005175000000000001,
+  "input_tokens": 535,
+  "model": "claude-opus-4-5",
+  "output_tokens": 100,
+  "purpose": "Narrative synthesis: Product Quality & Safety",
+  "temperature": 0.2
+}

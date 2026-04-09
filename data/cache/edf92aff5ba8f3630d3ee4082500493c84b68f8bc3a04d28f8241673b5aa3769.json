@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [\n    {\n      \"text\": \"investment economics for all investment cases where bp's share of annual greenhouse gas (GHG) emissions from operations are anticipated to exceed specific thresholds include a carbon price for those emissions, which rises from $67/tCO2e in 2026 to $135/tCO2e (2024 $ real) in 2030\",\n      \"amount\": 135,\n      \"currency\": \"USD\",\n      \"year\": 2030,\n      \"category\": \"other\"\n    }\n  ],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"we expect capital expenditure to be $13.0-13.5 billion in 2026\",\n      \"amount\": 13250000000,\n      \"currency\": \"USD\",\n      \"year\": 2026,\n      \"category\": \"capex\"\n    },\n    {\n      \"text\": \"We reiterate our primary target for net debt of $14-18 billion by the end of 2027\",\n      \"amount\": 16000000000,\n      \"currency\": \"USD\",\n      \"year\": 2027,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"Since the end of 2019 we have repurchased around $26 billion of short-dated existing bonds\",\n      \"amount\": 26000000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"issued over $12 billion of new bonds with a duration of 20 years or longer\",\n      \"amount\": 12000000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.037305000000000005,
+  "input_tokens": 4886,
+  "model": "claude-opus-4-5",
+  "output_tokens": 515,
+  "purpose": "WvM extraction chunk 13/79 (10 factors)",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's Employee Health & Safety credibility presents a mixed picture with moderate confidence given 75% evidence coverage. The company demonstrates strong disclosure practices with quantified safety metrics, though the reported fatalities in 2025 indicate material safety incidents requiring attention. Talent signals suggest weak employee sentiment on safety culture (n=7, low confidence), while regulatory and supply chain evidence streams were excluded due to data limitations rather than poor performance, and the absence of words_money data reflects extraction constraints rather than a gap between stated commitments and financial backing.",
+  "cost_usd": 0.005540000000000001,
+  "input_tokens": 543,
+  "model": "claude-opus-4-5",
+  "output_tokens": 113,
+  "purpose": "Narrative synthesis: Employee Health & Safety",
+  "temperature": 0.2
+}

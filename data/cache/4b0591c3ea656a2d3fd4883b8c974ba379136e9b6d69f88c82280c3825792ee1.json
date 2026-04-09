@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates consistent credibility signals across the two available evidence streams for legal and regulatory environment management. The disclosure score reflects quantified reporting on Gulf of America oil spill payments, while the words-money alignment shows all 18 extracted commitments were consistent with financial backing. However, with regulatory, talent, and supply chain streams excluded due to data limitations rather than poor performance, the overall assessment rests on partial evidence and should be interpreted with moderate confidence.",
+  "cost_usd": 0.00516,
+  "input_tokens": 557,
+  "model": "claude-opus-4-5",
+  "output_tokens": 95,
+  "purpose": "Narrative synthesis: Management of the Legal & Regulatory Environment",
+  "temperature": 0.2
+}

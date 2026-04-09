@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"Water Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Implement water stewardship programmes in 100 locations in water-stressed areas by 2030 100 29 30 21 13\"},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"Unilever's functional standards define mandatory requirements across a range of specialist areas such as product safety and cyber security, which are key controls in mitigating these risks.\"},\n  {\"factor\": \"Product Design & Lifecycle Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Reduce our virgin plastic footprint \u2013 by 30% by 2026, and 40% by 2028, from a 2019 baseline (f) (30) % (29) % (29) % (23) % (21) %; 100% of our plastic packaging to be reusable, recyclable or compostable (a)(f) 100% 57% 57% 57% 53% by 2030 (for rigids) 100% 75% 75% 76% \u2014 by 2035 (for flexibles) 100% 15% 15% 13% \u2014\"},\n  {\"factor\": \"Supply Chain Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Suppliers representing 50% of our procurement spend to sign the Living Wage Promise by 2026 50% 43% 41% 32% \u2013; Our scope 3 decarbonisation efforts continue to prioritise supplier engagement, such as our Supplier Climate Programme, which now includes almost 200 suppliers and 40% of raw material scope 3 emissions.\"}\n]\n```",
+  "cost_usd": 0.033915,
+  "input_tokens": 4808,
+  "model": "claude-opus-4-5",
+  "output_tokens": 395,
+  "purpose": "Batch grade 4 ESG factors",
+  "temperature": 0.0
+}

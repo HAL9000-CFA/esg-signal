@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates strong disclosure practices for critical incident risk management, with quantified reporting showing a 29% reduction in tier 1 and 2 process safety events, and the words_money stream indicates consistent alignment between stated commitments and financial backing across all 10 commitments examined. However, the talent signal presents a notable concern, with zero relevant hiring activity detected despite sufficient sample size, suggesting limited organizational investment in building incident management capabilities through recruitment. The absence of regulatory data (NRC returned no records) and unmeasured supply chain evidence means this assessment reflects internal disclosure and commitment consistency rather than external validation of incident management performance.",
+  "cost_usd": 0.0061200000000000004,
+  "input_tokens": 564,
+  "model": "claude-opus-4-5",
+  "output_tokens": 132,
+  "purpose": "Narrative synthesis: Critical Incident Risk Management",
+  "temperature": 0.2
+}

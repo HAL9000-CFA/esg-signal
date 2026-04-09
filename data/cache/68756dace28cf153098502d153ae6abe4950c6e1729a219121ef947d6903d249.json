@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Critical Incident Risk Management\": [\n    {\n      \"text\": \"The group has $ 0.6 billion of decommissioning provisions recognized as at 31 December 2025 (2024 $ 0.7 billion ) for assets previously sold to third parties\",\n      \"amount\": 600000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"estimated phasing of undiscounted cash flows in real terms for upstream decommissioning is approximately $ 5.7 billion (2024 $ 5.5 billion ) within the next 10 years\",\n      \"amount\": 5700000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"$ 6.0 billion (2024 $ 6.2 billion ) in 10 to 20 years\",\n      \"amount\": 6000000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"the remainder of approximately $ 7.0 billion (2024 $ 6.7 billion ) after 20 years\",\n      \"amount\": 7000000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    }\n  ],\n  \"Employee Health & Safety\": []\n}\n```",
+  "cost_usd": 0.031985,
+  "input_tokens": 4402,
+  "model": "claude-opus-4-5",
+  "output_tokens": 399,
+  "purpose": "WvM extraction chunk 42/79 (5 factors)",
+  "temperature": 0.0
+}

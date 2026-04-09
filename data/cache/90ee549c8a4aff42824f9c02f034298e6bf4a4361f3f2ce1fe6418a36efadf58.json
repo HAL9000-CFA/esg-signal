@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"Forum for approval of investments related to existing and new lines of business above $250 million or $25 million for acquisitions\",\n      \"amount\": 250000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.027685,
+  "input_tokens": 4622,
+  "model": "claude-opus-4-5",
+  "output_tokens": 183,
+  "purpose": "WvM extraction chunk 11/79 (10 factors)",
+  "temperature": 0.0
+}

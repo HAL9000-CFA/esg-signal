@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [\n    {\n      \"text\": \"In April 2025, following a three-week trial, the jury returned a verdict against Chevron awarding plaintiffs $745 million\",\n      \"amount\": 745000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [\n    {\n      \"text\": \"In April 2025, following a three-week trial, the jury returned a verdict against Chevron awarding plaintiffs $745 million\",\n      \"amount\": 745000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.033235,
+  "input_tokens": 5297,
+  "model": "claude-opus-4-5",
+  "output_tokens": 270,
+  "purpose": "WvM extraction chunk 56/79 (10 factors)",
+  "temperature": 0.0
+}

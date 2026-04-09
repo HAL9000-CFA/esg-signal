@@ -1,0 +1,127 @@
+{
+  "fetched_at": "2026-04-11T18:06:24.841197+00:00",
+  "data": {
+    "industry_code": "IF-EU",
+    "industry_name": "Electric Utilities & Power Generators",
+    "industry_description": "Electric Utilities & Power Generators industry entities generate electricity; build, own and operate transmission and distribution (T&D) lines; and sell electricity. Utilities generate electricity from many different sources, commonly including coal, natural gas, nuclear energy, hydropower, solar, wind and other renewable and fossil fuel energy sources. The industry comprises entities operating in both regulated and unregulated business structures. Regulated utilities face comprehensive regulatory oversight of their pricing mechanisms and their allowed return on equity, among other types of regulation, to maintain their licence to operate as a monopoly. Unregulated entities or merchant power entities are often independent power producers (IPPs) that generate electricity to sell to the wholesale market, which includes regulated utility buyers and other end users. Furthermore, entities in the industry may operate across both regulated and deregulated power markets depending on their operational span. Regulated markets typically contain vertically integrated utilities that own and operate everything from the generation of power to its retail distribution. Deregulated markets commonly split generation from distribution to encourage wholesale power generation competition. Overall, the complex task of providing reliable, accessible, low-cost power while balancing the protection of human life and the environment remains a challenge.",
+    "industry_gics": [
+      {
+        "gic_code": 110,
+        "gic_name": "GHG Emissions",
+        "gic_description": "The category addresses direct (Scope 1) greenhouse gas (GHG) emissions that a company generates through its operations. This includes GHG emissions from stationary (e.g., factories, power plants) and mobile sources (e.g., trucks, delivery vehicles, planes), whether a result of combustion of fuel or non-combusted direct releases during activities such as natural resource extraction, power generation, land use, or biogenic processes. The category further includes management of regulatory risks, environmental compliance, and reputational risks and opportunities, as they related to direct GHG emissions. The seven GHGs covered under the Kyoto Protocol are included within the category\u2014carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur hexafluoride (SF6), and nitrogen trifluoride (NF3).",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "IF-EU-110a",
+            "topic_name": "Greenhouse Gas Emissions & Energy Resource Planning",
+            "topic_description": "Electricity generation represents the largest source of greenhouse gas (GHG) emissions in the world. Mainly carbon dioxide, methane and nitrous oxide, these emissions are mostly by-products of fossil fuel combustion. The transmission or distribution (T&D) segments of the industry produce negligible emissions. Electric utility entities could face significant operating costs and capital expenditures for mitigating GHG emissions as environmental regulations become increasingly stringent. Although many of these costs may be passed to a utility\u2019s customers, some power generators, especially in deregulated markets, may be unable to recoup these costs. Entities may reduce GHG emissions from electricity generation through careful infrastructure investment planning by ensuring the delivery of an energy mix capable of meeting the emissions requirements set forth by regulations, and by implementing industry-leading technologies and processes. Being proactive in cost-effectively reducing GHG emissions may create a competitive advantage for entities and mitigate unanticipated regulatory compliance costs. Failure to properly estimate capital-expenditure needs and permitting costs, or other difficulties in reducing GHG emissions, may result in significant negative effects on returns in the form of asset write-downs, the costs to obtain carbon credits, or unexpected increases in operating and capital expenditures. Regulatory emphasis on this issue may increase in the coming decades, as exemplified by the international emissions-reduction agreement made at the 21st session of the United Nations Conference of the Parties in 2015."
+          }
+        ]
+      },
+      {
+        "gic_code": 120,
+        "gic_name": "Air Quality",
+        "gic_description": "The category addresses management of air quality impacts resulting from stationary (e.g., factories, power plants) and mobile sources (e.g., trucks, delivery vehicles, planes) as well as industrial emissions. Relevant airborne pollutants include, but are not limited to, oxides of nitrogen (NOx), oxides of sulfur (SOx), volatile organic compounds (VOCs), heavy metals, particulate matter, and chlorofluorocarbons. The category does not include GHG emissions, which are addressed in a separate category.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "IF-EU-120a",
+            "topic_name": "Air Quality",
+            "topic_description": "Fuel combustion in electricity-generation operations generates hazardous air pollutants. These air pollutants can create significant and localised environmental and health risks. The most common and impactful are nitrogen oxides (excluding nitrous oxide), sulphur oxide, particulate matter (PM), lead and mercury. Emissions of these localised air pollutants often are strictly regulated, creating significant compliance risks for electricity generators. Regulatory and legal risks are higher for entities operating near large communities. Harmful operational air emissions may result in regulatory penalties, higher regulatory compliance costs and capital expenditures to install control technology. In some cases, such expenditures may be cost prohibitive to continued facility operations. Entities may manage air quality concerns by reducing emissions, as well as by working with regulators to establish priorities and manage short- and long-term capital planning risks."
+          }
+        ]
+      },
+      {
+        "gic_code": 140,
+        "gic_name": "Water & Wastewater Management",
+        "gic_description": "The category addresses a company\u2019s water use, water consumption, wastewater generation, and other impacts of operations on water resources, which may be influenced by regional differences in the availability and quality of and competition for water resources. More specifically, it addresses management strategies including, but not limited to, water efficiency, intensity, and recycling. Lastly, the category also addresses management of wastewater treatment and discharge, including groundwater and aquifer pollution.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "IF-EU-140a",
+            "topic_name": "Water Management",
+            "topic_description": "Electricity generation is one of the most water-intensive industries in the world in terms of water withdrawals. Thermoelectric power plants\u2014typically coal, nuclear and natural gas\u2014use large quantities of water for cooling purposes. The industry is facing increasing water-related supply and regulatory risks, potentially requiring capital investment in technology or even creating stranded assets. As water supplies tighten in many regions\u2014and electricity generation, agriculture and community use compete for water supplies\u2014power plants increasingly may be unable to operate at full capacity, or at all, because of region-specific water constraints. The availability of water is an important factor to consider when calculating the future value of many electricity-generating assets and for evaluating proposals for new generation sources. Increased water scarcity\u2014because of factors such as increasing consumption and reduced supplies resulting from climate change, which could result in more frequent or intense droughts\u2014could prompt regulatory authorities to limit entities\u2019 ability to withdraw necessary amounts of water, especially in regions with high baseline water stress. Furthermore, entities must manage the growing number of regulations related to the significant biodiversity impacts that such large withdrawals may cause. To mitigate these risks, entities can invest both in more efficient water-usage systems for plants, and place strategic priority on assessing long-term water availability, as well as water-related biodiversity risks, when siting new power plants."
+          }
+        ]
+      },
+      {
+        "gic_code": 150,
+        "gic_name": "Waste & Hazardous Materials Management",
+        "gic_description": "The category addresses environmental issues associated with hazardous and non-hazardous waste generated by companies. It addresses a company\u2019s management of solid wastes in manufacturing, agriculture, and other industrial processes. It covers treatment, handling, storage, disposal, and regulatory compliance. The category does not cover emissions to air or wastewater nor does it cover waste from end-of-life of products, which are addressed in separate categories.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "IF-EU-150a",
+            "topic_name": "Coal Ash Management",
+            "topic_description": "Electricity generators must safely discard the hazardous by-products of their operations. Coal-fired electricity generation is a major source of hazardous waste because of coal ash. Coal ash can have a significant effect on entity value in the power-generation segment of the industry. This issue will affect entities differently, depending on the extent to which they generate electricity from coal. Coal ash is one of the largest industrial waste streams in the world. It contains heavy metal contaminants associated with cancer and other serious diseases, especially when they leach into groundwater. Coal ash can have beneficial uses when recycled or reused, such as in the creation of fly ash concrete or wallboard, creating revenue opportunities for electric utilities. Safe handling of coal ash, locating coal ash impoundments to minimise potential harm to human life or the environment, effective monitoring and containment of coal ash, and the sale of coal ash for beneficial uses are important strategies to reduce regulatory compliance costs as well as penalties for non-compliance. Coal ash leaching into the surrounding environment can result in significant litigation and remediation costs."
+          }
+        ]
+      },
+      {
+        "gic_code": 240,
+        "gic_name": "Access & Affordability",
+        "gic_description": "The category addresses a company\u2019s ability to ensure broad access to its products and services, specifically in the context of underserved markets and/or population groups. It includes the management of issues related to universal needs, such as the accessibility and affordability of health care, financial services, utilities, education, and telecommunications.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "IF-EU-240a",
+            "topic_name": "Energy Affordability",
+            "topic_description": "An objective of regulated electric utilities is to provide reliable, affordable and sustainable electricity. Entities in the industry manage these potentially competing priorities to maintain favourable relations with customers and regulators\u2014and ultimately to earn appropriate returns for shareholders. The affordability of energy is particularly challenging for entities to balance because it often conflicts with other core objectives. Utility energy bills generally are perceived to be increasingly unaffordable for low-income customers (affordability is determined by both the net cost of energy bills and the underlying customer economics). Ensuring that utility bills are affordable is crucial for utilities working to build trust (intangible asset value) with regulators and customers. Regulatory relations are an important value driver for utilities and one of the issues analysed closely by investment analysts. The willingness of regulators to grant rate requests, rate structure modifications, cost recovery and allowed returns determines financial performance and investment risk. Effectively managing affordability may enable utilities to invest more capital, favourably revise rate structures and increase allowed returns. Furthermore, utilities that ineffectively manage affordability increasingly are exposed to customers defecting from the grid (or reducing reliance on the grid) by implementing distributed energy resources or pursuing other alternative energy sources (for example, industrial customers\u2019 use of combined heat and power). Managing affordability involves operating an efficient business with a comprehensive, long-term strategy, as well as working closely with regulators and public policymakers on rate structures and, potentially, bill-assistance programmes. Although a utility\u2019s business model and rate structure largely determine the precise nature of the financial effects, affordability is a critical business issue for utilities managing, maintaining and growing customer bases, building intangible asset value, creating investment and return opportunities, and ultimately delivering shareholder returns."
+          }
+        ]
+      },
+      {
+        "gic_code": 320,
+        "gic_name": "Employee Health & Safety",
+        "gic_description": "The category addresses a company\u2019s ability to create and maintain a safe and healthy workplace environment that is free of injuries, fatalities, and illness (both chronic and acute). It is traditionally accomplished through implementing safety management plans, developing training requirements for employees and contractors, and conducting regular audits of their own practices as well as those of their subcontractors. The category further captures how companies ensure physical and mental health of workforce through technology, training, corporate culture, regulatory compliance, monitoring and testing, and personal protective equipment.",
+        "gic_dimension": "Human Capital",
+        "gic_topics": [
+          {
+            "topic_code": "IF-EU-320a",
+            "topic_name": "Workforce Health & Safety",
+            "topic_description": "Employees of entities in the Electric Utilities & Power Generators industry face numerous hazards in the construction and maintenance of electric transmission and distribution lines, as well as with the various means of electricity generation. Many of these employees work for extended periods at great heights, operate heavy machinery and face electrocution risks. Although the industry has made significant strides in safety improvements, significant risks remain, along with opportunities for further improvements. The nature of the industry\u2014as a necessity of modern life and economies, as well as commonly a legally granted monopoly\u2014means that entity actions receive significant public and regulatory scrutiny. Entities must maintain a culture of safety to ensure adequate working conditions for their workers, strong operational productivity, and to uphold positive views from the perspective of regulators and manage potential risks of regulatory penalties."
+          }
+        ]
+      },
+      {
+        "gic_code": 420,
+        "gic_name": "Business Model Resilience",
+        "gic_description": "The category addresses an industry\u2019s capacity to manage risks and opportunities associated with incorporating social, environmental, and political transitions into long-term business model planning. This includes responsiveness to the transition to a low-carbon and climate-constrained economy, as well as growth and creation of new markets among unserved and underserved socio-economic populations. The category highlights industries in which evolving environmental and social realities may challenge companies to fundamentally adapt or may put their business models at risk.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "IF-EU-420a",
+            "topic_name": "End-Use Efficiency & Demand",
+            "topic_description": "Energy efficiency is a low-lifecycle-cost method to reduce greenhouse gas (GHG) emissions, because less electricity needs to be generated to provide the same end-use energy services. Utilities can promote energy efficiency and conservation among their customers. Such strategies may include offering rebates for energy-efficient appliances, weatherising customers\u2019 homes, educating customers on energy-saving methods, offering incentives to customers to curb electricity use during times of peak demand (\u2018demand response\u2019), or investing in technology such as smart meters, which allow customers to track their energy use. While saving consumers money, these efforts also may reduce operating costs for electric utilities by decreasing peak demand. Furthermore, depending on the utility regulatory framework, local jurisdictions may mandate that entities develop energy efficiency plans before permitting new builds. Companies with effective strategies to reduce the downside risks from demand fluctuations, may gain adequate and timely returns on needed investments. Furthermore, reducing costs through efficiency initiatives may earn higher, long-term risk-adjusted returns."
+          }
+        ]
+      },
+      {
+        "gic_code": 540,
+        "gic_name": "Critical Incident Risk Management",
+        "gic_description": "The category addresses the company\u2019s use of management systems and scenario planning to identify, understand, and prevent or minimize the occurrence of low-probability, high-impact accidents and emergencies with significant potential environmental and social externalities. It relates to the culture of safety at a company, its relevant safety management systems and technological controls, the potential human, environmental, and social implications of such events occurring, and the long-term effects to an organization, its workers, and society should these events occur.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "IF-EU-540a",
+            "topic_name": "Nuclear Safety & Emergency Management",
+            "topic_description": "Although rare, nuclear accidents can have significant human health and environmental consequences because of their severity. Owners of nuclear power plants in many regions have operated for decades without any major public safety incidents, but the occurrence of infrequent but large-magnitude incidents anywhere in the world can have major effects on the entire nuclear power industry. Entities that own and operate nuclear plants may lose their licence to operate, as well as face many other financial consequences in the event of an accident\u2014though entities carry insurance and may have legal protections from some liabilities. Failure to comply with the safety regulations can be expensive to nuclear power operators; in extreme circumstances it may make the continued operation of the plant uneconomical. Facing potentially significant financial repercussions, both from ongoing safety compliance as well as tail risk incidents, entities that own or operate nuclear plants must be vigilant in the safety compliance, best practices and upgrades of their facilities. They also must maintain robust emergency preparedness training for their staff and a strong safety culture. These measures can reduce the probability that accidents will occur and enable an entity to effectively detect and respond to such incidents."
+          }
+        ]
+      },
+      {
+        "gic_code": 550,
+        "gic_name": "Systemic Risk Management",
+        "gic_description": "The category addresses the company\u2019s contributions to or management of systemic risks resulting from large-scale weakening or collapse of systems upon which the economy and society depend. This includes financial systems, natural resource systems, and technological systems. It addresses the mechanisms a company has in place to reduce its contributions to systemic risks and to improve safeguards that may mitigate the impacts of systemic failure. For financial institutions, the category also captures the company\u2019s ability to absorb shocks arising from financial and economic stress and meet stricter regulatory requirements related to the complexity and interconnectedness of companies in the industry.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "IF-EU-550a",
+            "topic_name": "Grid Resiliency",
+            "topic_description": "Electricity is critical for the continued function of most elements of modern life, from medicine to finance, creating a societal reliance on continuous service. Major disruptions to electricity infrastructure may result in potentially high societal costs. Disruptions can be caused by extreme weather events, natural disasters and cyberattacks. As the frequency and severity of extreme weather events associated with climate change continues to increase, all segments of electric utilities entities\u2014and especially major transmission and distribution (T&D) operations\u2014will face increasing physical threats to their infrastructure. Extreme weather events could result in frequent or significant service disruptions, outages and require upgrade or repair of damaged or compromised equipment, all of which may add substantial costs and damage brand reputation among regulators and customers. The increased use of smart grid technology has several benefits, including strengthening the resiliency of the grid to extreme weather events. However, this technology may make the grid more vulnerable to cyberattacks, because it provides hackers more entryways into infrastructure systems. Entities must implement strategies that minimise the probability and magnitude of impacts from extreme weather events and cyberattacks. To remain competitive in the face of increasing external competition, entities must improve the reliability, resilience and quality of their infrastructure."
+          }
+        ]
+      }
+    ]
+  }
+}

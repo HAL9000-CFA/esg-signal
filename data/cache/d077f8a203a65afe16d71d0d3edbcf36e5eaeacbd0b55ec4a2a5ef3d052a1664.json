@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"Water Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Design & Lifecycle Management\", \"grade\": \"VAGUE\", \"evidence\": \"The Corporate Responsibility Committee reviewed the Company's strategy to invest in reducing the use of plastics. Following this review, and discussion at Board level, the Company continues to invest in research and development in this area in support of its ambitious targets to reduce plastic waste.\"},\n  {\"factor\": \"Supply Chain Management\", \"grade\": \"VAGUE\", \"evidence\": \"We uphold a Responsible Partner Policy, which sets out mandatory requirements that all supply chain partners must meet. The Board reviewed and approved the 2025 Modern Slavery Act Statement... The Board reviewed ongoing investment in the supply chain, particularly in technology and simplification.\"}\n]\n```",
+  "cost_usd": 0.02978,
+  "input_tokens": 4876,
+  "model": "claude-opus-4-5",
+  "output_tokens": 216,
+  "purpose": "Batch grade 4 ESG factors",
+  "temperature": 0.0
+}

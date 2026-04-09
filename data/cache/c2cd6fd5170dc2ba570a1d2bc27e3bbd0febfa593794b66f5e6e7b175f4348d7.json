@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n[\n  {\n    \"text\": \"\u20ac150 million investment across Europe. Launched in 2023 and continuing through 2026, the programme is focused on driving efficiencies and unlocking growth\",\n    \"amount\": 150000000,\n    \"currency\": \"EUR\",\n    \"year\": 2026,\n    \"category\": \"capex\"\n  }\n]\n```",
+  "cost_usd": 0.09870000000000001,
+  "input_tokens": 19265,
+  "model": "claude-opus-4-5",
+  "output_tokens": 95,
+  "purpose": "Commitment extraction: Ecological Impacts",
+  "temperature": 0.0
+}

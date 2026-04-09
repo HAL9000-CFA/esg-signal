@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP PLC's Employee Health & Safety credibility presents a mixed picture with limited evidence coverage. The disclosure stream shows strong quantified reporting, including transparent acknowledgment of four workplace fatalities in 2025, which suggests genuine accountability rather than evasive communication. However, the words-money alignment score indicates no identified monetary commitments to back stated safety priorities, and with regulatory, talent, and supply chain streams excluded due to data limitations, there is insufficient evidence to draw broader conclusions about operational safety performance beyond what the company self-reports.",
+  "cost_usd": 0.005125,
+  "input_tokens": 465,
+  "model": "claude-opus-4-5",
+  "output_tokens": 112,
+  "purpose": "Narrative synthesis: Employee Health & Safety",
+  "temperature": 0.2
+}

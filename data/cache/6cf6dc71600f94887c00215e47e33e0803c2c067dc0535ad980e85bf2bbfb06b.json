@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's Employee Health & Safety credibility presents a mixed picture with moderate confidence given 75% evidence coverage. The strong disclosure score reflects transparent reporting of workplace fatalities, demonstrating accountability in acknowledging serious incidents. However, talent signals suggest potential concerns, though the low sample size (n=7) limits confidence in this finding, while the words_money score indicates that safety-related commitments could not be independently verified against financial backing.",
+  "cost_usd": 0.00499,
+  "input_tokens": 538,
+  "model": "claude-opus-4-5",
+  "output_tokens": 92,
+  "purpose": "Narrative synthesis: Employee Health & Safety",
+  "temperature": 0.2
+}

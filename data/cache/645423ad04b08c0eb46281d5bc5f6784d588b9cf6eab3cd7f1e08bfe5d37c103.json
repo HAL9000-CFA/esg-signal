@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"bp set out anticipated investment in transition businesses through to 2027 as part of our reset strategy in February 2025. This investment was $2.3 billion in 2025 including $0.8 billion of inorganic spend.\",\n      \"amount\": 2300000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"capex\"\n    },\n    {\n      \"text\": \"In June bp and its partners agreed the final investment decision for the $2.9 billion Shah Deniz Compression project.\",\n      \"amount\": 2900000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"capex\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [\n    {\n      \"text\": \"forum for executive management's review and approval of investments related to existing and new lines of business above $250 million, or $25 million for acquisitions\",\n      \"amount\": 250000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    }\n  ],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.035820000000000005,
+  "input_tokens": 5324,
+  "model": "claude-opus-4-5",
+  "output_tokens": 368,
+  "purpose": "WvM extraction chunk 6/79 (10 factors)",
+  "temperature": 0.0
+}

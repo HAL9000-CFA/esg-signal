@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates solid credibility on Ecological Impacts, with quantified disclosure acknowledging an increase in oil spills (110 in 2025 versus 96 in 2024), which reflects transparent reporting of adverse trends. Regulatory records from environmental agencies show no violations detected across seven records, and the company's stated commitments align consistently with financial backing across all eleven commitments examined. With talent and supply chain streams excluded due to insufficient data and industry inapplicability respectively, the assessment draws from three active evidence streams, providing reasonable but not comprehensive confidence in this evaluation.",
+  "cost_usd": 0.005725000000000001,
+  "input_tokens": 535,
+  "model": "claude-opus-4-5",
+  "output_tokens": 122,
+  "purpose": "Narrative synthesis: Ecological Impacts",
+  "temperature": 0.2
+}

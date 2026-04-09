@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates solid disclosure practices for water management, with quantified commitments around freshwater withdrawal in stressed catchments, and regulatory records from the Environment Agency indicate no pollution violations across 7 records examined. However, talent signals suggest weaker organisational capability in this area, with a blended score of 0.39 despite adequate sample size, indicating limited specialist depth. With supply chain evidence unavailable and no monetary commitment data extracted, the overall assessment rests on partial evidence, though the active streams point to reasonable but not exceptional credibility.",
+  "cost_usd": 0.00566,
+  "input_tokens": 562,
+  "model": "claude-opus-4-5",
+  "output_tokens": 114,
+  "purpose": "Narrative synthesis: Water & Wastewater Management",
+  "temperature": 0.2
+}

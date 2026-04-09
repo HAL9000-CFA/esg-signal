@@ -1,0 +1,72 @@
+{
+  "fetched_at": "2026-04-11T18:03:07.195861+00:00",
+  "data": {
+    "industry_code": "FN-IN",
+    "industry_name": "Insurance",
+    "industry_description": "The Insurance industry provides both traditional and non-traditional insurance-related products. Traditional policy lines include property, life, casualty and reinsurance. Non-traditional products include annuities, alternative risk transfers and financial guarantees. Entities in the insurance industry also engage in proprietary investments. Insurance entities generally operate within a single segment in the industry, for example, property and casualty, although some large insurance entities have diversified operations. Similarly, entities may vary based on the level of their geographical segmentation. Whereas large entities may underwrite insurance premiums in many countries, smaller entities generally operate in a single country or jurisdiction. Insurance premiums, underwriting revenue and investment income drive industry growth, while insurance claim payments present the most significant cost and source of uncertainty for profits. Insurance entities provide products and services that enable the transfer, pooling and sharing of risk necessary for a well-functioning economy. Insurance entities, through their products, can also create a form of moral hazard, reducing incentives to improve underlying behaviour and performance, and thus contributing to sustainability-related impacts. Like other financial institutions, insurance entities face risks associated with credit and financial markets. Within the industry, regulators have identified entities that engage in non-traditional or non-insurance activities, including credit default swaps (CDS) protection and debt securities insurance, as being more vulnerable to financial market developments, and therefore more likely to amplify or contribute to systemic risk. As a result, some insurance entities may be designated as Systemically Important Financial Institutions, thus exposing them to increased regulation and oversight.",
+    "industry_gics": [
+      {
+        "gic_code": 270,
+        "gic_name": "Selling Practices & Product Labeling",
+        "gic_description": "The category addresses social issues that may arise from a failure to manage the transparency, accuracy, and comprehensibility of marketing statements, advertising, and labeling of products and services. It includes, but is not limited to, advertising standards and regulations, ethical and responsible marketing practices, misleading or deceptive labeling, as well as discriminatory or predatory selling and lending practices. This may include deceptive or aggressive selling practices in which incentive structures for employees could encourage the sale of products or services that are not in the best interest of customers or clients.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "FN-IN-270a",
+            "topic_name": "Transparent Information & Fair Advice for Customers",
+            "topic_description": "Insurance products play an important societal role in alleviating unexpected economic shocks, allowing individual policyholders to reduce the financial consequences of events such as illnesses, accidents and deaths. However, unclear insurance policies, ambiguous product terms and potentially misleading sales tactics may erode brand reputation, spur legal disputes, and reduce the number of services and products an entity can offer. Regulators may deem some policies overly complex and unsuitable for customers. Moreover, entities compete based on financial strength, price, brand reputation, services offered and customer relationships. Dissatisfied customers may reduce or avoid insurance coverage, potentially leading to negative financial outcomes such as personal bankruptcies. While financial regulators continue to emphasise consumer protection and accountability, entities that maintain transparent policy terms and sell products to customers best suited to them may better maintain their brand reputation, avoid regulatory scrutiny and protect shareholder value. Failure to inform customers about products in a clear and transparent manner may result in increased consumer complaints, customer churn, or regulatory fines and settlements."
+          }
+        ]
+      },
+      {
+        "gic_code": 410,
+        "gic_name": "Product Design & Lifecycle Management",
+        "gic_description": "The category addresses incorporation of environmental, social, and governance (ESG) considerations in characteristics of products and services provided or sold by the company. It includes, but is not limited to, managing the lifecycle impacts of products and services, such as those related to packaging, distribution, use-phase resource intensity, and other environmental and social externalities that may occur during their use-phase or at the end of life. The category captures a company\u2019s ability to address customer and societal demand for more sustainable products and services as well as to meet evolving environmental and social regulation. It does not address direct environmental or social impacts of the company\u2019s operations nor does it address health and safety risks to consumers from product use, which are covered in other categories.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "FN-IN-410a",
+            "topic_name": "Incorporation of Environmental, Social and Governance Factors in Investment Management",
+            "topic_description": "Insurance entities must invest capital to preserve accumulated premium revenues equivalent to expected policy claim pay-outs and maintain long-term asset-liability parity. Because environmental, social and governance (ESG) factors increasingly have a material impact on the performance of corporations and other assets, insurance entities increasingly must incorporate these factors into their investment management. Failure to address these issues may diminish risk-adjusted portfolio returns and limit an entity\u2019s ability to issue claim payments. Entities, therefore, should enhance disclosure on how they incorporate ESG factors, including climate change and natural resource constraints, into the investment of policy premiums and how they affect the portfolio risk."
+          },
+          {
+            "topic_code": "FN-IN-410b",
+            "topic_name": "Policies Designed to Incentivise Responsible Behaviour",
+            "topic_description": "Advances in technology and the development of new policy products have allowed insurance entities to limit claim payments while encouraging responsible behaviour. The industry is subsequently in a unique position to generate positive social and environmental externalities. Insurance entities can incentivise healthy lifestyles and safe behaviour as well as develop sustainability-related projects and technologies, such as those focused on renewable energy, energy efficiency and carbon capture. As the renewable energy industry continues to grow, insurance entities may seek related growth opportunities by underwriting insurance in this area. Additionally, policy clauses may encourage customers to incorporate environmental, social and governance (ESG) factors to mitigate overall underwriting portfolio risk, which may reduce insurance pay-outs over the long term. Therefore, disclosure on products related to energy efficiency and low carbon technology, as well as discussion of how entities incentivise health, safety or environmentally responsible actions or behaviours, may assist investors in assessing how insurance entities incentivise responsible behaviour."
+          },
+          {
+            "topic_code": "FN-IN-410c",
+            "topic_name": "Financed Emissions",
+            "topic_description": "Entities participating in insurance activities face risks and opportunities related to the greenhouse gas emissions associated with those activities. Counterparties, borrowers or investees with higher emissions might be more susceptible to risks associated with technological changes, shifts in supply and demand and policy change which in turn can impact the prospects of a financial institution that is providing financial services to these entities. These risks and opportunities can arise in the form of credit risk, market risk, reputational risk and other financial and operational risks. For example, credit risk might arise in relation to financing clients affected by increasingly stringent carbon taxes, fuel efficiency regulations or other policies; credit risk might also arise through related technological shifts. Reputational risk might arise from financing fossil-fuel projects. Entities participating in insurance activities are increasingly monitoring and managing such risks by measuring their financed emissions. This measurement serves as an indicator of an entity\u2019s exposure to climate-related risks and opportunities and how it might need to adapt its financial activities over time."
+          }
+        ]
+      },
+      {
+        "gic_code": 450,
+        "gic_name": "Physical Impacts of Climate Change",
+        "gic_description": "The category addresses the company\u2019s ability to manage risks and opportunities associated with direct exposure of its owned or controlled assets and operations to actual or potential physical impacts of climate change. It captures environmental and social issues that may arise from operational disruptions due to physical impacts of climate change. It further captures socio-economic issues resulting from companies failing to incorporate climate change consideration in products and services sold, such as insurance policies and mortgages. The category relates to the company\u2019s ability to adapt to increased frequency and severity of extreme weather, shifting climate, sea level risk, and other expected physical impacts of climate change. Management may involve enhancing resiliency of physical assets and/or surrounding infrastructure as well as incorporation of climate change-related considerations into key business activities (e.g., mortgage and insurance underwriting, planning and development of real estate projects).",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "FN-IN-450a",
+            "topic_name": "Physical Risk Exposure",
+            "topic_description": "Catastrophic losses associated with extreme weather events will continue to have a material, adverse effect on the Insurance industry. The extent of this effect may evolve as climate change increases the frequency and severity of both modelled and non-modelled natural catastrophes, including hurricanes, floods and droughts. Failure to appropriately understand environmental risks, and price them into the underwritten insurance products, may result in higher-than-expected claims on policies. Therefore, insurance entities that incorporate climate change considerations into their underwriting process for individual contracts, as well as the management of entity-level risks and capital adequacy, may be better positioned to create value over the long-term. Enhanced disclosure of an entity\u2019s approach to incorporating these factors, in addition to quantitative data such as the probable maximum loss and total losses attributable to insurance pay-outs, may provide investors with the information necessary to assess current and future performance on this issue."
+          }
+        ]
+      },
+      {
+        "gic_code": 550,
+        "gic_name": "Systemic Risk Management",
+        "gic_description": "The category addresses the company\u2019s contributions to or management of systemic risks resulting from large-scale weakening or collapse of systems upon which the economy and society depend. This includes financial systems, natural resource systems, and technological systems. It addresses the mechanisms a company has in place to reduce its contributions to systemic risks and to improve safeguards that may mitigate the impacts of systemic failure. For financial institutions, the category also captures the company\u2019s ability to absorb shocks arising from financial and economic stress and meet stricter regulatory requirements related to the complexity and interconnectedness of companies in the industry.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "FN-IN-550a",
+            "topic_name": "Systemic Risk Management",
+            "topic_description": "Entities in the Insurance industry have the potential to pose, amplify or transmit a threat to the financial system. The size, interconnectedness and complexity of entities highlight the industry\u2019s exposure to systemic risk. Regulators have identified entities that engage in non-traditional or non-insurance-related activities as being more vulnerable to financial market developments and subsequently more likely to contribute to systemic risk. As a result, entities may be designated as Systemically Important Financial Institutions. Central banking systems in various jurisdictions may subject such entities to stricter prudential regulatory standards and oversight. Such entities may face stricter limits on their risk-based capital, leverage, liquidity and credit exposure. In addition, regulators may require entities to maintain a plan for rapid and orderly dissolution in the event of financial distress. Regulatory compliance can be costly, and failure to meet qualitative and quantitative regulatory performance thresholds could lead to substantial penalties. To demonstrate how these risks are being managed, entities should disclose important aspects of their systemic risk management and their ability to meet stricter regulatory requirements."
+          }
+        ]
+      }
+    ]
+  }
+}

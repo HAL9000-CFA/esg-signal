@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"CO2 equivalent (CO2e) emissions in Current Trajectory peak in the mid-2020s and by 2050 are around 25% below 2023 levels.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"On process safety, we made strong progress, with 29% fewer combined tier 1 and 2 process safety events in 2025\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Tragically, in 2025, four people died while working in our US retail business. Three were employees in our TravelCenters of America business.\"}\n]\n```",
+  "cost_usd": 0.030875,
+  "input_tokens": 4975,
+  "model": "claude-opus-4-5",
+  "output_tokens": 240,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

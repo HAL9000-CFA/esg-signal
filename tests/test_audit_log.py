@@ -50,6 +50,7 @@ def test_summarise_aggregates_correctly(tmp_log):
 
 
 def test_compute_cost_known_model():
+    # claude-opus-4-5: $5/M input + $25/M output (docs.anthropic.com/en/docs/about-claude/pricing)
     cost = al.compute_cost("claude-opus-4-5", input_tokens=1_000_000, output_tokens=1_000_000)
     assert cost == pytest.approx(30.0)
 

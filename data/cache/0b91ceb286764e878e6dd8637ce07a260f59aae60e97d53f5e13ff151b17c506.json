@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"We used our operational carbon intensity as a guide level, reflecting our portfolio average... we compared the operational carbon intensity of the investment (on the basis of equity share) to the portfolio average equity share GHG emissions intensity shown in the bp ESG Datasheet 2024 for the relevant business activity (Exploration, production and LNG). We normally target a ratio of less than 100%, meaning that the investment is expected to reduce the average operational carbon intensity of the relevant portfolio.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"Safety risk management at bp is underpinned by our Operating Management System (OMS), which is designed to help us sustainably deliver safe, reliable and compliant bp operations.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"Safety and risks: For all investment cases, we provide an assessment of the key risks to the investment that have a significantly higher probability than usual or have a significantly greater impact (relative to the size of the project) were they to occur. Safety risk management at bp is underpinned by our Operating Management System (OMS), which is designed to help us sustainably deliver safe, reliable and compliant bp operations.\"}\n]\n```",
+  "cost_usd": 0.033565,
+  "input_tokens": 4923,
+  "model": "claude-opus-4-5",
+  "output_tokens": 358,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

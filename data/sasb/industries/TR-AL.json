@@ -1,0 +1,62 @@
+{
+  "fetched_at": "2026-04-11T18:03:08.984589+00:00",
+  "data": {
+    "industry_code": "TR-AL",
+    "industry_name": "Airlines",
+    "industry_description": "Airlines industry entities provide air transportation globally to passengers for both leisure and business purposes. This includes commercial full-service, low-cost and regional airlines. Full-service carriers typically use a hub-and-spoke model to design their routes within countries and internationally. Low-cost carriers usually offer a smaller number of routes as well as no-frills service to their customers. Regional carriers typically operate under contract to full-service carriers, expanding the network of the larger carriers. Many airline entities also have a cargo segment in their operations to generate additional revenue. Entities in the industry commonly form partnerships or join alliances to increase network size. Operating as an alliance allows airlines to offer customers access to international or otherwise underserved itineraries on more than one airline under one ticket. At the same time, airlines share some overhead costs and increase their competitive position in the global market without having to operate outside their home country.",
+    "industry_gics": [
+      {
+        "gic_code": 110,
+        "gic_name": "GHG Emissions",
+        "gic_description": "The category addresses direct (Scope 1) greenhouse gas (GHG) emissions that a company generates through its operations. This includes GHG emissions from stationary (e.g., factories, power plants) and mobile sources (e.g., trucks, delivery vehicles, planes), whether a result of combustion of fuel or non-combusted direct releases during activities such as natural resource extraction, power generation, land use, or biogenic processes. The category further includes management of regulatory risks, environmental compliance, and reputational risks and opportunities, as they related to direct GHG emissions. The seven GHGs covered under the Kyoto Protocol are included within the category\u2014carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur hexafluoride (SF6), and nitrogen trifluoride (NF3).",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "TR-AL-110a",
+            "topic_name": "Greenhouse Gas Emissions",
+            "topic_description": "As a result of a heavy reliance on hydrocarbon fuels, the Airlines industry generates significant emissions, more than 99% of which are in the form of carbon dioxide (CO2). Therefore, the industry is subject to compliance costs and risks associated with climate change mitigation policies. The main sources of greenhouse gas (GHG) emissions for airlines entities are aircraft fuel use and emissions, ground equipment and facility electricity. Aircraft fuel consumption is the largest contributor to total emissions from the industry, and fuel management is a critical part of reducing emissions. Management of fuel-related environmental impacts includes increasing fuel efficiency through fleet upgrades, retrofits, and flight speed and route design optimisation, as well as using alternative and sustainable fuels. These initiatives require capital expenditures, but in the long term, they may reduce fuel costs and decrease exposure to GHG emissions programmes and regulatory risk."
+          }
+        ]
+      },
+      {
+        "gic_code": 310,
+        "gic_name": "Labour Practices",
+        "gic_description": "The category addresses the company\u2019s ability to uphold commonly accepted labour standards in the workplace, including compliance with labour laws and internationally accepted norms and standards. This includes, but is not limited to, ensuring basic human rights related to child labour, forced or bonded labour, exploitative labour, fair wages and overtime pay, and other basic workers\u2019 rights. It also includes minimum wage policies and provision of benefits, which may influence how a workforce is attracted, retained, and motivated. The category further addresses a company\u2019s relationship with organized labour and freedom of association.",
+        "gic_dimension": "Human Capital",
+        "gic_topics": [
+          {
+            "topic_code": "TR-AL-310a",
+            "topic_name": "Labour Practices",
+            "topic_description": "Collective agreements cover many workers in the Airlines industry and guide fair wage discussions, safe working conditions and freedom of association, which are among basic worker rights. The organising of essential personnel and increased wages or benefits may result in higher labour costs. At the same time, labour practices may affect long-term business profitability. Effective management of, and communication associated with, issues such as worker pay and working conditions may prevent conflicts with workers that could result in extended periods of strikes, which may slow or suspend operations and damage an entity\u2019s reputation, potentially reducing revenue and market share."
+          }
+        ]
+      },
+      {
+        "gic_code": 520,
+        "gic_name": "Competitive Behaviour",
+        "gic_description": "The category covers social issues associated with existence of monopolies, which may include, but are not limited to, excessive prices, poor quality of service, and inefficiencies. It addresses a company\u2019s management of legal and social expectation around monopolistic and anti-competitive practices, including issues related to bargaining power, collusion, price fixing or manipulation, and protection of patents and intellectual property (IP).",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "TR-AL-520a",
+            "topic_name": "Competitive Behaviour",
+            "topic_description": "The Airlines industry is characterised by competitive margins because of high fixed capital and labour costs and competition with government-subsidised carriers in some markets. Airlines often seek cost savings using economies of scale with alliances or consolidation, which may result in market concentration. The industry also has high barriers to entry because of limited landing rights and increasing airport congestion. Together, these characteristics may encourage entities to engage in anti-competitive practices that increase consumer prices. As a result, antitrust authorities have scrutinised some airline industry practices such as airport slot management, predatory pricing, and alliances and mergers. Legal fees, reputational risk, delayed merger or acquisition transaction costs, and limits to growth through acquisition or merger may create material risks for investors."
+          }
+        ]
+      },
+      {
+        "gic_code": 540,
+        "gic_name": "Critical Incident Risk Management",
+        "gic_description": "The category addresses the company\u2019s use of management systems and scenario planning to identify, understand, and prevent or minimize the occurrence of low-probability, high-impact accidents and emergencies with significant potential environmental and social externalities. It relates to the culture of safety at a company, its relevant safety management systems and technological controls, the potential human, environmental, and social implications of such events occurring, and the long-term effects to an organization, its workers, and society should these events occur.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "TR-AL-540a",
+            "topic_name": "Accident & Safety Management",
+            "topic_description": "Air travel accidents may result in significant consequences. Passenger safety is paramount in the Airlines industry. Although air travel is one of the safest transport modes, airlines are held to very high safety standards, and consumers expect accident-free operations. Furthermore, since products transported by air tend to be high-value or perishable goods, delivering them safely and in a timely manner is a priority for any carrier. Airline accidents may result in significant environmental and social externalities and require entities to pay for remediation and victim compensation. Safety incidents or violations of safety regulations may affect an entity\u2019s reputation, increasing its risk and cost of capital, resulting in reduced consumer demand and revenues. Even if they occur rarely, larger accidents may result in significant, long-term effects on brand value and revenue growth. Providing adequate employee safety training and ensuring the health and well-being of crew members is critical to ensuring safety. Timely and competent aircraft maintenance may minimise the chances of technical failure and regulatory penalties for non-compliance."
+          }
+        ]
+      }
+    ]
+  }
+}

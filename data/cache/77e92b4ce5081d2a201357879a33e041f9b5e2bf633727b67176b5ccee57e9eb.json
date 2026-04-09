@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [\n    {\n      \"text\": \"Operated carbon emissions (MtCO2e) 38.9 35.5 32.1 15% 0.22 Actual: 33.9\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2025,\n      \"category\": \"reduction_target\"\n    }\n  ],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Critical Incident Risk Management\": [],\n  \"Employee Health & Safety\": []\n}\n```",
+  "cost_usd": 0.029245000000000004,
+  "input_tokens": 5114,
+  "model": "claude-opus-4-5",
+  "output_tokens": 147,
+  "purpose": "WvM extraction chunk 27/79 (5 factors)",
+  "temperature": 0.0
+}

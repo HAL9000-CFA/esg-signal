@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's air quality credibility shows moderate strength based on limited but positive evidence. Disclosure indicates quantified commitments with specific reference to MARPOL sulphur cap compliance, while regulatory data from environmental agency records suggests clean operational performance with no violations detected across 7 records. However, with only two of five evidence streams active and insufficient hiring data to assess operational capability, the overall assessment carries meaningful uncertainty.",
+  "cost_usd": 0.004835000000000001,
+  "input_tokens": 532,
+  "model": "claude-opus-4-5",
+  "output_tokens": 87,
+  "purpose": "Narrative synthesis: Air Quality",
+  "temperature": 0.2
+}

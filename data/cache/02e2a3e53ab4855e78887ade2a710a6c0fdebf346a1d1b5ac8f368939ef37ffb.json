@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"The committee will assess overall safety performance as well as progress towards the reduction of net debt as an underpin in determining the final vesting percentage.\"},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"VAGUE\", \"evidence\": \"progress in transitioning to an integrated energy company\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"VAGUE\", \"evidence\": \"Material misconduct by a participant. Fraud effected by or with the knowledge of a participant.\"},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"VAGUE\", \"evidence\": \"The committee may make minor amendments to the remuneration policy to aid its operation or implementation without seeking shareholder approvals (e.g. for regulatory, exchange control, tax or administrative purposes or to take account of a change in legislation).\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"Material failure impacting safety or environmental sustainability.\"}\n]\n```",
+  "cost_usd": 0.03171,
+  "input_tokens": 4447,
+  "model": "claude-opus-4-5",
+  "output_tokens": 379,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates strong disclosure practices for water management, with quantified reporting on water stress exposure across major operating sites, while regulatory records show no violations across seven Environment Agency pollution records. However, the words-versus-money stream suggests a gap between detailed narrative disclosure and identifiable monetary commitments to water stewardship. With talent and supply chain evidence unavailable, the overall picture indicates credible baseline performance but leaves questions about the depth of capital allocation to this stated priority.",
+  "cost_usd": 0.00483,
+  "input_tokens": 481,
+  "model": "claude-opus-4-5",
+  "output_tokens": 97,
+  "purpose": "Narrative synthesis: Water & Wastewater Management",
+  "temperature": 0.2
+}

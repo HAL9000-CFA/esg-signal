@@ -14,6 +14,8 @@ repos:
     rev: v6.0.0
     hooks:
       - id: trailing-whitespace
+        exclude: ^data/
       - id: end-of-file-fixer
+        exclude: ^data/
       - id: check-merge-conflict
       - id: detect-private-key

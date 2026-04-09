@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"the committee has monitored progress against bp's 2027 $4-5 billion structural cost reduction target\",\n      \"amount\": 4500000000,\n      \"currency\": \"USD\",\n      \"year\": 2027,\n      \"category\": \"reduction_target\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.028605000000000002,
+  "input_tokens": 4796,
+  "model": "claude-opus-4-5",
+  "output_tokens": 185,
+  "purpose": "WvM extraction chunk 24/79 (10 factors)",
+  "temperature": 0.0
+}

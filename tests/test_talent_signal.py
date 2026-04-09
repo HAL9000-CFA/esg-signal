@@ -206,16 +206,17 @@ class TestFetchSerpJobs:
 
         assert result == []
 
-    def test_caps_keywords_at_three(self, monkeypatch):
+    def test_caps_keywords_at_max(self, monkeypatch):
         monkeypatch.setenv("SERPAPI_KEY", "test-key")
         mock_resp = MagicMock()
         mock_resp.json.return_value = {"jobs_results": []}
         mock_resp.raise_for_status.return_value = None
 
+        keywords = [str(i) for i in range(15)]
         with patch("pipeline.fetchers.serp_jobs.requests.get", return_value=mock_resp) as mock_get:
-            fetch_serp_jobs("Acme", ["a", "b", "c", "d", "e"])
+            fetch_serp_jobs("Acme", keywords)
 
-        assert mock_get.call_count == 3
+        assert mock_get.call_count == 10
 
 
 # ---------------------------------------------------------------------------

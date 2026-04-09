@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates solid disclosure practices for air quality, with quantified commitments referencing specific MARPOL sulphur cap standards, and regulatory records from the Environment Agency show no violations across seven entries. However, talent signals are notably weaker, with the blended score of 0.39 suggesting limited specialist hiring activity in air quality roles despite adequate sample size. With supply chain evidence unmeasured and no monetary commitment data extracted from available text, the overall amber rating reflects genuine strength in compliance and transparency but insufficient evidence to assess operational investment depth.",
+  "cost_usd": 0.005625,
+  "input_tokens": 550,
+  "model": "claude-opus-4-5",
+  "output_tokens": 115,
+  "purpose": "Narrative synthesis: Air Quality",
+  "temperature": 0.2
+}

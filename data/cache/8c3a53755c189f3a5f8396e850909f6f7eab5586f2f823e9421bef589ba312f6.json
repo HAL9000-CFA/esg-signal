@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"$1,000 million (2024 $500 million), specifically earmarked to fund BP Alternative Energy Investments Ltd including the funding of Lightsource bp\",\n      \"amount\": 1000000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"$1,500 million (2024 $1500 million) specifically earmarked to fund a floating, production, storage and offloading vessel (FPSO) used in one of the group's major projects\",\n      \"amount\": 1500000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"capex\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [\n    {\n      \"text\": \"the group estimates that for production facilities, approximately $17 billion (2024 $16 billion) of associated decommissioning obligations were previously transferred to third parties\",\n      \"amount\": 17000000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    }\n  ],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.039270000000000006,
+  "input_tokens": 5994,
+  "model": "claude-opus-4-5",
+  "output_tokens": 372,
+  "purpose": "WvM extraction chunk 55/79 (10 factors)",
+  "temperature": 0.0
+}

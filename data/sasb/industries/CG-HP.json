@@ -1,0 +1,62 @@
+{
+  "fetched_at": "2026-04-11T20:09:00.412972+00:00",
+  "data": {
+    "industry_code": "CG-HP",
+    "industry_name": "Household & Personal Products",
+    "industry_description": "Household & Personal Products industry entities manufacture a wide range of goods for personal and commercial consumption, including cosmetics, household and industrial cleaning supplies, soaps and detergents, sanitary paper products, household batteries, razors and kitchen utensils. Household and personal products entities operate globally and typically sell their products to mass merchants, grocery stores, membership club stores, drug stores, high-frequency stores, distributors and e-commerce retailers. Some entities sell products through independent representatives rather than third-party retail establishments.",
+    "industry_gics": [
+      {
+        "gic_code": 140,
+        "gic_name": "Water & Wastewater Management",
+        "gic_description": "The category addresses a company\u2019s water use, water consumption, wastewater generation, and other impacts of operations on water resources, which may be influenced by regional differences in the availability and quality of and competition for water resources. More specifically, it addresses management strategies including, but not limited to, water efficiency, intensity, and recycling. Lastly, the category also addresses management of wastewater treatment and discharge, including groundwater and aquifer pollution.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "CG-HP-140a",
+            "topic_name": "Water Management",
+            "topic_description": "Water is vital to the Household & Personal Products industry, both as a coolant in manufacturing processes and as a main input for many of the industry\u2019s products. Water is becoming a scarce resource around the world because of population growth and increasing consumption, rapid urbanisation, and declining supplies because of subsurface aquifer depletion, drought and climate change. Many entities in this industry have operations in regions of the world facing water scarcity. Without careful planning, entities could face increased costs or lose water access in these regions, which may be a risk to production. Having rigorous checks in place to ensure a steady supply of water to all factories, as well as investing in technology to increase water use efficiency, will help entities reduce water-related risks as water scarcity becomes an increasingly global issue."
+          }
+        ]
+      },
+      {
+        "gic_code": 250,
+        "gic_name": "Product Quality & Safety",
+        "gic_description": "The category addresses issues involving unintended characteristics of products sold or services provided that may create health or safety risks to end-users. It addresses a company\u2019s ability to offer manufactured products and/or services that meet customer expectations with respect to their health and safety characteristics. It includes, but is not limited to, issues involving liability, management of recalls and market withdrawals, product testing, and chemicals/content/ingredient management in products.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "CG-HP-250a",
+            "topic_name": "Product Environmental, Health and Safety Performance",
+            "topic_description": "The Household & Personal Products industry faces consumer and regulatory scrutiny over the use of chemicals of concern, which have been linked to adverse effects on human health and the environment. These chemicals include persistent, bioaccumulative and toxic (PBT) substances and carcinogenic, mutagen or teratogenic chemicals. Isolating and determining causal channels for negative impacts on health and the environment is difficult, which often results in a significant delay between a product\u2019s market introduction and the point at which regulation or public opinion demands entities in the industry to reformulate harmful chemicals. Applicable jurisdictional laws and regulations place restrictions on, or suggest alternatives to, the use of harmful chemicals within the industry. Large retailers have implemented programmes to ban chemicals of concern in the products they sell, placing greater pressure on the industry. Entities that anticipate the changing regulatory landscape and implement stricter processes and testing are more likely to gain a competitive advantage. Early adopters of innovations in green chemistry and the reduction of chemicals of concern may improve profitability by being better able to capture changing customer demand and avoid regulatory burdens."
+          }
+        ]
+      },
+      {
+        "gic_code": 410,
+        "gic_name": "Product Design & Lifecycle Management",
+        "gic_description": "The category addresses incorporation of environmental, social, and governance (ESG) considerations in characteristics of products and services provided or sold by the company. It includes, but is not limited to, managing the lifecycle impacts of products and services, such as those related to packaging, distribution, use-phase resource intensity, and other environmental and social externalities that may occur during their use-phase or at the end of life. The category captures a company\u2019s ability to address customer and societal demand for more sustainable products and services as well as to meet evolving environmental and social regulation. It does not address direct environmental or social impacts of the company\u2019s operations nor does it address health and safety risks to consumers from product use, which are covered in other categories.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "CG-HP-410a",
+            "topic_name": "Packaging Lifecycle Management",
+            "topic_description": "The Household & Personal Products industry uses a large quantity of materials for product packaging, which often constitutes a significant portion of entities\u2019 expenses. Packaging design, particularly packaging weight, has direct consequences for transportation expenses, which can be significant. The industry also faces pressure from both consumers and large retail outlets to manage the negative environmental externalities associated with packaging because of material extraction and waste. The sustainability performance of packaging depends largely on the type, use and ultimate disposal of materials. However, entities that effectively manage the sustainability characteristics of their product packaging\u2014including developing light-weight, using recycled content and recyclable materials and adopting sustainably sourced materials\u2014may be positioned better to capture shifting consumer demand and avoid (or mitigate) the effects of regulation related to extended producer responsibility. By managing the sustainability of product packaging, entities also potentially can reduce input and transportation costs."
+          }
+        ]
+      },
+      {
+        "gic_code": 430,
+        "gic_name": "Supply Chain Management",
+        "gic_description": "The category addresses management of environmental, social, and governance (ESG) risks within a company\u2019s supply chain. It addresses issues associated with environmental and social externalities created by suppliers through their operational activities. Such issues include, but are not limited to, environmental responsibility, human rights, labour practices, and ethics and corruption. Management may involve screening, selection, monitoring, and engagement with suppliers on their environmental and social impacts. The category does not address the impacts of external factors \u2013 such as climate change and other environmental and social factors \u2013 on suppliers\u2019 operations and/or on the availability and pricing of key resources, which is covered in a separate category.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "CG-HP-430a",
+            "topic_name": "Environmental & Social Impacts of Palm Oil Supply Chain",
+            "topic_description": "Palm oil has increased in popularity as a cheap input for a wide range of goods in the Household & Personal Products industry, including cleaning products, candles and cosmetics. Palm oil harvesting in specific regions of the world may contribute to deforestation, GHG emissions and other environmental and social problems. If not sourced responsibly, palm oil materials contribute to environmental and social externalities that can present reputational and regulatory risks for entities. Furthermore, entities in this industry are exposed to the risk of supply chain disruptions, input price increases and reputational damage associated with environmental and social externalities from palm oil sourcing. Entities face pressure to track and responsibly source palm oil and ensure minimum working condition standards in the supply chain, because palm oil production often is associated with labour issues. Implementing sourcing standards can reduce these risks, as can product-design phase innovations to reduce dependence on controversial materials such as palm oil."
+          }
+        ]
+      }
+    ]
+  }
+}

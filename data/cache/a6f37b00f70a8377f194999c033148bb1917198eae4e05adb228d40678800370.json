@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"Capital expenditure \u00ab 4,071 3,789 4,761\",\n      \"amount\": 4071000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"capex\"\n    },\n    {\n      \"text\": \"Of which: customers \u2013 convenience & mobility 2,480 2,059 3,135\",\n      \"amount\": 2480000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"capex\"\n    },\n    {\n      \"text\": \"products \u2013 refining & trading e 1,591 1,730 1,626\",\n      \"amount\": 1591000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"capex\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.0368,
+  "input_tokens": 5780,
+  "model": "claude-opus-4-5",
+  "output_tokens": 316,
+  "purpose": "WvM extraction chunk 9/79 (10 factors)",
+  "temperature": 0.0
+}

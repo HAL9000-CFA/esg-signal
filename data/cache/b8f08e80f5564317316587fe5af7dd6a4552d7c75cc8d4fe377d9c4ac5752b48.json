@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "Unilever demonstrates solid credibility on water management, with quantified disclosure tracking progress toward 100 water stewardship programmes in water-stressed areas by 2030. Regulatory evidence from 74 Environment Agency pollution records indicates a clean compliance record with no violations detected. While talent signals suggest organizational capability in this area, the absence of identifiable monetary commitments creates a moderate gap between stated ambitions and verifiable financial backing, warranting continued monitoring of capital allocation to water initiatives.",
+  "cost_usd": 0.005095000000000001,
+  "input_tokens": 499,
+  "model": "claude-opus-4-5",
+  "output_tokens": 104,
+  "purpose": "Narrative synthesis: Water & Wastewater Management",
+  "temperature": 0.2
+}

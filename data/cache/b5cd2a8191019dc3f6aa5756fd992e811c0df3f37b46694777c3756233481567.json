@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"34.3 MtCO2e GHG emissions \u2013 operational control (2024 33.6 MtCO2e)\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"QUANTIFIED\", \"evidence\": \"27 tier 1 and 2 process safety events (2024 38)\"},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Adjusted free cash flow growth >20% adjusted free cash flow compound annual growth rate (CAGR) from 2024-27; Net debt $14-18bn by end 2027; Structural cost reduction $5.5-6.5bn by end 2027; Return on average capital employed (ROACE) >16% in 2027\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"VAGUE\", \"evidence\": \"Our governance framework remains a foundation for delivering sustainable long\u2011term value for shareholders. That framework has also evolved, recognizing the changing needs of the business and external developments, including the implementation of provision 29 of the UK Corporate Governance Code, relating to risk management and internal control.\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"Safety will always be the board's highest priority. That's why we continue to work with the leadership team to ensure every incident is thoroughly investigated and the lessons learned are applied.\"}\n]\n```",
+  "cost_usd": 0.03928,
+  "input_tokens": 5421,
+  "model": "claude-opus-4-5",
+  "output_tokens": 487,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

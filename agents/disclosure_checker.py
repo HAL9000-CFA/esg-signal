@@ -11,11 +11,17 @@ Run normally:
 
 import argparse
 import json
+import logging
 from datetime import datetime
 from textwrap import dedent
 
 from pipeline.llm_client import call_claude
 from pipeline.models import CompanyProfile
+
+LOGGER = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s | %(levelname)s | %(name)s | %(message)s"
+)
 
 # model config
 MODEL_NAME = "claude-opus-4-5"
@@ -119,16 +125,17 @@ def grade_all_factors(
     run_id: str = None,
 ) -> list:
     """
-    Grade all ESG factors in a single Claude call.
+    Grade all ESG factors against the full report text, chunking when necessary.
 
-    Batching all factors into one request avoids sending the full report text
-    once per factor, which saves (N-1) * report_tokens input tokens per run.
-    Use this in preference to calling grade_single_factor() in a loop.
+    For reports that exceed _CHUNK_SIZE chars, the text is split into overlapping
+    chunks and each chunk is graded independently.  Per-factor results are merged
+    using QUANTIFIED > VAGUE > UNDISCLOSED priority so the best evidence across
+    all chunks is kept.  Chunk processing stops early once every factor reaches
+    QUANTIFIED.
 
     Args:
         report_text: annual report text from CompanyProfile
         factors: list of factor name strings or MaterialFactor objects
-                 (name attribute is used if objects are passed)
         company: company name
         run_id: Airflow run ID for audit log grouping (optional)
 
@@ -137,7 +144,64 @@ def grade_all_factors(
         Length and order match the input factors list.
     """
     factor_names = [f.name if hasattr(f, "name") else str(f) for f in factors]
-    factors_list = "\n".join(f"- {name}" for name in factor_names)
+
+    if len(report_text) <= _CHUNK_SIZE:
+        return _grade_all_factors_chunk(report_text, factors, factor_names, company, run_id)
+
+    chunks = _chunk_text(report_text)
+    LOGGER.info(
+        "grade_all_factors: report_text %d chars → %d chunks for %s",
+        len(report_text),
+        len(chunks),
+        company,
+    )
+    best: dict = {}
+
+    for chunk_idx, chunk in enumerate(chunks):
+        chunk_results = _grade_all_factors_chunk(chunk, factors, factor_names, company, run_id)
+        for r in chunk_results:
+            fname = r["factor"]
+            r_pri = _GRADE_PRIORITY.get(r.get("grade", "UNDISCLOSED"), 0)
+            b_pri = _GRADE_PRIORITY.get(best.get(fname, {}).get("grade", "UNDISCLOSED"), 0)
+            if r_pri > b_pri:
+                best[fname] = r
+
+        # Early exit: all factors QUANTIFIED — no need to read more of the report
+        if all(
+            _GRADE_PRIORITY.get(best.get(n, {}).get("grade", "UNDISCLOSED"), 0) == 2
+            for n in factor_names
+        ):
+            LOGGER.info(
+                "grade_all_factors: all factors QUANTIFIED after chunk %d/%d — stopping early",
+                chunk_idx + 1,
+                len(chunks),
+            )
+            break
+
+    return [
+        best.get(n, {"factor": n, "grade": "UNDISCLOSED", "evidence": None}) for n in factor_names
+    ]
+
+
+def _grade_all_factors_chunk(
+    report_text: str,
+    factors: list,
+    factor_names: list,
+    company: str,
+    run_id: str = None,
+) -> list:
+    """
+    Grade all factors against a single text chunk in one Claude call.
+    Internal helper — use grade_all_factors() as the public entry point.
+    """
+
+    def _factor_line(f, name: str) -> str:
+        desc = (getattr(f, "description", "") or "").strip()
+        if desc:
+            return f"- {name}: {desc}"
+        return f"- {name}"
+
+    factors_list = "\n".join(_factor_line(f, name) for f, name in zip(factors, factor_names))
 
     prompt = dedent(
         f"""
@@ -164,9 +228,27 @@ def grade_all_factors(
     )
 
     response = response.replace("```json", "").replace("```", "").strip()
-    results = json.loads(response)
 
-    # Guarantee one result per input factor, in order, even if Claude drops one
+    if not response:
+        LOGGER.warning(
+            "disclosure_checker: empty response from call_claude for company=%s — "
+            "treating chunk as UNDISCLOSED and continuing",
+            company,
+        )
+        return [{"factor": name, "grade": "UNDISCLOSED", "evidence": None} for name in factor_names]
+
+    try:
+        results = json.loads(response)
+    except json.JSONDecodeError as exc:
+        LOGGER.warning(
+            "disclosure_checker: JSON decode error for company=%s (%s) — "
+            "raw response (first 200 chars): %r — treating chunk as UNDISCLOSED",
+            company,
+            exc,
+            response[:200],
+        )
+        return [{"factor": name, "grade": "UNDISCLOSED", "evidence": None} for name in factor_names]
+
     result_map = {r["factor"]: r for r in results}
     return [
         result_map.get(name, {"factor": name, "grade": "UNDISCLOSED", "evidence": None})
@@ -174,7 +256,7 @@ def grade_all_factors(
     ]
 
 
-_CHUNK_SIZE = 20_000   # characters per chunk
+_CHUNK_SIZE = 20_000  # characters per chunk
 _CHUNK_OVERLAP = 2_000  # overlap between consecutive chunks
 
 # Grade priority: QUANTIFIED > VAGUE > UNDISCLOSED
@@ -190,7 +272,9 @@ def _chunk_text(text: str) -> list[str]:
     if len(text) <= _CHUNK_SIZE:
         return [text]
     step = _CHUNK_SIZE - _CHUNK_OVERLAP
-    return [text[i : i + _CHUNK_SIZE] for i in range(0, len(text), step) if text[i : i + _CHUNK_SIZE]]
+    return [
+        text[i : i + _CHUNK_SIZE] for i in range(0, len(text), step) if text[i : i + _CHUNK_SIZE]
+    ]
 
 
 def _merge_grades(grades: list[dict]) -> dict:

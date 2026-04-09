@@ -1,0 +1,72 @@
+{
+  "fetched_at": "2026-04-11T18:03:06.936964+00:00",
+  "data": {
+    "industry_code": "FN-IB",
+    "industry_name": "Investment Banking & Brokerage",
+    "industry_description": "Investment Banking & Brokerage industry entities perform a wide range of functions in the capital markets, including raising and allocating capital and providing market-making and advisory services for corporations, financial institutions, governments and high net-worth individuals. Specific activities include financial advisory and securities underwriting services conducted on a fee basis; securities and commodities brokerage activities, which involve buying and selling securities or commodities contracts and options on a commission or fee basis; and trading and principal investment activities, which involve the buying and selling of equities, fixed income, currencies, commodities and other securities for client-driven and proprietary trading. Investment banks also originate and securitise loans for infrastructure and other projects. Entities in the industry generate revenues from global markets and, therefore, are exposed to various regulatory regimes. The industry continues to face regulatory pressure to reform and disclose aspects of operations that present systemic risks. Specifically, entities are facing new capital requirements, stress testing, limits on proprietary trading and increased scrutiny over compensation practices.",
+    "industry_gics": [
+      {
+        "gic_code": 330,
+        "gic_name": "Employee Engagement, Diversity & Inclusion",
+        "gic_description": "The category addresses a company\u2019s ability to ensure that its culture and hiring and promotion practices embrace the building of a diverse and inclusive workforce that reflects the makeup of local talent pools and its customer base. It addresses the issues of discriminatory practices on the bases of race, gender, ethnicity, religion, sexual orientation, and other factors.",
+        "gic_dimension": "Human Capital",
+        "gic_topics": [
+          {
+            "topic_code": "FN-IB-330a",
+            "topic_name": "Employee Diversity & Inclusion",
+            "topic_description": "Entities in the Investment Banking & Brokerage industry face significant competition for skilled employees. As the industry continues to undergo rapid innovation through the introduction of more complex financial products and computerised algorithmic and high-frequency trading, material concerns such as profitability are more likely to determine the ability of entities to attract and retain skilled employees. By ensuring gender and racial diversity throughout the organisation, entities may expand their candidate pool, which may reduce hiring costs and improve operational efficiency. Evidence also suggests that entities with more diverse groups of employees may reduce risk-taking among employees involved in risk-prone trading activities (for example, trading), which may reduce the entity\u2019s overall risk exposure. Entities with more diverse workforces may, therefore, be better able to attract skilled labour, adapt to advancements in technology and safeguard employee well-being."
+          }
+        ]
+      },
+      {
+        "gic_code": 410,
+        "gic_name": "Product Design & Lifecycle Management",
+        "gic_description": "The category addresses incorporation of environmental, social, and governance (ESG) considerations in characteristics of products and services provided or sold by the company. It includes, but is not limited to, managing the lifecycle impacts of products and services, such as those related to packaging, distribution, use-phase resource intensity, and other environmental and social externalities that may occur during their use-phase or at the end of life. The category captures a company\u2019s ability to address customer and societal demand for more sustainable products and services as well as to meet evolving environmental and social regulation. It does not address direct environmental or social impacts of the company\u2019s operations nor does it address health and safety risks to consumers from product use, which are covered in other categories.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "FN-IB-410a",
+            "topic_name": "Incorporation of Environmental, Social, and Governance Factors in Investment Banking & Brokerage Activities",
+            "topic_description": "Environmental, social and governance (ESG) factors may have material impacts on the entities assets and projects across a range of industries to which investment banks provide services or in which they invest. Therefore, by accounting for these factors in underwriting, advisory, investing and lending activities, investment banks may manage significant positive and negative environmental and social externalities effectively. The potential for both value creation and loss associated with ESG factors suggests that investment banking and brokerage entities have a responsibility to shareholders and clients to consider these factors when analysing and valuing core products, including sell-side research, advisory services, origination, underwriting and principal transactions. Investment banking and brokerage entities that fail to manage these risks and opportunities effectively may expose themselves to increased reputational and financial risks. Appropriately pricing ESG risks may reduce investment banks\u2019 financial risk exposure, help generate additional revenue or open new market opportunities. To help investors better understand how entities in the industry manage these issues, investment banks should disclose how they incorporate ESG factors in their core products and services."
+          }
+        ]
+      },
+      {
+        "gic_code": 510,
+        "gic_name": "Business Ethics",
+        "gic_description": "The category addresses the company\u2019s approach to managing risks and opportunities surrounding ethical conduct of business, including fraud, corruption, bribery and facilitation payments, fiduciary responsibilities, and other behaviour that may have an ethical component. This includes sensitivity to business norms and standards as they shift over time, jurisdiction, and culture. It addresses the company\u2019s ability to provide services that satisfy the highest professional and ethical standards of the industry, which means to avoid conflicts of interest, misrepresentation, bias, and negligence through training employees adequately and implementing policies and procedures to ensure employees provide services free from bias and error.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "FN-IB-510a",
+            "topic_name": "Business Ethics",
+            "topic_description": "The regulatory environment surrounding the Investment Banking & Brokerage industry continues to evolve internationally. Entities must adhere to a complex and often inconsistent set of rules relating to performance and conduct, as well as provide disclosure on issues including insider trading, antitrust behaviour, price fixing and market manipulation. Entities are subject to strict legal requirements against tax evasion, fraud, money laundering and corrupt practices. In some jurisdictions, enhanced rewards for whistle-blowers may increase the number of complaints brought to regulators. Entities that ensure regulatory compliance through robust internal controls may build trust with clients, increase revenue and protect shareholder value by minimising losses incurred because of legal proceedings."
+          },
+          {
+            "topic_code": "FN-IB-510b",
+            "topic_name": "Professional Integrity",
+            "topic_description": "The success of entities in the Investment Banking & Brokerage industry is dependent on cultivating client trust and loyalty. To ensure long-term, mutually beneficial relationships, entities must provide services that satisfy the highest professional standards, which means taking careful measures to avoid conflicts of interest, misrepresentation and negligence. Professional integrity also means following a code of ethics with respect to transparency and disclosure. These measures are important both for preserving an entity\u2019s licence to operate, as well as for attracting and retaining clients. Failure to meet professional standards may lead to negative consequences such as legal penalties or reputational damage, harming the entity\u2019s clients as well as its shareholders. To maintain professional integrity, entities must ensure employees are trained in, and committed to adhering to, applicable financial industry regulations. A description of management\u2019s approach to assuring professional integrity may help investors understand risk exposure and processes in place to avoid misconduct. Disclosure of the entity\u2019s amount of legal and regulatory fines and settlements may provide investors and stakeholders with more transparent information regarding which financial institutions are adhering to regulatory norms."
+          }
+        ]
+      },
+      {
+        "gic_code": 550,
+        "gic_name": "Systemic Risk Management",
+        "gic_description": "The category addresses the company\u2019s contributions to or management of systemic risks resulting from large-scale weakening or collapse of systems upon which the economy and society depend. This includes financial systems, natural resource systems, and technological systems. It addresses the mechanisms a company has in place to reduce its contributions to systemic risks and to improve safeguards that may mitigate the impacts of systemic failure. For financial institutions, the category also captures the company\u2019s ability to absorb shocks arising from financial and economic stress and meet stricter regulatory requirements related to the complexity and interconnectedness of companies in the industry.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "FN-IB-550a",
+            "topic_name": "Systemic Risk Management",
+            "topic_description": "Investment Banking & Brokerage entities that fail to manage risks to capital effectively may suffer significant value losses to their financial assets while increasing liabilities. Because of the interconnectedness of the global financial system, these failures can contribute to significant market disruption and financial crises. This systemic nature of risk has become a central concern for regulators. As a result, many jurisdictions require that banks undergo supervised stress tests to evaluate whether the entity has sufficient capital and liquidity to absorb losses, continue operations and meet obligations in adverse economic and financial conditions. Failure to meet regulatory requirements may lead to penalties and substantially increased future compliance costs. Investment banks should improve their disclosures by measuring how well they can absorb shocks arising from systemic stresses to demonstrate how risks associated with their size, complexity, interconnectedness, substitutability and cross-jurisdictional activity are being managed. Entities that commit to enhanced disclosures may experience improved investor and shareholder confidence, potentially leading to increased revenues."
+          },
+          {
+            "topic_code": "FN-IB-550b",
+            "topic_name": "Employee Incentives & Risk-taking",
+            "topic_description": "Variations in employee compensation structures in the Investment Banking & Brokerage industry may incentivise employees to focus on short- or long-term entity performance. Structures that emphasise short-term performance may encourage excessive risk-taking, with adverse implications for long-term corporate value. Various financial crises in recent decades have increased regulatory and shareholder scrutiny towards excessive risk-taking behaviour. Enhanced disclosure of employee compensation, focusing on performance metrics and variable remuneration, policies regarding clawback provisions, supervision, control and validation of traders\u2019 pricing of Level 3 assets may provide investors with a better understanding of how entities are preserving corporate value by prioritising long-term growth over short-term reward."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "fetched_at": "2026-04-11T20:08:43.806975+00:00",
+  "data": {
+    "industry_code": "TC-SI",
+    "industry_name": "Software & IT Services",
+    "industry_description": "The Software & Information Technology (IT) Services industry offers products and services globally to retail, business and government customers, and includes entities that develop and sell applications software, infrastructure software and middleware. The industry generally is competitive but with dominant players in some segments. Although relatively immature, the industry is characterised by high-growth entities that place a heavy emphasis on innovation and depend on human and intellectual capital. The industry also includes IT services entities delivering specialised IT functions, such as consulting and outsourced services. New industry business models include cloud computing, software as a service, virtualisation, machine-to-machine communication, big data analysis and machine learning. Additionally, brand value is important for entities in the industry to scale and achieve network effects, whereby wide adoption of a particular software product may result in self-perpetuating growth in sales.",
+    "industry_gics": [
+      {
+        "gic_code": 130,
+        "gic_name": "Energy Management",
+        "gic_description": "The category addresses environmental impacts associated with energy consumption. It addresses the company\u2019s management of energy in manufacturing and/or for provision of products and services derived from utility providers (grid energy) not owned or controlled by the company. More specifically, it includes management of energy efficiency and intensity, energy mix, as well as grid reliance. Upstream (e.g., suppliers) and downstream (e.g., product use) energy use is not included in the scope.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "TC-SI-130a",
+            "topic_name": "Environmental Footprint of Hardware Infrastructure",
+            "topic_description": "With the growth of cloud-based service offerings, entities in this industry own, operate or rent increasingly more data centres and other hardware. Thus, managing the energy and water use associated with IT hardware infrastructure is relevant to value creation. Data centres must be powered continuously, and disruptions to the energy supply can have a material effect on operations, depending on the magnitude and timing of the disruption. Entities face a trade-off between energy and water consumption because of data centre cooling needs. Cooling data centres with water instead of chillers improves energy efficiency, but this method may create dependence on significant local water resources. Data centre specification decisions are important for managing costs, obtaining a reliable supply of energy and water, and reducing reputational risks, particularly with the increasing global regulatory focus on climate change and the opportunities arising from energy efficiency and renewable energy innovations."
+          }
+        ]
+      },
+      {
+        "gic_code": 220,
+        "gic_name": "Customer Privacy",
+        "gic_description": "The category addresses management of risks related to the use of personally identifiable information (PII) and other customer or user data for secondary purposes including but not limited to marketing through affiliates and non-affiliates. The scope of the category includes social issues that may arise from a company\u2019s approach to collecting data, obtaining consent (e.g., opt-in policies), managing user and customer expectations regarding how their data is used, and managing evolving regulation. It excludes social issues arising from cybersecurity risks, which are covered in a separate category.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "TC-SI-220a",
+            "topic_name": "Data Privacy & Freedom of Expression",
+            "topic_description": "As Software & IT Services entities increasingly deliver products and services over the Internet and through mobile devices, they must carefully manage two separate and often conflicting priorities. First, entities use customer data to innovate and provide customers with new products and services to generate revenues. Second, entities have access to a wide range of customer data, such as personal, demographic, content and behavioural data creating associated privacy concerns. This dynamic may result in increased regulatory scrutiny in many countries. The delivery of cloud-based software and IT services also raises concerns about potential access to user data by governments that may use it to limit the citizens\u2019 freedoms. Effective management in this area may reduce regulatory and reputational risks that may result in decreased revenues, reduced market share and increased regulatory actions involving potential fines and other legal costs."
+          }
+        ]
+      },
+      {
+        "gic_code": 230,
+        "gic_name": "Data Security",
+        "gic_description": "The category addresses management of risks related to collection, retention, and use of sensitive, confidential, and/or proprietary customer or user data. It includes social issues that may arise from incidents such as data breaches in which personally identifiable information (PII) and other user or customer data may be exposed. It addresses a company\u2019s strategy, policies, and practices related to IT infrastructure, staff training, record keeping, cooperation with law enforcement, and other mechanisms used to ensure security of customer or user data.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "TC-SI-230a",
+            "topic_name": "Data Security",
+            "topic_description": "Software & IT Services entities are targets of growing data security threats from cyberattacks, which puts their own data and their customers\u2019 data at risk. Inadequate prevention, detection and remediation of data security threats may influence customer acquisition and retention and result in decreased market share and reduced demand for the entity\u2019s products. In addition to reputational damage and increased customer turnover, data breaches also may result in increased expenses, commonly associated with remediation efforts such as identity protection offerings and employee training on data protection. Meanwhile, new and emerging data security standards and regulations may affect operating expenses through increased compliance costs. Additionally, entities in this industry may be well-positioned to capture revenue opportunities by providing secure software and services to meet the demand for ensuring data is kept secure."
+          }
+        ]
+      },
+      {
+        "gic_code": 330,
+        "gic_name": "Employee Engagement, Diversity & Inclusion",
+        "gic_description": "The category addresses a company\u2019s ability to ensure that its culture and hiring and promotion practices embrace the building of a diverse and inclusive workforce that reflects the makeup of local talent pools and its customer base. It addresses the issues of discriminatory practices on the bases of race, gender, ethnicity, religion, sexual orientation, and other factors.",
+        "gic_dimension": "Human Capital",
+        "gic_topics": [
+          {
+            "topic_code": "TC-SI-330a",
+            "topic_name": "Recruiting & Managing a Global, Diverse & Skilled Workforce",
+            "topic_description": "Employees are important contributors to value creation in the Software & IT Services industry. Entities commonly find recruiting qualified employees to fill these positions difficult. A shortage in technically skilled employees can create intense competition to acquire highly skilled employees globally, contributing to high employee turnover rates. Some entities contribute to relevant education and training programmes to expand the availability of domestic, skilled employees. Entities offer significant monetary and non-monetary benefits to improve employee engagement and therefore retention and productivity. Initiatives to improve employee engagement and work-life balance may influence the recruitment and retention of a diverse workforce. Since the industry is characterised by relatively low representation from women and minority groups, efforts to recruit and develop globally diverse talent pools may address the talent shortage and improve the value of entity offerings. Greater workforce diversity is important for innovation and helps entities understand the needs of a diverse and global customer base."
+          }
+        ]
+      },
+      {
+        "gic_code": 520,
+        "gic_name": "Competitive Behaviour",
+        "gic_description": "The category covers social issues associated with existence of monopolies, which may include, but are not limited to, excessive prices, poor quality of service, and inefficiencies. It addresses a company\u2019s management of legal and social expectation around monopolistic and anti-competitive practices, including issues related to bargaining power, collusion, price fixing or manipulation, and protection of patents and intellectual property (IP).",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "TC-SI-520a",
+            "topic_name": "Intellectual Property Protection & Competitive Behaviour",
+            "topic_description": "Entities in the Software & IT Services industry spend a significant proportion of their revenues on IP protection, including acquiring patents and copyrights. Although IP protection is inherent to some entity business models and is an important driver of innovation, entities\u2019 IP practices sometimes may be a contentious societal issue. Entities sometimes acquire patents and other IP protection to restrict competition and innovation, particularly if they are dominant market players. Because of software complexity, its abstract nature and increasing IP rights protection related to software, entities in the industry must navigate overlapping patent claims to operate. As a result, entities in the industry may find themselves constantly in litigation or subject to regulatory scrutiny either because of allegations of patent violations if they engage in unethical business practices, or are perceived as doing so, or because they engage in IP infringement litigation. Adverse legal or regulatory rulings related to antitrust and IP may expose entities in the industry to costly and lengthy litigations and potential monetary losses as a result. Such rulings also may affect an entity\u2019s market share and pricing power if its patents or dominant position in important markets are challenged legally, with potentially significant effects on revenue. Therefore, entities that balance the protection of their IP and its use to spur innovation while ensuring their IP management and other business practices do not unfairly restrict competition, may reduce regulatory scrutiny and legal actions while protecting their market value."
+          }
+        ]
+      },
+      {
+        "gic_code": 550,
+        "gic_name": "Systemic Risk Management",
+        "gic_description": "The category addresses the company\u2019s contributions to or management of systemic risks resulting from large-scale weakening or collapse of systems upon which the economy and society depend. This includes financial systems, natural resource systems, and technological systems. It addresses the mechanisms a company has in place to reduce its contributions to systemic risks and to improve safeguards that may mitigate the impacts of systemic failure. For financial institutions, the category also captures the company\u2019s ability to absorb shocks arising from financial and economic stress and meet stricter regulatory requirements related to the complexity and interconnectedness of companies in the industry.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "TC-SI-550a",
+            "topic_name": "Managing Systemic Risks from Technology Disruptions",
+            "topic_description": "With trends towards increased cloud computing and Software as a Service (SaaS), software and IT service providers must ensure they have robust infrastructure and policies in place to minimise disruptions to their services. Disruptions such as programming errors or server downtime may generate systemic risks, because computing and data storage functions move from individual entity servers in various industries to data centres of cloud-computing service providers. The risks are increased particularly if the affected customers are in sensitive sectors, such as financial institutions or utilities, which are considered critical national infrastructure. Entities\u2019 investments in improving the reliability and quality of their IT infrastructure and services may attract and retain customers, thereby creating revenue and opportunities in new markets."
+          }
+        ]
+      }
+    ]
+  }
+}

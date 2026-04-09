@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [\n    {\n      \"text\": \"Once fully operational NZT will have the ability to capture up to 2 million tonnes of CO2 per annum for storage via the NEP storage infrastructure which is sized for an initial 4 million tonnes of CO2 per annum\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2028,\n      \"category\": \"reduction_target\"\n    },\n    {\n      \"text\": \"$14.5bn capital expenditure\",\n      \"amount\": 14500000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"capex\"\n    }\n  ],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Critical Incident Risk Management\": [],\n  \"Employee Health & Safety\": []\n}\n```",
+  "cost_usd": 0.032060000000000005,
+  "input_tokens": 5337,
+  "model": "claude-opus-4-5",
+  "output_tokens": 215,
+  "purpose": "WvM extraction chunk 4/79 (5 factors)",
+  "temperature": 0.0
+}

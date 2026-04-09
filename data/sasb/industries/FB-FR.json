@@ -1,0 +1,132 @@
+{
+  "fetched_at": "2026-04-11T18:08:57.808973+00:00",
+  "data": {
+    "industry_code": "FB-FR",
+    "industry_name": "Food Retailers & Distributors",
+    "industry_description": "The Food Retailers & Distributors industry consists of entities engaged in wholesale and retail sales of food, beverage and agricultural products. Store formats include retail supermarkets, convenience stores, warehouse supermarkets, liquor stores, bakeries, natural food stores, specialty food stores, seafood stores and distribution centres. Entities may specialise in one type of store format or have facilities that contain many formats. Products typically are sourced worldwide and include fresh meat and produce, prepared foods, processed foods, baked goods, frozen and canned foods, non-alcoholic and alcoholic beverages, and a wide selection of household goods and personal care products. Food retailers also may produce or sell private-label products.",
+    "industry_gics": [
+      {
+        "gic_code": 110,
+        "gic_name": "GHG Emissions",
+        "gic_description": "The category addresses direct (Scope 1) greenhouse gas (GHG) emissions that a company generates through its operations. This includes GHG emissions from stationary (e.g., factories, power plants) and mobile sources (e.g., trucks, delivery vehicles, planes), whether a result of combustion of fuel or non-combusted direct releases during activities such as natural resource extraction, power generation, land use, or biogenic processes. The category further includes management of regulatory risks, environmental compliance, and reputational risks and opportunities, as they related to direct GHG emissions. The seven GHGs covered under the Kyoto Protocol are included within the category\u2014carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur hexafluoride (SF6), and nitrogen trifluoride (NF3).",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "FB-FR-110a",
+            "topic_name": "Fleet Fuel Management",
+            "topic_description": "Entities in the Food Retailers & Distributors industry own and operate vehicle fleets to deliver products between its distribution and retail locations. The fuel consumption of vehicle fleets is a significant industry expense, both in terms of operating costs and associated capital expenditures. Fossil fuel consumption can contribute to environmental impacts, including climate change and pollution. These environmental impacts may affect food retailers and distributors through regulatory exposure. Efficiencies gained in fuel use can reduce costs, mitigate exposure to fossil fuel price volatility and limit the carbon footprint associated with storage and transportation. Short-term capital expenditures in fuel-efficient fleets and more energy efficient technologies may be outweighed by long-term operational savings and decreased exposure to regulatory risks."
+          },
+          {
+            "topic_code": "FB-FR-110b",
+            "topic_name": "Air Emissions from Refrigeration",
+            "topic_description": "Emissions of refrigeration chemicals from equipment used to store and display perishable foods pose unique regulatory risks for the Food Retailers & Distributors industry. International regulations on hydrochlorofluorocarbons (HCFCs) aim to mitigate damage by HCFCs to the earth\u2019s ozone layer. Additionally, many common HCFCs and hydrofluorocarbons (HFCs) are highly potent greenhouse gases (GHGs), which increases the industry\u2019s exposure to climate change-related regulations. Regulators can assess penalties on entities that violate emissions standards. Entities may be required to upgrade or replace equipment, making capital expenditures to reduce emissions or replace existing refrigerants with potentially costlier but less environmentally-damaging alternatives."
+          }
+        ]
+      },
+      {
+        "gic_code": 130,
+        "gic_name": "Energy Management",
+        "gic_description": "The category addresses environmental impacts associated with energy consumption. It addresses the company\u2019s management of energy in manufacturing and/or for provision of products and services derived from utility providers (grid energy) not owned or controlled by the company. More specifically, it includes management of energy efficiency and intensity, energy mix, as well as grid reliance. Upstream (e.g., suppliers) and downstream (e.g., product use) energy use is not included in the scope.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "FB-FR-130a",
+            "topic_name": "Energy Management",
+            "topic_description": "Food retail and distribution facilities are typically more energy-intensive than other types of commercial spaces. These facilities use energy predominately for refrigeration, heating, ventilation and air conditioning (HVAC), as well as lighting. Entities in the industry generally purchase the majority of consumed electricity, while some are beginning to generate energy on-site or add renewable energy into their energy mix. Energy production and consumption contribute to environmental impacts, including climate change and pollution, which have the potential to indirectly, yet materially, impact the operations of food retailers and distributors. Entities that manage to increase energy efficiency and use alternative energy sources may increase profitability by reducing expenses and decreasing risk."
+          }
+        ]
+      },
+      {
+        "gic_code": 150,
+        "gic_name": "Waste & Hazardous Materials Management",
+        "gic_description": "The category addresses environmental issues associated with hazardous and non-hazardous waste generated by companies. It addresses a company\u2019s management of solid wastes in manufacturing, agriculture, and other industrial processes. It covers treatment, handling, storage, disposal, and regulatory compliance. The category does not cover emissions to air or wastewater nor does it cover waste from end-of-life of products, which are addressed in separate categories.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "FB-FR-150a",
+            "topic_name": "Food Waste Management",
+            "topic_description": "The Food Retailers & Distributors industry generates food waste at various stages of operation. Food waste includes edible or otherwise useful food that does not reach consumers, as well as foods that spoil or are damaged during transportation or stocking or while sitting on store shelves. For entities, food waste represents losses of both saleable merchandise and resources used in food production, including land, water, labour, energy and agricultural chemicals. Food waste also contributes to food insecurity and can generate greenhouse gas (GHG) emissions during landfill decomposition. Effective food waste management can present financial opportunities to reduce costs associated with inventory loss, as well as help improve food security by more efficiently diverting food resources for beneficial purposes."
+          }
+        ]
+      },
+      {
+        "gic_code": 230,
+        "gic_name": "Data Security",
+        "gic_description": "The category addresses management of risks related to collection, retention, and use of sensitive, confidential, and/or proprietary customer or user data. It includes social issues that may arise from incidents such as data breaches in which personally identifiable information (PII) and other user or customer data may be exposed. It addresses a company\u2019s strategy, policies, and practices related to IT infrastructure, staff training, record keeping, cooperation with law enforcement, and other mechanisms used to ensure security of customer or user data.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "FB-FR-230a",
+            "topic_name": "Data Security",
+            "topic_description": "Through electronic payment transactions, food retailers establish a relationship of trust with consumers who share their personal financial data with them. Data breaches can occur through breaches of the physical payment technology, called point-of-sale breaches, as well as through attacks on cybersecurity infrastructure. Data breaches that result in the theft or loss of customers\u2019 personal data undermine trust in an entity\u2019s ability to securely manage confidential information. This loss of confidence could result in reduced number of customer visits, lower revenues and diminished brand value. Retailers with strong technological and managerial systems to avoid data breaches and respond to threats effectively can position themselves favourably with customers and reduce the risk of litigation and other costs."
+          }
+        ]
+      },
+      {
+        "gic_code": 250,
+        "gic_name": "Product Quality & Safety",
+        "gic_description": "The category addresses issues involving unintended characteristics of products sold or services provided that may create health or safety risks to end-users. It addresses a company\u2019s ability to offer manufactured products and/or services that meet customer expectations with respect to their health and safety characteristics. It includes, but is not limited to, issues involving liability, management of recalls and market withdrawals, product testing, and chemicals/content/ingredient management in products.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "FB-FR-250a",
+            "topic_name": "Food Safety",
+            "topic_description": "Maintaining product quality and safety is crucial for the Food Retailers & Distributors industry, since contamination by pathogens, hazardous substances or spoilage can present risks to human health. Contamination can occur at any stage in the food value chain, including food production, processing, transportation, distribution and retail. Although entities may not be directly responsible for all food safety and recall incidents, they are involved in the process and still may experience consequences associated with incidents, such as financial ramifications, damage to brand value, lower revenues and increased costs. Measures to prevent spoilage and contamination include temperature control, frequent food inspection and careful supplier selection."
+          }
+        ]
+      },
+      {
+        "gic_code": 260,
+        "gic_name": "Customer Welfare",
+        "gic_description": "The category addresses customer welfare concerns over issues including, but not limited to, health and nutrition of foods and beverages, antibiotic use in animal production, and management of controlled substances. The category addresses the company\u2019s ability to provide consumers with manufactured products and services that are aligned with societal expectations. It does not include issues directly related to quality and safety malfunctions of manufactured products and services, but instead addresses qualities inherent to the design and delivery of products and services where customer welfare may be in question. The scope of the category also captures companies\u2019 ability to prevent counterfeit products.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "FB-FR-260a",
+            "topic_name": "Product Health & Nutrition",
+            "topic_description": "Consumer awareness of food content and nutritional value and their relationship to health, shapes the industry\u2019s competitive landscape. Demand for food products that are made with natural ingredients, certified to be organic, low-fat or low-sugar, or produced without genetically modified organisms (GMOs) can create opportunities for entities. Although the links between consumer health and some foods are not well-established, consumers have nonetheless shown preferences for food categories that are perceived to be healthier than others. Food retailers that recognise the risks and opportunities presented by consumers\u2019 shifting preferences and adapt to consumer demands may be better positioned to capture opportunities for increasing revenue and market share."
+          }
+        ]
+      },
+      {
+        "gic_code": 270,
+        "gic_name": "Selling Practices & Product Labeling",
+        "gic_description": "The category addresses social issues that may arise from a failure to manage the transparency, accuracy, and comprehensibility of marketing statements, advertising, and labeling of products and services. It includes, but is not limited to, advertising standards and regulations, ethical and responsible marketing practices, misleading or deceptive labeling, as well as discriminatory or predatory selling and lending practices. This may include deceptive or aggressive selling practices in which incentive structures for employees could encourage the sale of products or services that are not in the best interest of customers or clients.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "FB-FR-270a",
+            "topic_name": "Product Labelling & Marketing",
+            "topic_description": "Communication with consumers through product labelling and marketing is an important facet of food retail. The accuracy and depth of information presented in food labelling is important to shoppers and regulators. Labelling is especially relevant for the sale of private-label products manufactured for food retailers, with direct consequences on brand reputation. To inform purchasing decisions, consumers may seek additional information about product ingredients, such as the presence of genetically modified organism (GMO) content or other ingredients considered healthy or nutritious. These issues can affect competition among entities in the industry, since entities may be subject to litigation or criticism resulting from making misleading statements or failing to adapt to consumer demand for increased labelling transparency. These factors can have consequences on retailers\u2019 brand value and revenue growth. Regulations addressing the accurate labelling of products and their ingredients present an additional risk of penalties or litigation for entities."
+          }
+        ]
+      },
+      {
+        "gic_code": 310,
+        "gic_name": "Labour Practices",
+        "gic_description": "The category addresses the company\u2019s ability to uphold commonly accepted labour standards in the workplace, including compliance with labour laws and internationally accepted norms and standards. This includes, but is not limited to, ensuring basic human rights related to child labour, forced or bonded labour, exploitative labour, fair wages and overtime pay, and other basic workers\u2019 rights. It also includes minimum wage policies and provision of benefits, which may influence how a workforce is attracted, retained, and motivated. The category further addresses a company\u2019s relationship with organized labour and freedom of association.",
+        "gic_dimension": "Human Capital",
+        "gic_topics": [
+          {
+            "topic_code": "FB-FR-310a",
+            "topic_name": "Labour Practices",
+            "topic_description": "The Food Retailers & Distributors industry employs many hourly workers. Low average wages in the industry, which help entities maintain low prices for products, may result in labour-related risks. Worker dissatisfaction with wages and benefits, combined with high unionisation rates, can result in strikes which can in turn lead to business disruption and reputational damage. Additionally, entities that are involved in gender and racial discrimination cases can experience costly financial settlements. Entities may benefit from taking a long-term perspective on managing workers, including their pay and benefits, in a way that protects the rights of workers and enhances their productivity and strengthens the entity\u2019s reputation and brand value."
+          }
+        ]
+      },
+      {
+        "gic_code": 430,
+        "gic_name": "Supply Chain Management",
+        "gic_description": "The category addresses management of environmental, social, and governance (ESG) risks within a company\u2019s supply chain. It addresses issues associated with environmental and social externalities created by suppliers through their operational activities. Such issues include, but are not limited to, environmental responsibility, human rights, labour practices, and ethics and corruption. Management may involve screening, selection, monitoring, and engagement with suppliers on their environmental and social impacts. The category does not address the impacts of external factors \u2013 such as climate change and other environmental and social factors \u2013 on suppliers\u2019 operations and/or on the availability and pricing of key resources, which is covered in a separate category.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "FB-FR-430a",
+            "topic_name": "Management of Environmental & Social Impacts in the Supply Chain",
+            "topic_description": "Food retailers and distributors source merchandise from a wide range of manufacturers. These suppliers face a myriad of sustainability-related challenges that include resource conservation, water scarcity, animal welfare, fair labour practices and climate change. When poorly managed, these issues can affect the price and availability of food. Additionally, consumers increasingly are concerned with the production methods, origins and externalities associated with the foods they purchase, which may affect an entity\u2019s reputation. Food retailers and distributors also can work with suppliers on packaging design to generate cost savings in transport, improve brand reputation and reduce environmental impact. Entities that can manage effectively product supply risks by assessing and engaging with suppliers, implementing sustainable sourcing guidelines and enhancing supply chain transparency positioned more advantageously to improve supply chain resiliency, mitigate reputational risks, and potentially increase consumer demand or capture new market opportunities."
+          }
+        ]
+      }
+    ]
+  }
+}

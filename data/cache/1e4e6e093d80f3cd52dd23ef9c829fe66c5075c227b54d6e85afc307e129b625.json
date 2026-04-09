@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"$24.5bn operating cash flow\",\n      \"amount\": 24500000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"$14.5bn capital expenditure 10% YoY reduction\",\n      \"amount\": 14500000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"capex\"\n    },\n    {\n      \"text\": \"$11bn completed or signed divestments, including $6bn Castrol transaction\",\n      \"amount\": 11000000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.0346,
+  "input_tokens": 5435,
+  "model": "claude-opus-4-5",
+  "output_tokens": 297,
+  "purpose": "WvM extraction chunk 27/79 (10 factors)",
+  "temperature": 0.0
+}

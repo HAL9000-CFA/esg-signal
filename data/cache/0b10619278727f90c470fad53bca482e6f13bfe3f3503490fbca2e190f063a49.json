@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [],\n  \"Business Ethics\": [\n    {\n      \"text\": \"He is entitled to receive ongoing tax filing support in respect of any trailing income from the company and a contribution towards his legal fees incurred in connection with stepping down to the total of \u00a310,000 (plus VAT).\",\n      \"amount\": 10000,\n      \"currency\": \"GBP\",\n      \"year\": null,\n      \"category\": \"other\"\n    }\n  ],\n  \"Management of the Legal & Regulatory Environment\": [\n    {\n      \"text\": \"Total fees or other charges (based on an hourly rate) for the provision of remuneration advice to the committee in 2025 (save in respect of legal advice) were \u00a367,683 and \u00a364,800 to PwC and WTW respectively.\",\n      \"amount\": 67683,\n      \"currency\": \"GBP\",\n      \"year\": 2025,\n      \"category\": \"opex\"\n    },\n    {\n      \"text\": \"Total fees or other charges (based on an hourly rate) for the provision of remuneration advice to the committee in 2025 (save in respect of legal advice) were \u00a367,683 and \u00a364,800 to PwC and WTW respectively.\",\n      \"amount\": 64800,\n      \"currency\": \"GBP\",\n      \"year\": 2025,\n      \"category\": \"opex\"\n    }\n  ],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.040605,
+  "input_tokens": 6006,
+  "model": "claude-opus-4-5",
+  "output_tokens": 423,
+  "purpose": "WvM extraction chunk 31/79 (10 factors)",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"The Committee also reviews and provides recommendations to the Board about the Climate Transition Action Plan (CTAP), which sets out the actions Unilever intends to take to reduce the business's direct and indirect emissions and make progress on our net zero goal by 2039.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"VAGUE\", \"evidence\": \"Many of the challenges, such as climate change, nature degradation and plastic pollution, are compounded by growing geopolitical divides and economic difficulties.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"QUANTIFIED\", \"evidence\": \"It reviewed performance, including the Total Recordable Frequency Rate (TRFR), as reported under one of the Health and Safety Metrics. The Committee noted continued reductions in injuries, fatalities and risk exposure... Unilever's global Healthier U initiative now reaches more than 59,000 employees across 56 countries\"},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"In 2025, the Committee approved updates to our Code of Business Principles to improve clarity, make it easier for employees to raise concerns, and strengthen controls for sourcing, quality and recordkeeping.\"}\n]\n```",
+  "cost_usd": 0.031970000000000005,
+  "input_tokens": 4589,
+  "model": "claude-opus-4-5",
+  "output_tokens": 361,
+  "purpose": "Batch grade 6 ESG factors",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n[\n  {\n    \"text\": \"72% absolute reduction in Scope 1 & 2 greenhouse gas emissions since 2015\",\n    \"amount\": 72,\n    \"currency\": null,\n    \"year\": null,\n    \"category\": \"reduction_target\"\n  }\n]\n```",
+  "cost_usd": 0.102825,
+  "input_tokens": 20180,
+  "model": "claude-opus-4-5",
+  "output_tokens": 77,
+  "purpose": "Commitment extraction: GHG Emissions",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's business model resilience narrative shows mixed credibility signals. Strong disclosure practices with quantified metrics on adjusted free cash flow growth and clear financial commitments (78% consistency rate across 91 tracked commitments) indicate substantive strategic planning, though the talent signal reveals no workforce positioning around business model transformation despite high-confidence data (n=20). This disconnect between financial articulation and human capital alignment warrants monitoring, while regulatory and supply chain evidence remains unmeasured rather than negative.",
+  "cost_usd": 0.0053750000000000004,
+  "input_tokens": 560,
+  "model": "claude-opus-4-5",
+  "output_tokens": 103,
+  "purpose": "Narrative synthesis: Business Model Resilience",
+  "temperature": 0.2
+}

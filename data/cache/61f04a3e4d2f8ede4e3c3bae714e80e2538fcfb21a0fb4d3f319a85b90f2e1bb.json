@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [\n    {\n      \"text\": \"we are aiming for the Scope 1 and 2 emissions from our operations \u2013 the majority of which are associated with the operating assets in our hydrocarbons portfolio (refining and upstream oil and gas combined) \u2013 to be 45-50 % lower at the end of 2030 than in 2019\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2030,\n      \"category\": \"reduction_target\"\n    }\n  ],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [\n    {\n      \"text\": \"we anticipate that our freshwater withdrawal in stressed catchments will be covered by freshwater management plans by 2028\",\n      \"amount\": null,\n      \"currency\": null,\n      \"year\": 2028,\n      \"category\": \"other\"\n    }\n  ],\n  \"Critical Incident Risk Management\": [],\n  \"Employee Health & Safety\": []\n}\n```",
+  "cost_usd": 0.027755000000000002,
+  "input_tokens": 4306,
+  "model": "claude-opus-4-5",
+  "output_tokens": 249,
+  "purpose": "WvM extraction chunk 12/79 (5 factors)",
+  "temperature": 0.0
+}

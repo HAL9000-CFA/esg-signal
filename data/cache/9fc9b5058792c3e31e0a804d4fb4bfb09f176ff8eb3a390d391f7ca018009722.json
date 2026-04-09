@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"VAGUE\", \"evidence\": \"The recoverability of certain of the group's $4.0 billion total exploration and appraisal (E&A) assets capitalised as at 31 December 2025 is potentially exposed to climate change and the global energy transition\"},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"VAGUE\", \"evidence\": \"The carrying value of goodwill associated with the transition businesses, specifically Archaea Energy and Lightsource bp, may no longer be recoverable due to increases in cost or lower forecast production or development rate reflecting the slowdown in the pace of energy transition adversely impacting the value of these projects\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"VAGUE\", \"evidence\": \"assessing licence documentation and evidence of active dialogue with partners and regulators including negotiations to renew licences or modify key terms\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.03560000000000001,
+  "input_tokens": 5100,
+  "model": "claude-opus-4-5",
+  "output_tokens": 404,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"Capital expenditure in 2025 was $14.5 billion, including $0.9 billion of inorganic capital expenditure\",\n      \"amount\": 14500000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"capex\"\n    },\n    {\n      \"text\": \"We expect capital expenditure of around $13.0-13.5 billion in 2026 including inorganic expenditure\",\n      \"amount\": 13250000000,\n      \"currency\": \"USD\",\n      \"year\": 2026,\n      \"category\": \"capex\"\n    },\n    {\n      \"text\": \"Net debt at 31 December 2025 was $22.2 billion and is expected to reduce over time to a targeted range of $14-18 billion by the end of 2027\",\n      \"amount\": 16000000000,\n      \"currency\": \"USD\",\n      \"year\": 2027,\n      \"category\": \"reduction_target\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [\n    {\n      \"text\": \"Gulf of America oil spill (31)\",\n      \"amount\": 31000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"Environmental and related provisions (320)\",\n      \"amount\": 320000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ],\n  \"Critical Incident Risk Management\": [\n    {\n      \"text\": \"Gulf of America oil spill (31)\",\n      \"amount\": 31000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ]\n}\n```",
+  "cost_usd": 0.04584500000000001,
+  "input_tokens": 6494,
+  "model": "claude-opus-4-5",
+  "output_tokens": 535,
+  "purpose": "WvM extraction chunk 61/79 (10 factors)",
+  "temperature": 0.0
+}

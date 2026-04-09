@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [\n    {\n      \"text\": \"Since 2020 we have reduced freshwater withdrawals (excluding once through cooling water) by 15 % and freshwater consumption by 15 % against the baseline\",\n      \"amount\": 15,\n      \"currency\": null,\n      \"year\": 2025,\n      \"category\": \"reduction_target\"\n    }\n  ],\n  \"Critical Incident Risk Management\": [],\n  \"Employee Health & Safety\": []\n}\n```",
+  "cost_usd": 0.024855000000000002,
+  "input_tokens": 4246,
+  "model": "claude-opus-4-5",
+  "output_tokens": 145,
+  "purpose": "WvM extraction chunk 17/79 (5 factors)",
+  "temperature": 0.0
+}

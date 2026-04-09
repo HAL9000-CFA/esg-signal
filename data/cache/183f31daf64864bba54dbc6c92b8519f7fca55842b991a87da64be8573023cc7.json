@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"Water Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Design & Lifecycle Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Supply Chain Management\", \"grade\": \"VAGUE\", \"evidence\": \"workforce engagement sessions... cover the entire workforce demographic in terms of geography, Business Groups, length of service, work level/seniority, and both supply chain and office staff\"}\n]\n```",
+  "cost_usd": 0.026535,
+  "input_tokens": 4587,
+  "model": "claude-opus-4-5",
+  "output_tokens": 144,
+  "purpose": "Batch grade 4 ESG factors",
+  "temperature": 0.0
+}

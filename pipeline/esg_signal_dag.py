@@ -80,8 +80,23 @@ _LOCAL_KWARGS = {
 
 
 def _to_xcom(obj) -> Dict:
-    """Convert a dataclass (possibly nested) to a plain JSON-serialisable dict."""
-    return dataclasses.asdict(obj)
+    """
+    Convert a dataclass (possibly nested) to a plain JSON-serialisable dict.
+    NaN/Inf floats are replaced with None so Airflow's JSON backend doesn't drop
+    the XCom entry silently.
+    """
+    import math
+
+    def _sanitise(v):
+        if isinstance(v, float) and (math.isnan(v) or math.isinf(v)):
+            return None
+        if isinstance(v, dict):
+            return {k: _sanitise(val) for k, val in v.items()}
+        if isinstance(v, list):
+            return [_sanitise(i) for i in v]
+        return v
+
+    return _sanitise(dataclasses.asdict(obj))
 
 
 def _profile_from_dict(d: Dict):
@@ -156,6 +171,8 @@ def _credibility_from_dict(d: Dict):
             factor_name=fs["factor_name"],
             score=fs["score"],
             flag=fs["flag"],
+            coverage=fs.get("coverage", 1.0),
+            confidence=fs.get("confidence", fs.get("coverage", 1.0)),
             stream_scores=fs.get("stream_scores") or {},
             evidence=fs.get("evidence") or [],
             sources=fs.get("sources") or [],
@@ -203,6 +220,12 @@ def _task_fetch_data(**context) -> Dict:
     result = gatherer.fetch_all(ticker=ticker, company_name=company_name, index=index)
 
     LOGGER.info("fetch_data: source_statuses=%s", json.dumps(result.source_statuses, default=str))
+
+    # Ensure profile.ticker always reflects the user-entered ticker.
+    # EDGAR may return a different or null ticker (e.g. ULVR is an LSE ticker;
+    # EDGAR knows Unilever as UL), which would break Navigator lookup downstream.
+    if result.profile and not result.profile.ticker:
+        result.profile.ticker = ticker
 
     return {
         "profile": _to_xcom(result.profile) if result.profile else None,
@@ -322,7 +345,23 @@ def _task_run_credibility_scorer(**context) -> Dict:
         result.overall_flag,
     )
 
-    return _to_xcom(result)
+    result_dict = _to_xcom(result)
+
+    # Write result to disk so the UI can load it even if XCom retrieval fails.
+    # Path is deterministic from ticker so the UI can find it without the run_id.
+    import json as _json
+    from pathlib import Path as _Path
+
+    ticker = profile.ticker or "unknown"
+    out_path = _Path(f"data/processed/credibility_{ticker}.json")
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        out_path.write_text(_json.dumps(result_dict, indent=2))
+        LOGGER.info("run_credibility_scorer: result written to %s", out_path)
+    except Exception as exc:
+        LOGGER.warning("run_credibility_scorer: could not write result to disk: %s", exc)
+
+    return result_dict
 
 
 def _task_run_dcf_mapper(**context) -> Dict:

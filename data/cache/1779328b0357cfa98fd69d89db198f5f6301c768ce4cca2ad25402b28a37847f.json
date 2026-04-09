@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"Focused the sustainability aims on those most relevant to the long-term success of our businesses and to our net zero ambition.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Human Rights & Community Relations\", \"grade\": \"VAGUE\", \"evidence\": \"Directors regularly engage with a wide range of stakeholders to gain different insights, giving the board a more rounded perspective in support of the decisions it takes.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"Routine reviews of safety performance undertaken, including measurement against targets and ad hoc reporting, as required.\"},\n  {\"factor\": \"Business Model Resilience\", \"grade\": \"VAGUE\", \"evidence\": \"Worked closely with the CEO and the leadership team to approve a new purpose and reset strategy for bp, as announced in February 2025.\"},\n  {\"factor\": \"Business Ethics\", \"grade\": \"VAGUE\", \"evidence\": \"Reviewed the annual ethics and compliance report, and the function's priorities and objectives.\"},\n  {\"factor\": \"Management of the Legal & Regulatory Environment\", \"grade\": \"VAGUE\", \"evidence\": \"Company secretary Ben Mathews advises the board on corporate governance matters, changes to and compliance with board procedures, and monitors regulatory requirements.\"},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"Analysed trends and themes arising from risk management processes. Performed mid-year and full-year reviews of bp's principal and emerging risks, including those related to climate.\"}\n]\n```",
+  "cost_usd": 0.03374,
+  "input_tokens": 4508,
+  "model": "claude-opus-4-5",
+  "output_tokens": 448,
+  "purpose": "Batch grade 10 ESG factors",
+  "temperature": 0.0
+}

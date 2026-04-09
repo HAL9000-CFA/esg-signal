@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"The committee oversees employee engagement, leading and lagging indicators of culture, and how culture is being embedded. This includes monitoring feedback from the workforce engagement programme (WFEP) and private sessions with bp's SVP, ethics & compliance (E&C)\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"The WFEP continued during 2025 with directors engaging with employees across multiple regions and from different disciplines on topics including leadership and culture, safety (including retail safety), transformation, and remuneration.\"}\n]\n```",
+  "cost_usd": 0.02908,
+  "input_tokens": 4646,
+  "model": "claude-opus-4-5",
+  "output_tokens": 234,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

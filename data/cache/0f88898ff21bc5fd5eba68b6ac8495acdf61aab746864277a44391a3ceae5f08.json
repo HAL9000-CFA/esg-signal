@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"In 2025 our combined Scope 1 and 2 emissions increased due to growth in our portfolio and project start-ups. Scope 1 (direct) emissions were 33.7 MtCO2e \u2013 an overall increase from 32.8 MtCO2e in 2024. Of these Scope 1 emissions, 32.8 MtCO2e were carbon dioxide and 0.9 MtCO2e were from methane. In 2025 our Scope 2 (indirect) emissions decreased by 0.1MtCO2e, to 0.7 MtCO2e, compared with 2024\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Tier 1 and 2 process safety events... In 2025 there were 27 PSEs, down from 38 in 2024. Tier 1 events increased to five (2024 three) and tier 2 events decreased to 22 (2024 35)\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Reported recordable injury frequency (RIF) measures the number of reported work-related employee and contractor incidents that result in a fatality or injury per 200,000 hours worked. 2025 performance In 2025 our RIF decreased by 21%. 2025: 0.234, 2024: 0.297\"}\n]\n```",
+  "cost_usd": 0.037185,
+  "input_tokens": 5257,
+  "model": "claude-opus-4-5",
+  "output_tokens": 436,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

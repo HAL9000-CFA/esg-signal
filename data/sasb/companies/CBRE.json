@@ -1,0 +1,16 @@
+{
+  "fetched_at": "2026-04-11T18:07:29.274759+00:00",
+  "data": {
+    "id": 190001,
+    "company_ticker": "CBRE",
+    "isin": "ID1000181704",
+    "company_name": "Cakra Buana Resources Energi Tbk PT",
+    "sector": "Transportation",
+    "sector_hs_value": "Transportation",
+    "industry_code": "TR-MT",
+    "industry": "Marine Transportation",
+    "industry_hs_value": "Marine Transportation",
+    "industry_description": "Marine Transportation industry entities provide deep-sea, coastal or river-way freight shipping services. The industry is of strategic importance to international trade, and its revenues are tied to macroeconomic cycles. Important activities include transportation of containerised and bulk freight, including consumer goods and a wide range of commodities, and transportation of chemicals and petroleum products in tankers. Because of the industry's global scope, entities may operate under many diverse applicable jurisdictional legal and regulatory frameworks.",
+    "web_prepend_text": null
+  }
+}

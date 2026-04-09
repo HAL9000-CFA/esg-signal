@@ -13,6 +13,7 @@ load_dotenv()
 LOGGER = logging.getLogger(__name__)
 
 CH_FILING_BASE = "https://find-and-update.company-information.service.gov.uk"
+CH_DOCUMENT_API = "https://document-api.company-information.service.gov.uk"
 
 
 class CompaniesHouseFetcher(BaseFetcher):
@@ -22,7 +23,7 @@ class CompaniesHouseFetcher(BaseFetcher):
         key = api_key or os.getenv("COMPANIES_HOUSE_API_KEY")
         if not key:
             raise ValueError("Provide api_key or set COMPANIES_HOUSE_API_KEY env var")
-        self.auth = (key, "")
+        self.auth = (key.strip(), "")
 
     def search(self, name: str) -> Optional[str]:
         r = requests.get(
@@ -60,14 +61,72 @@ class CompaniesHouseFetcher(BaseFetcher):
         for item in history.get("items", []):
             if item.get("type") == "AA":
                 links = item.get("links", {})
+                # document_metadata points to the Document API endpoint (requires auth).
+                # Prefer this over links.self which is a viewer page that returns 404 for
+                # direct PDF download.
+                doc_meta = links.get("document_metadata", "")
                 self_path = links.get("self", "")
+                document_url = (
+                    doc_meta if doc_meta else (f"{CH_FILING_BASE}{self_path}" if self_path else "")
+                )
                 return {
                     "filing_type": "AA",
                     "filed_date": item.get("date", ""),
                     "period_of_report": item.get("description_values", {}).get("made_up_date"),
-                    "document_url": f"{CH_FILING_BASE}{self_path}" if self_path else "",
+                    "document_url": document_url,
+                    "document_metadata_url": doc_meta,
                 }
         return None
+
+    def download_document(
+        self, document_metadata_url: str, save_path: str = None
+    ) -> tuple[Optional[bytes], str]:
+        """
+        Download a Companies House filing document via the Document API.
+
+        Returns (bytes, content_type). content_type is used by the caller to decide
+        how to extract text:
+          - "application/pdf"       → pass to PDFExtractor.extract_from_bytes()
+          - "application/xhtml+xml" → iXBRL; strip tags to plain text
+          - "text/html"             → HTML; strip tags to plain text
+
+        The document_metadata_url (from filing-history links.document_metadata) points to
+        https://document-api.company-information.service.gov.uk/document/{id}.
+        Appending /content and following the redirect yields the actual document.
+
+        If save_path is provided the raw bytes are written there so they can be
+        inspected outside the pipeline (useful for debugging).
+        """
+        content_url = document_metadata_url.rstrip("/") + "/content"
+        LOGGER.info("CompaniesHouse: downloading document from %s", content_url)
+        try:
+            r = requests.get(
+                content_url,
+                auth=self.auth,
+                headers={"Accept": "application/pdf,application/xhtml+xml,text/html,*/*"},
+                timeout=60,
+                allow_redirects=True,
+            )
+            r.raise_for_status()
+            content_type = (
+                r.headers.get("Content-Type", "application/octet-stream").split(";")[0].strip()
+            )
+            LOGGER.info(
+                "CompaniesHouse: downloaded %d bytes Content-Type=%s",
+                len(r.content),
+                content_type,
+            )
+            if save_path:
+                import os
+
+                os.makedirs(os.path.dirname(save_path), exist_ok=True)
+                with open(save_path, "wb") as fh:
+                    fh.write(r.content)
+                LOGGER.info("CompaniesHouse: saved raw document to %s", save_path)
+            return r.content, content_type
+        except Exception as e:
+            LOGGER.warning("CompaniesHouse: document download failed %s: %s", content_url, e)
+            return None, ""
 
     def fetch(self, company_name: str) -> CompanyProfile:
         LOGGER.info("Companies House: starting fetch for company=%r", company_name)
@@ -108,7 +167,10 @@ class CompaniesHouseFetcher(BaseFetcher):
 
         LOGGER.info(
             "Companies House: fetch complete company=%r number=%s sic=%s errors=%d",
-            name, number, sic_code, len(errors),
+            name,
+            number,
+            sic_code,
+            len(errors),
         )
         return CompanyProfile(
             ticker=None,

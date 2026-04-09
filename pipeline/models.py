@@ -56,6 +56,7 @@ class MaterialFactor:
     financial_impacts: List[
         str
     ]  # subset of revenue_impact / cost_impact / asset_impact / liability_impact
+    description: str = ""  # SASB GIC description from Navigator (empty if not enriched)
 
 
 @dataclass
@@ -93,8 +94,12 @@ class WordsMoneyResult:
 class FactorScore:
     factor_id: str
     factor_name: str
-    score: float  # weighted average across streams (0.0–1.0)
+    score: float  # weighted average across active streams (0.0–1.0)
     flag: str  # "green" | "amber" | "red"
+    coverage: float  # structural: fraction of scoreable streams that returned a score (0.0–1.0)
+    confidence: (
+        float  # quality-weighted: accounts for evidence strength within active streams (0.0–1.0)
+    )
     stream_scores: Dict[str, float]  # {"disclosure": 0.85, "regulatory": 0.5, ...}
     evidence: List[str]  # human-readable notes per stream
     sources: List[str]  # URLs from CompanyProfile.source_urls

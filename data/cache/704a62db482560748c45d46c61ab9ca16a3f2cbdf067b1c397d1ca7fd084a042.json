@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP demonstrates solid disclosure practices for legal and regulatory management, with quantified reporting on Gulf of America oil spill payments providing transparent evidence of material liability handling. The words-to-money alignment suggests reasonable consistency between stated commitments and financial backing, with 16 of 18 commitments verified as consistent. However, with only two of five evidence streams active and regulatory data unavailable, this assessment reflects partial visibility into the company's full legal and regulatory management posture.",
+  "cost_usd": 0.005295,
+  "input_tokens": 564,
+  "model": "claude-opus-4-5",
+  "output_tokens": 99,
+  "purpose": "Narrative synthesis: Management of the Legal & Regulatory Environment",
+  "temperature": 0.2
+}

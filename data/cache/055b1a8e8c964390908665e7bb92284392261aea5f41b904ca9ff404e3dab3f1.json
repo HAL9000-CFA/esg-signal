@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's Business Model Resilience shows moderate credibility based on limited but consistent evidence. The disclosure stream indicates strong quantified commitments with specific adjusted free cash flow growth targets and net debt metrics, while the words-money analysis suggests good alignment between stated commitments and financial backing, with 86 of 91 commitments verified as consistent. However, with only two of five evidence streams active and regulatory, talent, and supply chain data unavailable or excluded, there is insufficient breadth of evidence to draw comprehensive conclusions about overall business model resilience.",
+  "cost_usd": 0.00561,
+  "input_tokens": 542,
+  "model": "claude-opus-4-5",
+  "output_tokens": 116,
+  "purpose": "Narrative synthesis: Business Model Resilience",
+  "temperature": 0.2
+}

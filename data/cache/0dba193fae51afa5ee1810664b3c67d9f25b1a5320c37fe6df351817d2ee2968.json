@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"This document also contains data on the Group's Scope 1, 2 and 3 emissions. Some of this data is based on estimates, assumptions and uncertainties.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Ecological Impacts\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"the production of safe and high-quality products\"}\n]\n```",
+  "cost_usd": 0.030085,
+  "input_tokens": 4982,
+  "model": "claude-opus-4-5",
+  "output_tokens": 207,
+  "purpose": "Batch grade 6 ESG factors",
+  "temperature": 0.0
+}

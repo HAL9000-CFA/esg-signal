@@ -1,0 +1,88 @@
+{
+  "fetched_at": "2026-04-11T18:06:25.445174+00:00",
+  "data": {
+    "industry_code": "TR-MT",
+    "industry_name": "Marine Transportation",
+    "industry_description": "Marine Transportation industry entities provide deep-sea, coastal or river-way freight shipping services. The industry is of strategic importance to international trade, and its revenues are tied to macroeconomic cycles. Important activities include transportation of containerised and bulk freight, including consumer goods and a wide range of commodities, and transportation of chemicals and petroleum products in tankers. Because of the industry's global scope, entities may operate under many diverse applicable jurisdictional legal and regulatory frameworks.",
+    "industry_gics": [
+      {
+        "gic_code": 110,
+        "gic_name": "GHG Emissions",
+        "gic_description": "The category addresses direct (Scope 1) greenhouse gas (GHG) emissions that a company generates through its operations. This includes GHG emissions from stationary (e.g., factories, power plants) and mobile sources (e.g., trucks, delivery vehicles, planes), whether a result of combustion of fuel or non-combusted direct releases during activities such as natural resource extraction, power generation, land use, or biogenic processes. The category further includes management of regulatory risks, environmental compliance, and reputational risks and opportunities, as they related to direct GHG emissions. The seven GHGs covered under the Kyoto Protocol are included within the category\u2014carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur hexafluoride (SF6), and nitrogen trifluoride (NF3).",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "TR-MT-110a",
+            "topic_name": "Greenhouse Gas Emissions",
+            "topic_description": "Marine transportation entities generate emissions mainly from the combustion of diesel in ship engines. The industry\u2019s reliance on heavy fuel oil (\u2018bunker fuel\u2019) is of material concern because of rising fuel costs and intensifying greenhouse gas (GHG) regulations. The industry is among the most fuel efficient of the major transportation modes in terms of fuel use per tonne shipped. However, because of the industry\u2019s size, its contribution to the global GHG emissions is still significant. Recent environmental regulations are encouraging the adoption of more fuel-efficient engines and the use of cleaner-burning fuels. Fuel constitutes a major expense for industry players, providing a further incentive for investing in upgrades or retrofits to boost fuel efficiency."
+          }
+        ]
+      },
+      {
+        "gic_code": 120,
+        "gic_name": "Air Quality",
+        "gic_description": "The category addresses management of air quality impacts resulting from stationary (e.g., factories, power plants) and mobile sources (e.g., trucks, delivery vehicles, planes) as well as industrial emissions. Relevant airborne pollutants include, but are not limited to, oxides of nitrogen (NOx), oxides of sulfur (SOx), volatile organic compounds (VOCs), heavy metals, particulate matter, and chlorofluorocarbons. The category does not include GHG emissions, which are addressed in a separate category.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "TR-MT-120a",
+            "topic_name": "Air Quality",
+            "topic_description": "Air pollutants such as sulphur oxides (SO?), nitrogen oxides (NO?) and particulate matter (PM10) are significant environmental externalities from the use of fossil fuels by marine shipping entities. These pollutants tend to have localised environmental and health impacts and are especially a concern at port cities. Air pollution regulations are encouraging the adoption of more fuel-efficient engines and the use of cleaner-burning fuels as entities seek to reduce exposure to fines and environmental remediation costs. A further fuel efficiency incentive is that fuel constitutes a major expense for the industry, so capital expenditures to upgrade vessels may be offset over the long term from fuel costs savings."
+          }
+        ]
+      },
+      {
+        "gic_code": 160,
+        "gic_name": "Ecological Impacts",
+        "gic_description": "The category addresses management of the company\u2019s impacts on ecosystems and biodiversity through activities including, but not limited to, land use for exploration, natural resource extraction, and cultivation, as well as project development, construction, and siting. The impacts include, but are not limited to, biodiversity loss, habitat destruction, and deforestation at all stages \u2013 planning, land acquisition, permitting, development, operations, and site remediation. The category does not cover impacts of climate change on ecosystems and biodiversity.",
+        "gic_dimension": "Environment",
+        "gic_topics": [
+          {
+            "topic_code": "TR-MT-160a",
+            "topic_name": "Ecological Impacts",
+            "topic_description": "The operations and waste disposal practices of marine transportation entities may create substantial environmental externalities, such as water pollution and damage to marine life. Seagoing vessels routinely discharge ballast water, bilge water and untreated sewage. Compliance with international regulations intended to manage the ecological impacts of operation may require significant capital expenditures to upgrade or instal waste management systems. Illegal bilge water dumping and other unregulated discharges may result in hefty fines, negatively affecting an entity\u2019s risk profile. Operating in areas of protected conservation status, such as Emission Control Areas (ECAs) and Particularly Sensitive Sea Areas (PSSAs), may increase the risk of ecological impacts as well as the risk of violating environmental regulations."
+          }
+        ]
+      },
+      {
+        "gic_code": 320,
+        "gic_name": "Employee Health & Safety",
+        "gic_description": "The category addresses a company\u2019s ability to create and maintain a safe and healthy workplace environment that is free of injuries, fatalities, and illness (both chronic and acute). It is traditionally accomplished through implementing safety management plans, developing training requirements for employees and contractors, and conducting regular audits of their own practices as well as those of their subcontractors. The category further captures how companies ensure physical and mental health of workforce through technology, training, corporate culture, regulatory compliance, monitoring and testing, and personal protective equipment.",
+        "gic_dimension": "Human Capital",
+        "gic_topics": [
+          {
+            "topic_code": "TR-MT-320a",
+            "topic_name": "Workforce Health & Safety",
+            "topic_description": "Marine transportation workers face dangers such as hazardous weather and exposure to large machinery and heavy cargo. The greatest health and safety risks occur during loading and unloading cargo at ports. Ships must be loaded and unloaded quickly and on schedule, increasing injury risk, fatigue and stress. The health and well-being of workers in the industry also is linked inextricably to entity safety performance since a healthy crew is necessary for safe voyages. Entities with inadequate safety management systems that fail to ensure crew health and safety may witness increased employee turnover and worker-related expenses, including medical expenses such as insurance premiums and worker pay-outs."
+          }
+        ]
+      },
+      {
+        "gic_code": 510,
+        "gic_name": "Business Ethics",
+        "gic_description": "The category addresses the company\u2019s approach to managing risks and opportunities surrounding ethical conduct of business, including fraud, corruption, bribery and facilitation payments, fiduciary responsibilities, and other behaviour that may have an ethical component. This includes sensitivity to business norms and standards as they shift over time, jurisdiction, and culture. It addresses the company\u2019s ability to provide services that satisfy the highest professional and ethical standards of the industry, which means to avoid conflicts of interest, misrepresentation, bias, and negligence through training employees adequately and implementing policies and procedures to ensure employees provide services free from bias and error.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "TR-MT-510a",
+            "topic_name": "Business Ethics",
+            "topic_description": "Port facilitation payments are considered standard business practice in some countries to obtain permits, cargo clearance and port berths. However, anti-bribery laws place pressure on marine transportation entities to alter this practice. Enforcement of these laws may result in significant one-time costs and higher compliance costs and increased cost of capital, or affect an entity\u2019s social licence to operate. Entity governance must monitor for and prevent corruption, participation\u2014whether wilful or unintentional\u2014in illegal or unethical payments, or the exertion of unfair influence. Operating in corruption-prone countries may exacerbate these risks."
+          }
+        ]
+      },
+      {
+        "gic_code": 540,
+        "gic_name": "Critical Incident Risk Management",
+        "gic_description": "The category addresses the company\u2019s use of management systems and scenario planning to identify, understand, and prevent or minimize the occurrence of low-probability, high-impact accidents and emergencies with significant potential environmental and social externalities. It relates to the culture of safety at a company, its relevant safety management systems and technological controls, the potential human, environmental, and social implications of such events occurring, and the long-term effects to an organization, its workers, and society should these events occur.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "TR-MT-540a",
+            "topic_name": "Accident & Safety Management",
+            "topic_description": "Accidents or leaks involving large vessels can have significant impacts on life, property and the environment. Negative media attention and significant clean-up costs may impair an entity\u2019s finances. To reduce the risk of accidents, entities conduct extensive safety measures, such as employee training programmes, periodic dry-docking maintenance periods and annual class-renewal surveys conducted by classification societies. The global marketplace\u2019s reliance on the shipping industry means that voyages must be made within precise timeframes, providing further accident prevention incentives."
+          }
+        ]
+      }
+    ]
+  }
+}

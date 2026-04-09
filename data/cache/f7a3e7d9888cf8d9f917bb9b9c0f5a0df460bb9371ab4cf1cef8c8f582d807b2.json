@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "BP's Business Ethics credibility presents a mixed picture with moderate evidence coverage. Disclosure practices are strong, with quantified reporting on ethics concerns and separations, and the company demonstrates consistency between stated commitments and financial backing across three verified instances. However, talent market signals indicate weak perception of the company's ethics culture among employees and candidates, which warrants attention given this reflects actual sentiment data rather than absent evidence.",
+  "cost_usd": 0.004880000000000001,
+  "input_tokens": 546,
+  "model": "claude-opus-4-5",
+  "output_tokens": 86,
+  "purpose": "Narrative synthesis: Business Ethics",
+  "temperature": 0.2
+}

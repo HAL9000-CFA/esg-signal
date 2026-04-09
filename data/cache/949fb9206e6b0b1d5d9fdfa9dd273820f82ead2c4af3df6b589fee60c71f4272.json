@@ -1,0 +1,10 @@
+{
+  "agent": "credibility_scorer",
+  "content": "Unilever's labor practices credibility presents a mixed picture with moderate evidence coverage. The company's strong disclosure score, supported by quantified metrics such as employee engagement survey results, suggests robust transparency, though this contrasts with a weak talent signal where Glassdoor sentiment data (n=12) indicates potential workforce concerns despite the small sample size limiting confidence. The absence of identifiable monetary commitments in the words-versus-money analysis results in a neutral assessment, while regulatory and supply chain streams remain unmapped, leaving gaps in the overall evidence base.",
+  "cost_usd": 0.005205,
+  "input_tokens": 456,
+  "model": "claude-opus-4-5",
+  "output_tokens": 117,
+  "purpose": "Narrative synthesis: Labor Practices",
+  "temperature": 0.2
+}

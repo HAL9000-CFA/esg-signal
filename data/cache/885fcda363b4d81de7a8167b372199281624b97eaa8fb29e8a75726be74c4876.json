@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"VAGUE\", \"evidence\": \"As part of this simplification, the emissions measure has been removed from the short\u2011term scorecard. To maintain appropriate balance, the weighting of emissions within the long\u2011term incentive award has been increased from 15% to 20%... Our ambition to reach net zero by 2050 remains unchanged, but we believe that progress towards this long\u2011term objective is more appropriately evaluated through our performance share award rather than the annual bonus.\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"For safety, however, we will revert to assessing performance on a combined tier 1 and tier 2 basis. In recent years, the number of tier 1 process safety events has continued to decline... Tier 1 and tier 2 process safety events 15%\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"QUANTIFIED\", \"evidence\": \"For 2026, the scorecard has been simplified and performance will now be assessed against four measures across three categories: safety (15%), operations (20%) and financials (65%)... the framework on fatalities, which helps guide decisions on adjustments to the bonus outcome in relation to fatalities, will continue to be applied.\"}\n]\n```",
+  "cost_usd": 0.034280000000000005,
+  "input_tokens": 5046,
+  "model": "claude-opus-4-5",
+  "output_tokens": 362,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

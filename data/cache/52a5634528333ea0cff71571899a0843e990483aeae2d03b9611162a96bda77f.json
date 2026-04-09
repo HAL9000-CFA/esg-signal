@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"Water Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"VAGUE\", \"evidence\": \"The Committee approved updates to our Code of Business Principles to improve clarity, make it easier for employees to raise concerns, and strengthen controls for sourcing, quality and recordkeeping.\"},\n  {\"factor\": \"Product Design & Lifecycle Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Supply Chain Management\", \"grade\": \"VAGUE\", \"evidence\": \"The Responsible Partner Policy (RPP) sets out Unilever's requirements that third parties conduct business with integrity and with respect for human rights and core labour principles... This year, the Committee focused on the new compliance system, strengthening governance, extending coverage to suppliers of non-integrated spends, as well as sharpening audits and enhanced anti-bribery and sanctions screening.\"}\n]\n```",
+  "cost_usd": 0.028520000000000004,
+  "input_tokens": 4574,
+  "model": "claude-opus-4-5",
+  "output_tokens": 226,
+  "purpose": "Batch grade 4 ESG factors",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [\n    {\n      \"text\": \"He is entitled to receive ongoing tax filing support in respect of any trailing income from the company and a contribution towards his legal fees incurred in connection with stepping down to the total of \u00a310,000 (plus VAT).\",\n      \"amount\": 10000,\n      \"currency\": \"GBP\",\n      \"year\": null,\n      \"category\": \"other\"\n    }\n  ],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.03615,
+  "input_tokens": 6210,
+  "model": "claude-opus-4-5",
+  "output_tokens": 204,
+  "purpose": "WvM extraction chunk 30/79 (10 factors)",
+  "temperature": 0.0
+}

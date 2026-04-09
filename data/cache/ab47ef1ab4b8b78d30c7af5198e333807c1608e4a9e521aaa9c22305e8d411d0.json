@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"VAGUE\", \"evidence\": \"we have identified a number of physical risks which may affect our business and assets, the frequency or severity of which could be affected by climate change. Exposure to physical climate-related risk is highly dependent on geographical location and on factors such as asset design, and we seek to manage these risks accordingly.\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null}\n]\n```",
+  "cost_usd": 0.028235000000000003,
+  "input_tokens": 4657,
+  "model": "claude-opus-4-5",
+  "output_tokens": 198,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

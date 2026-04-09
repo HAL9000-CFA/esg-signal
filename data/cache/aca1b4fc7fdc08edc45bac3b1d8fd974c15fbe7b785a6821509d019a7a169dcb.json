@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"CMU target: $14-$18bn (end of 2027) Net debt at the end of 2025 was $22.2 billion, which is $800 million lower than at the end of 2024\",\n      \"amount\": 800000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"reduction_target\"\n    },\n    {\n      \"text\": \"During 2025, $1.2 billion of perpetual hybrid bonds were redeemed\",\n      \"amount\": 1200000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"bp made $1.2 billion of pre-tax payments against our Gulf of America settlement liability\",\n      \"amount\": 1200000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"Structural cost reductions CMU target: $4-$5bn (end of 2027) Since the start of the programme, bp has delivered $2.8 billion of the cost reduction target\",\n      \"amount\": 2800000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"reduction_target\"\n    },\n    {\n      \"text\": \"the CMU target was increased (to $5.5-$6.5 billion)\",\n      \"amount\": 6500000000,\n      \"currency\": \"USD\",\n      \"year\": 2027,\n      \"category\": \"reduction_target\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.040060000000000005,
+  "input_tokens": 5447,
+  "model": "claude-opus-4-5",
+  "output_tokens": 513,
+  "purpose": "WvM extraction chunk 29/79 (10 factors)",
+  "temperature": 0.0
+}

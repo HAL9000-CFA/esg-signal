@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"GHG Emissions\", \"grade\": \"QUANTIFIED\", \"evidence\": \"operated carbon emissions of 33.9MtCO2e (footnote a) resulted in an outcome between target and maximum. This holds underlying operated emissions broadly flat compared to the 2024 result... The most significant contributions to emissions performance of 1.6MtCO2e below 2025 plan came from improved management of abnormal plant conditions... Emission reduction projects totalling 0.27MtCO2e implemented by our business in 2025\"},\n  {\"factor\": \"Air Quality\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Water & Wastewater Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Critical Incident Risk Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Safety performance, as measured by tier 1 and 2 process safety events, was strong with the mechanical outcome achieving between target and maximum performance. The total number of events is less than prior year, with 27 tier 1 and tier 2 events in 2025 (38 in 2024)... During 2025, we recorded five tier 1 events, a slight increase compared with the prior year... the number of tier 2 events fell significantly, with 22 events compared to 35 in 2024\"},\n  {\"factor\": \"Employee Health & Safety\", \"grade\": \"QUANTIFIED\", \"evidence\": \"there were sadly four workforce fatalities during the year \u2013 three at our recently acquired TravelCenters of America facilities and one at Thorntons... the committee determined that the formulaic score should be reduced by 4 points to 1.59 out of 2 (79.5% of maximum)\"}\n]\n```",
+  "cost_usd": 0.036695000000000005,
+  "input_tokens": 5229,
+  "model": "claude-opus-4-5",
+  "output_tokens": 422,
+  "purpose": "Batch grade 5 ESG factors",
+  "temperature": 0.0
+}

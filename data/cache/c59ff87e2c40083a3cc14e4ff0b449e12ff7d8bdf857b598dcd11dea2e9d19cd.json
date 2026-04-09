@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "{\"GHG Emissions\":[],\"Energy Management\":[],\"Labor Practices\":[],\"Business Ethics\":[],\"Data Security\":[]}",
+  "cost_usd": 0.029570000000000003,
+  "input_tokens": 5749,
+  "model": "claude-opus-4-5",
+  "output_tokens": 33,
+  "purpose": "WvM extraction chunk 14/17 (5 factors)",
+  "temperature": 0.0
+}

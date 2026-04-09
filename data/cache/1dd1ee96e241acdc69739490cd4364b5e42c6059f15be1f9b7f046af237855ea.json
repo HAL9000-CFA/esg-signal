@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"completed the sale of our non-controlling interests in Permian and Eagle Ford midstream assets to Sixth Street for $1.5 billion\",\n      \"amount\": 1500000000,\n      \"currency\": \"USD\",\n      \"year\": null,\n      \"category\": \"other\"\n    },\n    {\n      \"text\": \"divestment programme targeting $20 billion by 2027\",\n      \"amount\": 20000000000,\n      \"currency\": \"USD\",\n      \"year\": 2027,\n      \"category\": \"other\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.03775,
+  "input_tokens": 6300,
+  "model": "claude-opus-4-5",
+  "output_tokens": 250,
+  "purpose": "WvM extraction chunk 8/79 (10 factors)",
+  "temperature": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Ecological Impacts\": [],\n  \"Human Rights & Community Relations\": [\n    {\n      \"text\": \"$ 64 m supporting additional initiatives to benefit communities (2024 $ 76 m)\",\n      \"amount\": 64000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"other\"\n    }\n  ],\n  \"Employee Health & Safety\": [],\n  \"Business Model Resilience\": [\n    {\n      \"text\": \"$14.5bn capital expenditure\",\n      \"amount\": 14500000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"capex\"\n    },\n    {\n      \"text\": \"$274m invested in research and development\",\n      \"amount\": 274000000,\n      \"currency\": \"USD\",\n      \"year\": 2025,\n      \"category\": \"capex\"\n    }\n  ],\n  \"Business Ethics\": [],\n  \"Management of the Legal & Regulatory Environment\": [],\n  \"Critical Incident Risk Management\": []\n}\n```",
+  "cost_usd": 0.035665,
+  "input_tokens": 5658,
+  "model": "claude-opus-4-5",
+  "output_tokens": 295,
+  "purpose": "WvM extraction chunk 4/79 (10 factors)",
+  "temperature": 0.0
+}

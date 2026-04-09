@@ -7,11 +7,22 @@ real file to verify its structure is valid.
 """
 
 import json
+from unittest.mock import patch
 
 import pytest
 
 from agents.relevance_filter import RelevanceFilter
 from pipeline.models import CompanyProfile
+
+# Patch out all Navigator network calls for unit tests
+_no_navigator = patch(
+    "agents.relevance_filter.search_company_results",
+    side_effect=RuntimeError("Navigator disabled in tests"),
+)
+_no_industry_topics = patch(
+    "agents.relevance_filter.get_industry_topics",
+    side_effect=RuntimeError("Navigator disabled in tests"),
+)
 
 # ---------------------------------------------------------------------------
 # Minimal test SASB map (injected via tmp_path)
@@ -76,6 +87,13 @@ def map_path(tmp_path):
 @pytest.fixture
 def rf(map_path):
     return RelevanceFilter(sasb_map_path=map_path)
+
+
+@pytest.fixture(autouse=True)
+def _disable_navigator():
+    """Prevent all unit tests from hitting the Navigator API."""
+    with _no_navigator, _no_industry_topics:
+        yield
 
 
 def _make_profile(sic_code=None, ticker="TEST"):

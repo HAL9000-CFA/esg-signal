@@ -1,0 +1,10 @@
+{
+  "agent": "words_vs_money",
+  "content": "```json\n{\n  \"GHG Emissions\": [\n    {\n      \"text\": \"investment economics for all investment cases where bp's share of annual greenhouse gas (GHG) emissions from operations are anticipated to exceed specific thresholds include a carbon price for those emissions, which rises from $67/tCO2e in 2026 to $135/tCO2e (2024 $ real) in 2030\",\n      \"amount\": 135,\n      \"currency\": \"USD\",\n      \"year\": 2030,\n      \"category\": \"other\"\n    }\n  ],\n  \"Air Quality\": [],\n  \"Water & Wastewater Management\": [],\n  \"Critical Incident Risk Management\": [],\n  \"Employee Health & Safety\": []\n}\n```",
+  "cost_usd": 0.027375000000000003,
+  "input_tokens": 4565,
+  "model": "claude-opus-4-5",
+  "output_tokens": 182,
+  "purpose": "WvM extraction chunk 13/79 (5 factors)",
+  "temperature": 0.0
+}

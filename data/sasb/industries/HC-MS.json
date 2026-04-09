@@ -1,0 +1,88 @@
+{
+  "fetched_at": "2026-04-11T18:03:07.714826+00:00",
+  "data": {
+    "industry_code": "HC-MS",
+    "industry_name": "Medical Equipment & Supplies",
+    "industry_description": "The Medical Equipment & Supplies industry researches, develops and produces medical, surgical, dental, ophthalmic and veterinary instruments and devices. Hospitals, clinics and laboratories use these products, which range from disposable items to highly specialised equipment. The increased prevalence of diseases associated with unhealthy lifestyles and an ageing population are important factors that may encourage growth in this industry. Emerging markets and the expansion of health insurance may contribute to further growth. However, the extension of government insurance programmes, provider and payer consolidation, and regulatory emphasis on reduced costs in all markets may result in downward pricing pressure.",
+    "industry_gics": [
+      {
+        "gic_code": 240,
+        "gic_name": "Access & Affordability",
+        "gic_description": "The category addresses a company\u2019s ability to ensure broad access to its products and services, specifically in the context of underserved markets and/or population groups. It includes the management of issues related to universal needs, such as the accessibility and affordability of health care, financial services, utilities, education, and telecommunications.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "HC-MS-240a",
+            "topic_name": "Affordability & Pricing",
+            "topic_description": "Health care cost containment and health care access regulatory initiatives may place downward pricing pressures on the Medical Equipment & Supplies industry. This pressure may be increased further by consolidation among health care providers and the role of government-sponsored insurance programmes. Entities that ensure fair pricing may limit the negative effects of cost containment as well as benefitting from the potential revenue opportunities associated with expanded access. Entities that successfully balance the risks and opportunities associated with cost containment and improved access to health care may increase their market share among segments of the population that might ordinarily be less likely to seek health care."
+          }
+        ]
+      },
+      {
+        "gic_code": 250,
+        "gic_name": "Product Quality & Safety",
+        "gic_description": "The category addresses issues involving unintended characteristics of products sold or services provided that may create health or safety risks to end-users. It addresses a company\u2019s ability to offer manufactured products and/or services that meet customer expectations with respect to their health and safety characteristics. It includes, but is not limited to, issues involving liability, management of recalls and market withdrawals, product testing, and chemicals/content/ingredient management in products.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "HC-MS-250a",
+            "topic_name": "Product Safety",
+            "topic_description": "Information on product safety and side effects may be discovered after controlled clinical trials and approval. In such cases, entities are exposed to the financial implications of recalls and other adverse events, such as unfavourable media coverage, fines or investigations. Issues related to product safety, such as equipment failures, manufacturing defects, design flaws or inadequate disclosure of product-related risks, may result in significant product liability claims. Entities that limit the incidence of recalls, safety concerns and enforcement actions for manufacturing concerns may better protect shareholder value."
+          }
+        ]
+      },
+      {
+        "gic_code": 270,
+        "gic_name": "Selling Practices & Product Labeling",
+        "gic_description": "The category addresses social issues that may arise from a failure to manage the transparency, accuracy, and comprehensibility of marketing statements, advertising, and labeling of products and services. It includes, but is not limited to, advertising standards and regulations, ethical and responsible marketing practices, misleading or deceptive labeling, as well as discriminatory or predatory selling and lending practices. This may include deceptive or aggressive selling practices in which incentive structures for employees could encourage the sale of products or services that are not in the best interest of customers or clients.",
+        "gic_dimension": "Social Capital",
+        "gic_topics": [
+          {
+            "topic_code": "HC-MS-270a",
+            "topic_name": "Ethical Marketing",
+            "topic_description": "Entities in the Medical Equipment & Supplies industry face legal and regulatory challenges associated with product marketing. Direct-to-consumer advertisements for medical devices and outreach to physicians provide opportunities for entities to increase their market share. However, challenges arise from the potential for marketing off-label uses, which may result in significant fines and settlements. Corporate disclosure of legal and regulatory fines and the codes of ethics that govern marketing activities may allow investors to develop a better understanding of performance in this area."
+          }
+        ]
+      },
+      {
+        "gic_code": 410,
+        "gic_name": "Product Design & Lifecycle Management",
+        "gic_description": "The category addresses incorporation of environmental, social, and governance (ESG) considerations in characteristics of products and services provided or sold by the company. It includes, but is not limited to, managing the lifecycle impacts of products and services, such as those related to packaging, distribution, use-phase resource intensity, and other environmental and social externalities that may occur during their use-phase or at the end of life. The category captures a company\u2019s ability to address customer and societal demand for more sustainable products and services as well as to meet evolving environmental and social regulation. It does not address direct environmental or social impacts of the company\u2019s operations nor does it address health and safety risks to consumers from product use, which are covered in other categories.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "HC-MS-410a",
+            "topic_name": "Product Design & Lifecycle Management",
+            "topic_description": "Medical equipment and supplies entities face increasing challenges associated with the human and environmental impact of the industry\u2019s products. Entities may face consumer and regulatory pressure to limit the use of material inputs associated with health concerns, while also addressing issues such as the energy efficiency and end-of-life disposal of specific products. Entities that address these concerns while engaging in efforts to enhance product take-back may satisfy consumer demand and reduce future liabilities better."
+          }
+        ]
+      },
+      {
+        "gic_code": 430,
+        "gic_name": "Supply Chain Management",
+        "gic_description": "The category addresses management of environmental, social, and governance (ESG) risks within a company\u2019s supply chain. It addresses issues associated with environmental and social externalities created by suppliers through their operational activities. Such issues include, but are not limited to, environmental responsibility, human rights, labour practices, and ethics and corruption. Management may involve screening, selection, monitoring, and engagement with suppliers on their environmental and social impacts. The category does not address the impacts of external factors \u2013 such as climate change and other environmental and social factors \u2013 on suppliers\u2019 operations and/or on the availability and pricing of key resources, which is covered in a separate category.",
+        "gic_dimension": "Business Model and Innovation",
+        "gic_topics": [
+          {
+            "topic_code": "HC-MS-430a",
+            "topic_name": "Supply Chain Management",
+            "topic_description": "Supply chain quality is essential to protecting consumer health and corporate value. Entities that fail to ensure quality and traceability throughout their supply chains may be susceptible to fines, lost revenue and reputational damage. Additionally, entities may need to manage the use of material inputs that are considered scarce. Disclosure of supply chain audit programmes, strategies to ensure traceability and management of critical materials may better inform investors how entities in this industry are protecting shareholder value."
+          }
+        ]
+      },
+      {
+        "gic_code": 510,
+        "gic_name": "Business Ethics",
+        "gic_description": "The category addresses the company\u2019s approach to managing risks and opportunities surrounding ethical conduct of business, including fraud, corruption, bribery and facilitation payments, fiduciary responsibilities, and other behaviour that may have an ethical component. This includes sensitivity to business norms and standards as they shift over time, jurisdiction, and culture. It addresses the company\u2019s ability to provide services that satisfy the highest professional and ethical standards of the industry, which means to avoid conflicts of interest, misrepresentation, bias, and negligence through training employees adequately and implementing policies and procedures to ensure employees provide services free from bias and error.",
+        "gic_dimension": "Leadership and Governance",
+        "gic_topics": [
+          {
+            "topic_code": "HC-MS-510a",
+            "topic_name": "Business Ethics",
+            "topic_description": "Entities in the Medical Equipment & Supplies industry are subject to various international, national and local laws pertaining to health care fraud and abuse. An entity\u2019s ability to ensure compliance throughout its global and domestic operational footprint may have notable effects on enterprise viability and reputation. Corporate disclosure of legal and regulatory fines and the codes of ethics that govern interactions with health professionals may better allow investors to monitor performance in this area."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "fetched_at": "2026-04-11T18:07:28.762632+00:00",
+  "data": {
+    "id": 103879,
+    "company_ticker": "EKHCRA",
+    "isin": "BA100EKHCRA3",
+    "company_name": "Elektrohercegovina AD Trebinje",
+    "sector": "Infrastructure",
+    "sector_hs_value": "Infrastructure",
+    "industry_code": "IF-EU",
+    "industry": "Electric Utilities & Power Generators",
+    "industry_hs_value": "Electric Utilities & Power Generators",
+    "industry_description": "Electric Utilities & Power Generators industry entities generate electricity; build, own and operate transmission and distribution (T&D) lines; and sell electricity. Utilities generate electricity from many different sources, commonly including coal, natural gas, nuclear energy, hydropower, solar, wind and other renewable and fossil fuel energy sources. The industry comprises entities operating in both regulated and unregulated business structures. Regulated utilities face comprehensive regulatory oversight of their pricing mechanisms and their allowed return on equity, among other types of regulation, to maintain their licence to operate as a monopoly. Unregulated entities or merchant power entities are often independent power producers (IPPs) that generate electricity to sell to the wholesale market, which includes regulated utility buyers and other end users. Furthermore, entities in the industry may operate across both regulated and deregulated power markets depending on their operational span. Regulated markets typically contain vertically integrated utilities that own and operate everything from the generation of power to its retail distribution. Deregulated markets commonly split generation from distribution to encourage wholesale power generation competition. Overall, the complex task of providing reliable, accessible, low-cost power while balancing the protection of human life and the environment remains a challenge.",
+    "web_prepend_text": null
+  }
+}

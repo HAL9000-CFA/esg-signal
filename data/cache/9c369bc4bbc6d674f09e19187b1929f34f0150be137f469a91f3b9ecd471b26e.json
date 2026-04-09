@@ -1,0 +1,10 @@
+{
+  "agent": "disclosure_quality",
+  "content": "```json\n[\n  {\"factor\": \"Water Management\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Quality & Safety\", \"grade\": \"UNDISCLOSED\", \"evidence\": null},\n  {\"factor\": \"Product Design & Lifecycle Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Plastics: The percentage change in the total tonnes of virgin plastics used in the packaging for our products sold between 2019 (baseline) and 2025. (26.0%) (29.0%) significantly above target\"},\n  {\"factor\": \"Supply Chain Management\", \"grade\": \"QUANTIFIED\", \"evidence\": \"Livelihoods: The percentage of our procurement spend in the financial year that is with suppliers who have signed the Living Wage promise by the end of that financial year. 35.0% 41% significantly above target\"}\n]\n```",
+  "cost_usd": 0.03347,
+  "input_tokens": 5674,
+  "model": "claude-opus-4-5",
+  "output_tokens": 204,
+  "purpose": "Batch grade 4 ESG factors",
+  "temperature": 0.0
+}
