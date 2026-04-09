@@ -2,11 +2,20 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# requirements-ui.txt provides streamlit + reportlab.
+# The additional packages cover what the UI imports from requirements.txt
+# without pulling in pandas>=3 (not yet supported by streamlit 1.37).
+COPY requirements-ui.txt .
+RUN pip install --no-cache-dir -r requirements-ui.txt
+
+RUN pip install --no-cache-dir \
+    openpyxl==3.1.5 \
+    requests==2.32.3 \
+    python-dotenv==1.0.1
 
 COPY ui/ ./ui/
 COPY agents/ ./agents/
+COPY pipeline/ ./pipeline/
 
 ENV PYTHONPATH=/app
 

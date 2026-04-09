@@ -1,0 +1,7 @@
+FROM apache/airflow:2.9.3-python3.11
+
+# Install pipeline dependencies into the Airflow image.
+# apache-airflow itself is already in the base image — only add extras here.
+COPY requirements-airflow.txt /requirements-airflow.txt
+USER airflow
+RUN pip install --no-cache-dir -r /requirements-airflow.txt
